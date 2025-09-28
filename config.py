@@ -16,8 +16,8 @@ DATABASE_CONFIG = {
 # Scraping Configuration
 SCRAPING_CONFIG = {
     'max_pages': int(os.getenv('MAX_PAGES', 3)),
-    'min_delay': int(os.getenv('MIN_DELAY', 8)),
-    'max_delay': int(os.getenv('MAX_DELAY', 15)),
+    'min_delay': int(os.getenv('MIN_DELAY', 12)),
+    'max_delay': int(os.getenv('MAX_DELAY', 25)),
     'proxy_enabled': os.getenv('PROXY_ENABLED', 'True').lower() == 'true',
     'fuzzy_match_threshold': int(os.getenv('FUZZY_MATCH_THRESHOLD', 85)),
 }

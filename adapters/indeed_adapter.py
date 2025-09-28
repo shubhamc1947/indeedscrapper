@@ -134,7 +134,15 @@ class IndeedAdapter:
                 '--disable-extensions',
                 '--disable-plugins',
                 '--disable-default-apps',
-                '--window-size=1366,768'
+                '--window-size=1366,768',
+                '--disable-web-security',
+                '--disable-features=VizDisplayCompositor',
+                '--disable-dev-shm-usage',
+                '--no-first-run',
+                '--disable-gpu',
+                '--disable-background-timer-throttling',
+                '--disable-backgrounding-occluded-windows',
+                '--disable-renderer-backgrounding'
             ]
             
             browser = await p.chromium.launch(
@@ -205,7 +213,10 @@ class IndeedAdapter:
                         if job_data.get('job_url_indeed'):
                             try:
                                 full_details = await self.fetch_job_details(job_data['job_url_indeed'], context)
-                                                                
+                                
+                                # Update job data with full details
+                                job_data.update(full_details)
+                                
                                 # Update job data with full details
                                 job_data.update(full_details)
                                 
@@ -246,7 +257,9 @@ class IndeedAdapter:
                                 all_jobs.append(job)
                             
                             # Random delay between job detail fetches - increased for stealth
-                            await asyncio.sleep(random.uniform(3, 8))
+                            delay = random.uniform(10, 20) + random.uniform(0, 5)
+                            logger.info(f"Waiting {delay:.1f} seconds before next job...")
+                            await asyncio.sleep(delay)
                     
                     # Delay between pages with more randomization
                     delay = random.uniform(
@@ -270,10 +283,27 @@ class IndeedAdapter:
         page = await context.new_page()
         try:
             # Add random delay before navigation to appear more human
-            await asyncio.sleep(random.uniform(2, 5))
+            await asyncio.sleep(random.uniform(3, 7))
             
-            await page.goto(job_url, timeout=60000)
-            await page.wait_for_load_state('domcontentloaded')
+            # Set additional headers to appear more human
+            await page.set_extra_http_headers({
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'same-origin'
+            })
+            
+            # Navigate with realistic timeout
+            await page.goto(job_url, wait_until='domcontentloaded', timeout=90000)
+            
+            # Check for Cloudflare challenge
+            if await self.detect_and_handle_cloudflare(page):
+                logger.warning(f"Cloudflare detected on {job_url}, attempting to handle...")
+                # Wait additional time for potential Cloudflare resolution
+                await asyncio.sleep(random.uniform(15, 25))
             
             # Simulate more human behavior on job detail pages
             await self.simulate_job_page_behavior(page)
@@ -434,25 +464,112 @@ class IndeedAdapter:
         
         return jobs
     
+    async def detect_and_handle_cloudflare(self, page) -> bool:
+        """Detect and attempt to handle Cloudflare challenges"""
+        try:
+            # Check for common Cloudflare indicators
+            cloudflare_indicators = [
+                'Checking your browser',
+                'DDoS protection by Cloudflare',
+                'Ray ID',
+                'Additional Verification Required',
+                'cf-browser-verification',
+                'cf-wrapper'
+            ]
+            
+            page_content = await page.content()
+            page_text = await page.evaluate('() => document.body.innerText')
+            
+            # Check if any Cloudflare indicators are present
+            is_cloudflare = any(indicator.lower() in page_content.lower() or 
+                              indicator.lower() in page_text.lower() 
+                              for indicator in cloudflare_indicators)
+            
+            if is_cloudflare:
+                logger.warning("Cloudflare challenge detected, attempting to handle...")
+                
+                # Wait for potential automatic resolution
+                await asyncio.sleep(random.uniform(8, 15))
+                
+                # Check for checkbox challenge
+                checkbox = await page.query_selector('input[type="checkbox"]')
+                if checkbox:
+                    logger.info("Attempting to handle Cloudflare checkbox...")
+                    await checkbox.click()
+                    await asyncio.sleep(random.uniform(3, 6))
+                
+                # Check for "Verify you are human" button
+                verify_buttons = await page.query_selector_all('button, input[type="submit"], [role="button"]')
+                for button in verify_buttons:
+                    button_text = await button.inner_text() if hasattr(button, 'inner_text') else ''
+                    if any(text in button_text.lower() for text in ['verify', 'continue', 'proceed']):
+                        logger.info("Clicking verification button...")
+                        await button.click()
+                        await asyncio.sleep(random.uniform(5, 10))
+                        break
+                
+                # Wait for page to potentially reload
+                try:
+                    await page.wait_for_load_state('networkidle', timeout=30000)
+                except:
+                    pass
+                
+                return True
+            
+            return False
+            
+        except Exception as e:
+            logger.warning(f"Error handling Cloudflare challenge: {e}")
+            return False
+    
     async def simulate_job_page_behavior(self, page):
         """Simulate realistic human behavior on job detail pages"""
-        # Scroll down to read the job description
-        for _ in range(random.randint(2, 4)):
-            scroll_amount = random.randint(200, 500)
-            await page.evaluate(f'window.scrollBy(0, {scroll_amount})')
-            await asyncio.sleep(random.uniform(1, 3))
-        
-        # Sometimes scroll back up as if re-reading
-        if random.random() < 0.3:
-            await page.evaluate('window.scrollBy(0, -300)')
-            await asyncio.sleep(random.uniform(0.5, 1.5))
-        
-        # Random mouse movements
-        for _ in range(random.randint(1, 3)):
-            x = random.randint(100, 800)
-            y = random.randint(100, 600)
-            await page.mouse.move(x, y, steps=random.randint(5, 10))
-            await asyncio.sleep(random.uniform(0.2, 0.8))
+        try:
+            # Random mouse movements
+            for _ in range(random.randint(2, 4)):
+                x = random.randint(100, 800)
+                y = random.randint(100, 600)
+                await page.mouse.move(x, y, steps=random.randint(8, 15))
+                await asyncio.sleep(random.uniform(0.3, 1.0))
+            
+            # Slow, realistic scrolling to read the job description
+            viewport_height = await page.evaluate('window.innerHeight')
+            total_height = await page.evaluate('document.body.scrollHeight')
+            
+            # Scroll down in small increments
+            current_position = 0
+            scroll_increment = random.randint(150, 300)
+            
+            while current_position < total_height - viewport_height:
+                scroll_amount = min(scroll_increment, total_height - viewport_height - current_position)
+                await page.evaluate(f'window.scrollBy(0, {scroll_amount})')
+                current_position += scroll_amount
+                
+                # Random pause while "reading"
+                reading_time = random.uniform(1.5, 4.0)
+                await asyncio.sleep(reading_time)
+                
+                # Sometimes scroll back up slightly (as if re-reading)
+                if random.random() < 0.3:
+                    back_scroll = random.randint(50, 150)
+                    await page.evaluate(f'window.scrollBy(0, -{back_scroll})')
+                    await asyncio.sleep(random.uniform(0.8, 2.0))
+                    current_position -= back_scroll
+            
+            # Sometimes scroll back to top
+            if random.random() < 0.4:
+                await page.evaluate('window.scrollTo(0, 0)')
+                await asyncio.sleep(random.uniform(1, 3))
+            
+            # Final random mouse movements
+            for _ in range(random.randint(1, 3)):
+                x = random.randint(200, 700)
+                y = random.randint(200, 500)
+                await page.mouse.move(x, y, steps=random.randint(5, 12))
+                await asyncio.sleep(random.uniform(0.2, 0.8))
+                
+        except Exception as e:
+            logger.warning(f"Error simulating human behavior: {e}")
     
     async def simulate_human_behavior(self, page):
         """Simulate human-like behavior on the page"""
