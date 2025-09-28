@@ -16,14 +16,13 @@ logger = logging.getLogger(__name__)
 class CompanyMatcher:
     def __init__(self):
         self.fuzzy_threshold = SCRAPING_CONFIG['fuzzy_match_threshold']
-        self.companies_cache = {}
-        self._load_companies_cache()
+        self.companies_cache = {'by_url': {}, 'by_name': {}, 'by_iva': {}, 'all': []}
     
     async def _load_companies_cache(self):
         """Load companies into memory cache for faster matching"""
         try:
             companies = await db_manager.execute_query(
-                "SELECT id, company_id, name, ragione_sociale, url, iva FROM companies"
+                "SELECT id, company_id, name, legal_name, url, iva FROM companies"
             )
             
             self.companies_cache = {
@@ -212,11 +211,11 @@ class CompanyMatcher:
                 scores.append(fuzz.partial_ratio(normalized_job_name, normalized_company_name))
                 scores.append(fuzz.token_sort_ratio(normalized_job_name, normalized_company_name))
             
-            # Match against ragione sociale
-            if company.get('ragione_sociale'):
-                normalized_ragione = self.normalize_company_name(company['ragione_sociale'])
-                scores.append(fuzz.ratio(normalized_job_name, normalized_ragione))
-                scores.append(fuzz.partial_ratio(normalized_job_name, normalized_ragione))
+            # Match against ragione sociale (legal_name)
+            if company.get('legal_name'):
+                normalized_legal_name = self.normalize_company_name(company['legal_name'])
+                scores.append(fuzz.ratio(normalized_job_name, normalized_legal_name))
+                scores.append(fuzz.partial_ratio(normalized_job_name, normalized_legal_name))
             
             if scores:
                 max_score = max(scores)
@@ -290,18 +289,18 @@ class CompanyMatcher:
             
             # Create processed job
             processed_job = ProcessedJob(
-                url_job_indeed=job_data['url_job_indeed'],
-                url_company_indeed=job_data.get('url_company_indeed'),
-                testo_offerta=job_data.get('full_description') or job_data.get('description', ''),
+                job_url_indeed=job_data['job_url_indeed'],
+                company_url_indeed=job_data.get('company_url_indeed'),
+                job_offer_text=job_data.get('full_description') or job_data.get('description', ''),
                 company_id=company['id'] if company else None,
-                data_estrazione=date.today(),
-                url_azienda=company['url'] if company else None,
+                extraction_date=date.today(),
+                company_website_url=company['url'] if company else None,
                 match_type=match_type,
                 match_confidence=confidence
             )
             
             logger.info(
-                f"Job processed: {job_data['url_job_indeed'][:50]}... | "
+                f"Job processed: {job_data['job_url_indeed'][:50]}... | "
                 f"Match: {match_type} ({confidence:.1f}%) | "
                 f"Company: {company['name'] if company else 'None'}"
             )

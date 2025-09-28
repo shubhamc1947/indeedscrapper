@@ -91,14 +91,9 @@ class CompanyImporter:
         """Insert new company"""
         query = """
         INSERT INTO companies (
-            company_id, ragione_sociale, employees, vat, iva, address, city, province, region,
-            rea, forma_giuridica, data_iscrizione, ateco, ateco_cod, camera_commercio,
-            codice_destinatario, capitale_sociale, utile, fatturato, name, file_name, url,
-            sectors, pages, details, gen_sector, updated_data, to_check, new_gen_sector,
-            new_sectors, meta_description, created_at, updated_at
+            company_id, legal_name, vat, iva, name, url, created_at, updated_at
         ) VALUES (
-            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19,
-            $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33
+            $1, $2, $3, $4, $5, $6, $7, $8
         )
         """
         
@@ -108,35 +103,10 @@ class CompanyImporter:
             query,
             company_data.get('companyID'),
             company_data.get('ragioneSociale'),
-            company_data.get('employees'),
             company_data.get('vat'),
             company_data.get('iva'),
-            company_data.get('address'),
-            company_data.get('city'),
-            company_data.get('province'),
-            company_data.get('region'),
-            company_data.get('rea'),
-            company_data.get('formaGiuridica'),
-            company_data.get('dataIscrizione'),
-            company_data.get('ateco'),
-            company_data.get('atecoCod'),
-            company_data.get('cameraCommercio'),
-            company_data.get('codiceDestinatario'),
-            company_data.get('capitaleSociale'),
-            company_data.get('utile'),
-            company_data.get('fatturato'),
             company_data.get('name'),
-            company_data.get('file'),
             company_data.get('url'),
-            json.dumps(company_data.get('sectors', [])),
-            json.dumps(company_data.get('pages', [])),
-            company_data.get('details'),
-            company_data.get('genSector'),
-            company_data.get('updatedData'),
-            company_data.get('toCheck', ''),
-            company_data.get('newGenSector'),
-            json.dumps(company_data.get('newSectors', [])),
-            company_data.get('meta_description'),
             current_time,
             current_time
         )
@@ -145,13 +115,7 @@ class CompanyImporter:
         """Update existing company"""
         query = """
         UPDATE companies SET
-            ragione_sociale = $2, employees = $3, vat = $4, iva = $5, address = $6,
-            city = $7, province = $8, region = $9, rea = $10, forma_giuridica = $11,
-            data_iscrizione = $12, ateco = $13, ateco_cod = $14, camera_commercio = $15,
-            codice_destinatario = $16, capitale_sociale = $17, utile = $18, fatturato = $19,
-            name = $20, file_name = $21, url = $22, sectors = $23, pages = $24, details = $25,
-            gen_sector = $26, updated_data = $27, to_check = $28, new_gen_sector = $29,
-            new_sectors = $30, meta_description = $31, updated_at = $32
+            legal_name = $2, vat = $3, iva = $4, name = $5, url = $6, updated_at = $7
         WHERE id = $1
         """
         
@@ -159,35 +123,10 @@ class CompanyImporter:
             query,
             company_id,
             company_data.get('ragioneSociale'),
-            company_data.get('employees'),
             company_data.get('vat'),
             company_data.get('iva'),
-            company_data.get('address'),
-            company_data.get('city'),
-            company_data.get('province'),
-            company_data.get('region'),
-            company_data.get('rea'),
-            company_data.get('formaGiuridica'),
-            company_data.get('dataIscrizione'),
-            company_data.get('ateco'),
-            company_data.get('atecoCod'),
-            company_data.get('cameraCommercio'),
-            company_data.get('codiceDestinatario'),
-            company_data.get('capitaleSociale'),
-            company_data.get('utile'),
-            company_data.get('fatturato'),
             company_data.get('name'),
-            company_data.get('file'),
             company_data.get('url'),
-            json.dumps(company_data.get('sectors', [])),
-            json.dumps(company_data.get('pages', [])),
-            company_data.get('details'),
-            company_data.get('genSector'),
-            company_data.get('updatedData'),
-            company_data.get('toCheck', ''),
-            company_data.get('newGenSector'),
-            json.dumps(company_data.get('newSectors', [])),
-            company_data.get('meta_description'),
             datetime.now()
         )
 

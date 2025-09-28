@@ -153,12 +153,30 @@ class IndeedAdapter:
             # Add stealth scripts
             await context.add_init_script("""
                 Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
-                Object.defineProperty(navigator, 'languages', {get: () => ['en-IN', 'en', 'hi']});
+                Object.defineProperty(navigator, 'languages', {get: () => ['it-IT', 'it', 'en-US', 'en']});
                 Object.defineProperty(navigator, 'plugins', {
                     get: () => Array.from({length: 5}, (_, i) => ({name: `Plugin ${i}`}))
                 });
+                Object.defineProperty(navigator, 'platform', {get: () => 'Win32'});
+                Object.defineProperty(navigator, 'hardwareConcurrency', {get: () => 4});
                 window.chrome = {runtime: {}};
                 delete window.navigator.webdriver;
+                
+                // Override canvas fingerprinting
+                const originalToDataURL = HTMLCanvasElement.prototype.toDataURL;
+                HTMLCanvasElement.prototype.toDataURL = function(type) {
+                    const shift = Math.floor(Math.random() * 10);
+                    this.getContext('2d').fillStyle = `rgb(${100 + shift}, ${100 + shift}, ${100 + shift})`;
+                    return originalToDataURL.apply(this, arguments);
+                };
+                
+                // Override WebGL fingerprinting
+                const getParameter = WebGLRenderingContext.prototype.getParameter;
+                WebGLRenderingContext.prototype.getParameter = function(parameter) {
+                    if (parameter === 37445) return 'Intel Inc.';
+                    if (parameter === 37446) return 'Intel(R) HD Graphics';
+                    return getParameter.apply(this, arguments);
+                };
             """)
             
             page = await context.new_page()
@@ -197,7 +215,7 @@ class IndeedAdapter:
                                     company_name=job_data.get('company_name', ''),
                                     location=job_data.get('location', ''),
                                     description=job_data.get('description', ''),
-                                    url_job_indeed=job_data.get('url_job_indeed', ''),
+                                    job_url_indeed=job_data.get('job_url_indeed', ''),
                                     salary=job_data.get('salary'),
                                     date_posted=job_data.get('date_posted'),
                                     job_type=job_data.get('job_type'),
@@ -207,34 +225,34 @@ class IndeedAdapter:
                                     employment_type=job_data.get('employment_type'),
                                     company_rating=job_data.get('company_rating'),
                                     full_description=job_data.get('full_description'),
-                                    url_company_indeed=job_data.get('url_company_indeed')
+                                    company_url_indeed=job_data.get('company_url_indeed')
                                 )
                                 
                                 all_jobs.append(job)
                                 
                             except Exception as e:
-                                logger.warning(f"Failed to fetch details for job {job_data.get('url_job_indeed')}: {e}")
+                                logger.warning(f"Failed to fetch details for job {job_data.get('job_url_indeed')}: {e}")
                                 # Still add the job with basic info
                                 job = JobListing(
                                     title=job_data.get('title', ''),
                                     company_name=job_data.get('company_name', ''),
                                     location=job_data.get('location', ''),
                                     description=job_data.get('description', ''),
-                                    url_job_indeed=job_data.get('url_job_indeed', ''),
+                                    job_url_indeed=job_data.get('job_url_indeed', ''),
                                     salary=job_data.get('salary'),
                                     date_posted=job_data.get('date_posted'),
                                     remote=job_data.get('remote', False)
                                 )
                                 all_jobs.append(job)
                             
-                            # Random delay between job detail fetches
-                            await asyncio.sleep(random.uniform(1, 3))
+                            # Random delay between job detail fetches - increased for stealth
+                            await asyncio.sleep(random.uniform(3, 8))
                     
-                    # Delay between pages
+                    # Delay between pages with more randomization
                     delay = random.uniform(
                         SCRAPING_CONFIG['min_delay'], 
                         SCRAPING_CONFIG['max_delay']
-                    ) + (page_num * 2)
+                    ) + (page_num * random.uniform(3, 8))  # Increased delay
                     
                     logger.info(f"Waiting {delay:.1f} seconds before next page...")
                     await asyncio.sleep(delay)
@@ -251,11 +269,14 @@ class IndeedAdapter:
         """Fetch detailed job information from job page"""
         page = await context.new_page()
         try:
+            # Add random delay before navigation to appear more human
+            await asyncio.sleep(random.uniform(2, 5))
+            
             await page.goto(job_url, timeout=60000)
             await page.wait_for_load_state('domcontentloaded')
             
-            # Random delay to appear human
-            await asyncio.sleep(random.uniform(0.5, 2))
+            # Simulate more human behavior on job detail pages
+            await self.simulate_job_page_behavior(page)
             
             html = await page.content()
             soup = BeautifulSoup(html, 'lxml')
@@ -332,9 +353,9 @@ class IndeedAdapter:
             url_elem = container.select_one('a[data-jk], h2.jobTitle a, a[data-testid="job-title"]')
             if url_elem:
                 href = url_elem.get('href', '')
-                job['url_job_indeed'] = urljoin(self.base_url, href) if href and not href.startswith('http') else href
+                job['job_url_indeed'] = urljoin(self.base_url, href) if href and not href.startswith('http') else href
             else:
-                job['url_job_indeed'] = None
+                job['job_url_indeed'] = None
             
             # Company
             company_elem = container.select_one(
@@ -412,6 +433,26 @@ class IndeedAdapter:
             jobs.append(job)
         
         return jobs
+    
+    async def simulate_job_page_behavior(self, page):
+        """Simulate realistic human behavior on job detail pages"""
+        # Scroll down to read the job description
+        for _ in range(random.randint(2, 4)):
+            scroll_amount = random.randint(200, 500)
+            await page.evaluate(f'window.scrollBy(0, {scroll_amount})')
+            await asyncio.sleep(random.uniform(1, 3))
+        
+        # Sometimes scroll back up as if re-reading
+        if random.random() < 0.3:
+            await page.evaluate('window.scrollBy(0, -300)')
+            await asyncio.sleep(random.uniform(0.5, 1.5))
+        
+        # Random mouse movements
+        for _ in range(random.randint(1, 3)):
+            x = random.randint(100, 800)
+            y = random.randint(100, 600)
+            await page.mouse.move(x, y, steps=random.randint(5, 10))
+            await asyncio.sleep(random.uniform(0.2, 0.8))
     
     async def simulate_human_behavior(self, page):
         """Simulate human-like behavior on the page"""

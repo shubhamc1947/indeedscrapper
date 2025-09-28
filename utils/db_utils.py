@@ -73,41 +73,16 @@ class DatabaseManager:
                     raise
     
     def create_companies_table(self) -> str:
-        """Create companies table migration"""
+        """Create simplified companies table migration"""
         return """
         CREATE TABLE IF NOT EXISTS companies (
             id SERIAL PRIMARY KEY,
             company_id VARCHAR(50) UNIQUE,
-            ragione_sociale TEXT,
-            employees INTEGER,
+            legal_name TEXT,
             vat VARCHAR(20),
             iva VARCHAR(20),
-            address TEXT,
-            city VARCHAR(100),
-            province VARCHAR(100),
-            region VARCHAR(100),
-            rea VARCHAR(50),
-            forma_giuridica VARCHAR(10),
-            data_iscrizione BIGINT,
-            ateco TEXT,
-            ateco_cod VARCHAR(20),
-            camera_commercio VARCHAR(10),
-            codice_destinatario VARCHAR(20),
-            capitale_sociale BIGINT,
-            utile BIGINT,
-            fatturato BIGINT,
             name VARCHAR(255),
-            file_name VARCHAR(255),
             url TEXT,
-            sectors JSONB,
-            pages JSONB,
-            details TEXT,
-            gen_sector TEXT,
-            updated_data BIGINT,
-            to_check TEXT,
-            new_gen_sector TEXT,
-            new_sectors JSONB,
-            meta_description TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );

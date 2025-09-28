@@ -14,7 +14,7 @@ class JobListing:
     company_name: str
     location: str
     description: str
-    url_job_indeed: str
+    job_url_indeed: str
     salary: Optional[str] = None
     date_posted: Optional[str] = None
     job_type: Optional[str] = None
@@ -24,16 +24,16 @@ class JobListing:
     employment_type: Optional[str] = None
     company_rating: Optional[str] = None
     full_description: Optional[str] = None
-    url_company_indeed: Optional[str] = None
+    company_url_indeed: Optional[str] = None
 
 @dataclass
 class ProcessedJob:
-    url_job_indeed: str
-    url_company_indeed: Optional[str]
-    testo_offerta: str
+    job_url_indeed: str
+    company_url_indeed: Optional[str]
+    job_offer_text: str
     company_id: Optional[int]
-    data_estrazione: date
-    url_azienda: Optional[str]
+    extraction_date: date
+    company_website_url: Optional[str]
     match_type: Optional[str] = None
     match_confidence: Optional[float] = None
 
@@ -44,20 +44,20 @@ class JobModel:
         try:
             # Check if job already exists
             existing_job = await db_manager.execute_query_one(
-                "SELECT id FROM it_indeed_scrapped_data WHERE url_job_indeed = $1",
-                job.url_job_indeed
+                "SELECT id FROM it_indeed_scrapped_data WHERE job_url_indeed = $1",
+                job.job_url_indeed
             )
             
             if existing_job:
-                logger.info(f"Job already exists: {job.url_job_indeed}")
+                logger.info(f"Job already exists: {job.job_url_indeed}")
                 return existing_job['id']
             
             # Insert new job
             query = """
             INSERT INTO it_indeed_scrapped_data (
-                url_job_indeed, title, company_name, location, description, salary,
+                job_url_indeed, title, company_name, location, description, salary,
                 date_posted, job_type, remote, skills, experience_level, employment_type,
-                company_rating, full_description, url_company_indeed, extraction_date,
+                company_rating, full_description, company_url_indeed, extraction_date,
                 status, created_at, updated_at
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19
@@ -79,7 +79,7 @@ class JobModel:
             
             result = await db_manager.execute_insert(
                 query,
-                job.url_job_indeed,
+                job.job_url_indeed,
                 job.title,
                 job.company_name,
                 job.location,
@@ -93,7 +93,7 @@ class JobModel:
                 job.employment_type,
                 job.company_rating,
                 job.full_description,
-                job.url_company_indeed,
+                job.company_url_indeed,
                 date.today(),
                 'extracted',
                 current_time,
@@ -133,7 +133,7 @@ class JobModel:
         """Get jobs that haven't been processed yet"""
         query = """
         SELECT s.* FROM it_indeed_scrapped_data s
-        LEFT JOIN it_indeed_result_data r ON s.url_job_indeed = r.url_job_indeed
+        LEFT JOIN it_indeed_result_data r ON s.job_url_indeed = r.job_url_indeed
         WHERE r.id IS NULL AND s.status = 'extracted'
         ORDER BY s.created_at ASC
         """
@@ -149,18 +149,18 @@ class JobModel:
         try:
             # Check if already processed
             existing_result = await db_manager.execute_query_one(
-                "SELECT id FROM it_indeed_result_data WHERE url_job_indeed = $1",
-                processed_job.url_job_indeed
+                "SELECT id FROM it_indeed_result_data WHERE job_url_indeed = $1",
+                processed_job.job_url_indeed
             )
             
             if existing_result:
-                logger.info(f"Job already processed: {processed_job.url_job_indeed}")
+                logger.info(f"Job already processed: {processed_job.job_url_indeed}")
                 return existing_result['id']
             
             query = """
             INSERT INTO it_indeed_result_data (
-                scrapped_job_id, url_job_indeed, url_company_indeed, testo_offerta,
-                company_id, data_estrazione, url_azienda, match_type, match_confidence,
+                scrapped_job_id, job_url_indeed, company_url_indeed, job_offer_text,
+                company_id, extraction_date, company_website_url, match_type, match_confidence,
                 created_at
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
@@ -170,12 +170,12 @@ class JobModel:
             result = await db_manager.execute_insert(
                 query,
                 scrapped_job_id,
-                processed_job.url_job_indeed,
-                processed_job.url_company_indeed,
-                processed_job.testo_offerta,
+                processed_job.job_url_indeed,
+                processed_job.company_url_indeed,
+                processed_job.job_offer_text,
                 processed_job.company_id,
-                processed_job.data_estrazione,
-                processed_job.url_azienda,
+                processed_job.extraction_date,
+                processed_job.company_website_url,
                 processed_job.match_type,
                 processed_job.match_confidence,
                 datetime.now()
