@@ -104,7 +104,7 @@ class JobModel:
             return result['id']
             
         except Exception as e:
-            logger.error(f"Failed to store raw job {job.url_job_indeed}: {e}")
+            logger.error(f"Failed to store raw job {job.job_url_indeed}: {e}")
             return None
     
     async def store_raw_jobs_batch(self, jobs: List[JobListing]) -> Tuple[int, int]:
@@ -192,7 +192,7 @@ class JobModel:
             return result['id']
             
         except Exception as e:
-            logger.error(f"Failed to store processed job {processed_job.url_job_indeed}: {e}")
+            logger.error(f"Failed to store processed job {processed_job.job_url_indeed}: {e}")
             # Mark as failed
             await db_manager.execute_insert(
                 "UPDATE it_indeed_scrapped_data SET status = 'failed', updated_at = $1 WHERE id = $2",
@@ -230,7 +230,7 @@ class JobModel:
         processed_results_query = """
         SELECT COUNT(*) as processed_results
         FROM it_indeed_result_data
-        WHERE data_estrazione = CURRENT_DATE
+        WHERE extraction_date = CURRENT_DATE
         """
         
         processed_result = await db_manager.execute_query_one(processed_results_query)
@@ -250,7 +250,7 @@ class JobModel:
             match_type,
             COUNT(*) as count
         FROM it_indeed_result_data
-        WHERE data_estrazione = CURRENT_DATE
+        WHERE extraction_date = CURRENT_DATE
         GROUP BY match_type
         """
         

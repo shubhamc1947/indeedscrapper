@@ -145,8 +145,8 @@ class IndeedAdapter:
             
             context = await browser.new_context(
                 viewport={'width': 1366, 'height': 768},
-                locale='en-IN',
-                timezone_id='Asia/Kolkata',
+                locale='it-IT',
+                timezone_id='Europe/Rome',
                 user_agent=self.ua.random
             )
             
@@ -202,10 +202,10 @@ class IndeedAdapter:
                     
                     # For each job, visit the detail page and get full description
                     for job_data in jobs:
-                        if job_data.get('url_job_indeed'):
+                        if job_data.get('job_url_indeed'):
                             try:
-                                full_details = await self.fetch_job_details(job_data['url_job_indeed'], context)
-                                
+                                full_details = await self.fetch_job_details(job_data['job_url_indeed'], context)
+                                                                
                                 # Update job data with full details
                                 job_data.update(full_details)
                                 
@@ -293,7 +293,7 @@ class IndeedAdapter:
             # Company profile URL on Indeed
             company_link = soup.select_one('a[data-testid="company-name"], .companyName a')
             if company_link and company_link.get('href'):
-                details['url_company_indeed'] = urljoin(self.base_url, company_link['href'])
+                details['company_url_indeed'] = urljoin(self.base_url, company_link['href'])
             
             # Additional job details
             for label in soup.select('div.jobsearch-JobDescriptionSection-sectionItem span.jobsearch-JobDescriptionSection-label'):

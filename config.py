@@ -40,8 +40,8 @@ PROXY_LIST = [
 
 # Indeed Configuration
 INDEED_CONFIG = {
-    'base_url': 'https://in.indeed.com',
-    'default_location': 'Mumbai, Maharashtra',
+    'base_url': 'https://it.indeed.com',
+    'default_location': 'Italy',
     'user_agents_rotation': True,
     'retry_attempts': 3,
     'retry_delay': 5,

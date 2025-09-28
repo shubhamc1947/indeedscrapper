@@ -57,13 +57,31 @@ class DatabaseManager:
     
     async def run_migrations(self):
         """Run database migrations to create tables"""
+        # Only create companies table, job tables should already exist
         migrations = [
             self.create_companies_table(),
-            self.create_indeed_scrapped_data_table(),
-            self.create_indeed_result_data_table(),
+            # Skip job table migrations if they already exist
         ]
         
         async with self.pool.acquire() as conn:
+            # Check if job tables exist
+            job_tables_exist = await conn.fetchval("""
+                SELECT EXISTS (
+                    SELECT FROM information_schema.tables 
+                    WHERE table_name = 'it_indeed_scrapped_data'
+                ) AND EXISTS (
+                    SELECT FROM information_schema.tables 
+                    WHERE table_name = 'it_indeed_result_data'
+                );
+            """)
+            
+            if not job_tables_exist:
+                logger.info("Job tables don't exist. Please create them manually with correct column names.")
+                migrations.extend([
+                    self.create_indeed_scrapped_data_table(),
+                    self.create_indeed_result_data_table(),
+                ])
+            
             for migration in migrations:
                 try:
                     await conn.execute(migration)
@@ -98,7 +116,7 @@ class DatabaseManager:
         return """
         CREATE TABLE IF NOT EXISTS it_indeed_scrapped_data (
             id SERIAL PRIMARY KEY,
-            url_job_indeed TEXT UNIQUE NOT NULL,
+            job_url_indeed TEXT UNIQUE NOT NULL,
             title TEXT,
             company_name TEXT,
             location TEXT,
@@ -112,14 +130,14 @@ class DatabaseManager:
             employment_type TEXT,
             company_rating TEXT,
             full_description TEXT,
-            url_company_indeed TEXT,
+            company_url_indeed TEXT,
             extraction_date DATE DEFAULT CURRENT_DATE,
             status VARCHAR(20) DEFAULT 'extracted',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
         
-        CREATE INDEX IF NOT EXISTS idx_indeed_scrapped_url ON it_indeed_scrapped_data(url_job_indeed);
+        CREATE INDEX IF NOT EXISTS idx_indeed_scrapped_job_url ON it_indeed_scrapped_data(job_url_indeed);
         CREATE INDEX IF NOT EXISTS idx_indeed_scrapped_status ON it_indeed_scrapped_data(status);
         CREATE INDEX IF NOT EXISTS idx_indeed_scrapped_date ON it_indeed_scrapped_data(extraction_date);
         CREATE INDEX IF NOT EXISTS idx_indeed_scrapped_company ON it_indeed_scrapped_data(company_name);
@@ -131,20 +149,20 @@ class DatabaseManager:
         CREATE TABLE IF NOT EXISTS it_indeed_result_data (
             id SERIAL PRIMARY KEY,
             scrapped_job_id INTEGER REFERENCES it_indeed_scrapped_data(id),
-            url_job_indeed TEXT NOT NULL,
-            url_company_indeed TEXT,
-            testo_offerta TEXT,
+            job_url_indeed TEXT NOT NULL,
+            company_url_indeed TEXT,
+            job_offer_text TEXT,
             company_id INTEGER REFERENCES companies(id),
-            data_estrazione DATE DEFAULT CURRENT_DATE,
-            url_azienda TEXT,
+            extraction_date DATE DEFAULT CURRENT_DATE,
+            company_website_url TEXT,
             match_type VARCHAR(20), -- 'url', 'name', 'google_api', 'none'
             match_confidence DECIMAL(5,2),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
         
-        CREATE INDEX IF NOT EXISTS idx_indeed_result_url ON it_indeed_result_data(url_job_indeed);
+        CREATE INDEX IF NOT EXISTS idx_indeed_result_job_url ON it_indeed_result_data(job_url_indeed);
         CREATE INDEX IF NOT EXISTS idx_indeed_result_company ON it_indeed_result_data(company_id);
-        CREATE INDEX IF NOT EXISTS idx_indeed_result_date ON it_indeed_result_data(data_estrazione);
+        CREATE INDEX IF NOT EXISTS idx_indeed_result_date ON it_indeed_result_data(extraction_date);
         """
     
     async def execute_query(self, query: str, *args) -> Any:
