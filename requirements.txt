@@ -1,0 +1,16 @@
+asyncio==3.4.3
+asyncpg==0.29.0
+beautifulsoup4==4.12.2
+fake-useragent==1.4.0
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.21.1
+playwright==1.40.0
+python-dotenv==1.0.0
+dateparser==1.2.0
+pandas==2.1.4
+psycopg2-binary==2.9.9
+requests==2.31.0
+lxml==4.9.4
+googlesearch-python==1.2.3
+unicodedata2==15.1.0
+aiofiles==23.2.1
