@@ -25,6 +25,8 @@ class IndeedAdapter:
         self.current_proxy_index = 0
         self.retry_attempts = INDEED_CONFIG['retry_attempts']
         self.retry_delay = INDEED_CONFIG['retry_delay']
+        self.jobs_processed_with_current_proxy = 0
+        self.proxy_switch_threshold = random.randint(3, 7)  # Switch proxy every 3-7 jobs
     
     def get_rotating_headers(self):
         """Get rotating headers for requests"""
@@ -61,12 +63,34 @@ class IndeedAdapter:
         self.current_proxy_index = (self.current_proxy_index + 1) % len(PROXY_LIST)
         return proxy
     
+    def should_switch_proxy(self) -> bool:
+        """Determine if we should switch proxy based on job count"""
+        self.jobs_processed_with_current_proxy += 1
+        if self.jobs_processed_with_current_proxy >= self.proxy_switch_threshold:
+            self.jobs_processed_with_current_proxy = 0
+            self.proxy_switch_threshold = random.randint(3, 7)  # Reset threshold
+            return True
+        return False
+    
     def build_search_url(self, query: str, location: str, start: int = 0, date_filter: str = "1") -> str:
         """Build Indeed search URL with date filtering"""
         formatted_query = query.replace(' ', '+')
         formatted_location = location.replace(', ', '%2C+').replace(' ', '+')
-        # date_filter: "1" = last 24 hours, "3" = last 3 days, "7" = last week
-        search_url = f"{self.base_url}/jobs?q={formatted_query}&l={formatted_location}&start={start}&sort=date&fromage={date_filter}"
+        
+        # Build URL with proper parameters for Italian Indeed
+        params = {
+            'q': formatted_query,
+            'l': formatted_location,
+            'start': start,
+            'sort': 'date',
+            'fromage': date_filter
+        }
+        
+        # Add additional parameters for better pagination support
+        if start > 0:
+            params['from'] = 'searchOnDesktopSerp'
+        
+        search_url = f"{self.base_url}/jobs?" + "&".join([f"{k}={v}" for k, v in params.items()])
         return search_url
     
     async def scrape_jobs(self, query: str, location: str = None, max_pages: int = None, date_filter: str = "1") -> List[JobListing]:
@@ -209,10 +233,39 @@ class IndeedAdapter:
                     logger.info(f"Found {len(jobs)} jobs on page {page_num + 1}")
                     
                     # For each job, visit the detail page and get full description
+                    job_count = 0
                     for job_data in jobs:
+                        job_count += 1
+                        
                         if job_data.get('job_url_indeed'):
                             try:
-                                full_details = await self.fetch_job_details(job_data['job_url_indeed'], context)
+                                # Check if we need to create a new context with different proxy
+                                current_context = context
+                                if self.should_switch_proxy() and SCRAPING_CONFIG['proxy_enabled']:
+                                    logger.info(f"Creating new browser context with different proxy for job {job_count}")
+                                    current_context = await self.create_new_context_with_proxy(browser)
+                                
+                                # Skip job detail fetching after too many Cloudflare hits
+                                if len(all_jobs) > 15 and len([j for j in all_jobs if j.full_description]) < 5:
+                                    logger.warning("Too many Cloudflare blocks, skipping detailed fetching for remaining jobs")
+                                    job = JobListing(
+                                        title=job_data.get('title', ''),
+                                        company_name=job_data.get('company_name', ''),
+                                        location=job_data.get('location', ''),
+                                        description=job_data.get('description', ''),
+                                        job_url_indeed=job_data.get('job_url_indeed', ''),
+                                        salary=job_data.get('salary'),
+                                        date_posted=job_data.get('date_posted'),
+                                        remote=job_data.get('remote', False)
+                                    )
+                                    all_jobs.append(job)
+                                    continue
+                                
+                                full_details = await self.fetch_job_details(job_data['job_url_indeed'], current_context, proxy)
+                                
+                                # Close the new context if we created one
+                                if current_context != context:
+                                    await current_context.close()
                                 
                                 # Update job data with full details
                                 job_data.update(full_details)
@@ -256,9 +309,10 @@ class IndeedAdapter:
                                 )
                                 all_jobs.append(job)
                             
-                            # Random delay between job detail fetches - increased for stealth
-                            delay = random.uniform(10, 20) + random.uniform(0, 5)
-                            logger.info(f"Waiting {delay:.1f} seconds before next job...")
+                            # Adaptive delay - shorter for early jobs, longer as we get more jobs
+                            base_delay = 8 if len(all_jobs) < 10 else 15
+                            delay = random.uniform(base_delay, base_delay + 8) + random.uniform(0, 3)
+                            logger.info(f"Waiting {delay:.1f} seconds before next job (job #{len(all_jobs) + 1})...")
                             await asyncio.sleep(delay)
                     
                     # Delay between pages with more randomization
@@ -278,10 +332,16 @@ class IndeedAdapter:
             await browser.close()
             return all_jobs
     
-    async def fetch_job_details(self, job_url: str, context) -> Dict:
+    async def fetch_job_details(self, job_url: str, context, current_proxy: str = None) -> Dict:
         """Fetch detailed job information from job page"""
         page = await context.new_page()
         try:
+            # Check if we should switch proxy for this job
+            if self.should_switch_proxy() and SCRAPING_CONFIG['proxy_enabled']:
+                new_proxy = self.get_next_proxy()
+                logger.info(f"Switching proxy from {current_proxy} to {new_proxy.split('@')[1] if new_proxy else 'None'}")
+                # Note: We can't change proxy mid-session, but we can track for the next session
+            
             # Add random delay before navigation to appear more human
             await asyncio.sleep(random.uniform(3, 7))
             
@@ -467,6 +527,9 @@ class IndeedAdapter:
     async def detect_and_handle_cloudflare(self, page) -> bool:
         """Detect and attempt to handle Cloudflare challenges"""
         try:
+            # Wait a moment for page to fully load
+            await asyncio.sleep(2)
+            
             # Check for common Cloudflare indicators
             cloudflare_indicators = [
                 'Checking your browser',
@@ -474,53 +537,184 @@ class IndeedAdapter:
                 'Ray ID',
                 'Additional Verification Required',
                 'cf-browser-verification',
-                'cf-wrapper'
+                'cf-wrapper',
+                'cf-challenge',
+                'Verify you are human'
             ]
             
             page_content = await page.content()
-            page_text = await page.evaluate('() => document.body.innerText')
+            page_text = await page.evaluate('() => document.body ? document.body.innerText : ""')
+            page_title = await page.title()
             
             # Check if any Cloudflare indicators are present
-            is_cloudflare = any(indicator.lower() in page_content.lower() or 
-                              indicator.lower() in page_text.lower() 
-                              for indicator in cloudflare_indicators)
+            is_cloudflare = (any(indicator.lower() in page_content.lower() for indicator in cloudflare_indicators) or
+                           any(indicator.lower() in page_text.lower() for indicator in cloudflare_indicators) or
+                           'cloudflare' in page_title.lower())
             
             if is_cloudflare:
-                logger.warning("Cloudflare challenge detected, attempting to handle...")
+                logger.warning("Cloudflare challenge detected, attempting advanced handling...")
                 
-                # Wait for potential automatic resolution
-                await asyncio.sleep(random.uniform(8, 15))
+                # Strategy 1: Wait for automatic resolution (most common)
+                logger.info("Waiting for automatic Cloudflare resolution...")
+                for attempt in range(3):
+                    await asyncio.sleep(8 + (attempt * 3))
+                    current_content = await page.content()
+                    if not any(indicator.lower() in current_content.lower() for indicator in cloudflare_indicators):
+                        logger.info("Cloudflare automatically resolved!")
+                        return True
                 
-                # Check for checkbox challenge
-                checkbox = await page.query_selector('input[type="checkbox"]')
-                if checkbox:
-                    logger.info("Attempting to handle Cloudflare checkbox...")
-                    await checkbox.click()
-                    await asyncio.sleep(random.uniform(3, 6))
+                # Strategy 2: Look for and handle interactive elements
+                await self.handle_cloudflare_interactions(page)
                 
-                # Check for "Verify you are human" button
-                verify_buttons = await page.query_selector_all('button, input[type="submit"], [role="button"]')
-                for button in verify_buttons:
-                    button_text = await button.inner_text() if hasattr(button, 'inner_text') else ''
-                    if any(text in button_text.lower() for text in ['verify', 'continue', 'proceed']):
-                        logger.info("Clicking verification button...")
-                        await button.click()
-                        await asyncio.sleep(random.uniform(5, 10))
-                        break
+                # Strategy 3: Final wait and verification
+                await asyncio.sleep(random.uniform(10, 15))
                 
-                # Wait for page to potentially reload
-                try:
-                    await page.wait_for_load_state('networkidle', timeout=30000)
-                except:
-                    pass
+                # Check if we've bypassed Cloudflare
+                final_content = await page.content()
+                final_text = await page.evaluate('() => document.body ? document.body.innerText : ""')
+                still_blocked = any(indicator.lower() in final_content.lower() or 
+                                  indicator.lower() in final_text.lower() 
+                                  for indicator in cloudflare_indicators)
                 
-                return True
+                if still_blocked:
+                    logger.warning("Cloudflare challenge persists, skipping this page")
+                    return False
+                else:
+                    logger.info("Successfully bypassed Cloudflare challenge!")
+                    return True
             
             return False
             
         except Exception as e:
             logger.warning(f"Error handling Cloudflare challenge: {e}")
             return False
+    
+    async def handle_cloudflare_interactions(self, page):
+        """Handle interactive Cloudflare elements"""
+        try:
+            # Look for checkbox
+            checkbox_selectors = [
+                'input[type="checkbox"]',
+                '.cf-turnstile input',
+                '[data-callback] input',
+                '.challenge-form input[type="checkbox"]'
+            ]
+            
+            for selector in checkbox_selectors:
+                checkbox = await page.query_selector(selector)
+                if checkbox:
+                    logger.info(f"Found checkbox with selector: {selector}")
+                    await asyncio.sleep(random.uniform(1, 3))
+                    await checkbox.click()
+                    logger.info("Clicked Cloudflare checkbox")
+                    await asyncio.sleep(random.uniform(3, 6))
+                    break
+            
+            # Look for verify buttons
+            button_selectors = [
+                'button:has-text("Verify")',
+                'button:has-text("Continue")',
+                'button:has-text("Proceed")',
+                'input[type="submit"]',
+                '[role="button"]:has-text("Verify")',
+                '.cf-button'
+            ]
+            
+            for selector in button_selectors:
+                try:
+                    button = await page.query_selector(selector)
+                    if button:
+                        button_text = await button.inner_text()
+                        if any(text in button_text.lower() for text in ['verify', 'continue', 'proceed']):
+                            logger.info(f"Clicking verification button: {button_text}")
+                            await asyncio.sleep(random.uniform(1, 2))
+                            await button.click()
+                            await asyncio.sleep(random.uniform(5, 8))
+                            break
+                except:
+                    continue
+            
+            # Handle iframe challenges (like Turnstile)
+            frames = await page.frames
+            for frame in frames:
+                try:
+                    if 'turnstile' in frame.url or 'challenge' in frame.url:
+                        logger.info("Found Cloudflare iframe challenge")
+                        iframe_checkbox = await frame.query_selector('input[type="checkbox"]')
+                        if iframe_checkbox:
+                            await asyncio.sleep(random.uniform(2, 4))
+                            await iframe_checkbox.click()
+                            logger.info("Clicked iframe checkbox")
+                            await asyncio.sleep(random.uniform(5, 10))
+                except:
+                    continue
+                    
+        except Exception as e:
+            logger.warning(f"Error in Cloudflare interaction handling: {e}")
+    
+    async def create_new_context_with_proxy(self, browser):
+        """Create a new browser context with a different proxy"""
+        new_proxy = self.get_next_proxy()
+        
+        # Parse new proxy
+        proxy_config = None
+        if new_proxy:
+            try:
+                proxy_parts = new_proxy.replace('http://', '').split('@')
+                if len(proxy_parts) == 2:
+                    credentials, server = proxy_parts
+                    username, password = credentials.split(':')
+                    ip, port = server.split(':')
+                    
+                    proxy_config = {
+                        'server': f'http://{ip}:{port}',
+                        'username': username,
+                        'password': password
+                    }
+                    logger.info(f"Using new proxy: {ip}:{port}")
+            except Exception as e:
+                logger.warning(f"Failed to parse new proxy {new_proxy}: {e}")
+                proxy_config = None
+        
+        # Create new context with new proxy
+        new_context = await browser.new_context(
+            viewport={'width': 1366, 'height': 768},
+            locale='it-IT',
+            timezone_id='Europe/Rome',
+            user_agent=self.ua.random,
+            proxy=proxy_config
+        )
+        
+        # Add stealth scripts to new context
+        await new_context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+            Object.defineProperty(navigator, 'languages', {get: () => ['it-IT', 'it', 'en-US', 'en']});
+            Object.defineProperty(navigator, 'plugins', {
+                get: () => Array.from({length: 5}, (_, i) => ({name: `Plugin ${i}`}))
+            });
+            Object.defineProperty(navigator, 'platform', {get: () => 'Win32'});
+            Object.defineProperty(navigator, 'hardwareConcurrency', {get: () => 4});
+            window.chrome = {runtime: {}};
+            delete window.navigator.webdriver;
+            
+            // Override canvas fingerprinting
+            const originalToDataURL = HTMLCanvasElement.prototype.toDataURL;
+            HTMLCanvasElement.prototype.toDataURL = function(type) {
+                const shift = Math.floor(Math.random() * 10);
+                this.getContext('2d').fillStyle = `rgb(${100 + shift}, ${100 + shift}, ${100 + shift})`;
+                return originalToDataURL.apply(this, arguments);
+            };
+            
+            // Override WebGL fingerprinting
+            const getParameter = WebGLRenderingContext.prototype.getParameter;
+            WebGLRenderingContext.prototype.getParameter = function(parameter) {
+                if (parameter === 37445) return 'Intel Inc.';
+                if (parameter === 37446) return 'Intel(R) HD Graphics';
+                return getParameter.apply(this, arguments);
+            };
+        """)
+        
+        return new_context
     
     async def simulate_job_page_behavior(self, page):
         """Simulate realistic human behavior on job detail pages"""
