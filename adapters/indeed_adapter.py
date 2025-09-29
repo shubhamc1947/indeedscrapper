@@ -340,12 +340,11 @@ class IndeedAdapter:
             if self.should_switch_proxy() and SCRAPING_CONFIG['proxy_enabled']:
                 new_proxy = self.get_next_proxy()
                 logger.info(f"Switching proxy from {current_proxy} to {new_proxy.split('@')[1] if new_proxy else 'None'}")
-                # Note: We can't change proxy mid-session, but we can track for the next session
             
-            # Add random delay before navigation to appear more human
+            # Add random delay before navigation
             await asyncio.sleep(random.uniform(3, 7))
             
-            # Set additional headers to appear more human
+            # Set additional headers
             await page.set_extra_http_headers({
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                 'Accept-Language': 'it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7',
@@ -362,10 +361,9 @@ class IndeedAdapter:
             # Check for Cloudflare challenge
             if await self.detect_and_handle_cloudflare(page):
                 logger.warning(f"Cloudflare detected on {job_url}, attempting to handle...")
-                # Wait additional time for potential Cloudflare resolution
                 await asyncio.sleep(random.uniform(15, 25))
             
-            # Simulate more human behavior on job detail pages
+            # Simulate human behavior on job detail pages
             await self.simulate_job_page_behavior(page)
             
             html = await page.content()
@@ -373,19 +371,59 @@ class IndeedAdapter:
             
             details = {}
             
-            # Full job description
+            # ===== NEW: Extract Company Indeed URL and Rating =====
+            # Company Indeed URL from the job detail page
+            company_link = soup.select_one('div[data-testid="inlineHeader-companyName"] a[href]')
+            if company_link and company_link.get('href'):
+                company_url = company_link.get('href')
+                # Make absolute URL if relative
+                if company_url and not company_url.startswith('http'):
+                    details['company_url_indeed'] = urljoin(self.base_url, company_url)
+                else:
+                    details['company_url_indeed'] = company_url
+                logger.info(f"Found company Indeed URL: {details['company_url_indeed']}")
+            
+            # Company Rating
+            rating_elem = soup.select_one('span.css-10jzft1')
+            if rating_elem:
+                rating_text = rating_elem.get_text(strip=True)
+                details['company_rating'] = rating_text
+                logger.info(f"Found company rating: {rating_text}")
+            
+            # ===== NEW: Extract Location and Work Type =====
+            # Location
+            location_elem = soup.select_one('div[data-testid="inlineHeader-companyLocation"]')
+            if location_elem:
+                location_text = location_elem.get_text(strip=True)
+                details['location'] = location_text
+                logger.info(f"Found location: {location_text}")
+            
+            # Work Type (Remote/Hybrid/Office)
+            work_type_elem = soup.select_one('div.css-1fajx0z')
+            if work_type_elem:
+                work_type_text = work_type_elem.get_text(strip=True).lower()
+                
+                # Map Italian terms to standardized values
+                if 'remoto' in work_type_text or 'lavoro da casa' in work_type_text:
+                    details['remote'] = True
+                    details['work_type'] = 'remote'
+                elif 'ibrido' in work_type_text or 'hybrid' in work_type_text:
+                    details['remote'] = False
+                    details['work_type'] = 'hybrid'
+                else:
+                    details['remote'] = False
+                    details['work_type'] = 'office'
+                
+                logger.info(f"Found work type: {details.get('work_type')}")
+            
+            # ===== EXISTING: Full job description =====
             desc_elem = soup.select_one(
                 'div#jobDescriptionText, div.jobsearch-jobDescriptionText, div[data-testid="jobDescriptionText"]'
             )
             if desc_elem:
                 details['full_description'] = desc_elem.get_text(separator=' ', strip=True)
             
-            # Company profile URL on Indeed
-            company_link = soup.select_one('a[data-testid="company-name"], .companyName a')
-            if company_link and company_link.get('href'):
-                details['company_url_indeed'] = urljoin(self.base_url, company_link['href'])
-            
-            # Additional job details
+            # ===== EXISTING: Additional job details =====
             for label in soup.select('div.jobsearch-JobDescriptionSection-sectionItem span.jobsearch-JobDescriptionSection-label'):
                 text = label.get_text(strip=True).lower()
                 value = label.find_next_sibling('span')
@@ -394,19 +432,19 @@ class IndeedAdapter:
                 
                 value_text = value.get_text(strip=True)
                 
-                if 'job type' in text or 'employment type' in text:
+                if 'job type' in text or 'employment type' in text or 'tipo di contratto' in text:
                     details['job_type'] = value_text
-                elif 'salary' in text or 'pay' in text:
+                elif 'salary' in text or 'pay' in text or 'stipendio' in text:
                     details['salary'] = value_text
             
-            # Try to extract company website from job description
+            # ===== EXISTING: Extract company website from job description =====
             if details.get('full_description'):
                 url_pattern = r'https?://(?:[-\w.])+(?:[:\d]+)?(?:/(?:[\w/_.])*)?'
                 urls = re.findall(url_pattern, details['full_description'])
                 
                 # Filter for likely company websites (not Indeed URLs)
                 company_urls = [url for url in urls if 'indeed.com' not in url.lower() 
-                              and not url.endswith(('.pdf', '.jpg', '.png', '.gif'))]
+                            and not url.endswith(('.pdf', '.jpg', '.png', '.gif'))]
                 
                 if company_urls:
                     details['company_website'] = company_urls[0]
