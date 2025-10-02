@@ -57,25 +57,57 @@ class CompanyMatcher:
             self.companies_cache = {'by_url': {}, 'by_name': {}, 'by_iva': {}, 'all': []}
     
     def normalize_url(self, url: str) -> str:
-        """Normalize URL for comparison"""
+        """Normalize URL for comparison with validation"""
         if not url:
             return ""
         
         try:
-            # Remove protocol, www, trailing slash, query params
+            # Basic validation - check for common URL patterns
+            if not isinstance(url, str):
+                logger.warning(f"URL is not a string: {type(url)}")
+                return ""
+            
+            url = url.strip()
+            
+            # Check minimum length
+            if len(url) < 4:
+                return ""
+            
+            # Add http:// if no protocol specified
+            if not url.startswith(('http://', 'https://', '//')):
+                url = 'https://' + url
+            
+            # Parse URL
             parsed = urlparse(url.lower())
+            
+            # Validate domain exists
             domain = parsed.netloc or parsed.path
+            if not domain or len(domain) < 3:
+                logger.warning(f"Invalid domain in URL: {url}")
+                return ""
+            
+            # Check for valid TLD (basic check)
+            if '.' not in domain:
+                logger.warning(f"URL missing TLD: {url}")
+                return ""
             
             # Remove www prefix
             if domain.startswith('www.'):
                 domain = domain[4:]
             
-            # Remove trailing slash
+            # Remove trailing slash from path
             path = parsed.path.rstrip('/')
             
+            # Validate characters (basic check for malformed URLs)
+            if any(char in domain for char in ['<', '>', '"', "'", '|', '^', '`', '{', '}']):
+                logger.warning(f"URL contains invalid characters: {url}")
+                return ""
+            
             return f"{domain}{path}"
-        except:
-            return url.lower().strip()
+            
+        except Exception as e:
+            logger.warning(f"Failed to normalize URL '{url}': {e}")
+            return ""
     
     def normalize_company_name(self, name: str) -> str:
         """Normalize company name for comparison"""
@@ -187,21 +219,44 @@ class CompanyMatcher:
         return None, 0.0
     
     async def match_by_name(self, job_data: Dict[str, Any]) -> Tuple[Optional[Dict], float]:
-        """Match company by name using fuzzy matching"""
+        """Match company by name using optimized fuzzy matching"""
         job_company_name = job_data.get('company_name', '').strip()
         if not job_company_name:
             return None, 0.0
         
         normalized_job_name = self.normalize_company_name(job_company_name)
-        best_match = None
-        best_score = 0
         
         # Check direct normalized match first
         if normalized_job_name in self.companies_cache['by_name']:
             return self.companies_cache['by_name'][normalized_job_name], 100.0
         
-        # Fuzzy matching against all companies
-        for company in self.companies_cache['all']:
+        # Pre-filter: only check companies that start with the same letter
+        first_char = normalized_job_name[0] if normalized_job_name else ''
+        filtered_companies = [
+            c for c in self.companies_cache['all'] 
+            if (c.get('name') and self.normalize_company_name(c['name']).startswith(first_char)) or
+            (c.get('legal_name') and self.normalize_company_name(c['legal_name']).startswith(first_char))
+        ]
+        
+        # If no matches with first letter, expand search but limit to companies with similar length
+        if not filtered_companies:
+            name_len = len(normalized_job_name)
+            filtered_companies = [
+                c for c in self.companies_cache['all']
+                if (c.get('name') and abs(len(self.normalize_company_name(c['name'])) - name_len) <= 5) or
+                (c.get('legal_name') and abs(len(self.normalize_company_name(c['legal_name'])) - name_len) <= 5)
+            ]
+        
+        # Limit search to top N candidates if still too many
+        MAX_CANDIDATES = 100
+        if len(filtered_companies) > MAX_CANDIDATES:
+            filtered_companies = filtered_companies[:MAX_CANDIDATES]
+        
+        best_match = None
+        best_score = 0
+        
+        # Fuzzy matching against filtered companies
+        for company in filtered_companies:
             scores = []
             
             # Match against company name
@@ -211,7 +266,7 @@ class CompanyMatcher:
                 scores.append(fuzz.partial_ratio(normalized_job_name, normalized_company_name))
                 scores.append(fuzz.token_sort_ratio(normalized_job_name, normalized_company_name))
             
-            # Match against ragione sociale (legal_name)
+            # Match against legal name
             if company.get('legal_name'):
                 normalized_legal_name = self.normalize_company_name(company['legal_name'])
                 scores.append(fuzz.ratio(normalized_job_name, normalized_legal_name))
@@ -223,6 +278,7 @@ class CompanyMatcher:
                     best_score = max_score
                     best_match = company
         
+        logger.debug(f"Fuzzy match for '{job_company_name}': best score {best_score} from {len(filtered_companies)} candidates")
         return best_match, best_score
     
     async def match_by_google_api(self, job_data: Dict[str, Any]) -> Tuple[Optional[Dict], float]:

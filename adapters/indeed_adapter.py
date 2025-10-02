@@ -237,6 +237,7 @@ class IndeedAdapter:
                     for job_data in jobs:
                         job_count += 1
                         
+                        cloudflare_failure = False
                         if job_data.get('job_url_indeed'):
                             try:
                                 # Check if we need to create a new context with different proxy
@@ -245,81 +246,55 @@ class IndeedAdapter:
                                     logger.info(f"Creating new browser context with different proxy for job {job_count}")
                                     current_context = await self.create_new_context_with_proxy(browser)
                                 
-                                # Skip job detail fetching after too many Cloudflare hits
-                                if len(all_jobs) > 15 and len([j for j in all_jobs if j.full_description]) < 5:
-                                    logger.warning("Too many Cloudflare blocks, skipping detailed fetching for remaining jobs")
-                                    job = JobListing(
-                                        title=job_data.get('title', ''),
-                                        company_name=job_data.get('company_name', ''),
-                                        location=job_data.get('location', ''),
-                                        description=job_data.get('description', ''),
-                                        job_url_indeed=job_data.get('job_url_indeed', ''),
-                                        salary=job_data.get('salary'),
-                                        date_posted=job_data.get('date_posted'),
-                                        remote=job_data.get('remote', False)
-                                    )
-                                    all_jobs.append(job)
-                                    continue
-                                
                                 full_details = await self.fetch_job_details(job_data['job_url_indeed'], current_context, proxy)
                                 
                                 # Close the new context if we created one
                                 if current_context != context:
                                     await current_context.close()
                                 
-                                # Update job data with full details
-                                job_data.update(full_details)
-                                
-                                # Update job data with full details
-                                job_data.update(full_details)
-                                
-                                # Create JobListing object
-                                job = JobListing(
-                                    title=job_data.get('title', ''),
-                                    company_name=job_data.get('company_name', ''),
-                                    location=job_data.get('location', ''),
-                                    description=job_data.get('description', ''),
-                                    job_url_indeed=job_data.get('job_url_indeed', ''),
-                                    salary=job_data.get('salary'),
-                                    date_posted=job_data.get('date_posted'),
-                                    job_type=job_data.get('job_type'),
-                                    remote=job_data.get('remote', False),
-                                    skills=job_data.get('skills'),
-                                    experience_level=job_data.get('experience_level'),
-                                    employment_type=job_data.get('employment_type'),
-                                    company_rating=job_data.get('company_rating'),
-                                    full_description=job_data.get('full_description'),
-                                    company_url_indeed=job_data.get('company_url_indeed')
-                                )
-                                
-                                all_jobs.append(job)
+                                # Check if we got meaningful details (not blocked by Cloudflare)
+                                if full_details and full_details.get('full_description'):
+                                    job_data.update(full_details)
+                                else:
+                                    cloudflare_failure = True
+                                    logger.warning(f"No full description retrieved for {job_data['job_url_indeed'][:50]}... (possible Cloudflare block)")
                                 
                             except Exception as e:
                                 logger.warning(f"Failed to fetch details for job {job_data.get('job_url_indeed')}: {e}")
-                                # Still add the job with basic info
-                                job = JobListing(
-                                    title=job_data.get('title', ''),
-                                    company_name=job_data.get('company_name', ''),
-                                    location=job_data.get('location', ''),
-                                    description=job_data.get('description', ''),
-                                    job_url_indeed=job_data.get('job_url_indeed', ''),
-                                    salary=job_data.get('salary'),
-                                    date_posted=job_data.get('date_posted'),
-                                    remote=job_data.get('remote', False)
-                                )
-                                all_jobs.append(job)
+                                cloudflare_failure = True
+                            
+                            # Create JobListing object regardless of whether we got full details
+                            job = JobListing(
+                                title=job_data.get('title', ''),
+                                company_name=job_data.get('company_name', ''),
+                                location=job_data.get('location', ''),
+                                description=job_data.get('description', ''),
+                                job_url_indeed=job_data.get('job_url_indeed', ''),
+                                salary=job_data.get('salary'),
+                                date_posted=job_data.get('date_posted'),
+                                job_type=job_data.get('job_type'),
+                                remote=job_data.get('remote', False),
+                                skills=job_data.get('skills'),
+                                experience_level=job_data.get('experience_level'),
+                                employment_type=job_data.get('employment_type'),
+                                company_rating=job_data.get('company_rating'),
+                                full_description=job_data.get('full_description'),
+                                company_url_indeed=job_data.get('company_url_indeed')
+                            )
+                            
+                            all_jobs.append(job)
                             
                             # Adaptive delay - shorter for early jobs, longer as we get more jobs
                             base_delay = 8 if len(all_jobs) < 10 else 15
                             delay = random.uniform(base_delay, base_delay + 8) + random.uniform(0, 3)
-                            logger.info(f"Waiting {delay:.1f} seconds before next job (job #{len(all_jobs) + 1})...")
+                            logger.info(f"Waiting {delay:.1f} seconds before next job (job #{len(all_jobs)})...")
                             await asyncio.sleep(delay)
                     
                     # Delay between pages with more randomization
                     delay = random.uniform(
                         SCRAPING_CONFIG['min_delay'], 
                         SCRAPING_CONFIG['max_delay']
-                    ) + (page_num * random.uniform(3, 8))  # Increased delay
+                    ) + (page_num * random.uniform(3, 8))
                     
                     logger.info(f"Waiting {delay:.1f} seconds before next page...")
                     await asyncio.sleep(delay)
@@ -331,16 +306,12 @@ class IndeedAdapter:
             
             await browser.close()
             return all_jobs
-    
+
+
     async def fetch_job_details(self, job_url: str, context, current_proxy: str = None) -> Dict:
         """Fetch detailed job information from job page"""
         page = await context.new_page()
         try:
-            # Check if we should switch proxy for this job
-            if self.should_switch_proxy() and SCRAPING_CONFIG['proxy_enabled']:
-                new_proxy = self.get_next_proxy()
-                logger.info(f"Switching proxy from {current_proxy} to {new_proxy.split('@')[1] if new_proxy else 'None'}")
-            
             # Add random delay before navigation
             await asyncio.sleep(random.uniform(3, 7))
             
@@ -371,12 +342,10 @@ class IndeedAdapter:
             
             details = {}
             
-            # ===== NEW: Extract Company Indeed URL and Rating =====
-            # Company Indeed URL from the job detail page
+            # Extract Company Indeed URL and Rating
             company_link = soup.select_one('div[data-testid="inlineHeader-companyName"] a[href]')
             if company_link and company_link.get('href'):
                 company_url = company_link.get('href')
-                # Make absolute URL if relative
                 if company_url and not company_url.startswith('http'):
                     details['company_url_indeed'] = urljoin(self.base_url, company_url)
                 else:
@@ -390,7 +359,6 @@ class IndeedAdapter:
                 details['company_rating'] = rating_text
                 logger.info(f"Found company rating: {rating_text}")
             
-            # ===== NEW: Extract Location and Work Type =====
             # Location
             location_elem = soup.select_one('div[data-testid="inlineHeader-companyLocation"]')
             if location_elem:
@@ -403,7 +371,6 @@ class IndeedAdapter:
             if work_type_elem:
                 work_type_text = work_type_elem.get_text(strip=True).lower()
                 
-                # Map Italian terms to standardized values
                 if 'remoto' in work_type_text or 'lavoro da casa' in work_type_text:
                     details['remote'] = True
                     details['work_type'] = 'remote'
@@ -416,14 +383,14 @@ class IndeedAdapter:
                 
                 logger.info(f"Found work type: {details.get('work_type')}")
             
-            # ===== EXISTING: Full job description =====
+            # Full job description
             desc_elem = soup.select_one(
                 'div#jobDescriptionText, div.jobsearch-jobDescriptionText, div[data-testid="jobDescriptionText"]'
             )
             if desc_elem:
                 details['full_description'] = desc_elem.get_text(separator=' ', strip=True)
             
-            # ===== EXISTING: Additional job details =====
+            # Additional job details
             for label in soup.select('div.jobsearch-JobDescriptionSection-sectionItem span.jobsearch-JobDescriptionSection-label'):
                 text = label.get_text(strip=True).lower()
                 value = label.find_next_sibling('span')
@@ -437,12 +404,11 @@ class IndeedAdapter:
                 elif 'salary' in text or 'pay' in text or 'stipendio' in text:
                     details['salary'] = value_text
             
-            # ===== EXISTING: Extract company website from job description =====
+            # Extract company website from job description
             if details.get('full_description'):
                 url_pattern = r'https?://(?:[-\w.])+(?:[:\d]+)?(?:/(?:[\w/_.])*)?'
                 urls = re.findall(url_pattern, details['full_description'])
                 
-                # Filter for likely company websites (not Indeed URLs)
                 company_urls = [url for url in urls if 'indeed.com' not in url.lower() 
                             and not url.endswith(('.pdf', '.jpg', '.png', '.gif'))]
                 

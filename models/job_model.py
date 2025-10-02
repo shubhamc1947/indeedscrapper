@@ -41,71 +41,66 @@ class JobModel:
     
     async def store_raw_job(self, job: JobListing) -> Optional[int]:
         """Store a single raw job in the database"""
-        try:
-            # Check if job already exists
-            existing_job = await db_manager.execute_query_one(
-                "SELECT id FROM it_indeed_scrapped_data WHERE job_url_indeed = $1",
-                job.job_url_indeed
-            )
-            
-            if existing_job:
-                logger.info(f"Job already exists: {job.job_url_indeed}")
-                return existing_job['id']
-            
-            # Insert new job
-            query = """
-            INSERT INTO it_indeed_scrapped_data (
-                job_url_indeed, title, company_name, location, description, salary,
-                date_posted, job_type, remote, skills, experience_level, employment_type,
-                company_rating, full_description, company_url_indeed, extraction_date,
-                status, created_at, updated_at
-            ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19
-            ) RETURNING id
-            """
-            
-            current_time = datetime.now()
-            skills_json = json.dumps(job.skills) if job.skills else None
-            date_posted = None
-            
-            if job.date_posted:
-                try:
-                    if isinstance(job.date_posted, str):
-                        date_posted = datetime.strptime(job.date_posted, '%Y-%m-%d').date()
-                    elif isinstance(job.date_posted, date):
-                        date_posted = job.date_posted
-                except ValueError:
-                    logger.warning(f"Invalid date format: {job.date_posted}")
-            
-            result = await db_manager.execute_insert(
-                query,
-                job.job_url_indeed,
-                job.title,
-                job.company_name,
-                job.location,
-                job.description,
-                job.salary,
-                date_posted,
-                job.job_type,
-                job.remote,
-                skills_json,
-                job.experience_level,
-                job.employment_type,
-                job.company_rating,
-                job.full_description,
-                job.company_url_indeed,
-                date.today(),
-                'extracted',
-                current_time,
-                current_time
-            )
-            
-            logger.info(f"Raw job stored with ID: {result['id']}")
-            return result['id']
-            
-        except Exception as e:
-            logger.error(f"Failed to store raw job {job.job_url_indeed}: {e}")
-            return None
+        # Check if job already exists
+        existing_job = await db_manager.execute_query_one(
+            "SELECT id FROM it_indeed_scrapped_data WHERE job_url_indeed = $1",
+            job.job_url_indeed
+        )
+        
+        if existing_job:
+            logger.info(f"Job already exists: {job.job_url_indeed}")
+            return existing_job['id']
+        
+        # Insert new job
+        query = """
+        INSERT INTO it_indeed_scrapped_data (
+            job_url_indeed, title, company_name, location, description, salary,
+            date_posted, job_type, remote, skills, experience_level, employment_type,
+            company_rating, full_description, company_url_indeed, extraction_date,
+            status, created_at, updated_at
+        ) VALUES (
+            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19
+        ) RETURNING id
+        """
+        
+        current_time = datetime.now()
+        skills_json = json.dumps(job.skills) if job.skills else None
+        date_posted = None
+        
+        if job.date_posted:
+            try:
+                if isinstance(job.date_posted, str):
+                    date_posted = datetime.strptime(job.date_posted, '%Y-%m-%d').date()
+                elif isinstance(job.date_posted, date):
+                    date_posted = job.date_posted
+            except ValueError:
+                logger.warning(f"Invalid date format: {job.date_posted}")
+        
+        result = await db_manager.execute_insert(
+            query,
+            job.job_url_indeed,
+            job.title,
+            job.company_name,
+            job.location,
+            job.description,
+            job.salary,
+            date_posted,
+            job.job_type,
+            job.remote,
+            skills_json,
+            job.experience_level,
+            job.employment_type,
+            job.company_rating,
+            job.full_description,
+            job.company_url_indeed,
+            date.today(),
+            'extracted',
+            current_time,
+            current_time
+        )
+        
+        logger.info(f"Raw job stored with ID: {result['id']}")
+        return result['id']
     
     async def store_raw_jobs_batch(self, jobs: List[JobListing]) -> Tuple[int, int]:
         """Store multiple raw jobs in batch"""
@@ -139,7 +134,10 @@ class JobModel:
         """
         
         if limit:
-            query += f" LIMIT {limit}"
+            if not isinstance(limit, int) or limit < 0:
+                raise ValueError(f"Invalid limit value: {limit}")
+            query += f" LIMIT {limit}"  
+
         
         results = await db_manager.execute_query(query)
         return [dict(row) for row in results]
