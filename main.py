@@ -126,16 +126,20 @@ class IndeedScraperPipeline:
                         
                         if jobs:
                             # Store jobs immediately
-                            stored_count, duplicate_count = await job_model.store_raw_jobs_batch(jobs)
-                            
-                            self.stats['total_scraped'] += len(jobs)
-                            self.stats['total_stored'] += stored_count
-                            self.stats['duplicates_found'] += duplicate_count
-                            total_jobs_scraped += len(jobs)
-                            
-                            logger.info(
-                                f"Stored {stored_count} new jobs, {duplicate_count} duplicates from {location}"
-                            )
+                            try:
+                                stored_count, duplicate_count = await job_model.store_raw_jobs_batch(jobs)
+                                
+                                self.stats['total_scraped'] += len(jobs)
+                                self.stats['total_stored'] += stored_count
+                                self.stats['duplicates_found'] += duplicate_count
+                                total_jobs_scraped += len(jobs)
+                                
+                                logger.info(
+                                    f"Stored {stored_count} new jobs, {duplicate_count} duplicates from {location}"
+                                )
+                            except Exception as e:
+                                logger.error(f"Failed to store jobs batch from {location}: {e}")
+                                self.stats['errors'] += 1
                         
                         self.stats['locations_scraped'] += 1
                         break  # Success, move to next location

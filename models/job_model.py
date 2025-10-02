@@ -2,7 +2,7 @@ import json
 import logging
 from datetime import datetime, date
 from typing import List, Dict, Any, Optional, Tuple
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 
 from utils.db_utils import db_manager
 
@@ -25,6 +25,39 @@ class JobListing:
     company_rating: Optional[str] = None
     full_description: Optional[str] = None
     company_url_indeed: Optional[str] = None
+    
+    def __post_init__(self):
+        """Validate and clean required fields"""
+        # Provide defaults for truly required fields if empty
+        if not self.title or not self.title.strip():
+            self.title = "Untitled Position"
+            logger.warning(f"Job missing title, using default for URL: {self.job_url_indeed}")
+        
+        if not self.company_name or not self.company_name.strip():
+            self.company_name = "Unknown Company"
+            logger.warning(f"Job missing company name for URL: {self.job_url_indeed}")
+        
+        if not self.job_url_indeed or not self.job_url_indeed.strip():
+            raise ValueError("Job URL cannot be empty - this is critical")
+        
+        # Validate URL format (basic check)
+        if not self.job_url_indeed.startswith(('http://', 'https://')):
+            raise ValueError(f"Invalid job URL format: {self.job_url_indeed}")
+        
+        # Trim whitespace from string fields
+        self.title = self.title.strip()
+        self.company_name = self.company_name.strip()
+        self.location = self.location.strip() if self.location else ""
+        self.description = self.description.strip() if self.description else ""
+        
+        # Validate skills is a list if provided
+        if self.skills is not None and not isinstance(self.skills, list):
+            logger.warning(f"Skills is not a list, converting for job: {self.job_url_indeed}")
+            self.skills = []
+        
+        # Validate remote is boolean
+        if not isinstance(self.remote, bool):
+            self.remote = bool(self.remote)
 
 @dataclass
 class ProcessedJob:
@@ -134,10 +167,10 @@ class JobModel:
         """
         
         if limit:
+            # Validate limit is a positive integer
             if not isinstance(limit, int) or limit < 0:
-                raise ValueError(f"Invalid limit value: {limit}")
-            query += f" LIMIT {limit}"  
-
+                raise ValueError(f"Invalid limit value: {limit}. Must be a positive integer.")
+            query += f" LIMIT {limit}"
         
         results = await db_manager.execute_query(query)
         return [dict(row) for row in results]

@@ -27,7 +27,8 @@ class IndeedAdapter:
         self.retry_delay = INDEED_CONFIG['retry_delay']
         self.jobs_processed_with_current_proxy = 0
         self.proxy_switch_threshold = random.randint(3, 7)  # Switch proxy every 3-7 jobs
-    
+        self.scraped_urls = set() # Track scraped URLs to avoid duplicates
+
     def get_rotating_headers(self):
         """Get rotating headers for requests"""
         headers_list = [
@@ -236,6 +237,17 @@ class IndeedAdapter:
                     job_count = 0
                     for job_data in jobs:
                         job_count += 1
+
+                        # Skip if we've already scraped this job URL in this session
+                        job_url = job_data.get('job_url_indeed')
+                        if job_url and job_url in self.scraped_urls:
+                            logger.info(f"Skipping duplicate job URL: {job_url[:50]}...")
+                            continue
+                        
+                        # Mark URL as scraped
+                        if job_url:
+                            self.scraped_urls.add(job_url)
+                        
                         
                         cloudflare_failure = False
                         if job_data.get('job_url_indeed'):
@@ -264,25 +276,30 @@ class IndeedAdapter:
                                 cloudflare_failure = True
                             
                             # Create JobListing object regardless of whether we got full details
-                            job = JobListing(
-                                title=job_data.get('title', ''),
-                                company_name=job_data.get('company_name', ''),
-                                location=job_data.get('location', ''),
-                                description=job_data.get('description', ''),
-                                job_url_indeed=job_data.get('job_url_indeed', ''),
-                                salary=job_data.get('salary'),
-                                date_posted=job_data.get('date_posted'),
-                                job_type=job_data.get('job_type'),
-                                remote=job_data.get('remote', False),
-                                skills=job_data.get('skills'),
-                                experience_level=job_data.get('experience_level'),
-                                employment_type=job_data.get('employment_type'),
-                                company_rating=job_data.get('company_rating'),
-                                full_description=job_data.get('full_description'),
-                                company_url_indeed=job_data.get('company_url_indeed')
-                            )
-                            
-                            all_jobs.append(job)
+                            try:
+                                job = JobListing(
+                                    title=job_data.get('title', ''),
+                                    company_name=job_data.get('company_name', ''),
+                                    location=job_data.get('location', ''),
+                                    description=job_data.get('description', ''),
+                                    job_url_indeed=job_data.get('job_url_indeed', ''),
+                                    salary=job_data.get('salary'),
+                                    date_posted=job_data.get('date_posted'),
+                                    job_type=job_data.get('job_type'),
+                                    remote=job_data.get('remote', False),
+                                    skills=job_data.get('skills'),
+                                    experience_level=job_data.get('experience_level'),
+                                    employment_type=job_data.get('employment_type'),
+                                    company_rating=job_data.get('company_rating'),
+                                    full_description=job_data.get('full_description'),
+                                    company_url_indeed=job_data.get('company_url_indeed')
+                                )
+                                
+                                all_jobs.append(job)
+                            except ValueError as e:
+                                logger.error(f"Job validation failed for {job_data.get('job_url_indeed', 'unknown')}: {e}")
+                                # Skip this job and continue with next one
+                                continue
                             
                             # Adaptive delay - shorter for early jobs, longer as we get more jobs
                             base_delay = 8 if len(all_jobs) < 10 else 15
@@ -639,7 +656,7 @@ class IndeedAdapter:
                     continue
             
             # Handle iframe challenges (like Turnstile)
-            frames = await page.frames
+            frames = page.frames
             for frame in frames:
                 try:
                     if 'turnstile' in frame.url or 'challenge' in frame.url:

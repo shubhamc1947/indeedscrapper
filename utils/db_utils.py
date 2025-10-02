@@ -14,7 +14,12 @@ class DatabaseManager:
         """Initialize database connection pool and run migrations"""
         try:
             # First, try to connect to the database
-            self.pool = await asyncpg.create_pool(**DATABASE_CONFIG)
+            self.pool = await asyncpg.create_pool(
+                **DATABASE_CONFIG,
+                min_size=2,
+                max_size=10,
+                command_timeout=60
+            )
             logger.info("Database connection pool created successfully")
             
             # Run migrations
@@ -23,7 +28,12 @@ class DatabaseManager:
         except asyncpg.InvalidCatalogNameError:
             # Database doesn't exist, create it
             await self.create_database()
-            self.pool = await asyncpg.create_pool(**DATABASE_CONFIG)
+            self.pool = await asyncpg.create_pool(
+                **DATABASE_CONFIG,
+                min_size=2,
+                max_size=10,
+                command_timeout=60
+            )
             await self.run_migrations()
             
         except Exception as e:
