@@ -171,7 +171,7 @@ class IndeedAdapter:
             ]
             
             browser = await p.chromium.launch(
-                headless=True,
+                headless=False,
                 args=browser_args,
                 proxy=proxy_config
             )
@@ -655,9 +655,9 @@ class IndeedAdapter:
                 except:
                     continue
             
-            # Handle iframe challenges (like Turnstile)
-            frames = page.frames
-            for frame in frames:
+
+            frames = page.frames  
+            for frame in frames:  
                 try:
                     if 'turnstile' in frame.url or 'challenge' in frame.url:
                         logger.info("Found Cloudflare iframe challenge")
