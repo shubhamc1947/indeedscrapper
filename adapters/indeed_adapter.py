@@ -171,7 +171,7 @@ class IndeedAdapter:
             ]
             
             browser = await p.chromium.launch(
-                headless=False,
+                headless=True,
                 args=browser_args,
                 proxy=proxy_config
             )
