@@ -2,7 +2,7 @@ import json
 import logging
 from datetime import datetime, date
 from typing import List, Dict, Any, Optional, Tuple
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 
 from utils.db_utils import db_manager
 
@@ -14,7 +14,7 @@ class JobListing:
     company_name: str
     location: str
     description: str
-    url_job_indeed: str
+    job_url_indeed: str
     salary: Optional[str] = None
     date_posted: Optional[str] = None
     job_type: Optional[str] = None
@@ -24,16 +24,49 @@ class JobListing:
     employment_type: Optional[str] = None
     company_rating: Optional[str] = None
     full_description: Optional[str] = None
-    url_company_indeed: Optional[str] = None
+    company_url_indeed: Optional[str] = None
+    
+    def __post_init__(self):
+        """Validate and clean required fields"""
+        # Provide defaults for truly required fields if empty
+        if not self.title or not self.title.strip():
+            self.title = "Untitled Position"
+            logger.warning(f"Job missing title, using default for URL: {self.job_url_indeed}")
+        
+        if not self.company_name or not self.company_name.strip():
+            self.company_name = "Unknown Company"
+            logger.warning(f"Job missing company name for URL: {self.job_url_indeed}")
+        
+        if not self.job_url_indeed or not self.job_url_indeed.strip():
+            raise ValueError("Job URL cannot be empty - this is critical")
+        
+        # Validate URL format (basic check)
+        if not self.job_url_indeed.startswith(('http://', 'https://')):
+            raise ValueError(f"Invalid job URL format: {self.job_url_indeed}")
+        
+        # Trim whitespace from string fields
+        self.title = self.title.strip()
+        self.company_name = self.company_name.strip()
+        self.location = self.location.strip() if self.location else ""
+        self.description = self.description.strip() if self.description else ""
+        
+        # Validate skills is a list if provided
+        if self.skills is not None and not isinstance(self.skills, list):
+            logger.warning(f"Skills is not a list, converting for job: {self.job_url_indeed}")
+            self.skills = []
+        
+        # Validate remote is boolean
+        if not isinstance(self.remote, bool):
+            self.remote = bool(self.remote)
 
 @dataclass
 class ProcessedJob:
-    url_job_indeed: str
-    url_company_indeed: Optional[str]
-    testo_offerta: str
+    job_url_indeed: str
+    company_url_indeed: Optional[str]
+    job_offer_text: str
     company_id: Optional[int]
-    data_estrazione: date
-    url_azienda: Optional[str]
+    extraction_date: date
+    company_website_url: Optional[str]
     match_type: Optional[str] = None
     match_confidence: Optional[float] = None
 
@@ -41,71 +74,66 @@ class JobModel:
     
     async def store_raw_job(self, job: JobListing) -> Optional[int]:
         """Store a single raw job in the database"""
-        try:
-            # Check if job already exists
-            existing_job = await db_manager.execute_query_one(
-                "SELECT id FROM it_indeed_scrapped_data WHERE url_job_indeed = $1",
-                job.url_job_indeed
-            )
-            
-            if existing_job:
-                logger.info(f"Job already exists: {job.url_job_indeed}")
-                return existing_job['id']
-            
-            # Insert new job
-            query = """
-            INSERT INTO it_indeed_scrapped_data (
-                url_job_indeed, title, company_name, location, description, salary,
-                date_posted, job_type, remote, skills, experience_level, employment_type,
-                company_rating, full_description, url_company_indeed, extraction_date,
-                status, created_at, updated_at
-            ) VALUES (
-                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19
-            ) RETURNING id
-            """
-            
-            current_time = datetime.now()
-            skills_json = json.dumps(job.skills) if job.skills else None
-            date_posted = None
-            
-            if job.date_posted:
-                try:
-                    if isinstance(job.date_posted, str):
-                        date_posted = datetime.strptime(job.date_posted, '%Y-%m-%d').date()
-                    elif isinstance(job.date_posted, date):
-                        date_posted = job.date_posted
-                except ValueError:
-                    logger.warning(f"Invalid date format: {job.date_posted}")
-            
-            result = await db_manager.execute_insert(
-                query,
-                job.url_job_indeed,
-                job.title,
-                job.company_name,
-                job.location,
-                job.description,
-                job.salary,
-                date_posted,
-                job.job_type,
-                job.remote,
-                skills_json,
-                job.experience_level,
-                job.employment_type,
-                job.company_rating,
-                job.full_description,
-                job.url_company_indeed,
-                date.today(),
-                'extracted',
-                current_time,
-                current_time
-            )
-            
-            logger.info(f"Raw job stored with ID: {result['id']}")
-            return result['id']
-            
-        except Exception as e:
-            logger.error(f"Failed to store raw job {job.url_job_indeed}: {e}")
-            return None
+        # Check if job already exists
+        existing_job = await db_manager.execute_query_one(
+            "SELECT id FROM it_indeed_scrapped_data WHERE job_url_indeed = $1",
+            job.job_url_indeed
+        )
+        
+        if existing_job:
+            logger.info(f"Job already exists: {job.job_url_indeed}")
+            return existing_job['id']
+        
+        # Insert new job
+        query = """
+        INSERT INTO it_indeed_scrapped_data (
+            job_url_indeed, title, company_name, location, description, salary,
+            date_posted, job_type, remote, skills, experience_level, employment_type,
+            company_rating, full_description, company_url_indeed, extraction_date,
+            status, created_at, updated_at
+        ) VALUES (
+            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19
+        ) RETURNING id
+        """
+        
+        current_time = datetime.now()
+        skills_json = json.dumps(job.skills) if job.skills else None
+        date_posted = None
+        
+        if job.date_posted:
+            try:
+                if isinstance(job.date_posted, str):
+                    date_posted = datetime.strptime(job.date_posted, '%Y-%m-%d').date()
+                elif isinstance(job.date_posted, date):
+                    date_posted = job.date_posted
+            except ValueError:
+                logger.warning(f"Invalid date format: {job.date_posted}")
+        
+        result = await db_manager.execute_insert(
+            query,
+            job.job_url_indeed,
+            job.title,
+            job.company_name,
+            job.location,
+            job.description,
+            job.salary,
+            date_posted,
+            job.job_type,
+            job.remote,
+            skills_json,
+            job.experience_level,
+            job.employment_type,
+            job.company_rating,
+            job.full_description,
+            job.company_url_indeed,
+            date.today(),
+            'extracted',
+            current_time,
+            current_time
+        )
+        
+        logger.info(f"Raw job stored with ID: {result['id']}")
+        return result['id']
     
     async def store_raw_jobs_batch(self, jobs: List[JobListing]) -> Tuple[int, int]:
         """Store multiple raw jobs in batch"""
@@ -133,12 +161,15 @@ class JobModel:
         """Get jobs that haven't been processed yet"""
         query = """
         SELECT s.* FROM it_indeed_scrapped_data s
-        LEFT JOIN it_indeed_result_data r ON s.url_job_indeed = r.url_job_indeed
+        LEFT JOIN it_indeed_result_data r ON s.job_url_indeed = r.job_url_indeed
         WHERE r.id IS NULL AND s.status = 'extracted'
         ORDER BY s.created_at ASC
         """
         
         if limit:
+            # Validate limit is a positive integer
+            if not isinstance(limit, int) or limit < 0:
+                raise ValueError(f"Invalid limit value: {limit}. Must be a positive integer.")
             query += f" LIMIT {limit}"
         
         results = await db_manager.execute_query(query)
@@ -149,18 +180,18 @@ class JobModel:
         try:
             # Check if already processed
             existing_result = await db_manager.execute_query_one(
-                "SELECT id FROM it_indeed_result_data WHERE url_job_indeed = $1",
-                processed_job.url_job_indeed
+                "SELECT id FROM it_indeed_result_data WHERE job_url_indeed = $1",
+                processed_job.job_url_indeed
             )
             
             if existing_result:
-                logger.info(f"Job already processed: {processed_job.url_job_indeed}")
+                logger.info(f"Job already processed: {processed_job.job_url_indeed}")
                 return existing_result['id']
             
             query = """
             INSERT INTO it_indeed_result_data (
-                scrapped_job_id, url_job_indeed, url_company_indeed, testo_offerta,
-                company_id, data_estrazione, url_azienda, match_type, match_confidence,
+                scrapped_job_id, job_url_indeed, company_url_indeed, job_offer_text,
+                company_id, extraction_date, company_website_url, match_type, match_confidence,
                 created_at
             ) VALUES (
                 $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
@@ -170,12 +201,12 @@ class JobModel:
             result = await db_manager.execute_insert(
                 query,
                 scrapped_job_id,
-                processed_job.url_job_indeed,
-                processed_job.url_company_indeed,
-                processed_job.testo_offerta,
+                processed_job.job_url_indeed,
+                processed_job.company_url_indeed,
+                processed_job.job_offer_text,
                 processed_job.company_id,
-                processed_job.data_estrazione,
-                processed_job.url_azienda,
+                processed_job.extraction_date,
+                processed_job.company_website_url,
                 processed_job.match_type,
                 processed_job.match_confidence,
                 datetime.now()
@@ -192,7 +223,7 @@ class JobModel:
             return result['id']
             
         except Exception as e:
-            logger.error(f"Failed to store processed job {processed_job.url_job_indeed}: {e}")
+            logger.error(f"Failed to store processed job {processed_job.job_url_indeed}: {e}")
             # Mark as failed
             await db_manager.execute_insert(
                 "UPDATE it_indeed_scrapped_data SET status = 'failed', updated_at = $1 WHERE id = $2",
@@ -230,7 +261,7 @@ class JobModel:
         processed_results_query = """
         SELECT COUNT(*) as processed_results
         FROM it_indeed_result_data
-        WHERE data_estrazione = CURRENT_DATE
+        WHERE extraction_date = CURRENT_DATE
         """
         
         processed_result = await db_manager.execute_query_one(processed_results_query)
@@ -250,7 +281,7 @@ class JobModel:
             match_type,
             COUNT(*) as count
         FROM it_indeed_result_data
-        WHERE data_estrazione = CURRENT_DATE
+        WHERE extraction_date = CURRENT_DATE
         GROUP BY match_type
         """
         
