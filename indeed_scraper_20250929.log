@@ -1,0 +1,666 @@
+2025-09-29 10:08:02,592 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-09-29 10:08:03,142 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-29 10:08:03,177 - utils.db_utils - INFO - Migration executed successfully
+2025-09-29 10:08:03,179 - __main__ - INFO - Database initialized successfully
+2025-09-29 10:08:03,199 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-29 10:08:03,199 - __main__ - INFO - Companies cache loaded successfully
+2025-09-29 10:08:03,199 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'tier_3', 'remote']
+2025-09-29 10:08:03,200 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-09-29 10:08:03,200 - __main__ - INFO - Query 1/20: 'python developer'
+2025-09-29 10:08:03,200 - __main__ - INFO - Starting multi-location scrape for query: 'python developer'
+2025-09-29 10:08:03,201 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-09-29 10:08:03,201 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-09-29 10:08:03,201 - __main__ - INFO - Scraping: 'python developer' in 'Milano, Lombardia'
+2025-09-29 10:08:03,201 - adapters.indeed_adapter - INFO - Starting Indeed scraping: python developer in Milano, Lombardia, max_pages: 5
+2025-09-29 10:08:03,202 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-29 10:08:11,523 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-09-29 10:08:33,627 - adapters.indeed_adapter - INFO - Found 0 jobs on page 1
+2025-09-29 10:08:33,628 - adapters.indeed_adapter - INFO - Waiting 9.5 seconds before next page...
+2025-09-29 10:08:43,094 - adapters.indeed_adapter - INFO - Scraping page 2: https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=10&sort=date&fromage=1&from=searchOnDesktopSerp
+2025-09-29 10:09:43,110 - adapters.indeed_adapter - ERROR - Error on page 2: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=10&sort=date&fromage=1&from=searchOnDesktopSerp", waiting until "networkidle"
+
+2025-09-29 10:10:10,609 - adapters.indeed_adapter - INFO - Scraping page 3: https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=20&sort=date&fromage=1&from=searchOnDesktopSerp
+2025-09-29 10:10:26,380 - adapters.indeed_adapter - INFO - Found 0 jobs on page 3
+2025-09-29 10:10:26,381 - adapters.indeed_adapter - INFO - Waiting 26.6 seconds before next page...
+2025-09-29 10:10:53,010 - adapters.indeed_adapter - INFO - Scraping page 4: https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=30&sort=date&fromage=1&from=searchOnDesktopSerp
+2025-09-29 10:11:03,718 - adapters.indeed_adapter - INFO - Found 0 jobs on page 4
+2025-09-29 10:11:03,719 - adapters.indeed_adapter - INFO - Waiting 23.3 seconds before next page...
+2025-09-29 10:11:17,781 - utils.db_utils - INFO - Database connection pool closed
+2025-09-29 10:12:58,907 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-09-29 10:12:59,356 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-29 10:12:59,369 - utils.db_utils - INFO - Migration executed successfully
+2025-09-29 10:12:59,370 - __main__ - INFO - Database initialized successfully
+2025-09-29 10:12:59,380 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-29 10:12:59,381 - __main__ - INFO - Companies cache loaded successfully
+2025-09-29 10:12:59,381 - __main__ - INFO - Multi-location mode with tiers: ['tier_1']
+2025-09-29 10:12:59,381 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-09-29 10:12:59,382 - __main__ - INFO - Query 1/1: 'python developer'
+2025-09-29 10:12:59,382 - __main__ - INFO - Starting multi-location scrape for query: 'python developer'
+2025-09-29 10:12:59,383 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-09-29 10:12:59,383 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-09-29 10:12:59,384 - __main__ - INFO - Scraping: 'python developer' in 'Milano, Lombardia'
+2025-09-29 10:12:59,384 - adapters.indeed_adapter - INFO - Starting Indeed scraping: python developer in Milano, Lombardia, max_pages: 1
+2025-09-29 10:12:59,385 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-29 10:13:00,598 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-09-29 10:14:00,606 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=python+developer&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 10:14:05,064 - utils.db_utils - INFO - Database connection pool closed
+2025-09-29 10:15:06,208 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-09-29 10:15:06,645 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-29 10:15:06,655 - utils.db_utils - INFO - Migration executed successfully
+2025-09-29 10:15:06,656 - __main__ - INFO - Database initialized successfully
+2025-09-29 10:15:06,666 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-29 10:15:06,667 - __main__ - INFO - Companies cache loaded successfully
+2025-09-29 10:15:06,667 - __main__ - INFO - Multi-location mode with tiers: ['tier_1']
+2025-09-29 10:15:06,667 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-09-29 10:15:06,668 - __main__ - INFO - Query 1/1: ''
+2025-09-29 10:15:06,668 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-09-29 10:15:06,668 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-09-29 10:15:06,669 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-09-29 10:15:06,669 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-09-29 10:15:06,669 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Milano, Lombardia, max_pages: 1
+2025-09-29 10:15:06,670 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-29 10:15:07,902 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-09-29 10:15:34,436 - adapters.indeed_adapter - INFO - Found 30 jobs on page 1
+2025-09-29 10:15:41,921 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:15:41,921 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:16:12,362 - utils.db_utils - INFO - Database connection pool closed
+2025-09-29 10:17:04,249 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-09-29 10:17:04,843 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-29 10:17:04,854 - utils.db_utils - INFO - Migration executed successfully
+2025-09-29 10:17:04,855 - __main__ - INFO - Database initialized successfully
+2025-09-29 10:17:04,862 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-29 10:17:04,862 - __main__ - INFO - Companies cache loaded successfully
+2025-09-29 10:17:04,862 - __main__ - INFO - Multi-location mode with tiers: ['tier_1']
+2025-09-29 10:17:04,862 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-09-29 10:17:04,862 - __main__ - INFO - Query 1/1: ''
+2025-09-29 10:17:04,862 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-09-29 10:17:04,863 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-09-29 10:17:04,863 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-09-29 10:17:04,863 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-09-29 10:17:04,863 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Milano, Lombardia, max_pages: 1
+2025-09-29 10:17:04,863 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-09-29 10:17:06,139 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-09-29 10:18:06,156 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 10:18:34,602 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 10:18:34,603 - __main__ - INFO - Successfully scraped 0 jobs from Milano, Lombardia
+2025-09-29 10:18:34,603 - __main__ - INFO - Waiting 212 seconds before next location...
+2025-09-29 10:22:06,943 - __main__ - INFO - [tier_1] Location 2/8: Roma, Lazio
+2025-09-29 10:22:06,944 - __main__ - INFO - Scraping: '' in 'Roma, Lazio'
+2025-09-29 10:22:06,944 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Roma, Lazio, max_pages: 1
+2025-09-29 10:22:06,944 - adapters.indeed_adapter - INFO - Using proxy: 142.147.129.156:5765
+2025-09-29 10:22:08,332 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Roma%2C+Lazio&start=0&sort=date&fromage=1
+2025-09-29 10:22:33,867 - adapters.indeed_adapter - INFO - Found 30 jobs on page 1
+2025-09-29 10:23:55,599 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69t1jjjgc3j800&fromjk=75425b28ebbe7de8
+2025-09-29 10:23:55,603 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:23:55,641 - adapters.indeed_adapter - INFO - Waiting 11.4 seconds before next job (job #2)...
+2025-09-29 10:25:29,012 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69t4ejg2930000&fromjk=75425b28ebbe7de8
+2025-09-29 10:25:29,015 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:25:29,046 - adapters.indeed_adapter - INFO - Waiting 12.0 seconds before next job (job #3)...
+2025-09-29 10:25:41,158 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 103.99.33.128:6123
+2025-09-29 10:26:26,891 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69t7clngcv1800&fromjk=d2882e08a146d1ea
+2025-09-29 10:26:26,895 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:26:26,928 - adapters.indeed_adapter - INFO - Waiting 12.4 seconds before next job (job #4)...
+2025-09-29 10:27:42,214 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69t92bs21pn00d&fromjk=d2882e08a146d1ea
+2025-09-29 10:27:42,217 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:27:42,252 - adapters.indeed_adapter - INFO - Waiting 8.4 seconds before next job (job #5)...
+2025-09-29 10:27:50,747 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 103.37.180.144:6538
+2025-09-29 10:28:56,114 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69tbc7qi9fn839&fromjk=bdd676f4ac619e0d
+2025-09-29 10:28:56,117 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:28:56,148 - adapters.indeed_adapter - INFO - Waiting 11.6 seconds before next job (job #6)...
+2025-09-29 10:29:59,089 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69tdm8jgqoo82u&fromjk=bdd676f4ac619e0d
+2025-09-29 10:29:59,093 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:29:59,131 - adapters.indeed_adapter - INFO - Waiting 11.8 seconds before next job (job #7)...
+2025-09-29 10:31:13,632 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69tfhvjgc3j802&fromjk=710fd80171912b97
+2025-09-29 10:31:13,635 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:31:13,668 - adapters.indeed_adapter - INFO - Waiting 13.1 seconds before next job (job #8)...
+2025-09-29 10:31:26,746 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 8
+2025-09-29 10:31:26,747 - adapters.indeed_adapter - INFO - Using new proxy: 193.161.2.155:6578
+2025-09-29 10:32:52,876 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j69thvdqhmpn801&fromjk=710fd80171912b97
+2025-09-29 10:32:52,877 - adapters.indeed_adapter - INFO - Found company rating: 3.5
+2025-09-29 10:32:52,879 - adapters.indeed_adapter - INFO - Found location: Roma, Lazio
+2025-09-29 10:32:52,881 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 10:32:52,959 - adapters.indeed_adapter - INFO - Waiting 15.2 seconds before next job (job #9)...
+2025-09-29 10:33:34,242 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Alberto-Madau?campaignid=mobvjcmp&from=mobviewjob&tk=1j69tkvr323b7000&fromjk=ca6274a3ac1419d9
+2025-09-29 10:33:34,246 - adapters.indeed_adapter - INFO - Found location: 00128 Roma
+2025-09-29 10:33:34,278 - adapters.indeed_adapter - INFO - Waiting 15.9 seconds before next job (job #10)...
+2025-09-29 10:33:58,100 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:33:58,100 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:34:31,252 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:34:41,994 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:34:45,412 - adapters.indeed_adapter - INFO - Waiting 23.3 seconds before next job (job #11)...
+2025-09-29 10:35:08,761 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 92.249.34.110:5792
+2025-09-29 10:35:15,077 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:35:15,078 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:35:48,177 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:36:03,070 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:36:06,401 - adapters.indeed_adapter - INFO - Waiting 22.7 seconds before next job (job #12)...
+2025-09-29 10:36:37,116 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:36:37,117 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:37:10,233 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:37:24,792 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:37:28,649 - adapters.indeed_adapter - INFO - Waiting 15.6 seconds before next job (job #13)...
+2025-09-29 10:37:44,321 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 93.118.38.246:6390
+2025-09-29 10:37:51,228 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:37:51,228 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:38:24,338 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:38:37,249 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:38:43,195 - adapters.indeed_adapter - INFO - Waiting 23.0 seconds before next job (job #14)...
+2025-09-29 10:39:12,207 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:39:12,207 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:39:45,307 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:39:58,334 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:40:02,859 - adapters.indeed_adapter - INFO - Waiting 21.6 seconds before next job (job #15)...
+2025-09-29 10:40:32,679 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:40:32,679 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:41:05,802 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:41:17,070 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:41:19,739 - adapters.indeed_adapter - INFO - Waiting 22.1 seconds before next job (job #16)...
+2025-09-29 10:41:41,874 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 16
+2025-09-29 10:41:41,875 - adapters.indeed_adapter - INFO - Using new proxy: 31.57.82.127:6708
+2025-09-29 10:41:53,960 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:41:53,961 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:42:27,078 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:42:38,901 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:42:43,894 - adapters.indeed_adapter - INFO - Waiting 20.5 seconds before next job (job #17)...
+2025-09-29 10:43:11,016 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:43:11,017 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:43:44,160 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:43:57,184 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:44:03,893 - adapters.indeed_adapter - INFO - Waiting 15.7 seconds before next job (job #18)...
+2025-09-29 10:44:27,485 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:44:27,487 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:45:00,576 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:45:14,356 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:45:18,187 - adapters.indeed_adapter - INFO - Waiting 16.8 seconds before next job (job #19)...
+2025-09-29 10:45:35,023 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 19
+2025-09-29 10:45:35,024 - adapters.indeed_adapter - INFO - Using new proxy: 64.137.104.93:5703
+2025-09-29 10:46:09,666 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Al-Solito-Porzio?campaignid=mobvjcmp&from=mobviewjob&tk=1j69ubrc1hmp683a&fromjk=619e0acb23ebee0d
+2025-09-29 10:46:09,669 - adapters.indeed_adapter - INFO - Found location: 00181 Roma
+2025-09-29 10:46:09,795 - adapters.indeed_adapter - INFO - Waiting 24.3 seconds before next job (job #20)...
+2025-09-29 10:46:42,538 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:46:42,539 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:47:15,662 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:47:26,684 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:47:31,461 - adapters.indeed_adapter - INFO - Waiting 20.1 seconds before next job (job #21)...
+2025-09-29 10:48:00,358 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:48:00,358 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:48:33,467 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:48:47,040 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:48:50,745 - adapters.indeed_adapter - INFO - Waiting 23.8 seconds before next job (job #22)...
+2025-09-29 10:49:14,534 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 22
+2025-09-29 10:49:14,534 - adapters.indeed_adapter - INFO - Using new proxy: 104.239.92.205:6845
+2025-09-29 10:49:23,516 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:49:23,517 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:49:56,636 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:50:10,467 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:50:16,784 - adapters.indeed_adapter - INFO - Waiting 18.9 seconds before next job (job #23)...
+2025-09-29 10:51:10,050 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Alberto-Madau?campaignid=mobvjcmp&from=mobviewjob&tk=1j69ukt7fgc2r800&fromjk=5a961d8ff8a33bd8
+2025-09-29 10:51:10,055 - adapters.indeed_adapter - INFO - Found location: 00128 Roma
+2025-09-29 10:51:10,091 - adapters.indeed_adapter - INFO - Waiting 22.1 seconds before next job (job #24)...
+2025-09-29 10:51:32,291 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 148.135.188.184:7216
+2025-09-29 10:51:40,960 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:51:40,960 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:52:14,087 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:52:25,322 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:52:29,799 - adapters.indeed_adapter - INFO - Waiting 20.2 seconds before next job (job #25)...
+2025-09-29 10:52:58,824 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:52:58,825 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:53:31,939 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:53:42,320 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:53:46,426 - adapters.indeed_adapter - INFO - Waiting 19.1 seconds before next job (job #26)...
+2025-09-29 10:54:11,331 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:54:11,331 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:54:44,439 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:54:56,249 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:54:59,354 - adapters.indeed_adapter - INFO - Waiting 24.9 seconds before next job (job #27)...
+2025-09-29 10:55:32,988 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:55:32,989 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:56:06,095 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:56:18,854 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:56:22,282 - adapters.indeed_adapter - INFO - Waiting 16.8 seconds before next job (job #28)...
+2025-09-29 10:56:39,058 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 28
+2025-09-29 10:56:39,059 - adapters.indeed_adapter - INFO - Using new proxy: 192.210.191.123:6109
+2025-09-29 10:56:50,414 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:56:50,415 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:57:23,551 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:57:38,086 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:57:44,490 - adapters.indeed_adapter - INFO - Waiting 23.3 seconds before next job (job #29)...
+2025-09-29 10:58:16,518 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:58:16,519 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 10:58:49,631 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 10:59:04,223 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 10:59:07,289 - adapters.indeed_adapter - INFO - Waiting 21.6 seconds before next job (job #30)...
+2025-09-29 10:59:28,921 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@142.147.129.156:5765 to 209.35.5.40:6731
+2025-09-29 10:59:37,285 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 10:59:37,286 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:00:10,390 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:00:21,055 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:00:27,758 - adapters.indeed_adapter - INFO - Waiting 20.2 seconds before next job (job #31)...
+2025-09-29 11:00:47,997 - adapters.indeed_adapter - INFO - Waiting 12.4 seconds before next page...
+2025-09-29 11:01:00,769 - adapters.indeed_adapter - INFO - Scraping completed. Found 30 jobs
+2025-09-29 11:01:00,770 - __main__ - INFO - Successfully scraped 30 jobs from Roma, Lazio
+2025-09-29 11:01:00,965 - models.job_model - INFO - Raw job stored with ID: 52
+2025-09-29 11:01:00,967 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=75425b28ebbe7de8&bb=IUWcIRXYRGyEDlzCAT5lbZ4nW8VFcf0jwoyrB8bzJNVLYAatJLWIwgTa_Sy9iv9YRz_amq6Su7157_HicrfsygrBNWUvO-P5c0Lhs0Nfz0tnDO2Jo9lzfA%3D%3D&xkcb=SoBJ67M3sJyNJm2TZZ0LbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:01:00,971 - models.job_model - INFO - Raw job stored with ID: 53
+2025-09-29 11:01:00,973 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=d2882e08a146d1ea&bb=IUWcIRXYRGyEDlzCAT5lbZpK8Ic18zKmXUS1xGy5OlLUWgqohQfjPIJSVvY1s_2ItpSrkXzM41SDCr2B6xccmmtII5tdnGR491pfdBZQGqEnVouHe1l51A%3D%3D&xkcb=SoD967M3sJyNJm2TZZ0KbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:01:00,975 - models.job_model - INFO - Raw job stored with ID: 54
+2025-09-29 11:01:00,976 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=bdd676f4ac619e0d&bb=IUWcIRXYRGyEDlzCAT5lbXKBSITa20Ny0R_Y7z8owwj5frXizEdGCh67e1FTTcfdGBbciwBJTrfxyJesaknTjQc-hwzMX2t7GJxHfHjlrKZmBUgLp8wT4w%3D%3D&xkcb=SoBg67M3sJyNJm2TZZ0JbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:01:00,979 - models.job_model - INFO - Raw job stored with ID: 55
+2025-09-29 11:01:00,981 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=710fd80171912b97&bb=IUWcIRXYRGyEDlzCAT5lbehPiWPagcypO5v8Cy3-EUzxhDy3CnK81h_hClCF7mr_mjXOHiyGe5UTnhKULWFqS3duQfdk7_I2lHtjxOMn_vOcKZwTussCcQ%3D%3D&xkcb=SoDU67M3sJyNJm2TZZ0IbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:01:00,982 - models.job_model - INFO - Raw job stored with ID: 56
+2025-09-29 11:01:00,984 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=ca6274a3ac1419d9&bb=IUWcIRXYRGyEDlzCAT5lbehPiWPagcypI3RTk-LY8o8bZcH1IhEliaa2RNFrJj4Fnpi6Xu_vYHjHcw6CV44x1B6Q0Q1Nksk6VlYieiX8-zM2WwDUWAUqn_o2mhSR6MjA&xkcb=SoBa67M3sJyNJm2TZZ0PbzkdCdPP&fccid=6b83ba9f54994549&cmp=Alberto-madau&ti=Runner&vjs=3
+2025-09-29 11:01:00,987 - models.job_model - INFO - Raw job stored with ID: 57
+2025-09-29 11:01:00,990 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=74e245490608ffee&bb=IUWcIRXYRGyEDlzCAT5lbUzOQznQGsdahhxxGK9iB4VX-HhHaf_qK7RR28jAQxPdkCUrxKETYAiyl2dnNDA_SvIAIl1CWY_Gx3HeBfFT_DRP49nPUj9-6m05inBOpqT9&xkcb=SoDu67M3sJyNJm2TZZ0ObzkdCdPP&fccid=1604674d3148bb17&vjs=3
+2025-09-29 11:01:00,992 - models.job_model - INFO - Raw job stored with ID: 58
+2025-09-29 11:01:00,993 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=70ecbcf2af0376b2&bb=IUWcIRXYRGyEDlzCAT5lbchwLlp_iNC643r4YnNHLidzwKrVJRw2Pjj-UE_E7RwEMa1NPSWqGIiJuNUXMSuLEn342TJoCiCj3Vc9RzCqTqauKW_TG4xHRaLWV_2wjTn-&xkcb=SoBz67M3sJyNJm2TZZ0NbzkdCdPP&fccid=d042fde046d5679c&cmp=Con-Mollica-o-Senza-SRL&ti=Addetto+Al+Banco&vjs=3
+2025-09-29 11:01:00,995 - models.job_model - INFO - Raw job stored with ID: 59
+2025-09-29 11:01:00,997 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=2fb10b97c3ac0268&bb=IUWcIRXYRGyEDlzCAT5lbRgH3iN0LZXuTCNc-Q4QRwj8hE8aFhJFg1eUI1MqKouc5qxSOxpgrIlxlHWo9cFqZfm3MoQNNI86-1zCdir1gdUFw5rrvQ-hwm3rITVAjsJv&xkcb=SoDH67M3sJyNJm2TZZ0MbzkdCdPP&fccid=66eda04ae13ec9cf&cmp=Moonlight-srl&ti=Dipendente+A+Tempo+Indeterminato&vjs=3
+2025-09-29 11:01:00,999 - models.job_model - INFO - Raw job stored with ID: 60
+2025-09-29 11:01:01,001 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=2ea72bcef7ae634e&bb=IUWcIRXYRGyEDlzCAT5lbRKthh3yy9I5hqNY593u-JGzGYpN3oh9Ijd1SH5oxr--OXuOqlhtM1ZPTb8Vq-Z9LYX67oOucSVKELeo4EHJK3V8yuVAodEWmWni6uO54KYx&xkcb=SoAu67M3sJyNJm2TZZ0DbzkdCdPP&fccid=e61ba84c1576b1a8&cmp=Kiam%25C3%25AC&ti=Barman&vjs=3
+2025-09-29 11:01:01,003 - models.job_model - INFO - Raw job stored with ID: 61
+2025-09-29 11:01:01,005 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=619e0acb23ebee0d&bb=IUWcIRXYRGyEDlzCAT5lbVA4LfE7oKVXcgzuyIEFuONccUFge_FTldPtQo3_wAWMB8bzdRcAZGMnrwWK0g-kFXK4svLnsnOQQIZ1zlpVdlR_U2V294siSQL4REQwksoo&xkcb=SoCa67M3sJyNJm2TZZ0CbzkdCdPP&fccid=1d32cf07f7c232a4&cmp=Al-Solito-Porzio&ti=Fornaio&vjs=3
+2025-09-29 11:01:01,007 - models.job_model - INFO - Raw job stored with ID: 62
+2025-09-29 11:01:01,008 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=74ffb65aa839fd0f&bb=IUWcIRXYRGyEDlzCAT5lbfXtkOP_BtSfAMFyGzi8xzgQLzFyOhTQgMrklYGVBOhlWu6SM7G6hQMs1pzAPrXZ2nu3ZMTu-LBIhw07kKx3gaKZH6BxOmh2OKZt2KqfZx3b&xkcb=SoAH67M3sJyNJm2TZZ0BbzkdCdPP&fccid=ed32225e9fdfcc20&cmp=Contro-Corrente-srl&ti=Aiuto+Cuoco&vjs=3
+2025-09-29 11:01:01,010 - models.job_model - INFO - Raw job stored with ID: 63
+2025-09-29 11:01:01,012 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=5a961d8ff8a33bd8&bb=IUWcIRXYRGyEDlzCAT5lbTPf1g4_iWCJgj6xXBzsLByz88uDiuovRKoUD8KdzQGrRshCIeC4z_iHYhfLbpiN15glN9FMyCbp7VFFA-iFaQwfW-BOcJ9GrtlDJxqNSTBB&xkcb=SoCz67M3sJyNJm2TZZ0AbzkdCdPP&fccid=6b83ba9f54994549&cmp=Alberto-madau&ti=Chef+De+Rang&vjs=3
+2025-09-29 11:01:01,014 - models.job_model - INFO - Raw job stored with ID: 64
+2025-09-29 11:01:01,015 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=d858cb3be78b0795&bb=IUWcIRXYRGyEDlzCAT5lbUS8eZj-fwD0J5V4uOHK5rwe0My6L6NnaRinIBl5Mbgf9VwW26LyVo2uDIU7K4dPpDMG-hqvet0FK7b8Z6f1eJUSeIPNJHAhPHU4xS59wB8S&xkcb=SoA967M3sJyNJm2TZZ0HbzkdCdPP&fccid=b3d681a6244c426e&cmp=SimoBeauty&ti=Estetista+Onicotecnica&vjs=3
+2025-09-29 11:01:01,017 - models.job_model - INFO - Raw job stored with ID: 65
+2025-09-29 11:01:01,019 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=a988cf45125bdb9d&bb=IUWcIRXYRGyEDlzCAT5lbQNhrIXvF2wKr9zj4fEHp0o9D9Ap4GCUKR82TKWKNo9dub9TOpm5RooSBayzMERDtvytgzWO5xvfmDsdDN2UviEeDZ1hytNbNudX5T1p-pLM&xkcb=SoCJ67M3sJyNJm2TZZ0GbzkdCdPP&fccid=0bf7be4107f4ec81&vjs=3
+2025-09-29 11:01:01,023 - models.job_model - INFO - Raw job stored with ID: 66
+2025-09-29 11:01:01,024 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=7581778762f8a850&bb=IUWcIRXYRGyEDlzCAT5lbaXZyI9MbwXgZS9Az3spqtemGSTccKL4opxIUMD0n6DRNlyAxZ-M7JvAFl04habt_7DNnnwUUCbijVYguJiuukMrpD6MoN5Pd7yECtg9HoS8&xkcb=SoAU67M3sJyNJm2TZZ0FbzkdCdPP&fccid=02c1087ad920092c&cmp=Frugale-Roma---Food-Garden&ti=Cameriere&vjs=3
+2025-09-29 11:01:01,026 - models.job_model - INFO - Batch storage completed: 30 new jobs, 0 duplicates
+2025-09-29 11:01:01,026 - __main__ - INFO - Stored 30 new jobs, 0 duplicates from Roma, Lazio
+2025-09-29 11:01:01,027 - __main__ - INFO - Waiting 298 seconds before next location...
+2025-09-29 11:05:59,215 - __main__ - INFO - [tier_1] Location 3/8: Torino, Piemonte
+2025-09-29 11:05:59,216 - __main__ - INFO - Scraping: '' in 'Torino, Piemonte'
+2025-09-29 11:05:59,216 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Torino, Piemonte, max_pages: 1
+2025-09-29 11:05:59,217 - adapters.indeed_adapter - INFO - Using proxy: 104.143.224.162:6023
+2025-09-29 11:06:00,495 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Torino%2C+Piemonte&start=0&sort=date&fromage=1
+2025-09-29 11:07:00,512 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Torino%2C+Piemonte&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 11:07:27,435 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 11:07:27,436 - __main__ - INFO - Successfully scraped 0 jobs from Torino, Piemonte
+2025-09-29 11:07:27,436 - __main__ - INFO - Waiting 185 seconds before next location...
+2025-09-29 11:10:32,787 - __main__ - INFO - [tier_1] Location 4/8: Napoli, Campania
+2025-09-29 11:10:32,788 - __main__ - INFO - Scraping: '' in 'Napoli, Campania'
+2025-09-29 11:10:32,788 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Napoli, Campania, max_pages: 1
+2025-09-29 11:10:32,789 - adapters.indeed_adapter - INFO - Using proxy: 156.243.179.134:6622
+2025-09-29 11:10:34,164 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Napoli%2C+Campania&start=0&sort=date&fromage=1
+2025-09-29 11:10:35,395 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://it.indeed.com/jobs?q=&l=Napoli%2C+Campania&start=0&sort=date&fromage=1
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Napoli%2C+Campania&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 11:10:59,953 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 11:10:59,953 - __main__ - INFO - Successfully scraped 0 jobs from Napoli, Campania
+2025-09-29 11:10:59,953 - __main__ - INFO - Waiting 258 seconds before next location...
+2025-09-29 11:15:18,353 - __main__ - INFO - [tier_1] Location 5/8: Bologna, Emilia-Romagna
+2025-09-29 11:15:18,354 - __main__ - INFO - Scraping: '' in 'Bologna, Emilia-Romagna'
+2025-09-29 11:15:18,355 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Bologna, Emilia-Romagna, max_pages: 1
+2025-09-29 11:15:18,356 - adapters.indeed_adapter - INFO - Using proxy: 104.143.229.197:6125
+2025-09-29 11:15:27,926 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Bologna%2C+Emilia-Romagna&start=0&sort=date&fromage=1
+2025-09-29 11:15:53,070 - adapters.indeed_adapter - INFO - Found 30 jobs on page 1
+2025-09-29 11:16:39,776 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0383khmp6801&fromjk=732f632d54c03382
+2025-09-29 11:16:39,779 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:16:39,780 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:16:39,782 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:16:39,816 - adapters.indeed_adapter - INFO - Waiting 13.5 seconds before next job (job #2)...
+2025-09-29 11:17:28,003 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a054behmjs81c&fromjk=732f632d54c03382
+2025-09-29 11:17:28,005 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:17:28,006 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:17:28,007 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:17:28,034 - adapters.indeed_adapter - INFO - Waiting 9.7 seconds before next job (job #3)...
+2025-09-29 11:17:37,760 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 137.59.7.88:5632
+2025-09-29 11:18:15,080 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a06dq9hbfh808&fromjk=df1e94eb3df52950
+2025-09-29 11:18:15,084 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:18:15,104 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:18:15,198 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:18:15,319 - adapters.indeed_adapter - INFO - Waiting 15.5 seconds before next job (job #4)...
+2025-09-29 11:19:13,453 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0811nhcdm800&fromjk=df1e94eb3df52950
+2025-09-29 11:19:13,456 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:19:13,457 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:19:13,459 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:19:13,488 - adapters.indeed_adapter - INFO - Waiting 13.5 seconds before next job (job #5)...
+2025-09-29 11:19:27,035 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 5
+2025-09-29 11:19:27,036 - adapters.indeed_adapter - INFO - Using new proxy: 185.216.106.239:6316
+2025-09-29 11:19:33,093 - adapters.indeed_adapter - WARNING - Error fetching job details for https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FBMMMUl0pTMbxdvm0C2QJigcGRDTyFSyqiKke21LWaF1ogsvhD1XM28rqJ2tnGj7BWaAX1Y0KCIJCDP8fqOvCmRjIIW6yTp6edz44jJhDOuuSe6cqKdKfQRnnqwV0fgE71ag0I-Yd8MA3-JuRKWmIj7A-Nm9_oYEeH7E0MDHlnA3l5rmO2NCcGCrDIoeTq8tpSpR8aCK0pnlAMIHbvhVKzii9WKL4l3XMkxGdMwt03xNMUJYOEr7PUyClSNreABZtqBKkl3IcR3AtdymcxW3MU1xvi01UTeHuRzxdY5p11XQI3Q0zQUTLEf4aQh16fOswSmKagKBrP3eCJBGKN8LwtIyNf5Mgn02z7biw76eOo_N1uP37BS_cMEjn3CQaTAmfzDfz9W1s8X_9weZE4o8XODS4l7cLdbsf_4qoUMe5Dp4zunC55YwDvuH1_h4Y1SAeHNGXtR2YnVosY5QOdz2zHCxlTKHHF1DpQUI0LJY7C33cqkHAZ2lN5BufB55x2V7gkoid3A72k-DvF5E9gZAprKY60FdOpx31wnv6y-gSEGbSRHrArbBG-GR5k46o-fG5WjGQds6PiFzXFrWGKDIgYjmCaHdeI81umzDgGmfSLW4TMeKpNRXCRAF7SIqDWt_DIxb4wq7obE0B2mNDP0YgzOTAdAybSlva4uWPoIXHza-2H0EqXYxPsw3uZrZG4hN1oRt8viKTzUzgLjzYdiuvPRrH6BmHT8KzWnp5CsyjBknzb7DYBT9GxCsr4YK6iV1ZeQHwYm9p-2tyqabJhOsSQvqphZOFvH35Q==&xkcb=SoCd6_M3sKIGWpgfaj0JbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=2&fvj=0&vjs=3: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FBMMMUl0pTMbxdvm0C2QJigcGRDTyFSyqiKke21LWaF1ogsvhD1XM28rqJ2tnGj7BWaAX1Y0KCIJCDP8fqOvCmRjIIW6yTp6edz44jJhDOuuSe6cqKdKfQRnnqwV0fgE71ag0I-Yd8MA3-JuRKWmIj7A-Nm9_oYEeH7E0MDHlnA3l5rmO2NCcGCrDIoeTq8tpSpR8aCK0pnlAMIHbvhVKzii9WKL4l3XMkxGdMwt03xNMUJYOEr7PUyClSNreABZtqBKkl3IcR3AtdymcxW3MU1xvi01UTeHuRzxdY5p11XQI3Q0zQUTLEf4aQh16fOswSmKagKBrP3eCJBGKN8LwtIyNf5Mgn02z7biw76eOo_N1uP37BS_cMEjn3CQaTAmfzDfz9W1s8X_9weZE4o8XODS4l7cLdbsf_4qoUMe5Dp4zunC55YwDvuH1_h4Y1SAeHNGXtR2YnVosY5QOdz2zHCxlTKHHF1DpQUI0LJY7C33cqkHAZ2lN5BufB55x2V7gkoid3A72k-DvF5E9gZAprKY60FdOpx31wnv6y-gSEGbSRHrArbBG-GR5k46o-fG5WjGQds6PiFzXFrWGKDIgYjmCaHdeI81umzDgGmfSLW4TMeKpNRXCRAF7SIqDWt_DIxb4wq7obE0B2mNDP0YgzOTAdAybSlva4uWPoIXHza-2H0EqXYxPsw3uZrZG4hN1oRt8viKTzUzgLjzYdiuvPRrH6BmHT8KzWnp5CsyjBknzb7DYBT9GxCsr4YK6iV1ZeQHwYm9p-2tyqabJhOsSQvqphZOFvH35Q==&xkcb=SoCd6_M3sKIGWpgfaj0JbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=2&fvj=0&vjs=3
+Call log:
+  - navigating to "https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FBMMMUl0pTMbxdvm0C2QJigcGRDTyFSyqiKke21LWaF1ogsvhD1XM28rqJ2tnGj7BWaAX1Y0KCIJCDP8fqOvCmRjIIW6yTp6edz44jJhDOuuSe6cqKdKfQRnnqwV0fgE71ag0I-Yd8MA3-JuRKWmIj7A-Nm9_oYEeH7E0MDHlnA3l5rmO2NCcGCrDIoeTq8tpSpR8aCK0pnlAMIHbvhVKzii9WKL4l3XMkxGdMwt03xNMUJYOEr7PUyClSNreABZtqBKkl3IcR3AtdymcxW3MU1xvi01UTeHuRzxdY5p11XQI3Q0zQUTLEf4aQh16fOswSmKagKBrP3eCJBGKN8LwtIyNf5Mgn02z7biw76eOo_N1uP37BS_cMEjn3CQaTAmfzDfz9W1s8X_9weZE4o8XODS4l7cLdbsf_4qoUMe5Dp4zunC55YwDvuH1_h4Y1SAeHNGXtR2YnVosY5QOdz2zHCxlTKHHF1DpQUI0LJY7C33cqkHAZ2lN5BufB55x2V7gkoid3A72k-DvF5E9gZAprKY60FdOpx31wnv6y-gSEGbSRHrArbBG-GR5k46o-fG5WjGQds6PiFzXFrWGKDIgYjmCaHdeI81umzDgGmfSLW4TMeKpNRXCRAF7SIqDWt_DIxb4wq7obE0B2mNDP0YgzOTAdAybSlva4uWPoIXHza-2H0EqXYxPsw3uZrZG4hN1oRt8viKTzUzgLjzYdiuvPRrH6BmHT8KzWnp5CsyjBknzb7DYBT9GxCsr4YK6iV1ZeQHwYm9p-2tyqabJhOsSQvqphZOFvH35Q==&xkcb=SoCd6_M3sKIGWpgfaj0JbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=2&fvj=0&vjs=3", waiting until "domcontentloaded"
+
+2025-09-29 11:19:33,189 - adapters.indeed_adapter - INFO - Waiting 15.5 seconds before next job (job #6)...
+2025-09-29 11:21:17,936 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0aef5hmpn800&fromjk=cc518add5f958542
+2025-09-29 11:21:17,938 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:21:17,939 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:21:17,941 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:21:17,965 - adapters.indeed_adapter - INFO - Waiting 18.0 seconds before next job (job #7)...
+2025-09-29 11:21:35,946 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 7
+2025-09-29 11:21:35,947 - adapters.indeed_adapter - INFO - Using new proxy: 45.81.149.236:6668
+2025-09-29 11:22:17,644 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0dq0ai9f680h&fromjk=a00f662ddf8c825a
+2025-09-29 11:22:17,645 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:22:17,647 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:22:17,649 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:22:17,699 - adapters.indeed_adapter - INFO - Waiting 18.2 seconds before next job (job #8)...
+2025-09-29 11:24:20,439 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Just-Eat?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0fgochbch800&fromjk=a00f662ddf8c825a
+2025-09-29 11:24:20,441 - adapters.indeed_adapter - INFO - Found company rating: 3.1
+2025-09-29 11:24:20,443 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:24:20,444 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:24:20,470 - adapters.indeed_adapter - INFO - Waiting 10.8 seconds before next job (job #9)...
+2025-09-29 11:24:31,352 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 45.250.64.3:5640
+2025-09-29 11:25:38,871 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0j358hc7c803&fromjk=8b3f1d8cc5f81225
+2025-09-29 11:25:38,873 - adapters.indeed_adapter - INFO - Found company rating: 3.5
+2025-09-29 11:25:38,874 - adapters.indeed_adapter - INFO - Found location: Provincia di Bologna, Emilia-Romagna
+2025-09-29 11:25:38,877 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:25:38,910 - adapters.indeed_adapter - INFO - Waiting 12.7 seconds before next job (job #10)...
+2025-09-29 11:27:29,512 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0lffphmjs800&fromjk=8b3f1d8cc5f81225
+2025-09-29 11:27:29,514 - adapters.indeed_adapter - INFO - Found company rating: 3.5
+2025-09-29 11:27:29,516 - adapters.indeed_adapter - INFO - Found location: Provincia di Bologna, Emilia-Romagna
+2025-09-29 11:27:29,517 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:27:29,548 - adapters.indeed_adapter - INFO - Waiting 20.7 seconds before next job (job #11)...
+2025-09-29 11:28:30,218 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Holding-Gold-Srl?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a0p6a3hmtt800&fromjk=9fc40ee4f22d6c4d
+2025-09-29 11:28:30,221 - adapters.indeed_adapter - INFO - Found location: Italia
+2025-09-29 11:28:30,223 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:28:30,253 - adapters.indeed_adapter - INFO - Waiting 22.1 seconds before next job (job #12)...
+2025-09-29 11:28:52,429 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 84.33.62.225:5761
+2025-09-29 11:29:00,540 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:29:00,541 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:29:33,667 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:29:48,170 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:29:51,117 - adapters.indeed_adapter - INFO - Waiting 18.4 seconds before next job (job #13)...
+2025-09-29 11:30:17,092 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:30:17,094 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:30:50,274 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:31:02,031 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:31:05,534 - adapters.indeed_adapter - INFO - Waiting 18.9 seconds before next job (job #14)...
+2025-09-29 11:31:31,580 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:31:31,581 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:32:04,784 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:32:18,041 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:32:23,648 - adapters.indeed_adapter - INFO - Waiting 22.0 seconds before next job (job #15)...
+2025-09-29 11:32:53,145 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:32:53,158 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:33:26,343 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:33:38,278 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:33:40,468 - adapters.indeed_adapter - INFO - Waiting 20.7 seconds before next job (job #16)...
+2025-09-29 11:34:01,163 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 16
+2025-09-29 11:34:01,163 - adapters.indeed_adapter - INFO - Using new proxy: 46.202.248.65:5559
+2025-09-29 11:35:02,848 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a14i04i8r5817&fromjk=d6aba82ee742a588
+2025-09-29 11:35:02,851 - adapters.indeed_adapter - INFO - Found company rating: 3.5
+2025-09-29 11:35:02,853 - adapters.indeed_adapter - INFO - Found location: Bologna, Emilia-Romagna
+2025-09-29 11:35:02,858 - adapters.indeed_adapter - INFO - Found work type: remote
+2025-09-29 11:35:03,017 - adapters.indeed_adapter - INFO - Waiting 25.3 seconds before next job (job #17)...
+2025-09-29 11:35:37,160 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:35:37,173 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:36:10,690 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:36:21,142 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:36:27,645 - adapters.indeed_adapter - INFO - Waiting 23.1 seconds before next job (job #18)...
+2025-09-29 11:36:50,854 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 85.198.41.112:6038
+2025-09-29 11:36:59,132 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:36:59,134 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:37:32,302 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:37:44,263 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:37:47,551 - adapters.indeed_adapter - INFO - Waiting 20.2 seconds before next job (job #19)...
+2025-09-29 11:38:13,616 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:38:13,622 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:38:46,926 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:38:57,920 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:39:04,107 - adapters.indeed_adapter - INFO - Waiting 16.1 seconds before next job (job #20)...
+2025-09-29 11:39:20,331 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 31.58.23.16:5589
+2025-09-29 11:39:26,109 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:39:26,110 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:39:59,298 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:40:11,248 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:40:16,675 - adapters.indeed_adapter - INFO - Waiting 22.3 seconds before next job (job #21)...
+2025-09-29 11:40:45,165 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:40:45,167 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:41:18,337 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:41:29,308 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:41:32,946 - adapters.indeed_adapter - INFO - Waiting 20.8 seconds before next job (job #22)...
+2025-09-29 11:42:00,511 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:42:00,512 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:42:33,712 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:42:48,159 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:43:16,838 - adapters.indeed_adapter - INFO - Waiting 17.8 seconds before next job (job #23)...
+2025-09-29 11:43:34,638 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 23
+2025-09-29 11:43:34,638 - adapters.indeed_adapter - INFO - Using new proxy: 45.151.162.189:6591
+2025-09-29 11:44:09,103 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Le-Macchine-Celibi-Soc.-Coop.-1?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a1m2klhcdm85s&fromjk=c588249a705096e9
+2025-09-29 11:44:09,202 - adapters.indeed_adapter - INFO - Found location: Pianoro, Emilia-Romagna
+2025-09-29 11:44:09,251 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:44:09,391 - adapters.indeed_adapter - INFO - Waiting 22.7 seconds before next job (job #24)...
+2025-09-29 11:46:06,029 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/Le-Macchine-Celibi-Soc.-Coop.-1?campaignid=mobvjcmp&from=mobviewjob&tk=1j6a1noch250j000&fromjk=c588249a705096e9
+2025-09-29 11:46:06,036 - adapters.indeed_adapter - INFO - Found location: Pianoro, Emilia-Romagna
+2025-09-29 11:46:06,040 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 11:46:06,112 - adapters.indeed_adapter - INFO - Waiting 19.8 seconds before next job (job #25)...
+2025-09-29 11:46:34,321 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:46:34,322 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:47:07,493 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:47:18,862 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:47:53,831 - adapters.indeed_adapter - INFO - Waiting 19.1 seconds before next job (job #26)...
+2025-09-29 11:48:12,969 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 26
+2025-09-29 11:48:12,970 - adapters.indeed_adapter - INFO - Using new proxy: 50.114.98.116:5600
+2025-09-29 11:48:19,958 - adapters.indeed_adapter - WARNING - Error fetching job details for https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BR1jM-GbLNmyCrcFw9PuAjnLVbn-FZAgwk_oZDKciscVVwOLs8gdBuJTw_4HBAbWBJyNMyLvWuWqhX2ql-eAfRQtKXGVqbqNtefCpDSvy9zlOh7obnYRmvehdlS4YZAH-MlAdyz5kBajZ0fZzMA6aYIb7bvL6mJTWABv8Lv_6j6bBxrB_1Mtx6BSobOgyBLJOilteowAjSnpEAP5ZK2EX_hcqPYITb5CQBJJMqTBqxDWdOJ-7gSenhmjcFbYV65wyJI7ReA1SvehzoLGKIR3E7jOOnBxTA2D0LrBIo1fHsPpDqEUpF1D73lluOzuRr9Devet7TrDM2dkrXbSypqSDLEuT5g76mBcz-2aC0C4iFilssXThV-_JFW2diq7V2uzYXzSodapNv8__AAsd4u01LRzCb7v-48MH-gj25LXwqpIOaHRwpUcE8NkQ-qFxWQ3v00UV2bJJnQD3C8Bz2LB9LzG_6Gt5UPRtpm_v3aTPlSZuz9QW6cgMa6eFogeqHtFW1vokQ00qtNB3Wki7C6BaIiusAsxfa2fuvmLlzNcm0iBVofaJZdFdyKGxbMAaMkN0KtXEQbHxDJjKpJhrWWjHc-31y7XIepM7tLv1BeE41LKikRIA1leqIfU3tSEHmneH3SHUg1hutGLn2kq6NLC7yltkkqahLcBEFAfag5X0skw==&xkcb=SoDA6_M3sKIGWpgfaj0HbzkdCdPP&camk=UoKtGZLa3XL76uTkAgNfrg==&p=12&fvj=0&vjs=3: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BR1jM-GbLNmyCrcFw9PuAjnLVbn-FZAgwk_oZDKciscVVwOLs8gdBuJTw_4HBAbWBJyNMyLvWuWqhX2ql-eAfRQtKXGVqbqNtefCpDSvy9zlOh7obnYRmvehdlS4YZAH-MlAdyz5kBajZ0fZzMA6aYIb7bvL6mJTWABv8Lv_6j6bBxrB_1Mtx6BSobOgyBLJOilteowAjSnpEAP5ZK2EX_hcqPYITb5CQBJJMqTBqxDWdOJ-7gSenhmjcFbYV65wyJI7ReA1SvehzoLGKIR3E7jOOnBxTA2D0LrBIo1fHsPpDqEUpF1D73lluOzuRr9Devet7TrDM2dkrXbSypqSDLEuT5g76mBcz-2aC0C4iFilssXThV-_JFW2diq7V2uzYXzSodapNv8__AAsd4u01LRzCb7v-48MH-gj25LXwqpIOaHRwpUcE8NkQ-qFxWQ3v00UV2bJJnQD3C8Bz2LB9LzG_6Gt5UPRtpm_v3aTPlSZuz9QW6cgMa6eFogeqHtFW1vokQ00qtNB3Wki7C6BaIiusAsxfa2fuvmLlzNcm0iBVofaJZdFdyKGxbMAaMkN0KtXEQbHxDJjKpJhrWWjHc-31y7XIepM7tLv1BeE41LKikRIA1leqIfU3tSEHmneH3SHUg1hutGLn2kq6NLC7yltkkqahLcBEFAfag5X0skw==&xkcb=SoDA6_M3sKIGWpgfaj0HbzkdCdPP&camk=UoKtGZLa3XL76uTkAgNfrg==&p=12&fvj=0&vjs=3
+Call log:
+  - navigating to "https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BR1jM-GbLNmyCrcFw9PuAjnLVbn-FZAgwk_oZDKciscVVwOLs8gdBuJTw_4HBAbWBJyNMyLvWuWqhX2ql-eAfRQtKXGVqbqNtefCpDSvy9zlOh7obnYRmvehdlS4YZAH-MlAdyz5kBajZ0fZzMA6aYIb7bvL6mJTWABv8Lv_6j6bBxrB_1Mtx6BSobOgyBLJOilteowAjSnpEAP5ZK2EX_hcqPYITb5CQBJJMqTBqxDWdOJ-7gSenhmjcFbYV65wyJI7ReA1SvehzoLGKIR3E7jOOnBxTA2D0LrBIo1fHsPpDqEUpF1D73lluOzuRr9Devet7TrDM2dkrXbSypqSDLEuT5g76mBcz-2aC0C4iFilssXThV-_JFW2diq7V2uzYXzSodapNv8__AAsd4u01LRzCb7v-48MH-gj25LXwqpIOaHRwpUcE8NkQ-qFxWQ3v00UV2bJJnQD3C8Bz2LB9LzG_6Gt5UPRtpm_v3aTPlSZuz9QW6cgMa6eFogeqHtFW1vokQ00qtNB3Wki7C6BaIiusAsxfa2fuvmLlzNcm0iBVofaJZdFdyKGxbMAaMkN0KtXEQbHxDJjKpJhrWWjHc-31y7XIepM7tLv1BeE41LKikRIA1leqIfU3tSEHmneH3SHUg1hutGLn2kq6NLC7yltkkqahLcBEFAfag5X0skw==&xkcb=SoDA6_M3sKIGWpgfaj0HbzkdCdPP&camk=UoKtGZLa3XL76uTkAgNfrg==&p=12&fvj=0&vjs=3", waiting until "domcontentloaded"
+
+2025-09-29 11:48:20,091 - adapters.indeed_adapter - INFO - Waiting 18.1 seconds before next job (job #27)...
+2025-09-29 11:48:45,104 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:48:45,105 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:49:18,265 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:49:31,388 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:49:33,626 - adapters.indeed_adapter - INFO - Waiting 17.1 seconds before next job (job #28)...
+2025-09-29 11:49:58,461 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:49:58,462 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:50:31,632 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:50:42,077 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:50:45,509 - adapters.indeed_adapter - INFO - Waiting 18.9 seconds before next job (job #29)...
+2025-09-29 11:51:04,522 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@104.143.229.197:6125 to 64.137.104.108:5718
+2025-09-29 11:51:12,193 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:51:12,193 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:51:45,326 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:51:56,888 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:52:01,346 - adapters.indeed_adapter - INFO - Waiting 23.7 seconds before next job (job #30)...
+2025-09-29 11:52:31,425 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-29 11:52:31,426 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-29 11:53:04,607 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-29 11:53:17,155 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-29 11:53:25,209 - adapters.indeed_adapter - INFO - Waiting 24.1 seconds before next job (job #31)...
+2025-09-29 11:53:49,319 - adapters.indeed_adapter - INFO - Waiting 12.9 seconds before next page...
+2025-09-29 11:54:02,917 - adapters.indeed_adapter - INFO - Scraping completed. Found 30 jobs
+2025-09-29 11:54:02,917 - __main__ - INFO - Successfully scraped 30 jobs from Bologna, Emilia-Romagna
+2025-09-29 11:54:03,158 - models.job_model - INFO - Raw job stored with ID: 67
+2025-09-29 11:54:03,165 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FM6u5WmHPaV-BWNqbBcN2K38-zob8PgsKAPYg3HXG9d4WWNuV1RQpCskylVGymccqualptFj-UFzeQkj1-0sc0YbfsIC6LhbHzB7gZ09jKDB3s5V1QNadvsjkQDarpCsJ6kGkBpdlq92QS1g3mgJeKDB3xlrMC9jCZ8Rv5mNMwEwU83p40LeLTkQ7q2VGXCDyevPtGwn1UVWLnda-nhrOHIE22TpVe4J8FDu3wk3SGgHkXdFg-LXCUCdzKpaZN_hj6P4ly3i5gn1JBvJGBXAZx2hOD3wMvZBqd7iVdMe2Ss8SZT57RtOGJt54teWiIG-qMRPR5tZywJPmAx9npwKLWNTK_8jUvGJ9hSyUdqOYkF8TITHu8ctxsF7Xwh5POBQUbQaXA2W702dA7ImA4ZbuKtuEfGeQCPjSUSoW5mw4S9IowVXll0y6lq8PtcupqFwPv3d6b2dcwNxWvNCooDBhzGRfNc2SzWzxWccwsbxVaWi37z1EizFng1cIS-CFRDRYHE4PtB7qT9IRth8iHOgm-f1MNWwUHhPR2tJmuetHYOSIhEvv8zxQu4Ltrm6g3SXz6s067MkuU5cxrDLnq9CVKGaztWF9T67PvVTcaBEQuA_lbLh-1MSzXLeb6fS7Iq6UjeiTbpqJef5ZY2zRtWjKafNCH0C98pH-NLzCs3_xgL-gS14PBVJSzEQ_O8Ux5FKrEUijDURzhwnKaWYcdmW0e_mKDx5OvGXLO8UbhePmV8Es7KrauKEQgf-FkFkb5_URVdBtgCoSXQqtd7rzdhiIJYoPBY3pxJRRQ==&xkcb=SoC06_M3sKIGWpgfaj0LbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=0&fvj=0&vjs=3
+2025-09-29 11:54:03,176 - models.job_model - INFO - Raw job stored with ID: 68
+2025-09-29 11:54:03,181 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FBAG2MxkabgsWdrrTBFOEfKBL0tE-QFmtvMhR4B31f9ezOCU94_JZ1RSqpWcrrVqlb1G9jNSQ12IpFBhGsP220RBCpb4PsvexVaTj_P8O8neEAOsJWWyV9hY1qUIybzvAmubNASFZJsIj1geobt0jzB1uY4jGA7vZZKBQ2fwCJSzo40O99f5NZAdzVOnVIMs2qjfybNf325xAKs9gaUCMhZ8YxGiWnyHJ7r9jCupE0bjkykojqFlRfotMQhlKM16LN4_ncBvqd0M2W0gA7tlPjt-o7_PYHAqByV641O380ikVKrR-wNLmJfcv_QQAd7ydzT8gbpNWzhRhvKseiEOLVk99ZwPUCE4m5_ay4a2dtbdMCOk1ul8EHgNaSnVYP3JJjCZcfGxphp4M5iCu18u4J-G54kKSkPBnQMmSW9x9oozMbX0BnEc42BZJk4MVfGbIIQpFrfCL3zSgBmIOHjKVL4wtGLVCFxndA3a4WOyVlG15PFpHtEOgJYYfLIVK0HwbOSYjIDXyiyX3zLnoVz9DyZrlQpVZnk5isypjNfhzciQ2vNieY1aKbRihCQUn2YYmLDfWE66Q2oAMR_aZOmUVCitG8YQAQQ_FP-XCwqDRPHGwJFeWhnuQSIwwYG3rtHtg7RfLdWxaeNcvV3qd8GqcWIbmISSuY6phqw_fqkYKOgPjBpS-ZinXFjTXHtcY2GJ1Sm1qKL3IIAXAWl1Z9HA0MsgAHZa0qov33PP3tsnxv80VSGl5Z7swCnXb0hygZUoKKCZziTwETNcBz2m-U7gwsi6PX0VBdPpxA==&xkcb=SoAA6_M3sKIGWpgfaj0KbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=1&fvj=0&vjs=3
+2025-09-29 11:54:03,201 - models.job_model - INFO - Raw job stored with ID: 69
+2025-09-29 11:54:03,205 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FBMMMUl0pTMbxdvm0C2QJigcGRDTyFSyqiKke21LWaF1ogsvhD1XM28rqJ2tnGj7BWaAX1Y0KCIJCDP8fqOvCmRjIIW6yTp6edz44jJhDOuuSe6cqKdKfQRnnqwV0fgE71ag0I-Yd8MA3-JuRKWmIj7A-Nm9_oYEeH7E0MDHlnA3l5rmO2NCcGCrDIoeTq8tpSpR8aCK0pnlAMIHbvhVKzii9WKL4l3XMkxGdMwt03xNMUJYOEr7PUyClSNreABZtqBKkl3IcR3AtdymcxW3MU1xvi01UTeHuRzxdY5p11XQI3Q0zQUTLEf4aQh16fOswSmKagKBrP3eCJBGKN8LwtIyNf5Mgn02z7biw76eOo_N1uP37BS_cMEjn3CQaTAmfzDfz9W1s8X_9weZE4o8XODS4l7cLdbsf_4qoUMe5Dp4zunC55YwDvuH1_h4Y1SAeHNGXtR2YnVosY5QOdz2zHCxlTKHHF1DpQUI0LJY7C33cqkHAZ2lN5BufB55x2V7gkoid3A72k-DvF5E9gZAprKY60FdOpx31wnv6y-gSEGbSRHrArbBG-GR5k46o-fG5WjGQds6PiFzXFrWGKDIgYjmCaHdeI81umzDgGmfSLW4TMeKpNRXCRAF7SIqDWt_DIxb4wq7obE0B2mNDP0YgzOTAdAybSlva4uWPoIXHza-2H0EqXYxPsw3uZrZG4hN1oRt8viKTzUzgLjzYdiuvPRrH6BmHT8KzWnp5CsyjBknzb7DYBT9GxCsr4YK6iV1ZeQHwYm9p-2tyqabJhOsSQvqphZOFvH35Q==&xkcb=SoCd6_M3sKIGWpgfaj0JbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=2&fvj=0&vjs=3
+2025-09-29 11:54:03,221 - models.job_model - INFO - Raw job stored with ID: 70
+2025-09-29 11:54:03,227 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BV9k0DESAoAoClkUISVkb9dvc8icmu5ykco6OTDkFDyjsHJIouPWFwONxbZZOVgL1d7Ul9XTw9FGHxnijJN-I_dNhEsVpdoBZS9LuyD6Mix4cToeSIMSgeYvise11qsYHJvmK2j_pqtodOpG41c1tVWCJYCYcADGodWQnxyBQAxcvQhAKpuQV8yaiRIiZNkV30hzh8613N2yY4N9QQFDzeg9HIw6r6ebu8hHTpSyOjzsf4nIMds51GUol1Q23UPEL5PkVJCCWYE267d2GNl31EK-PgUFYpB4DLOICNaO4xSrKnJdwXqnsmUKRwfANnOy5H0TfvMdL6EgNvXKKNqPkxF0_nZIv2xOwI-4nEp2RuDLVzPAt66r-tBsnubXdpsBbaYBwObvUyT-2DIOTM5KJZD1Fq6Qm_ZF6rCo4fR1bKns7vGLj7_ZVv_lzqUn3872vDQWtLT0t8wVluC4upY1ypIbTvDwUn9FSDqVQU0Z84DmRoePhZ8a7yKYvAPlACX-rkJSi3mKeL5BvZEimmgIhUfr0pqDspcezGf6IHkRxLbj0Z86HduEn8Wk129iO2Z-iaFIwZEUB8ynVrvDbGhXsJs6q9g3H2NkzCAXEf7Ref5uSLsUtlyxHvovcE7NgbvVLnXRYLwhl4L2jin9NonmBnitiR1X9bzF-xc3GehYX4uVzsd8ipRK5aVYGsXOdolIkx3LppymGOgLGiNzmPGwKPz6kiIRafScem-K4k5ZSyNqn1ZO1H9egIR1QLffmU7yIN0XCdZKkY97-ffzgV6hepA3_-gPz0ufOZZbu6qHfEHnnTZFvQ6pxSFrRc6CWU2AclwG4s8R4vJ_IEwcEY6KQA3hby1xBIlQa3pktiV3K4aw==&xkcb=SoAp6_M3sKIGWpgfaj0IbzkdCdPP&camk=ethIe0s0hedH8Nj4JZPMgA==&p=3&fvj=0&vjs=3
+2025-09-29 11:54:03,241 - models.job_model - INFO - Raw job stored with ID: 71
+2025-09-29 11:54:03,248 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=8b3f1d8cc5f81225&bb=aqJ5dhYvGKLTdoW8ErNZ4Znxt4gRyUOsWY0XV2us066ChDInl3eM0RTNoEAJXo1AQCIwD0tl7FOrCBEAN4luWlDxc5q2YIa6Zr0O7RWjPmVd6PVka2QlEQ%3D%3D&xkcb=SoBT67M3sKIGWpgfaj0PbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:54:03,261 - models.job_model - INFO - Raw job stored with ID: 72
+2025-09-29 11:54:03,269 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DLb8rsH4I5dDeSKgibOJDPLwF4Tzu0zR93bDi43snz-TqmY_BfuBCbkZQK-CDtNaLHX7YHWGCfhdMH-gQHpjp91xEmO32Y0sNKrmX1G5D7icPVkLfqxUgAaLUvgkDyzgYZt5CvRzmVrvl6FPeyXEFTOiHWz4LRu03TgJf_MKBxyQiGkS8ngKCdxo9Vc2u5MfImO5gU9q0b1xkqkBLqr4y5v-YK27SFZzmG4g90LvI-sgOkpipzTySF0od38vwLkxxBumJg_rmbjjSCGDzR_w_g2dE4aSF9s2Y85h6E1RRJq0T0WDFS40EC0GW5tPfvs3T1sgA_z-U_QGI2qS92W2L6fUsvHmLb7YySIi-3zzBFPYX4VTMstbmvBprdfkeh8kuibsRPIBy2IIEv328EXK1qykryHICZ8WfHj2HxIhPW_aDXSv4GAR-GFIOD9c5hOGwaxcSoOBhPW9TX4Ed-hZtq4mMc1m2qGYOpQWP26VDE2aGj4I40AJfN5owvR4g7h8YHBVSp7A-osUmMg4WZ1GRf8M8pliBLCC9uJtyRVhUsnQfDAFhJDv8RMw0t0dguP9jwSonWhwPDVG_JmH3XM5Tvkd9HbjQo7E3pUKEoPhWT8-rTYUvkFt2sRsKv5spzhcT-Lt6XTnkbzHMjeO4e1yqwbo9L1h6u0wXvqLjOXC__oyEnLszPDYEGwNqboU0jipyhhN3E18IC_OYEB5vZZzndlYsED3bm7TSPO5HwJGxcEmYSoWaZijy_uHjDnqvp_wjToB1SElnH29nnB3pXitia&xkcb=SoAT6_M3sKIGWpgfaj0ObzkdCdPP&camk=UoKtGZLa3XI7izmJO5kSiQ==&p=5&fvj=0&vjs=3
+2025-09-29 11:54:03,282 - models.job_model - INFO - Raw job stored with ID: 73
+2025-09-29 11:54:03,285 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=64eafde35486cbf5&bb=aqJ5dhYvGKLTdoW8ErNZ4RGfCZX8S6p79SMxDAOcI_uZz7Hy5XAl6SKf-MqsiisFXORrE-B6RuOc8bBdHGRtkMF4ODLPTVIMvxJmAtd3T5vShlDJTKD-Tg%3D%3D&xkcb=SoB667M3sKIGWpgfaj0NbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:54:03,292 - models.job_model - INFO - Raw job stored with ID: 74
+2025-09-29 11:54:03,297 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=d6aba82ee742a588&bb=aqJ5dhYvGKLTdoW8ErNZ4ejgt_8ng3voZEiKWyk7p_Zir9BnpHKjEb9uSvQ2sqlITAPfgq4_kdPNLSuWHIEkqPVAmyAVzkNtEzPKB5jpv_hWIKDL72rd1Q%3D%3D&xkcb=SoDO67M3sKIGWpgfaj0MbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:54:03,304 - models.job_model - INFO - Raw job stored with ID: 75
+2025-09-29 11:54:03,310 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=925ebef25cfa6329&bb=aqJ5dhYvGKLTdoW8ErNZ4bK6etk5WbUdkRMn_fiKp1Sx8u3DTQR2RydX6L9hrJ5LH147Z4ubJHW1DNd76Eq5WlK1nh-cBLQ6BtPzc7kBHA4fxjEJ0QY0xA%3D%3D&xkcb=SoAn67M3sKIGWpgfaj0DbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-29 11:54:03,318 - models.job_model - INFO - Raw job stored with ID: 76
+2025-09-29 11:54:03,325 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DrwykygBt17UArnrpB8YTU7MiVom8a2ZA9VYUocxo5w_w4-W58WWb3VWRmf8HsdKswZ__ivEvwIca4bXcSI_8FxBLE8KFe7UY8GqPbEm-0eCvAa61zLvJZrw1lAHyXmg5q5f_R2_VgpgMIiXUrlmZdlX7RDAGFxx1u-uTtX41kM1oUHdhsqM7WgkiVP0YhXMGIJWWnAe_jLuMtr1wJeRFxAisjPkb9ZQKYD0fwBKWMG7sQ46-Jcx26tlQ_KkI3cPhwnrOQgiix7Al3pyKFLPZLE2xoAhDi_4zn8Sk3VStOWK70mcNBPizODbleJ5XM68e58ItpNLpxXy-QrZNLqdWSAosOgQqh71-WNdH4beK1MnMrjLA2RutRYvbrxI7Pl3uqnEb1xur6n1xq6jw-0Kzpc0FHx6LAxj4FPnP7NcJ-lPfDUlW6KiSVSqfBzpVHZuGZP6dUmmTLX_-jDKptzW5JhVSkZlNkLj3PV3ydQRiX-FwpaIXo1suvurR2ueBKtfcO5_rG6im0EwsZFERNO-SY7RJrUAC9enP5wICHenqIyeZRvs2HbN_ZVysurd8E3TfS_QVPZYsb4sYPxtawFc1RAShAccAJSmnqLhZozS5IZr2iFntK1JWm9CcuJxacHtBUTyBxOHohrted0jWJJLVcy0dDal6IlGXxkNRjzIvjBKDHIYpMfsIUpL6hxShiVdIBWFTkqPYRhtIvZDO4jvDTjWzdq3pCl3dVrYbIV13z6801pvJUlCxu&xkcb=SoBn6_M3sKIGWpgfaj0CbzkdCdPP&camk=UoKtGZLa3XJDP-jPmaoj1g==&p=9&fvj=0&vjs=3
+2025-09-29 11:54:03,339 - models.job_model - INFO - Raw job stored with ID: 77
+2025-09-29 11:54:03,346 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AObJ49tb3rC7O09YPzhK8huD-fwx2ahhn82F9XaVp7Q0lkM6rLm0aKgmKxSOpsVnyPGtdXuMhwNFw8QXMQ7Vz3qjvOiRhXUtFcs5NM2XYW1y0Lzo3tr3nuB0_tlFkjtmqmgveEdDYnerF0Bz9x0PaEukw4uDKzZz9u3XM63-VOdcQwiWOhf2pWg-vSwJdBO1QHjm3Bng_a7NpNmlYpL1Fqf00Vp11XOR5SNygCo-J5sqMJx89lqdBFDLLs9McOtr8ens2WzW6e_rKqy6Mz3EPDTGPs6UrvYOW9ZDI0OLuAKtfJ6rmXGWfoYQBByGWa_McqDlDW8hSJDISg5v97q0-w9-AWbWEncMr6ij3VmA4Xc96gWr8aCzaipGiTDwSitAgmfJWaE_w-K1woqPnVRI7YMe5ZTyycFyuiN5t3n2mfu8hR3v8VaoOLfdh53tR2IJS_XsENmgZvhR9TTprHFH6GpCx02aB_By6DMbmxQTH9ab6ZAdkVYSEu6Y3S4EwTqlGM_C8yuXWfDZ1h49WBttYuTTv4IqLy91OEyzZH9HVu1Qw_s5rgT6tCk0KqW4liAWyK2U3EsEQygqGlwJZPgk1UZfnPk8pbM8yrlhwvCgnLTuEQ9tGhrW2-gGQTplyqAFfjICEoK2ifquQG1biU7sm4ykRGXnCNdcl7oU6JP4oodvk7as6KSCbyPicBbloLNBQPJWPoVKZ8EQ==&xkcb=SoD66_M3sKIGWpgfaj0BbzkdCdPP&camk=UoKtGZLa3XLQLDb6hyLviQ==&p=10&fvj=0&vjs=3
+2025-09-29 11:54:03,355 - models.job_model - INFO - Raw job stored with ID: 78
+2025-09-29 11:54:03,362 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c588249a705096e9&bb=aqJ5dhYvGKLTdoW8ErNZ4fjXM38Yd38iLlGVlBmnO5Smf3sypbSwGtAlFDKjpFvtNtZbSldgSmw19uaV7OtneXhthTAZILZHiNBRKmRb_09KcrVwOeiEttcdOTu_NDsu4kuzfAlE6ak%3D&xkcb=SoC667M3sKIGWpgfaj0AbzkdCdPP&fccid=c62431d7b7231e13&cmp=Le-Macchine-Celibi-Soc.-Coop.&ti=Educatore&vjs=3
+2025-09-29 11:54:03,370 - models.job_model - INFO - Raw job stored with ID: 79
+2025-09-29 11:54:03,378 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BR1jM-GbLNmyCrcFw9PuAjnLVbn-FZAgwk_oZDKciscVVwOLs8gdBuJTw_4HBAbWBJyNMyLvWuWqhX2ql-eAfRQtKXGVqbqNtefCpDSvy9zlOh7obnYRmvehdlS4YZAH-MlAdyz5kBajZ0fZzMA6aYIb7bvL6mJTWABv8Lv_6j6bBxrB_1Mtx6BSobOgyBLJOilteowAjSnpEAP5ZK2EX_hcqPYITb5CQBJJMqTBqxDWdOJ-7gSenhmjcFbYV65wyJI7ReA1SvehzoLGKIR3E7jOOnBxTA2D0LrBIo1fHsPpDqEUpF1D73lluOzuRr9Devet7TrDM2dkrXbSypqSDLEuT5g76mBcz-2aC0C4iFilssXThV-_JFW2diq7V2uzYXzSodapNv8__AAsd4u01LRzCb7v-48MH-gj25LXwqpIOaHRwpUcE8NkQ-qFxWQ3v00UV2bJJnQD3C8Bz2LB9LzG_6Gt5UPRtpm_v3aTPlSZuz9QW6cgMa6eFogeqHtFW1vokQ00qtNB3Wki7C6BaIiusAsxfa2fuvmLlzNcm0iBVofaJZdFdyKGxbMAaMkN0KtXEQbHxDJjKpJhrWWjHc-31y7XIepM7tLv1BeE41LKikRIA1leqIfU3tSEHmneH3SHUg1hutGLn2kq6NLC7yltkkqahLcBEFAfag5X0skw==&xkcb=SoDA6_M3sKIGWpgfaj0HbzkdCdPP&camk=UoKtGZLa3XL76uTkAgNfrg==&p=12&fvj=0&vjs=3
+2025-09-29 11:54:03,392 - models.job_model - INFO - Raw job stored with ID: 80
+2025-09-29 11:54:03,397 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1460de4b8468ba04&bb=aqJ5dhYvGKLTdoW8ErNZ4aF8ZtxXiIhKICy3adt_78cZLUhNloxi_Xj5oNK0fdmjKXPU-WZ3t8mnCP5F7tgk1G-FJu3lkCgvc5M1kGdT7f-c2zjfu1O9Cw9F2lQwQ8mo&xkcb=SoCA67M3sKIGWpgfaj0GbzkdCdPP&fccid=c26cf8942059defd&vjs=3
+2025-09-29 11:54:03,405 - models.job_model - INFO - Raw job stored with ID: 81
+2025-09-29 11:54:03,412 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=770f699196c2f35f&bb=aqJ5dhYvGKLTdoW8ErNZ4bdzziMF2tKdGLQqTzCgiBvt7ku_MDPdgkdBf25iAXuaUakMWBTLQolTD3oe8Q-_f_EURGlZnwHJfufCzjH-vetwsc2IiMiCjnD-EYNC2FNM&xkcb=SoAd67M3sKIGWpgfaj0FbzkdCdPP&fccid=eeed7b5d8f031ea2&vjs=3
+2025-09-29 11:54:03,414 - models.job_model - INFO - Batch storage completed: 30 new jobs, 0 duplicates
+2025-09-29 11:54:03,415 - __main__ - INFO - Stored 30 new jobs, 0 duplicates from Bologna, Emilia-Romagna
+2025-09-29 11:54:03,416 - __main__ - INFO - Waiting 221 seconds before next location...
+2025-09-29 11:57:44,427 - __main__ - INFO - [tier_1] Location 6/8: Firenze, Toscana
+2025-09-29 11:57:44,428 - __main__ - INFO - Scraping: '' in 'Firenze, Toscana'
+2025-09-29 11:57:44,429 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Firenze, Toscana, max_pages: 1
+2025-09-29 11:57:44,429 - adapters.indeed_adapter - INFO - Using proxy: 179.61.166.171:6594
+2025-09-29 11:57:45,715 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Firenze%2C+Toscana&start=0&sort=date&fromage=1
+2025-09-29 11:58:45,737 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Firenze%2C+Toscana&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 11:59:10,058 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 11:59:10,059 - __main__ - INFO - Successfully scraped 0 jobs from Firenze, Toscana
+2025-09-29 11:59:10,059 - __main__ - INFO - Waiting 244 seconds before next location...
+2025-09-29 12:03:14,493 - __main__ - INFO - [tier_1] Location 7/8: Genova, Liguria
+2025-09-29 12:03:14,493 - __main__ - INFO - Scraping: '' in 'Genova, Liguria'
+2025-09-29 12:03:14,494 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Genova, Liguria, max_pages: 1
+2025-09-29 12:03:14,495 - adapters.indeed_adapter - INFO - Using proxy: 23.27.93.120:5699
+2025-09-29 12:03:15,642 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Genova%2C+Liguria&start=0&sort=date&fromage=1
+2025-09-29 12:03:17,304 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://it.indeed.com/jobs?q=&l=Genova%2C+Liguria&start=0&sort=date&fromage=1
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Genova%2C+Liguria&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 12:03:44,201 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 12:03:44,201 - __main__ - INFO - Successfully scraped 0 jobs from Genova, Liguria
+2025-09-29 12:03:44,201 - __main__ - INFO - Waiting 235 seconds before next location...
+2025-09-29 12:07:39,223 - __main__ - INFO - [tier_1] Location 8/8: Venezia, Veneto
+2025-09-29 12:07:39,224 - __main__ - INFO - Scraping: '' in 'Venezia, Veneto'
+2025-09-29 12:07:39,224 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Venezia, Veneto, max_pages: 1
+2025-09-29 12:07:39,225 - adapters.indeed_adapter - INFO - Using proxy: 67.227.42.17:5994
+2025-09-29 12:07:40,393 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Venezia%2C+Veneto&start=0&sort=date&fromage=1
+2025-09-29 12:08:40,403 - adapters.indeed_adapter - ERROR - Error on page 1: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Venezia%2C+Veneto&start=0&sort=date&fromage=1", waiting until "networkidle"
+
+2025-09-29 12:09:06,246 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-29 12:09:06,247 - __main__ - INFO - Successfully scraped 0 jobs from Venezia, Veneto
+2025-09-29 12:09:06,247 - __main__ - INFO - Multi-location scrape completed. Total jobs scraped: 60
+2025-09-29 12:09:06,247 - __main__ - INFO - Multi-query scrape completed. Total jobs: 60
+2025-09-29 12:09:06,248 - __main__ - INFO - Starting job processing and company matching...
+2025-09-29 12:09:06,450 - __main__ - INFO - Found 30 unprocessed jobs
+2025-09-29 12:09:06,450 - __main__ - INFO - Processing batch 1/1
+2025-09-29 12:09:06,473 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=75425b28ebbe7de8&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,504 - models.job_model - INFO - Processed job stored with ID: 52
+2025-09-29 12:09:06,514 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=d2882e08a146d1ea&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,519 - models.job_model - INFO - Processed job stored with ID: 53
+2025-09-29 12:09:06,536 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=bdd676f4ac619e0d&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,541 - models.job_model - INFO - Processed job stored with ID: 54
+2025-09-29 12:09:06,551 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=710fd80171912b97&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,556 - models.job_model - INFO - Processed job stored with ID: 55
+2025-09-29 12:09:06,566 - services.company_matcher - INFO - Google API search not implemented for: Alberto madau partita IVA VAT number Italy
+2025-09-29 12:09:06,567 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=ca6274a3ac1419d9&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,571 - models.job_model - INFO - Processed job stored with ID: 56
+2025-09-29 12:09:06,581 - services.company_matcher - INFO - Google API search not implemented for: Globe MKD partita IVA VAT number Italy
+2025-09-29 12:09:06,582 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=74e245490608ffee&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,586 - models.job_model - INFO - Processed job stored with ID: 57
+2025-09-29 12:09:06,597 - services.company_matcher - INFO - Google API search not implemented for: Con Mollica o Senza SRL partita IVA VAT number Italy
+2025-09-29 12:09:06,598 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=70ecbcf2af0376b2&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,601 - models.job_model - INFO - Processed job stored with ID: 58
+2025-09-29 12:09:06,610 - services.company_matcher - INFO - Google API search not implemented for: Moonlight srl partita IVA VAT number Italy
+2025-09-29 12:09:06,611 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=2fb10b97c3ac0268&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,613 - models.job_model - INFO - Processed job stored with ID: 59
+2025-09-29 12:09:06,621 - services.company_matcher - INFO - Google API search not implemented for: Kiamì partita IVA VAT number Italy
+2025-09-29 12:09:06,621 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=2ea72bcef7ae634e&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,626 - models.job_model - INFO - Processed job stored with ID: 60
+2025-09-29 12:09:06,634 - services.company_matcher - INFO - Google API search not implemented for: Al Solito Porzio partita IVA VAT number Italy
+2025-09-29 12:09:06,635 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=619e0acb23ebee0d&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,639 - models.job_model - INFO - Processed job stored with ID: 61
+2025-09-29 12:09:06,648 - services.company_matcher - INFO - Google API search not implemented for: Contro Corrente srl partita IVA VAT number Italy
+2025-09-29 12:09:06,649 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=74ffb65aa839fd0f&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,652 - models.job_model - INFO - Processed job stored with ID: 62
+2025-09-29 12:09:06,662 - services.company_matcher - INFO - Google API search not implemented for: Alberto madau partita IVA VAT number Italy
+2025-09-29 12:09:06,663 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=5a961d8ff8a33bd8&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,666 - models.job_model - INFO - Processed job stored with ID: 63
+2025-09-29 12:09:06,677 - services.company_matcher - INFO - Google API search not implemented for: SimoBeauty partita IVA VAT number Italy
+2025-09-29 12:09:06,677 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=d858cb3be78b0795&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,680 - models.job_model - INFO - Processed job stored with ID: 64
+2025-09-29 12:09:06,688 - services.company_matcher - INFO - Google API search not implemented for: Amplifon partita IVA VAT number Italy
+2025-09-29 12:09:06,689 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=a988cf45125bdb9d&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,693 - models.job_model - INFO - Processed job stored with ID: 65
+2025-09-29 12:09:06,702 - services.company_matcher - INFO - Google API search not implemented for: Frugale Roma - Food Garden partita IVA VAT number Italy
+2025-09-29 12:09:06,702 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=7581778762f8a850&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,706 - models.job_model - INFO - Processed job stored with ID: 66
+2025-09-29 12:09:06,714 - services.company_matcher - INFO - Google API search not implemented for: Just Eat partita IVA VAT number Italy
+2025-09-29 12:09:06,715 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,718 - models.job_model - INFO - Processed job stored with ID: 67
+2025-09-29 12:09:06,728 - services.company_matcher - INFO - Google API search not implemented for: Just Eat partita IVA VAT number Italy
+2025-09-29 12:09:06,728 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,731 - models.job_model - INFO - Processed job stored with ID: 68
+2025-09-29 12:09:06,741 - services.company_matcher - INFO - Google API search not implemented for: Just Eat partita IVA VAT number Italy
+2025-09-29 12:09:06,742 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,745 - models.job_model - INFO - Processed job stored with ID: 69
+2025-09-29 12:09:06,755 - services.company_matcher - INFO - Google API search not implemented for: Just Eat partita IVA VAT number Italy
+2025-09-29 12:09:06,755 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,760 - models.job_model - INFO - Processed job stored with ID: 70
+2025-09-29 12:09:06,771 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=8b3f1d8cc5f81225&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,776 - models.job_model - INFO - Processed job stored with ID: 71
+2025-09-29 12:09:06,785 - services.company_matcher - INFO - Google API search not implemented for: Holding Gold srl partita IVA VAT number Italy
+2025-09-29 12:09:06,785 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,789 - models.job_model - INFO - Processed job stored with ID: 72
+2025-09-29 12:09:06,800 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=64eafde35486cbf5&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,804 - models.job_model - INFO - Processed job stored with ID: 73
+2025-09-29 12:09:06,814 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=d6aba82ee742a588&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,818 - models.job_model - INFO - Processed job stored with ID: 74
+2025-09-29 12:09:06,828 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=925ebef25cfa6329&b... | Match: name (100.0%) | Company: Amazon
+2025-09-29 12:09:06,831 - models.job_model - INFO - Processed job stored with ID: 75
+2025-09-29 12:09:06,839 - services.company_matcher - INFO - Google API search not implemented for: AMG SPA partita IVA VAT number Italy
+2025-09-29 12:09:06,840 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,843 - models.job_model - INFO - Processed job stored with ID: 76
+2025-09-29 12:09:06,854 - services.company_matcher - INFO - Google API search not implemented for: Mister Coffee Bistrò partita IVA VAT number Italy
+2025-09-29 12:09:06,854 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,858 - models.job_model - INFO - Processed job stored with ID: 77
+2025-09-29 12:09:06,869 - services.company_matcher - INFO - Google API search not implemented for: Le Macchine Celibi Soc. Coop. partita IVA VAT number Italy
+2025-09-29 12:09:06,869 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c588249a705096e9&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,873 - models.job_model - INFO - Processed job stored with ID: 78
+2025-09-29 12:09:06,883 - services.company_matcher - INFO - Google API search not implemented for: EMILIA PULIZIE partita IVA VAT number Italy
+2025-09-29 12:09:06,884 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,888 - models.job_model - INFO - Processed job stored with ID: 79
+2025-09-29 12:09:06,900 - services.company_matcher - INFO - Google API search not implemented for: DECATHLON Retail Omnichannel partita IVA VAT number Italy
+2025-09-29 12:09:06,901 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1460de4b8468ba04&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,904 - models.job_model - INFO - Processed job stored with ID: 80
+2025-09-29 12:09:06,915 - services.company_matcher - INFO - Google API search not implemented for: EVENT MARKETING partita IVA VAT number Italy
+2025-09-29 12:09:06,916 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=770f699196c2f35f&b... | Match: none (0.0%) | Company: None
+2025-09-29 12:09:06,920 - models.job_model - INFO - Processed job stored with ID: 81
+2025-09-29 12:09:07,923 - __main__ - INFO - Processing completed: 30 jobs processed
+2025-09-29 12:09:07,924 - __main__ - INFO - Generating execution report...
+2025-09-29 12:09:07,935 - __main__ - INFO - Report generation completed
+2025-09-29 12:09:07,935 - __main__ - INFO - Pipeline execution completed successfully!
+2025-09-29 12:09:07,939 - utils.db_utils - INFO - Database connection pool closed
+2025-09-29 18:43:07,844 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-09-29 18:43:08,522 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-29 18:43:08,535 - utils.db_utils - INFO - Migration executed successfully
+2025-09-29 18:43:08,536 - __main__ - INFO - Database initialized successfully
+2025-09-29 18:43:08,548 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-29 18:43:08,549 - __main__ - INFO - Companies cache loaded successfully
+2025-09-29 18:43:08,550 - __main__ - INFO - Multi-location mode with tiers: ['tier_1']
+2025-09-29 18:43:08,550 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-09-29 18:43:08,550 - __main__ - INFO - Query 1/1: ''
+2025-09-29 18:43:08,551 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-09-29 18:43:08,551 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-09-29 18:43:08,551 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-09-29 18:43:08,551 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-09-29 18:43:08,552 - adapters.indeed_adapter - INFO - Starting Indeed scraping:  in Milano, Lombardia, max_pages: 1
+2025-09-29 18:43:08,552 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-09-29 18:43:11,070 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-09-29 18:43:53,145 - adapters.indeed_adapter - INFO - Found 30 jobs on page 1
+2025-09-29 18:44:23,857 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/SAN-Carlo-Gruppo-Alimentare?campaignid=mobvjcmp&from=mobviewjob&tk=1j6apnjj3k3fm800&fromjk=c1afa20933ea3007
+2025-09-29 18:44:23,859 - adapters.indeed_adapter - INFO - Found company rating: 2.9
+2025-09-29 18:44:23,861 - adapters.indeed_adapter - INFO - Found location: Lainate, Lombardia
+2025-09-29 18:44:23,865 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 18:44:23,897 - adapters.indeed_adapter - INFO - Waiting 13.0 seconds before next job (job #2)...
+2025-09-29 18:45:33,096 - adapters.indeed_adapter - INFO - Found company Indeed URL: https://it.indeed.com/cmp/SAN-Carlo-Gruppo-Alimentare?campaignid=mobvjcmp&from=mobviewjob&tk=1j6apov53l53t80a&fromjk=c1afa20933ea3007
+2025-09-29 18:45:33,097 - adapters.indeed_adapter - INFO - Found company rating: 2.9
+2025-09-29 18:45:33,099 - adapters.indeed_adapter - INFO - Found location: Lainate, Lombardia
+2025-09-29 18:45:33,101 - adapters.indeed_adapter - INFO - Found work type: office
+2025-09-29 18:45:33,114 - adapters.indeed_adapter - INFO - Waiting 14.3 seconds before next job (job #3)...
+2025-09-29 18:45:49,117 - utils.db_utils - INFO - Database connection pool closed

@@ -1,0 +1,643 @@
+2025-09-28 11:58:10,565 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 11:58:10,567 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 11:58:10,569 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 11:58:10,570 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 11:58:10,588 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 11:58:10,609 - __main__ - INFO - Search parameters: 'software engineer' in 'Mumbai, Maharashtra', 1 pages, date_filter: 1
+2025-09-28 11:58:10,609 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Mumbai, Maharashtra, max_pages: 1
+2025-09-28 11:58:10,618 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 11:58:20,114 - adapters.indeed_adapter - INFO - Scraping page 1: https://in.indeed.com/jobs?q=software+engineer&l=Mumbai%2C+Maharashtra&start=0&sort=date&fromage=1
+2025-09-28 11:58:35,453 - adapters.indeed_adapter - INFO - Found 30 jobs on page 1
+2025-09-28 12:02:22,464 - adapters.indeed_adapter - INFO - Waiting 11.9 seconds before next page...
+2025-09-28 12:02:34,649 - adapters.indeed_adapter - INFO - Scraping completed. Found 30 jobs
+2025-09-28 12:02:34,670 - models.job_model - INFO - Raw job stored with ID: 1
+2025-09-28 12:02:34,672 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=539654a66cdf0888&bb=AuY-b4qZKifH7Vk5I46hnc9vtyb1YaUlJWVi-J4B7Kud7EJaowR6MXSR81UejQ8vQ1hA3PLnNyu-LYwS4ZUfXCcdtV3mpAZT2WrNPETmDWIzCUr67YuoY7YeoJHkbT65ekQKdMVb4c1bthn_BMPBEw%3D%3D&xkcb=SoDs67M3sHofYpT4Mp0LbzkdCdPP&fccid=5cc0cdc6dbb121cc&vjs=3
+2025-09-28 12:02:34,678 - models.job_model - INFO - Raw job stored with ID: 2
+2025-09-28 12:02:34,681 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=6686e743ec2b0ea4&bb=AuY-b4qZKifH7Vk5I46hnQee46itetiTLwCftUGxGlgLaDWQ83JcU3sZXgBPSRR6JFMh1B7Gsu60oZp10VOumYjfB3N3IA5UNE89jcSAHeqDIL-1YINUsTdvR4etVAylzqk3njP3qpg3X2n0h1167Q%3D%3D&xkcb=SoBY67M3sHofYpT4Mp0KbzkdCdPP&fccid=34469318acdef3bc&cmp=SAMS--RBC&ti=Web+Developer&vjs=3
+2025-09-28 12:02:34,683 - models.job_model - INFO - Raw job stored with ID: 3
+2025-09-28 12:02:34,685 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=4688409f72150030&bb=AuY-b4qZKifH7Vk5I46hnR52WzGAAMWHLQtD8wpFv_ZWcVCmIyPzNgKszsFU-HYcTELWuOi3EvnJ8Z4SJCLU0vInkSbNgCYRj0LQ7mqR4j22EiQmtP5GticAN6oJWYpwJfo4CGsuudSyXDISAvmaIg%3D%3D&xkcb=SoDF67M3sHofYpT4Mp0JbzkdCdPP&fccid=a86116420d709a59&cmp=SafeSquid-Labs&ti=Full+Stack+Developer&vjs=3
+2025-09-28 12:02:34,688 - models.job_model - INFO - Raw job stored with ID: 4
+2025-09-28 12:02:34,690 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=fec8aab84c55099f&bb=AuY-b4qZKifH7Vk5I46hnR_5FLUjk6i_Lf4-3jRGMRq7DuwscB1l4ROaQ6sj7iMw4N-9vOFJJmXijOkCl-fTdJYllJCE448V5W_am1ln1m_vGyWxUeTbI3_7EKy1s5WCi4P1fxgm077a_3Al_gIcHw%3D%3D&xkcb=SoBx67M3sHofYpT4Mp0IbzkdCdPP&fccid=25279aba68934d64&cmp=Whizzact&ti=Java+Developer&vjs=3
+2025-09-28 12:02:34,694 - models.job_model - INFO - Raw job stored with ID: 5
+2025-09-28 12:02:34,696 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=9fd66635b60acf8a&bb=AuY-b4qZKifH7Vk5I46hnUAFmK3vGEmd-PM2ILspfQxAW6QP_C_9uh5KOkKEWoAJubmhPkjjdzfPccEmOZsD7Y3h2FSq-TralFy2PLJ6podGruNYEv7cPWQGgJlXubYaQAOAhiasyqCLryW0MMhdtA%3D%3D&xkcb=SoD_67M3sHofYpT4Mp0PbzkdCdPP&fccid=c46d0116f6e69eae&vjs=3
+2025-09-28 12:02:34,698 - models.job_model - INFO - Raw job stored with ID: 6
+2025-09-28 12:02:34,700 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=15083c8ad39d1782&bb=AuY-b4qZKifH7Vk5I46hnUXVObbHYh3tkM-R-xb2imMGn_UVEOg8Nv4k_usyEbAdbPg7LpyqP4JEU85ZVF6V_hImNCTNxnYzCP_HWVSYe4z7xqfs8e_dVDy9jFz-w_LswkoxGte_Xf6uMlwIS3Ozhw%3D%3D&xkcb=SoBL67M3sHofYpT4Mp0ObzkdCdPP&fccid=c46d0116f6e69eae&vjs=3
+2025-09-28 12:02:34,702 - models.job_model - INFO - Raw job stored with ID: 7
+2025-09-28 12:02:34,703 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=18b9849de6fbd9c8&bb=AuY-b4qZKifH7Vk5I46hnRJgHC7APlknzzPdKHGXDPP_2uBp2rBQGUIwVEBkTp2UgKJZNz_efQyz_yVla3LmnfmACoo2W4yuYOR7Q-G2NmPbp8n8Bt3zqT5n78z19aH1-4dnYk4g7TwC0AiwtD_KmA%3D%3D&xkcb=SoDW67M3sHofYpT4Mp0NbzkdCdPP&fccid=10aede0459d57aed&vjs=3
+2025-09-28 12:02:34,705 - models.job_model - INFO - Raw job stored with ID: 8
+2025-09-28 12:02:34,706 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=28cc66dfd51689f6&bb=AuY-b4qZKifH7Vk5I46hnW1cP3tqmUoNwPYUJQo2s27jhP7pYwZ7XJy2I1okXXUcVTcZMZgZZpZa4r3uWVekjc9jzezseVE7WnaOxHwoYvY3NyfHIs78i3cipIQATY2KjCyu15Prqo8aj9-18YeRFg%3D%3D&xkcb=SoBi67M3sHofYpT4Mp0MbzkdCdPP&fccid=75fa2ce65276a015&cmp=Karishma-Marine-Solutions-Pvt-Ltd&ti=Senior+Software+Engineer&vjs=3
+2025-09-28 12:02:34,712 - models.job_model - INFO - Raw job stored with ID: 9
+2025-09-28 12:02:34,714 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=ce904c51617507ff&bb=AuY-b4qZKifH7Vk5I46hnWrX5fmGROzpJAs6nLnk5E1N9Tp3SSstUBWoqOewqLrkcpBDkoTcfucAXmLssn6VejP2AH-0KQVD-JWJITWCVNEPkkkD0B2qhOD3GXtpb0f7_L15BEiaiDriN3n46PxqGw%3D%3D&xkcb=SoCL67M3sHofYpT4Mp0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=Evergreenix-Infotech-Pvt-Ltd&ti=Developer&vjs=3
+2025-09-28 12:02:34,715 - models.job_model - INFO - Raw job stored with ID: 10
+2025-09-28 12:02:34,716 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=e1c6e1124e5b9c84&bb=AuY-b4qZKifH7Vk5I46hnXnlD4a1W9tathGZ-ZzFqldGbTjNn_3UYXK7Dqtidw5UPRRAp9vQU5qUavlDEbrZfV53RGOQ6B3DjcL2zx1xrWpA5YWrzxXFszVjfUqK6P2yj-WoBYYobxfF2HNoTtAPtQ%3D%3D&xkcb=SoA_67M3sHofYpT4Mp0CbzkdCdPP&fccid=758607ae894e0e80&cmp=Sandhaanam-India&ti=Developer&vjs=3
+2025-09-28 12:02:34,718 - models.job_model - INFO - Raw job stored with ID: 11
+2025-09-28 12:02:34,719 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=3a3911f37fc5f3e3&bb=AuY-b4qZKifH7Vk5I46hnavrU601uIMBueTm5m123hk9rfCd6dbWJjJqGoLH3uoi0ZBGMpeCAkitGzJD-zp6rdklY1dGrryxPNfvvPRn2XvxskGSdF6x6wga0Pwt--M5EAnRKzZ1W2FTw8Fw1XZVLQ%3D%3D&xkcb=SoCi67M3sHofYpT4Mp0BbzkdCdPP&fccid=75fa2ce65276a015&cmp=Karishma-Marine-Solutions-Pvt-Ltd&ti=Developer&vjs=3
+2025-09-28 12:02:34,721 - models.job_model - INFO - Raw job stored with ID: 12
+2025-09-28 12:02:34,722 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=3b11c64068e7a12a&bb=AuY-b4qZKifH7Vk5I46hnXgM0yiaw9Es79cUNb22pm59h6dUDlmZVOOTXHdWfBP6aAmplz7_areqbnAsgXIrqccS-aGHXVswOnfHlhxCmEDYKcW30N8wIjqbTUVW1eW1u3U9PAO8TZBU3-BJWId93g%3D%3D&xkcb=SoAW67M3sHofYpT4Mp0AbzkdCdPP&fccid=d6c416d1e0a8b04a&cmp=RecruitRite-Manpower-Solutions&ti=Front+Desk+Receptionist&vjs=3
+2025-09-28 12:02:34,727 - models.job_model - INFO - Raw job stored with ID: 13
+2025-09-28 12:02:34,729 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=14f23336343b8615&bb=AuY-b4qZKifH7Vk5I46hnSXiEVHFH3sbNZMhqCNMi8WDG6C5iNlc52TW81ywu2r4JOVn67VWoogs9PSDE0TLwhLBXH8yBYS6xjzETjiXM6n1DCLxH72WSqrCtNxzV9GPRN06UdFnaweRJgKKQjO5Vw%3D%3D&xkcb=SoCY67M3sHofYpT4Mp0HbzkdCdPP&fccid=8d25321c1defe73f&vjs=3
+2025-09-28 12:02:34,731 - models.job_model - INFO - Raw job stored with ID: 14
+2025-09-28 12:02:34,733 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=6869518fa7bfe750&bb=AuY-b4qZKifH7Vk5I46hnVEwsK-oFltE-IIY7os0bBC4VQMEj6R8Y1oteGikul9M1-j9TuEsJCLKRCfMaukEAtIIWwzyrmNXnMC5nXG92nW52H7XEaa28aVzPpy_TafrO9To5ZLZSL_zPqiam0u4GQ%3D%3D&xkcb=SoAs67M3sHofYpT4Mp0GbzkdCdPP&fccid=3c566800dc2b9808&vjs=3
+2025-09-28 12:02:34,735 - models.job_model - INFO - Raw job stored with ID: 15
+2025-09-28 12:02:34,737 - models.job_model - INFO - Job already exists: https://in.indeed.com/rc/clk?jk=fa7f0461e5cb3aac&bb=AuY-b4qZKifH7Vk5I46hncIvwvmoNRmAYThbSfStwLzl_1kn8SMrYs1_z2tQBp4yUkn7-ct6pBLIJ2BSC2NIxZ4O1xTk5TqkXxAydml4KEHL0ETDd1_A0H7ARJeYe2w8L2Mh3Hz93ZI103gc5azFpA%3D%3D&xkcb=SoCx67M3sHofYpT4Mp0FbzkdCdPP&fccid=3c566800dc2b9808&vjs=3
+2025-09-28 12:02:34,737 - models.job_model - INFO - Batch storage completed: 30 new jobs, 0 duplicates
+2025-09-28 12:02:34,751 - __main__ - INFO - Found 15 unprocessed jobs
+2025-09-28 12:02:34,752 - __main__ - INFO - Processing batch 1/1
+2025-09-28 12:02:34,769 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=539654a66cdf0888&b... | Match: name (100.0%) | Company: Aws
+2025-09-28 12:02:34,778 - models.job_model - INFO - Processed job stored with ID: 1
+2025-09-28 12:02:34,785 - services.company_matcher - INFO - Google API search not implemented for: SAMS-RBC partita IVA VAT number Italy
+2025-09-28 12:02:34,786 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=6686e743ec2b0ea4&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,789 - models.job_model - INFO - Processed job stored with ID: 2
+2025-09-28 12:02:34,803 - services.company_matcher - INFO - Google API search not implemented for: SafeSquid Labs partita IVA VAT number Italy
+2025-09-28 12:02:34,803 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=4688409f72150030&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,807 - models.job_model - INFO - Processed job stored with ID: 3
+2025-09-28 12:02:34,818 - services.company_matcher - INFO - Google API search not implemented for: Whizzact partita IVA VAT number Italy
+2025-09-28 12:02:34,818 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=fec8aab84c55099f&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,822 - models.job_model - INFO - Processed job stored with ID: 4
+2025-09-28 12:02:34,835 - services.company_matcher - INFO - Google API search not implemented for: JPMorganChase partita IVA VAT number Italy
+2025-09-28 12:02:34,836 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=9fd66635b60acf8a&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,839 - models.job_model - INFO - Processed job stored with ID: 5
+2025-09-28 12:02:34,850 - services.company_matcher - INFO - Google API search not implemented for: JPMorganChase partita IVA VAT number Italy
+2025-09-28 12:02:34,851 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=15083c8ad39d1782&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,853 - models.job_model - INFO - Processed job stored with ID: 6
+2025-09-28 12:02:34,863 - services.company_matcher - INFO - Google API search not implemented for: Praan partita IVA VAT number Italy
+2025-09-28 12:02:34,863 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=18b9849de6fbd9c8&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,866 - models.job_model - INFO - Processed job stored with ID: 7
+2025-09-28 12:02:34,876 - services.company_matcher - INFO - Google API search not implemented for: Karishma Marine Solutions Pvt Ltd partita IVA VAT number Italy
+2025-09-28 12:02:34,876 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=28cc66dfd51689f6&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,879 - models.job_model - INFO - Processed job stored with ID: 8
+2025-09-28 12:02:34,890 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=ce904c51617507ff&b... | Match: name (100.0%) | Company: Eni
+2025-09-28 12:02:34,894 - models.job_model - INFO - Processed job stored with ID: 9
+2025-09-28 12:02:34,904 - services.company_matcher - INFO - Google API search not implemented for: Sandhaanam India partita IVA VAT number Italy
+2025-09-28 12:02:34,904 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=e1c6e1124e5b9c84&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,908 - models.job_model - INFO - Processed job stored with ID: 10
+2025-09-28 12:02:34,920 - services.company_matcher - INFO - Google API search not implemented for: Karishma Marine Solutions Pvt Ltd partita IVA VAT number Italy
+2025-09-28 12:02:34,921 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=3a3911f37fc5f3e3&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,925 - models.job_model - INFO - Processed job stored with ID: 11
+2025-09-28 12:02:34,937 - services.company_matcher - INFO - Google API search not implemented for: Recruitrite Manpower Solutions partita IVA VAT number Italy
+2025-09-28 12:02:34,938 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=3b11c64068e7a12a&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,942 - models.job_model - INFO - Processed job stored with ID: 12
+2025-09-28 12:02:34,950 - services.company_matcher - INFO - Google API search not implemented for: Wipro Limited partita IVA VAT number Italy
+2025-09-28 12:02:34,951 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=14f23336343b8615&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,955 - models.job_model - INFO - Processed job stored with ID: 13
+2025-09-28 12:02:34,965 - services.company_matcher - INFO - Google API search not implemented for: Infogain partita IVA VAT number Italy
+2025-09-28 12:02:34,966 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=6869518fa7bfe750&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,969 - models.job_model - INFO - Processed job stored with ID: 14
+2025-09-28 12:02:34,980 - services.company_matcher - INFO - Google API search not implemented for: Infogain partita IVA VAT number Italy
+2025-09-28 12:02:34,980 - services.company_matcher - INFO - Job processed: https://in.indeed.com/rc/clk?jk=fa7f0461e5cb3aac&b... | Match: none (0.0%) | Company: None
+2025-09-28 12:02:34,984 - models.job_model - INFO - Processed job stored with ID: 15
+2025-09-28 12:02:36,034 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 13:02:03,141 - __main__ - INFO - >>> Initializing Indeed Scraper Pipeline...
+2025-09-28 13:02:04,279 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 13:02:04,382 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 13:02:04,386 - utils.db_utils - ERROR - Migration failed: column "url_job_indeed" does not exist
+2025-09-28 13:02:04,392 - utils.db_utils - ERROR - Failed to initialize database: column "url_job_indeed" does not exist
+2025-09-28 13:02:04,395 - __main__ - ERROR - [ERROR] Initialization failed: column "url_job_indeed" does not exist
+2025-09-28 13:02:04,396 - __main__ - ERROR - [ERROR] Pipeline execution failed: column "url_job_indeed" does not exist
+2025-09-28 13:02:04,409 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 13:05:20,211 - __main__ - INFO - >>> Initializing Indeed Scraper Pipeline...
+2025-09-28 13:05:20,856 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 13:05:20,859 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 13:05:20,861 - utils.db_utils - ERROR - Migration failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:20,863 - utils.db_utils - ERROR - Failed to initialize database: column "url_job_indeed" does not exist
+2025-09-28 13:05:20,864 - __main__ - ERROR - [ERROR] Initialization failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:20,865 - __main__ - ERROR - [ERROR] Pipeline execution failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:20,883 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 13:05:31,025 - __main__ - INFO - >>> Initializing Indeed Scraper Pipeline...
+2025-09-28 13:05:31,701 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 13:05:31,705 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 13:05:31,706 - utils.db_utils - ERROR - Migration failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:31,708 - utils.db_utils - ERROR - Failed to initialize database: column "url_job_indeed" does not exist
+2025-09-28 13:05:31,709 - __main__ - ERROR - [ERROR] Initialization failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:31,710 - __main__ - ERROR - [ERROR] Pipeline execution failed: column "url_job_indeed" does not exist
+2025-09-28 13:05:31,723 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 13:06:12,194 - __main__ - INFO - >>> Initializing Indeed Scraper Pipeline...
+2025-09-28 13:06:12,958 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 13:06:12,973 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 13:06:12,974 - __main__ - INFO - [OK] Database initialized successfully
+2025-09-28 13:06:12,990 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 13:06:12,991 - __main__ - INFO - [OK] Companies cache loaded successfully
+2025-09-28 13:06:12,992 - __main__ - INFO - >>> Initialization completed successfully
+2025-09-28 13:06:12,992 - __main__ - INFO - 🚀 Running full pipeline...
+2025-09-28 13:06:12,993 - __main__ - INFO - [INFO] Phase 1: Starting job scraping from Indeed...
+2025-09-28 13:06:12,994 - __main__ - INFO - Search parameters: 'software engineer' in 'Italy', 1 pages, date_filter: 1
+2025-09-28 13:06:12,994 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Italy, max_pages: 1
+2025-09-28 13:06:12,995 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 13:06:22,446 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=0&sort=date&fromage=1
+2025-09-28 13:06:38,482 - adapters.indeed_adapter - INFO - Found 24 jobs on page 1
+2025-09-28 13:06:38,483 - adapters.indeed_adapter - INFO - Waiting 11.5 seconds before next page...
+2025-09-28 13:06:50,729 - adapters.indeed_adapter - INFO - Scraping completed. Found 0 jobs
+2025-09-28 13:06:50,730 - __main__ - INFO - [OK] Scraping completed: 0 jobs found
+2025-09-28 13:06:50,730 - __main__ - INFO - [INFO] Phase 3: Processing jobs and matching companies...
+2025-09-28 13:06:50,747 - __main__ - INFO - [INFO] No unprocessed jobs found
+2025-09-28 13:06:50,747 - __main__ - INFO - [INFO] Generating execution report...
+2025-09-28 13:06:50,755 - __main__ - ERROR - [ERROR] Pipeline failed: column "data_estrazione" does not exist
+2025-09-28 13:06:50,755 - __main__ - ERROR - [ERROR] Pipeline execution failed: column "data_estrazione" does not exist
+2025-09-28 13:06:50,773 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 13:09:14,996 - __main__ - INFO - INFO Initializing Indeed Scraper Pipeline...
+2025-09-28 13:09:15,811 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 13:09:15,836 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 13:09:15,838 - __main__ - INFO - OK Database initialized successfully
+2025-09-28 13:09:15,861 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 13:09:15,861 - __main__ - INFO - OK Companies cache loaded successfully
+2025-09-28 13:09:15,861 - __main__ - INFO - INFO Running full pipeline...
+2025-09-28 13:09:15,862 - __main__ - INFO - INFO Phase 1: Starting job scraping from Indeed...
+2025-09-28 13:09:15,862 - __main__ - INFO - Search parameters: 'software engineer' in 'Italy', 1 pages, date_filter: 1
+2025-09-28 13:09:15,862 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Italy, max_pages: 1
+2025-09-28 13:09:15,863 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 13:09:17,918 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=0&sort=date&fromage=1
+2025-09-28 13:09:32,400 - adapters.indeed_adapter - INFO - Found 26 jobs on page 1
+2025-09-28 13:19:33,885 - adapters.indeed_adapter - INFO - Waiting 13.9 seconds before next page...
+2025-09-28 13:19:48,404 - adapters.indeed_adapter - INFO - Scraping completed. Found 26 jobs
+2025-09-28 13:19:48,405 - __main__ - INFO - OK Scraping completed: 26 jobs found
+2025-09-28 13:19:48,405 - __main__ - INFO - INFO Phase 2: Storing raw jobs in database...
+2025-09-28 13:19:48,634 - models.job_model - INFO - Raw job stored with ID: 1
+2025-09-28 13:19:48,639 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&bb=0WoyU33yCk678TC_3wb8JWeBHiuBJi3I-ECYnRu_FOeGJXrk7eKSJJbuPpRsOzjg6-BmRNd5m5J0YDlmvGhjU4Mq4zBfMlxh4bTJu5Q6hAhc2X4XGV8dKIainkH2iMpsdQxREhJcQkAFkHgwTUhhQw%3D%3D&xkcb=SoDv67M3sHgXq3TBAZ0LbzkdCdPP&fccid=d3e096e42365dce5&vjs=3
+2025-09-28 13:19:48,645 - models.job_model - INFO - Raw job stored with ID: 2
+2025-09-28 13:19:48,651 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c1b4cb72e0dc3fe8&bb=0WoyU33yCk678TC_3wb8Jbtnph1DEDONUp8qR8tTIxsgi9P2SmRMq9SNxWJ64MK0y0eG9gHVKHyBN1Y7S9xF5gxTrfyh3wyylqzcUdefryO2GvFhm9ivFs5pmLl914HqUxTcHA7295C0XQ8E8D9TRQ%3D%3D&xkcb=SoBb67M3sHgXq3TBAZ0KbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 13:19:48,659 - models.job_model - INFO - Raw job stored with ID: 3
+2025-09-28 13:19:48,665 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=cb9fefb43c571ab4&bb=0WoyU33yCk678TC_3wb8JWcCuNrYQj24J6415XLCPBvv6wKaxOG8J427LtLW_iZLH_DYDxwwi9rj6_DP7mj1IJcAkISHKxAdBivp4YfoEFVX_sazn-Fp8g8_h833lfB4kla9roEvz-n3MDZvFrf_vg%3D%3D&xkcb=SoDG67M3sHgXq3TBAZ0JbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 13:19:48,673 - models.job_model - INFO - Raw job stored with ID: 4
+2025-09-28 13:19:48,677 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&bb=0WoyU33yCk678TC_3wb8JaFjPZg50UoNOxHdNO2OBy1BsRo17uth3RGys57nx1Rc03lJUVDCrLfM50F8-23-kCdl2DIdmvSN2y00zbaVbr3cjmwF5tD1ZwV0E02UBGGBQVWVoy6_J4rFTr-b_2_1ag%3D%3D&xkcb=SoBy67M3sHgXq3TBAZ0IbzkdCdPP&fccid=66d7e91c2e5a589e&cmp=Futurhouse&ti=Responsabile+Ufficio+Acquisti&vjs=3
+2025-09-28 13:19:48,683 - models.job_model - INFO - Raw job stored with ID: 5
+2025-09-28 13:19:48,688 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&bb=0WoyU33yCk678TC_3wb8JVprt13PNFlt7itBewBamnteRdDkSU-1Ncwh17myWwEBiePgBj4pjKQNAqrefg_pju-MpOomNAqd6rAcqTAReQSur2Ayd1mr_dIkz-JCY5yY-p1t04Ww7y1bsxUfuhPthw%3D%3D&xkcb=SoD867M3sHgXq3TBAZ0PbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 13:19:48,695 - models.job_model - INFO - Raw job stored with ID: 6
+2025-09-28 13:19:48,699 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=0WoyU33yCk678TC_3wb8JeffK6COdoCHNaSILXt5_HeEgLo1HM68x5-8dnvp9Th9wr1qk5wi-zo5pu0YRHoR7INdamkMDQPL_2C9Sci5P8WdP877pVOWWNMuKf9wYKJsZJdG2YG5kV5AlI8fKHShDg%3D%3D&xkcb=SoBI67M3sHgXq3TBAZ0ObzkdCdPP&fccid=0890bea06134d5a4&vjs=3
+2025-09-28 13:19:48,706 - models.job_model - INFO - Raw job stored with ID: 7
+2025-09-28 13:19:48,709 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BhHdEKEjbbdXRU65iZICAu2n3nIQwmym9fnqzWglEzf0cB7SAuJGltCiczNr_MnSyavg441IoIl0rC66mHgcDteuK7TVyI4uAxnOlD61IJgNHZgn5bVJX2w6xVl25Z0L4xb0YFXTyCQ9b5Ticxh-d5MbaFhSv_Zts0r3PPW9rdPFbFax08kqrrPDsfpCtZv-oVr1dZQFN0nn4sz1IvFDGhDoCmLg0-b_iOsy1n1DO8eCenxfqm_Gdqwf6kZQjow5rvoFkamMmPwdWiy3wRfW37Yn9-zBi9084ByVziCVo0XU_7FN2bBUVaYqfPDjPmLU_XHR2PcROipJlWN9MPCCKAbUeWW3q3d2zCfKCX5kadceQv_wDlOZ8okrLqGW40XGboU6WBuQrBvWHYtbplxunYKYPojPorMrShIyvMP9GAb2UOshfhiy8hg-8z2HCUe9Vz1-sc2py-bjKF08ftkU6x7K3J5uDtLBO3wb9x2BVs1CBdI7TaWWwJRGkCMFf-KDG4KBzbrKbzZS4EBXaE5DMo8xonjBCVf-CsaIphkyXrYhp85K63xDBHKeDKGCiZ-RN-Xz7vquVPre1gN0sxc_vhWIjfI7hJo_fR1CkCZWveYv1LDpe3SqOmVg-77-41QTyR3-rAZxmo6peVSGpsugE7xJtqqEfqMPM3xXn_JkHWKVtlRiXjUAUbVOAWiQ075lexw43452es_RPvfKUShX1JiGzLbVY-JlOyPE0zewCWMaP4iu_m_SedVt8NLwlMU1usJmvEhXCf2ghPQXtEoJR58Wkok5LUidZVez8RxpOLO7HbEnSf3U16J8-8QJeYOJ7-7yKXHhRf3zDhgFCubkINWiIspnkj3lQ3e9QVnWakP8rX0hIaLixVVQeVVaNvSgK9wbdS9zrFQ_PkLDFYpdTAzwDYErq723fnnUTBN9vQWJakER1Lab4L5LJBnamCgM4O3I_czp_ubGpxKLZUUMshQKveKvGSUfkhX2oIlD6oR4i5qLb-RZt6ncu_dsTr5rOvo4zNApVJ_hZ8XO0UE4WNnW7N8y5YpDfS3kyOjHD_rsHQYOsxlD_swBxd5H3k3dIRc_Dm_MYnT_RWICmuSJ0UO6VMJ7Y_k7hWrvI0m9TcyH0rIp5CuL7ZWRPYw6uJN8esGMyV2LJVTeOMSkzqvA5eyUoMy6GiIilMo6Xjh4ViW1KVz-VNqC3sdEH_6hlvTv0kEZcV696o98OdhdU6yPHjLWYXVAuQjHK_fMgwMnT5MBYOEkd7zxrA&xkcb=SoAh6_M3sHgXq3TBAZ0NbzkdCdPP&camk=UoKtGZLa3XKA7PVt0YhLFg==&p=6&fvj=0&vjs=3
+2025-09-28 13:19:48,716 - models.job_model - INFO - Raw job stored with ID: 8
+2025-09-28 13:19:48,721 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0A630RBzFHreiDZy19BUYYQDwSm-bpRwTOYDL91gP33wjSeggNX-DaWTy4m_SdCx5ca9qoWDHj7O4dvkwqYo2yKd4PyyDQbrwW6NJWo2Fn9045eA-bn2kRXFNr_nAXhZjZXXnB93S-xJwglU5TYhM_ZfpQbZqBOuOAyL3vwIkY2ef0LpJp7a3-FYVsUSU5TbWnHqXHt7MAbdQMsmphpmc4ZrDjTaWnyxlzVDW2G9aw36CE6vG9Vf6Ec5QqaeXFsMBIjTMY49La8Qh8GetA0ET59oIYWaJdvplptF-gSRY9cJ3-wNAYqSNc_I4GhdNlpm9A7NPPNJkHBpv-ToeOL241R438phcCgiI0P-MM6r9aMAIi6IGaYG1MFEwg_gdon8zptEUj4ACAuV5EB_kl5mQ8gr3bObR2UZ4cq7UUjIAh9IZ2Nx4GAhNwY7emBe9-veIIUDGyZn5dalhkY9d6wrJREbssTY5fO0aETQ4lmYQz_MRp2c5AD8yCqGtEqIQfdHixbMUkKzqeFA6kWKOdZNVJgDyGM0j7fbmMgxGLSgOE9fapyMqmxsICWGBFDPXw11Aqx5_M4mkAqnZO8PiJlsXjsAnZR7TIwKUUoaaCw4O-le8Fxtt0ie1SU19LpYMTzxlCIIyv3sErHY6wUY1MKPqLZss3Bjy0ZTlDY0muj0pthXaCSIFmAf8cEWnKd9lwoN50VQn2qh9oUCw==&xkcb=SoCV6_M3sHgXq3TBAZ0MbzkdCdPP&camk=UoKtGZLa3XJP9_-1GraktQ==&p=7&fvj=0&vjs=3
+2025-09-28 13:19:48,729 - models.job_model - INFO - Raw job stored with ID: 9
+2025-09-28 13:19:48,733 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0DEmfYDpYedhSxYaOHXiu54__gi9XYxo5QsD7A7Aig-d2qYWhzL6vjFRhBgJzO0UPEm0OcOHADQ9umJJqbwIrvy9dpDlPw9dAi1_dN3KD4g85A6XYJPxlEP4xS8AnWZ9ETlsL4BWF1IiUCZIyuPLoUVDtKJZ-2GKZhDOJRXmfCwEcb-CLia-pv8WRfgTWYwjz-c6U98K1I-po11WxkoIWHp-8_NzpEZW4kYlIjAGotFpTk5PiKEyKIQHrU_MkzmrsINi1uaH0f0P2EyYIiOfK9JKKgUtG9v380ddQd-3GxuTOUMda5Izj6KTL7E7SQYSOVvaLklQIW_CxeFYNLv5KRx9JSbuhFZYEUuYj2e5OcpeV8bNYlDgnjIz7vv9Ho4bUL1ZlrFuiX-RvYUE5VwyaZjsS-RvM9DYhDyY0VhUJhaGyX5noktyf1TFNUH8kyICST7uyHtRZAffL1iR-_TjW9JKipSWq5nI2he1TVPtGzxMkq4P6tSid-alHvNSYHd1lMwvXUeZflK6dzAjkIuHlfuWnqzfBpYFQjI5GBi_iSZS1WZmKmjhChRvt30iPj4uzbCic2pNiRmLT4wXkRTyS7EigO_mAx5Rdw_xZk-miCI4hrC-x--qi2jM0iNhTzta5n4-in_gPzJQn2kYtX295-suBXi0bz2WNpmqZv4D_XvfA==&xkcb=SoB86_M3sHgXq3TBAZ0DbzkdCdPP&camk=UoKtGZLa3XISp2lW0tnaIw==&p=8&fvj=0&vjs=3
+2025-09-28 13:19:48,741 - models.job_model - INFO - Raw job stored with ID: 10
+2025-09-28 13:19:48,744 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=0WoyU33yCk678TC_3wb8Ja6H_7BBejWOdBD4DCK10iataZEdZwTvYOm74qdxq2ZRcs6xsPxTsuOIIq9FmofX7Of55UfmGL2zyxJe_NdiegEbQylk-6kvCeZ5c86n4Sksf_-_S0UiVzP5L4a6OHoKRA%3D%3D&xkcb=SoA867M3sHgXq3TBAZ0CbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 13:19:48,750 - models.job_model - INFO - Raw job stored with ID: 11
+2025-09-28 13:19:48,754 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=0WoyU33yCk678TC_3wb8JRFnZfFgqxR4e-ZmBFyuTHtX2ipaln-xNq8Sm3Y83izoQul4-ikDK7R_yr4ZdNk2SdGEOzLDkHxmqTkCTh3Ps5XHLrybxFvqXLJ8Z4vS9FruyO7vukBvt3dMWPePFDl-NA%3D%3D&xkcb=SoCh67M3sHgXq3TBAZ0BbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3
+2025-09-28 13:19:48,760 - models.job_model - INFO - Raw job stored with ID: 12
+2025-09-28 13:19:48,764 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMY9puz2vB8R-6_Q-ZhqKOJ2_RtMgPDGAZKH1OD_Jzoga_usUJw5WDvQXGFWy_bC0Baa0ZjXMs1M2_Yjpq3o2-WgCe0zymqt51e_Y9sqKrntKAYYA-d2yURuw6fPgPsZCqpfK8v0Fl7V2yR9tqlsvEj3cXriuoLfwkKaIHbnPKJTMohTIyRRgUfDbJ2O9b5fCbiHCw4j78MXe28zLzQCmJ_tcroTNsRokWtqc6Mq4upVOiMKkugugw7WbXfJy-pAwqJf2eW1LbpiqeRb8b6qqo-77XaNv6ZqgLqwAHPebOu5JtcNwkPrr_LiQ3k2h-xlC_0ySX1Nyla4r0dMyr1KGsou3w2r3LUaoL91gUaYrb43SZ-GG_4qOi6aokI-LXkoReYY2tdOFU3hMFchSAmGFHvOsOv8ntZLQp3OuusT6ClRtr7r-zTDPZFxf4lWqvPaGXArTmPC_5MxS6KrJxf2TqJLHcvha4-yxHe4dkSH2PA-haHwxaiQk2yEvYTa25XU1uYLqPmhLRvZeu4xOpJ7sdqvXlS4_HgHZpmumnNeDVJgKKLU4qHxjOvg=&xkcb=SoDh6_M3sHgXq3TBAZ0AbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=11&fvj=0&vjs=3
+2025-09-28 13:19:48,771 - models.job_model - INFO - Raw job stored with ID: 13
+2025-09-28 13:19:48,776 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGlmGi2p9ByFmxLia6T3cs3Bxzm7TylvdTuScScwNSMevGwxtMSmICIesmr6UDDJPQqYTOLJ0gpdMJk2Gven2ZeIt7Vl12kw37Xqr1AhFnip1e8711qrkWnwjPXJKJpPbzynCeHeSSFaWDSwwkFMA4o5Ery_XxVRadoR5jmp3mwekszZb9WzVVkl7TaKNhZzOH-YCE8iJLNbL86xW7GMufaMKj5pdVJWbA8gKx_GdCgwJtVyAxLf0tpkLbBBhsxSm4CfelFb47t3vvRF0E367HTV78EmGN02bRi3Cm_C531x_N2RZoo_BMSbgGksNdIvqYVVW5ebrM3-d6X7BDDSx8o1_Gmo5Yx2-xJUgeU3TOyaPEay-HTaeI98HIkscSt9fbtwEtfqWSLZAnasKy5WM605pLOD-eLFoKtI8xWUBGSkRbWty2Scs_zjUev3UT0veFNVdl53knueAN9iw1x3UL1VeKiHgH7uuIxOQCl-QCPeZLaPeIJ2r-KUtS0CNlhPobgRtOMl3RAQrOI186coIfBz8-6826usWFr6f_JSO_i4Q9JL6Fo3ES3-6geIdNj_OoIR_Ob_g4GFHlhv3EKMkqW1kMi4JwLA5-jo35eEO4WsNAoGySSqYiccMxlT3FBcM6nYybj3QPlRdaRhDOuGKNc5U-JJW7oZxCi--bWXDbPlU=&xkcb=SoBv6_M3sHgXq3TBAZ0HbzkdCdPP&camk=UoKtGZLa3XK84WAT8VL43g==&p=12&fvj=0&vjs=3
+2025-09-28 13:19:48,780 - models.job_model - INFO - Batch storage completed: 26 new jobs, 0 duplicates
+2025-09-28 13:19:48,780 - __main__ - INFO - OK Storage completed: 26 new jobs stored, 0 duplicates skipped
+2025-09-28 13:19:48,781 - __main__ - INFO - INFO Phase 3: Processing jobs and matching companies...
+2025-09-28 13:19:48,794 - __main__ - INFO - Found 13 unprocessed jobs
+2025-09-28 13:19:48,794 - __main__ - INFO - Processing batch 1/1
+2025-09-28 13:19:48,824 - services.company_matcher - INFO - Google API search not implemented for: Spirax Sarco partita IVA VAT number Italy
+2025-09-28 13:19:48,825 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:48,839 - models.job_model - INFO - Processed job stored with ID: 1
+2025-09-28 13:19:48,872 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c1b4cb72e0dc3fe8&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 13:19:48,891 - models.job_model - INFO - Processed job stored with ID: 2
+2025-09-28 13:19:48,918 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=cb9fefb43c571ab4&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 13:19:48,929 - models.job_model - INFO - Processed job stored with ID: 3
+2025-09-28 13:19:48,951 - services.company_matcher - INFO - Google API search not implemented for: FuturHouse srl partita IVA VAT number Italy
+2025-09-28 13:19:48,953 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:48,960 - models.job_model - INFO - Processed job stored with ID: 4
+2025-09-28 13:19:48,989 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 13:19:48,990 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:48,996 - models.job_model - INFO - Processed job stored with ID: 5
+2025-09-28 13:19:49,020 - services.company_matcher - INFO - Google API search not implemented for: Dacomat srl partita IVA VAT number Italy
+2025-09-28 13:19:49,021 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,027 - models.job_model - INFO - Processed job stored with ID: 6
+2025-09-28 13:19:49,049 - services.company_matcher - INFO - Google API search not implemented for: GiGroup partita IVA VAT number Italy
+2025-09-28 13:19:49,050 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,058 - models.job_model - INFO - Processed job stored with ID: 7
+2025-09-28 13:19:49,080 - services.company_matcher - INFO - Google API search not implemented for: Moving Handling 24 S.r.l. partita IVA VAT number Italy
+2025-09-28 13:19:49,081 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,088 - models.job_model - INFO - Processed job stored with ID: 8
+2025-09-28 13:19:49,117 - services.company_matcher - INFO - Google API search not implemented for: Piano 99 SRL STP partita IVA VAT number Italy
+2025-09-28 13:19:49,118 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,125 - models.job_model - INFO - Processed job stored with ID: 9
+2025-09-28 13:19:49,151 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 13:19:49,152 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,158 - models.job_model - INFO - Processed job stored with ID: 10
+2025-09-28 13:19:49,188 - services.company_matcher - INFO - Google API search not implemented for: ARCHINET S.R.L. SB partita IVA VAT number Italy
+2025-09-28 13:19:49,189 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&b... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,196 - models.job_model - INFO - Processed job stored with ID: 11
+2025-09-28 13:19:49,230 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 13:19:49,231 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,240 - models.job_model - INFO - Processed job stored with ID: 12
+2025-09-28 13:19:49,266 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 13:19:49,267 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 13:19:49,274 - models.job_model - INFO - Processed job stored with ID: 13
+2025-09-28 13:19:50,284 - __main__ - INFO - OK Processing completed: 13 jobs processed
+2025-09-28 13:19:50,285 - __main__ - INFO - INFO Generating execution report...
+2025-09-28 13:19:50,290 - __main__ - ERROR - ERROR Pipeline failed: column "data_estrazione" does not exist
+2025-09-28 13:19:50,291 - __main__ - ERROR - ERROR Pipeline execution failed: column "data_estrazione" does not exist
+2025-09-28 13:19:50,298 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 14:23:08,048 - __main__ - INFO - INFO Initializing Indeed Scraper Pipeline...
+2025-09-28 14:23:09,474 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 14:23:09,495 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 14:23:09,499 - __main__ - INFO - OK Database initialized successfully
+2025-09-28 14:23:09,518 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 14:23:09,518 - __main__ - INFO - OK Companies cache loaded successfully
+2025-09-28 14:23:09,519 - __main__ - INFO - INFO Running full pipeline...
+2025-09-28 14:23:09,519 - __main__ - INFO - INFO Phase 1: Starting job scraping from Indeed...
+2025-09-28 14:23:09,519 - __main__ - INFO - Search parameters: 'software engineer' in 'Italy', 1 pages, date_filter: 1
+2025-09-28 14:23:09,520 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Italy, max_pages: 1
+2025-09-28 14:23:09,520 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 14:23:12,534 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=0&sort=date&fromage=1
+2025-09-28 14:23:26,299 - adapters.indeed_adapter - INFO - Found 26 jobs on page 1
+2025-09-28 14:32:40,867 - adapters.indeed_adapter - INFO - Waiting 9.0 seconds before next page...
+2025-09-28 14:32:50,336 - adapters.indeed_adapter - INFO - Scraping completed. Found 26 jobs
+2025-09-28 14:32:50,336 - __main__ - INFO - OK Scraping completed: 26 jobs found
+2025-09-28 14:32:50,337 - __main__ - INFO - INFO Phase 2: Storing raw jobs in database...
+2025-09-28 14:32:50,466 - models.job_model - INFO - Raw job stored with ID: 14
+2025-09-28 14:32:50,468 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&bb=VRnpOdFqPjIFQuEklUJrlreF8uq7-6bZU7NW1KQQhCDbcaHBjGqs-2T35uHYKkF0ohsDuwErBAKm7phGmMY0ydw7tOHnWxZbL5Ld9JwY0xnbIsbF96ZiYTMWipmSsA_ctbabbXCbOkJICIVuvePtjg%3D%3D&xkcb=SoDE67M3sH46GFTNQx0LbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 14:32:50,472 - models.job_model - INFO - Raw job stored with ID: 15
+2025-09-28 14:32:50,475 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&bb=VRnpOdFqPjIFQuEklUJrloIZdSxZ2APuMFcUFCsVRBTYTSzpS1-kzkb29onZiY-Wf_3ZE-SCo3EF3lRwmltiA8zwy2ToREj_PorkqzAIgBkCse98Zj5E2-jpSW2AQxva0vuFUQmxBUlM4cFpQHOLFQ%3D%3D&xkcb=SoBw67M3sH46GFTNQx0KbzkdCdPP&fccid=d3e096e42365dce5&vjs=3
+2025-09-28 14:32:50,481 - models.job_model - INFO - Raw job stored with ID: 16
+2025-09-28 14:32:50,483 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&bb=VRnpOdFqPjIFQuEklUJrli09TxglQHsDILhmhLRa6PfDlaKBpxJvx2dYjHL76xCl-JmVyceF3M7i_GAmYsyqzKJY9h1xi6pS593hjRuN9F38h6-3h4UdWrP7xwvhGQF52pOyeDAyeosU-uwl5NH-FQ%3D%3D&xkcb=SoDt67M3sH46GFTNQx0JbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 14:32:50,489 - models.job_model - INFO - Raw job stored with ID: 17
+2025-09-28 14:32:50,491 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&bb=VRnpOdFqPjIFQuEklUJrlkmFGx8fkRrrdPvCjJ2fyK6MXZbXkJ7GHtNnaycFvxnBUIuI7DbIvA8rMj7lENNyPZcx9nDSp0l_DI8N293pUkepd4PlMoj9YyMYnkZw6y83NL2c3LH_ZDZG81Fk5bSNOA%3D%3D&xkcb=SoBZ67M3sH46GFTNQx0IbzkdCdPP&fccid=66d7e91c2e5a589e&cmp=Futurhouse&ti=Responsabile+Ufficio+Acquisti&vjs=3
+2025-09-28 14:32:50,494 - models.job_model - INFO - Raw job stored with ID: 18
+2025-09-28 14:32:50,497 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0D98zC7tQUDpmow4h5q6I6u0rxG08P-blQ8gwCTwTUyriHG-9W8HQO73eR_N1PxguukkYBrM7gn-YZpNDmUAicmFWiIiBLtgkk9-fJxIH3A1JiYRgbxxxIi51EpJ7IfA7PvP4GCOL8xn4b91XZ5QlKi1Iv7ETI9b_enZ9N-4aHsni4_MgZVvfYAhI8m_pv70g9von_RmvhCce8szTpBEaTygmP-8-J7SwZcFuuWnKXOc8hbucj2d2pOZjoVemTpaK2fjm5U68o_se2PJQ3x-zVPc6_3Ijts6iynk78crOzqYGyCSfzMqmrGAyW9v6q8oy8tasBWgljK6LcukdquIHsdjYjR4BqeekwJ8YquDpWEuIHLQwdUuKFS32LD_Sklh_PXaeGkF6RsSug-z1MgQRXp4RzNH_y1wx5MYOPs0XYySW-FbswaQEFNRgCpvAtr7s9BnFE2DSp-165pfj4D9JVp-Ppcw7lH_exvQaLIArIiiDEDw_1eH_gGJdHymftdMsQK9M3Th3dIFBpqjATTMnPhTMrGt_FyP9Qw19aKqEPlq1L7j3VxD2LEK22EskYIkLHh4dD2IDW-tSdv7Puub38gNphMS5k0o5zqSmdQcgJkKrNDEi3jRLcO7n0lel0sgZMWNLBjq9BOl7h-5D38FAEe8hn6F67T7P9JMFzevODYi4mq9NOrn5UF&xkcb=SoAj6_M3sH46GFTNQx0PbzkdCdPP&camk=nUmJqO2E8rhFDEgLmTeAWw==&p=4&fvj=0&vjs=3
+2025-09-28 14:32:50,500 - models.job_model - INFO - Raw job stored with ID: 19
+2025-09-28 14:32:50,503 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&bb=VRnpOdFqPjIFQuEklUJrlpDCjbVz_uJwureYDqAtEqcbzvVv1dLk-CKrKs0_bePTo54pLlpYFOBbnU4gz_LRyCtTFJDyL-ltr_ZcjZP_OUKYuul-w2m0eWIdtgFt3uibiRD2dUhM-nFqi9wZD2pku0I-v9xX9Ww5&xkcb=SoBj67M3sH46GFTNQx0ObzkdCdPP&fccid=bb76686a67e75cb7&cmp=MOVING-HANDLING-24&ti=Direttore+Di+Cantiere&vjs=3
+2025-09-28 14:32:50,507 - models.job_model - INFO - Raw job stored with ID: 20
+2025-09-28 14:32:50,509 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=VRnpOdFqPjIFQuEklUJrlg-GsW-CWEI5XPA-XxkJNuEhF1EK8GOjItcFrPtV_gS1YgNBRjPrrBY9jjgf3qIWxboWD67ULA3acw_6lnjiTdmHuL5-aavjG-v1ZksVrbUWJ80SdTtvSszHk_fgX7BDEg%3D%3D&xkcb=SoD-67M3sH46GFTNQx0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3
+2025-09-28 14:32:50,513 - models.job_model - INFO - Raw job stored with ID: 21
+2025-09-28 14:32:50,515 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=VRnpOdFqPjIFQuEklUJrlrEMuaSE0kbm3Syz66b7XxqpMJh2YGhT_SHZMtpI1azz2a740tN3pAqb0pscRkoEceqVrlNVV7H5wd4k7ThXfduKKL6TrRu12fWkKfcBbUaj57bV3POzh8dvFZRLGZeriQ%3D%3D&xkcb=SoBK67M3sH46GFTNQx0MbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 14:32:50,518 - models.job_model - INFO - Raw job stored with ID: 22
+2025-09-28 14:32:50,523 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=VRnpOdFqPjIFQuEklUJrljOvOT5Iut7HIxXtMabVG_iAnqnLDr7IHnMn2Hj1RQ0oM07q6NsGrr7VhCZJRdIPv4RLtNpjVChEUHy9hNM4NnV0vmkSA1veoSJGMeiGGbB7z3nnbAyJZKq77FsnO-9doA%3D%3D&xkcb=SoCj67M3sH46GFTNQx0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3
+2025-09-28 14:32:50,527 - models.job_model - INFO - Raw job stored with ID: 23
+2025-09-28 14:32:50,529 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&bb=VRnpOdFqPjIFQuEklUJrlvoZ2U38497cwEfdACo9OpTIM_iCRvpBHJnj4fnBar-a29CM8MEQFczo3yGp8I77XIPet9XFYVlT3OiGCu2AAdo3Gq3MCQXKvsy7fHi_XWiSDWKukKzolWqLRu20D6u0BQ%3D%3D&xkcb=SoAX67M3sH46GFTNQx0CbzkdCdPP&fccid=1cd6ad6ff481831e&cmp=Studio-Tecnico-Piano99&ti=Geometra&vjs=3
+2025-09-28 14:32:50,533 - models.job_model - INFO - Raw job stored with ID: 24
+2025-09-28 14:32:50,535 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMYFEuHama_wsfaAaw_56IMC8bUybo__onIr6ydQiTpK5jI5cIY5jb6Bdxa4QabekiP4kgrDDbQSQ26RBFlnRYXDie-cefgocutHTlycINKxC9YeSlFf-BDQZDzQnETUNdFbZTniL_afEa-9dmrgZDua-iaI8qpV_bKZBCoJKXW1eWfahUlRs-9aO-g8MBDhqcHbdAP_K2DKoy7fIIk97M0iDJTjBrROivwzjlhST7mwhBYwbv797NCRD9vMYuR5z605eKj9UmD_Hwh4su3xnngGGQeTztAM4CdxL38YTcLEJA92D6bB7UuIUujKGCcVUmd9-LWWdBFYszbU5dofJMY-4Wj4Men8Rg-otmU49K-FfytxrW93JwmJ-HdeBZPOJi-2CP0qyHT3r0jNlJKVV4iZTZmLhY7aLDjeT5lRmJ5R8w7VDcn6u0gLoxEoNiILNgadKfWPwNTNg4lb21MDAGPzG30s0A5B7xp5Tn8t2aWPw3ww5YV8JDqZCdvnst2gZmQHCNyg08JYXS7Uh5w_7JIsJY1IVQYrZhpQiE8zosebhnW4i3wdcHhc=&xkcb=SoB-6_M3sH46GFTNQx0BbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=10&fvj=0&vjs=3
+2025-09-28 14:32:50,540 - models.job_model - INFO - Raw job stored with ID: 25
+2025-09-28 14:32:50,542 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BhHdEKEjbbdXRU65iZICAu2n3nIQwmym9fnqzWglEzf0cB7SAuJGltCiczNr_MnSyavg441IoIl0rC66mHgcDteuK7TVyI4uAxnOlD61IJgNHZgn5bVJX2w6xVl25Z0L4xb0YFXTyCQ9b5Ticxh-d5MbaFhSv_Zts0r3PPW9rdPFbFax08kqrrPDsfpCtZv-oVr1dZQFN0ngqwZIQnd2Rjaw46xTvgU59dTMGOi40lM9YIKox-sw82krDdPtrBACX0HBaZhSaY3NqrEK-fBeVSgxLg2CtVFGkvZ0khS38NTq8hQlGl_ovGKl8oQCJhFNH8TaWho1w2DreNas5FCHY0s3BGYrCqElkBMq3fxKPOHk_73kGhFsa2Z1giKUZ8-Or1hgD8Skl68vhQJl1wIkGLTgBaheNPtDqf0dtIRBWP_qHUVbbd4K0NnOsGUBO2vaZUvYYKefCSwp69bnq1_shpEljDIhMtDoebBNPFIcDED2uTQjDYjOIuHRH0qcgSi5O2pGhmv1BaTn_tFpyYd3neVVa9pWJEqTS1i5QvYcy34snxN9XeF_fjJnDvy8Bn0z3335ybuktDWPKF6bjX0K5CL3xSrstR7JP9q2pChESb7GFX0B8FLT7dGy0x0Z6Uz3m6426TN7-0N3Q7jL3Dy09D1v1D6jdBYGO7dbPDjvbicGhVfB2HrP30U-kpHvCIWI1VH-SLkaQHI1Z_5Q_Pf-HLYgHGbAXCthxthJaKg86ESzMc9TCaHBufyiwNilFZfOeVj_-0_8fBH2FBOHMim2tWrWObqEqhFAx3Y5oicvpIy3RIIF6GoCV9CTtL-T5OSbc8Wpao2DccCJWschjieCSGu4nMDIEjrjuHv5Yu-NHWM51V1N6-reoVUKTM5sdWVjWT-352VqDwJYY2HDIf7iG5AplT6y9_3tbLlVyKKbwoy6KaXHfs4ONEKwKQeDFleBrMZ_XSmbccENUGf9aHobp1Zh63-qhdIwrH-kPC1E53x_V2GTn_ryK8Ypr_JBqw3Uz0MKheQfsRRc4yKyvOl71Cj36TAwfezISvDDGFSjObPSdP8e-fZrHhH5A9p_BF_u3TMLEEeo9QpH-65aHuhn9bl-I4wssRp_La1SDb2_AXpbk54RNyyqcOqOJwEKcCmP1SqeSnvll-CAbVFht10sYsCxKBJjn0DshIFsPvRH8D0Nn3ERFLUgW7Y-0zIvIFJE5xjGcAFONSv4JiBjl4sEZ1TYKiyi5yGndKhF6Qy-m2Kl7Q8lyFxXAs&xkcb=SoDK6_M3sH46GFTNQx0AbzkdCdPP&camk=UoKtGZLa3XKA7PVt0YhLFg==&p=11&fvj=0&vjs=3
+2025-09-28 14:32:50,547 - models.job_model - INFO - Raw job stored with ID: 26
+2025-09-28 14:32:50,549 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&bb=VRnpOdFqPjIFQuEklUJrlglXP8x6DVqVWRfbwhCaKFEyDK-r6zg3dDk6cSJX8PRZToZibW85hbyYlBUCUiIglFQqTm-WilcDbwbJQtDU6xrj5oq02WvJqhoosEiC4BKWk9h09RbbunQO4LnwOff-rA%3D%3D&xkcb=SoCw67M3sH46GFTNQx0HbzkdCdPP&fccid=54b4fc7165f1674b&cmp=Fab-Costruzioni-Impianti-Srl&ti=Responsabile+Di+Cantiere&vjs=3
+2025-09-28 14:32:50,550 - models.job_model - INFO - Batch storage completed: 26 new jobs, 0 duplicates
+2025-09-28 14:32:50,550 - __main__ - INFO - OK Storage completed: 26 new jobs stored, 0 duplicates skipped
+2025-09-28 14:32:50,551 - __main__ - INFO - INFO Phase 3: Processing jobs and matching companies...
+2025-09-28 14:32:50,562 - __main__ - INFO - Found 13 unprocessed jobs
+2025-09-28 14:32:50,562 - __main__ - INFO - Processing batch 1/1
+2025-09-28 14:32:50,605 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 14:32:50,625 - models.job_model - INFO - Processed job stored with ID: 14
+2025-09-28 14:32:50,654 - services.company_matcher - INFO - Google API search not implemented for: Spirax Sarco partita IVA VAT number Italy
+2025-09-28 14:32:50,655 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,661 - models.job_model - INFO - Processed job stored with ID: 15
+2025-09-28 14:32:50,689 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 14:32:50,689 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,695 - models.job_model - INFO - Processed job stored with ID: 16
+2025-09-28 14:32:50,719 - services.company_matcher - INFO - Google API search not implemented for: FuturHouse srl partita IVA VAT number Italy
+2025-09-28 14:32:50,719 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,724 - models.job_model - INFO - Processed job stored with ID: 17
+2025-09-28 14:32:50,724 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: name (100.0%) | Company: Randstad
+2025-09-28 14:32:50,730 - models.job_model - INFO - Processed job stored with ID: 18
+2025-09-28 14:32:50,758 - services.company_matcher - INFO - Google API search not implemented for: Moving Handling 24 S.r.l. partita IVA VAT number Italy
+2025-09-28 14:32:50,758 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,764 - models.job_model - INFO - Processed job stored with ID: 19
+2025-09-28 14:32:50,793 - services.company_matcher - INFO - Google API search not implemented for: Dacomat srl partita IVA VAT number Italy
+2025-09-28 14:32:50,793 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,800 - models.job_model - INFO - Processed job stored with ID: 20
+2025-09-28 14:32:50,838 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 14:32:50,838 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,842 - models.job_model - INFO - Processed job stored with ID: 21
+2025-09-28 14:32:50,874 - services.company_matcher - INFO - Google API search not implemented for: ARCHINET S.R.L. SB partita IVA VAT number Italy
+2025-09-28 14:32:50,874 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,879 - models.job_model - INFO - Processed job stored with ID: 22
+2025-09-28 14:32:50,916 - services.company_matcher - INFO - Google API search not implemented for: Piano 99 SRL STP partita IVA VAT number Italy
+2025-09-28 14:32:50,917 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,921 - models.job_model - INFO - Processed job stored with ID: 23
+2025-09-28 14:32:50,954 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 14:32:50,955 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,959 - models.job_model - INFO - Processed job stored with ID: 24
+2025-09-28 14:32:50,990 - services.company_matcher - INFO - Google API search not implemented for: GiGroup partita IVA VAT number Italy
+2025-09-28 14:32:50,991 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:50,997 - models.job_model - INFO - Processed job stored with ID: 25
+2025-09-28 14:32:51,037 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 14:32:51,037 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&b... | Match: none (0.0%) | Company: None
+2025-09-28 14:32:51,043 - models.job_model - INFO - Processed job stored with ID: 26
+2025-09-28 14:32:52,052 - __main__ - INFO - OK Processing completed: 13 jobs processed
+2025-09-28 14:32:52,052 - __main__ - INFO - INFO Generating execution report...
+2025-09-28 14:32:52,063 - __main__ - INFO - OK Report generation completed
+2025-09-28 14:32:52,064 - __main__ - INFO - SUCCESS Pipeline execution completed successfully!
+2025-09-28 14:32:52,069 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 14:45:12,867 - __main__ - INFO - INFO Initializing Indeed Scraper Pipeline...
+2025-09-28 14:45:13,633 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 14:45:13,650 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 14:45:13,652 - __main__ - INFO - OK Database initialized successfully
+2025-09-28 14:45:13,665 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 14:45:13,665 - __main__ - INFO - OK Companies cache loaded successfully
+2025-09-28 14:45:13,666 - __main__ - INFO - INFO Running full pipeline...
+2025-09-28 14:45:13,666 - __main__ - INFO - INFO Phase 1: Starting job scraping from Indeed...
+2025-09-28 14:45:13,667 - __main__ - INFO - Search parameters: 'software engineer' in 'Italy', 3 pages, date_filter: 1
+2025-09-28 14:45:13,667 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Italy, max_pages: 3
+2025-09-28 14:45:13,668 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 14:45:15,907 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=0&sort=date&fromage=1
+2025-09-28 14:45:49,428 - adapters.indeed_adapter - INFO - Found 26 jobs on page 1
+2025-09-28 14:46:34,519 - adapters.indeed_adapter - INFO - Waiting 18.8 seconds before next job...
+2025-09-28 14:47:29,800 - adapters.indeed_adapter - INFO - Waiting 19.3 seconds before next job...
+2025-09-28 14:49:27,593 - adapters.indeed_adapter - INFO - Waiting 21.0 seconds before next job...
+2025-09-28 14:50:39,687 - adapters.indeed_adapter - INFO - Waiting 12.6 seconds before next job...
+2025-09-28 14:52:06,440 - adapters.indeed_adapter - INFO - Waiting 22.9 seconds before next job...
+2025-09-28 14:53:41,327 - adapters.indeed_adapter - INFO - Waiting 13.1 seconds before next job...
+2025-09-28 14:54:50,175 - adapters.indeed_adapter - INFO - Waiting 18.3 seconds before next job...
+2025-09-28 14:56:10,289 - adapters.indeed_adapter - INFO - Waiting 23.3 seconds before next job...
+2025-09-28 14:57:08,852 - adapters.indeed_adapter - INFO - Waiting 16.5 seconds before next job...
+2025-09-28 14:57:32,790 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 14:57:56,086 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=1a51246cd345027b&bb=zAWLLttr-wJNzjjT5rIYKdkems_XFqYoLpplOi86aC-7bq4yiw9mw90GosCt7rNIJTSYZGS_5zRNOea3VrAZG9qUQNgtH1V900F5mmf7VT2Cuj8zMtz0xXzEUgjaLjiE433mQHkdtQqeddqtVgHl2g%3D%3D&xkcb=SoDV67M3sH7Ykygfaj0PbzkdCdPP&fccid=66d7e91c2e5a589e&cmp=Futurhouse&ti=Responsabile+Ufficio+Acquisti&vjs=3, attempting to handle...
+2025-09-28 14:58:21,159 - adapters.indeed_adapter - INFO - Waiting 21.7 seconds before next job...
+2025-09-28 14:58:47,626 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 14:59:00,348 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&bb=zAWLLttr-wJNzjjT5rIYKUTDUaWguctqMhYIrzXTU9980vHtoaDUVdi4iG4yxQCKdXJ1bXvLzGT5pmhMsyFoExnHfh7vY_z9pV3uSTo75kh4WIZ-T-pwvjztMfFaY4d-leM0MEqj6ky0WFfIvknPMa5glEiI1wDE&xkcb=SoBh67M3sH7Ykygfaj0ObzkdCdPP&fccid=bb76686a67e75cb7&cmp=MOVING-HANDLING-24&ti=Direttore+Di+Cantiere&vjs=3, attempting to handle...
+2025-09-28 14:59:25,062 - adapters.indeed_adapter - INFO - Waiting 12.9 seconds before next job...
+2025-09-28 14:59:41,965 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:00:05,619 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&bb=zAWLLttr-wJNzjjT5rIYKUTDUaWguctqMhYIrzXTU9980vHtoaDUVdi4iG4yxQCKdXJ1bXvLzGT5pmhMsyFoExnHfh7vY_z9pV3uSTo75kh4WIZ-T-pwvjztMfFaY4d-leM0MEqj6ky0WFfIvknPMa5glEiI1wDE&xkcb=SoBh67M3sH7Ykygfaj0ObzkdCdPP&fccid=bb76686a67e75cb7&cmp=MOVING-HANDLING-24&ti=Direttore+Di+Cantiere&vjs=3, attempting to handle...
+2025-09-28 15:00:26,389 - adapters.indeed_adapter - INFO - Waiting 17.1 seconds before next job...
+2025-09-28 15:00:48,111 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:01:01,534 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=zAWLLttr-wJNzjjT5rIYKcx7E47Yq5FbuMJgrTZLbK0x3vPKXtVvw6MARNwV1CCK470rQc14U_j9KZ-bROIzofg-x6AqFCK7cw244ouNwPM4zwCBJqkIpavdYcrDorPefRYTRAk7t3Nbq50S4Z-RhQ%3D%3D&xkcb=SoD867M3sH7Ykygfaj0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3, attempting to handle...
+2025-09-28 15:01:34,153 - adapters.indeed_adapter - INFO - Waiting 18.1 seconds before next job...
+2025-09-28 15:01:58,250 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:02:10,387 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=zAWLLttr-wJNzjjT5rIYKcx7E47Yq5FbuMJgrTZLbK0x3vPKXtVvw6MARNwV1CCK470rQc14U_j9KZ-bROIzofg-x6AqFCK7cw244ouNwPM4zwCBJqkIpavdYcrDorPefRYTRAk7t3Nbq50S4Z-RhQ%3D%3D&xkcb=SoD867M3sH7Ykygfaj0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3, attempting to handle...
+2025-09-28 15:02:30,762 - adapters.indeed_adapter - INFO - Waiting 19.7 seconds before next job...
+2025-09-28 15:02:54,766 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:03:09,227 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=zAWLLttr-wJNzjjT5rIYKbxZiIST1tEmWMO2-pVj6LS5yR2h5wyzeBZPq9qCisdpGuJlZxhxzdMGMIu0vAN1DUbss_VGNx66uemOaWeVDGNI43f03zk74VG40eOSP1rkvq20IX4FOapjIGCxLfKfJw%3D%3D&xkcb=SoBI67M3sH7Ykygfaj0MbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3, attempting to handle...
+2025-09-28 15:03:35,925 - adapters.indeed_adapter - INFO - Waiting 22.6 seconds before next job...
+2025-09-28 15:04:03,487 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:04:24,729 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=zAWLLttr-wJNzjjT5rIYKbxZiIST1tEmWMO2-pVj6LS5yR2h5wyzeBZPq9qCisdpGuJlZxhxzdMGMIu0vAN1DUbss_VGNx66uemOaWeVDGNI43f03zk74VG40eOSP1rkvq20IX4FOapjIGCxLfKfJw%3D%3D&xkcb=SoBI67M3sH7Ykygfaj0MbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3, attempting to handle...
+2025-09-28 15:04:50,690 - adapters.indeed_adapter - INFO - Waiting 16.4 seconds before next job...
+2025-09-28 15:05:14,252 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:05:32,312 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=zAWLLttr-wJNzjjT5rIYKQqXYgXJ5eQWSc-wJxeZlDZFHWowQlc_J2i9HUtpVgRcWBRoKiM4trEZyEFITiy3EdnF169f-zpE4SYeFebJzdiNYf1WLOxfRCGaaKh8baBixWSBOCVHN2wcGzj99SP69A%3D%3D&xkcb=SoCh67M3sH7Ykygfaj0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3, attempting to handle...
+2025-09-28 15:06:02,565 - adapters.indeed_adapter - INFO - Waiting 17.1 seconds before next job...
+2025-09-28 15:06:28,911 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:06:50,797 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=zAWLLttr-wJNzjjT5rIYKQqXYgXJ5eQWSc-wJxeZlDZFHWowQlc_J2i9HUtpVgRcWBRoKiM4trEZyEFITiy3EdnF169f-zpE4SYeFebJzdiNYf1WLOxfRCGaaKh8baBixWSBOCVHN2wcGzj99SP69A%3D%3D&xkcb=SoCh67M3sH7Ykygfaj0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3, attempting to handle...
+2025-09-28 15:07:09,558 - adapters.indeed_adapter - INFO - Waiting 18.8 seconds before next job...
+2025-09-28 15:07:32,627 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:07:46,978 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMXOJDDRvg4DdAVKpGGVHb9vlZz1RBugE32ioBwInmq3l2wTQzwBnMHVkT1U_wCGp36hUr1Ps8CigFEYso0HmI_Ts_-BkDEyTzD8vzz-LxIom9jjz_-Gd4MtC5PeETqJC3fvFMgSOqszMlXnQbFieUiPIZ8SwfY115FPqE2Aivd9AE_zkFskLVHjXWLkjFDJ0mCxUEAa_wrzTVl2og6rhjFBSlgmIP89-U_DOwrovxqozwM-Dpq0SbC7zWtnO9O6-KMfUoMhEZ5QCl87SX-4qXR9G7ofZvEiSayFLwGy71qupYBJSkxRykC75tq694ERHigR9P_34q4WZCsCuUR2x0c4jm-gtFBHNz2ix6hzmuNy9YOAjklTjt0bU2vMTji11ocIRIekYwMGGej6CSfTTbd5SIfV7l8A3gSnE-XE7gEQ0G5s3BMVx3SJ5cxykCoHw21-pWhgjFOG0eDnL6NPwqMA2mumjIHnlCVBZot2GoMOE9laaJ5EPuaDLy303SNtFCjnN-3Iw9huwLpnVzcWaJUBy0X7eAtycSTdQ2OSRVFNAjhOgQoynyNk=&xkcb=SoDh6_M3sH7Ykygfaj0CbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=9&fvj=0&vjs=3, attempting to handle...
+2025-09-28 15:08:15,249 - adapters.indeed_adapter - INFO - Waiting 16.4 seconds before next job...
+2025-09-28 15:08:37,933 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:08:55,898 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMXOJDDRvg4DdAVKpGGVHb9vlZz1RBugE32ioBwInmq3l2wTQzwBnMHVkT1U_wCGp36hUr1Ps8CigFEYso0HmI_Ts_-BkDEyTzD8vzz-LxIom9jjz_-Gd4MtC5PeETqJC3fvFMgSOqszMlXnQbFieUiPIZ8SwfY115FPqE2Aivd9AE_zkFskLVHjXWLkjFDJ0mCxUEAa_wrzTVl2og6rhjFBSlgmIP89-U_DOwrovxqozwM-Dpq0SbC7zWtnO9O6-KMfUoMhEZ5QCl87SX-4qXR9G7ofZvEiSayFLwGy71qupYBJSkxRykC75tq694ERHigR9P_34q4WZCsCuUR2x0c4jm-gtFBHNz2ix6hzmuNy9YOAjklTjt0bU2vMTji11ocIRIekYwMGGej6CSfTTbd5SIfV7l8A3gSnE-XE7gEQ0G5s3BMVx3SJ5cxykCoHw21-pWhgjFOG0eDnL6NPwqMA2mumjIHnlCVBZot2GoMOE9laaJ5EPuaDLy303SNtFCjnN-3Iw9huwLpnVzcWaJUBy0X7eAtycSTdQ2OSRVFNAjhOgQoynyNk=&xkcb=SoDh6_M3sH7Ykygfaj0CbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=9&fvj=0&vjs=3, attempting to handle...
+2025-09-28 15:09:15,242 - adapters.indeed_adapter - INFO - Waiting 19.6 seconds before next job...
+2025-09-28 15:09:40,972 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:10:04,301 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&bb=zAWLLttr-wJNzjjT5rIYKWH0NyVhkZowktZmy5m1TAlUE7kWjWmLPPFRCyg6B9RT7XqZPH5S93qGaP2goOL3MOqXefployu8p59Q6lOVN9mDO5z7eC22WAKJEL_Ch0Pbzg9iz-O-G8jKrpPEdifzlQ%3D%3D&xkcb=SoCI67M3sH7Ykygfaj0BbzkdCdPP&fccid=54b4fc7165f1674b&cmp=Fab-Costruzioni-Impianti-Srl&ti=Responsabile+Di+Cantiere&vjs=3, attempting to handle...
+2025-09-28 15:10:31,230 - adapters.indeed_adapter - INFO - Waiting 19.2 seconds before next job...
+2025-09-28 15:10:57,117 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:11:11,145 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&bb=zAWLLttr-wJNzjjT5rIYKWH0NyVhkZowktZmy5m1TAlUE7kWjWmLPPFRCyg6B9RT7XqZPH5S93qGaP2goOL3MOqXefployu8p59Q6lOVN9mDO5z7eC22WAKJEL_Ch0Pbzg9iz-O-G8jKrpPEdifzlQ%3D%3D&xkcb=SoCI67M3sH7Ykygfaj0BbzkdCdPP&fccid=54b4fc7165f1674b&cmp=Fab-Costruzioni-Impianti-Srl&ti=Responsabile+Di+Cantiere&vjs=3, attempting to handle...
+2025-09-28 15:11:32,093 - adapters.indeed_adapter - INFO - Waiting 21.3 seconds before next job...
+2025-09-28 15:12:29,029 - adapters.indeed_adapter - INFO - Waiting 11.1 seconds before next job...
+2025-09-28 15:12:46,614 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:12:56,994 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=05f0ffe4f5d7f287&bb=zAWLLttr-wJNzjjT5rIYKTnRFGhpT4dfh3G45SuHnUZcen3XzzP_JSEib2oYG9HkZW_LiOVzIGhpkm97o0ggUzXeNIk3Ub_bqb8rQ-jb4Ts1jgKmbaKh1BqfvlbJ-55m3l_GMJ0Z5V0SkIL_a2YUh9YHV_AayWhj&xkcb=SoA867M3sH7Ykygfaj0AbzkdCdPP&fccid=b21712f0596052a4&vjs=3, attempting to handle...
+2025-09-28 15:13:25,600 - adapters.indeed_adapter - INFO - Waiting 18.2 seconds before next job...
+2025-09-28 15:13:51,373 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:14:08,706 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&bb=zAWLLttr-wJNzjjT5rIYKRUqL520ffXrL3E7RxUGCd4O-gynoYhsZ-aog-0ifel9jZAlIfFFhzCenx5LdDNbiJ0yzHib2aX89uXpsyOYxgIr-8CG0KuGkesviA1FfHlWj8cYvYlIL3cOGTQDNv1h_w%3D%3D&xkcb=SoCy67M3sH7Ykygfaj0HbzkdCdPP&fccid=1cd6ad6ff481831e&cmp=Studio-Tecnico-Piano99&ti=Geometra&vjs=3, attempting to handle...
+2025-09-28 15:14:34,213 - adapters.indeed_adapter - INFO - Waiting 13.4 seconds before next job...
+2025-09-28 15:14:54,501 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting to handle...
+2025-09-28 15:15:21,129 - adapters.indeed_adapter - WARNING - Cloudflare detected on https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&bb=zAWLLttr-wJNzjjT5rIYKRUqL520ffXrL3E7RxUGCd4O-gynoYhsZ-aog-0ifel9jZAlIfFFhzCenx5LdDNbiJ0yzHib2aX89uXpsyOYxgIr-8CG0KuGkesviA1FfHlWj8cYvYlIL3cOGTQDNv1h_w%3D%3D&xkcb=SoCy67M3sH7Ykygfaj0HbzkdCdPP&fccid=1cd6ad6ff481831e&cmp=Studio-Tecnico-Piano99&ti=Geometra&vjs=3, attempting to handle...
+2025-09-28 15:15:47,822 - adapters.indeed_adapter - INFO - Waiting 18.0 seconds before next job...
+2025-09-28 15:16:05,867 - adapters.indeed_adapter - INFO - Waiting 14.5 seconds before next page...
+2025-09-28 15:16:20,367 - adapters.indeed_adapter - INFO - Scraping page 2: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=10&sort=date&fromage=1
+2025-09-28 15:16:39,029 - adapters.indeed_adapter - INFO - Found 0 jobs on page 2
+2025-09-28 15:16:39,032 - adapters.indeed_adapter - INFO - Waiting 13.4 seconds before next page...
+2025-09-28 15:16:52,430 - adapters.indeed_adapter - INFO - Scraping page 3: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=20&sort=date&fromage=1
+2025-09-28 15:17:18,394 - adapters.indeed_adapter - INFO - Found 0 jobs on page 3
+2025-09-28 15:17:18,395 - adapters.indeed_adapter - INFO - Waiting 21.6 seconds before next page...
+2025-09-28 15:17:40,337 - adapters.indeed_adapter - INFO - Scraping completed. Found 26 jobs
+2025-09-28 15:17:40,338 - __main__ - INFO - OK Scraping completed: 26 jobs found
+2025-09-28 15:17:40,338 - __main__ - INFO - INFO Phase 2: Storing raw jobs in database...
+2025-09-28 15:17:40,585 - models.job_model - INFO - Raw job stored with ID: 27
+2025-09-28 15:17:40,588 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&bb=zAWLLttr-wJNzjjT5rIYKUfgyNWBe_6TJpWnQH1F66uJnoWCvgywQq9pBY6jIwquNQ9s5PUCJAUD3PK8h_GZMZf0kVujPNM-WBKmFFp25mdPis9YUWyU6FOopPSo6mMtqM9uHVtEutVS1IrO6UidUw%3D%3D&xkcb=SoDG67M3sH7Ykygfaj0LbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 15:17:40,592 - models.job_model - INFO - Raw job stored with ID: 28
+2025-09-28 15:17:40,594 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&bb=zAWLLttr-wJNzjjT5rIYKTQPnK15aDh9vk1AtshP5Q8TP973lBA5zw9CgxXvy_2t7cwxdc6HZUSA0pRsvznlOdSkuPqBOZAFjqhuEG0My5WDsjdfJL8ty6EN6Azg11UZqi6q4Ec45TsrpF3m4QibmA%3D%3D&xkcb=SoBy67M3sH7Ykygfaj0KbzkdCdPP&fccid=d3e096e42365dce5&vjs=3
+2025-09-28 15:17:40,601 - models.job_model - INFO - Raw job stored with ID: 29
+2025-09-28 15:17:40,604 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=aa37b961c8c8f9ed&bb=zAWLLttr-wJNzjjT5rIYKb_LPcmHQfQ7MPGeEvCyaR1cQk21OycUuZAUUO__oIzNeNCwDU2LwNf7c8lPjbJ1oP9C9Hs_Q3aogu8uAQ2JHYIKhyM433on6xQ9BKirwtVsjZQ2LFSfkubAR97VmB4FqQ%3D%3D&xkcb=SoDv67M3sH7Ykygfaj0JbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 15:17:40,608 - models.job_model - INFO - Raw job stored with ID: 30
+2025-09-28 15:17:40,611 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&bb=zAWLLttr-wJNzjjT5rIYKXT7N9kDVElKcWfJR-pzlHNHZKuewnWQ2lOWBW5ko4_gpsnH50R2RBqPcJzufcK2aQbDI5ceY1XZgkRWshhYh5TxpvrXpl3NZ69UWuIvz0-WmbHhF_LtoX6m0hLjhmLhfw%3D%3D&xkcb=SoBb67M3sH7Ykygfaj0IbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 15:17:40,616 - models.job_model - INFO - Raw job stored with ID: 31
+2025-09-28 15:17:40,619 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&bb=zAWLLttr-wJNzjjT5rIYKdkems_XFqYoLpplOi86aC-7bq4yiw9mw90GosCt7rNIJTSYZGS_5zRNOea3VrAZG9qUQNgtH1V900F5mmf7VT2Cuj8zMtz0xXzEUgjaLjiE433mQHkdtQqeddqtVgHl2g%3D%3D&xkcb=SoDV67M3sH7Ykygfaj0PbzkdCdPP&fccid=66d7e91c2e5a589e&cmp=Futurhouse&ti=Responsabile+Ufficio+Acquisti&vjs=3
+2025-09-28 15:17:40,623 - models.job_model - INFO - Raw job stored with ID: 32
+2025-09-28 15:17:40,626 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&bb=zAWLLttr-wJNzjjT5rIYKUTDUaWguctqMhYIrzXTU9980vHtoaDUVdi4iG4yxQCKdXJ1bXvLzGT5pmhMsyFoExnHfh7vY_z9pV3uSTo75kh4WIZ-T-pwvjztMfFaY4d-leM0MEqj6ky0WFfIvknPMa5glEiI1wDE&xkcb=SoBh67M3sH7Ykygfaj0ObzkdCdPP&fccid=bb76686a67e75cb7&cmp=MOVING-HANDLING-24&ti=Direttore+Di+Cantiere&vjs=3
+2025-09-28 15:17:40,630 - models.job_model - INFO - Raw job stored with ID: 33
+2025-09-28 15:17:40,635 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=zAWLLttr-wJNzjjT5rIYKcx7E47Yq5FbuMJgrTZLbK0x3vPKXtVvw6MARNwV1CCK470rQc14U_j9KZ-bROIzofg-x6AqFCK7cw244ouNwPM4zwCBJqkIpavdYcrDorPefRYTRAk7t3Nbq50S4Z-RhQ%3D%3D&xkcb=SoD867M3sH7Ykygfaj0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3
+2025-09-28 15:17:40,640 - models.job_model - INFO - Raw job stored with ID: 34
+2025-09-28 15:17:40,643 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=zAWLLttr-wJNzjjT5rIYKbxZiIST1tEmWMO2-pVj6LS5yR2h5wyzeBZPq9qCisdpGuJlZxhxzdMGMIu0vAN1DUbss_VGNx66uemOaWeVDGNI43f03zk74VG40eOSP1rkvq20IX4FOapjIGCxLfKfJw%3D%3D&xkcb=SoBI67M3sH7Ykygfaj0MbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 15:17:40,648 - models.job_model - INFO - Raw job stored with ID: 35
+2025-09-28 15:17:40,651 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=zAWLLttr-wJNzjjT5rIYKQqXYgXJ5eQWSc-wJxeZlDZFHWowQlc_J2i9HUtpVgRcWBRoKiM4trEZyEFITiy3EdnF169f-zpE4SYeFebJzdiNYf1WLOxfRCGaaKh8baBixWSBOCVHN2wcGzj99SP69A%3D%3D&xkcb=SoCh67M3sH7Ykygfaj0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3
+2025-09-28 15:17:40,657 - models.job_model - INFO - Raw job stored with ID: 36
+2025-09-28 15:17:40,659 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMXOJDDRvg4DdAVKpGGVHb9vlZz1RBugE32ioBwInmq3l2wTQzwBnMHVkT1U_wCGp36hUr1Ps8CigFEYso0HmI_Ts_-BkDEyTzD8vzz-LxIom9jjz_-Gd4MtC5PeETqJC3fvFMgSOqszMlXnQbFieUiPIZ8SwfY115FPqE2Aivd9AE_zkFskLVHjXWLkjFDJ0mCxUEAa_wrzTVl2og6rhjFBSlgmIP89-U_DOwrovxqozwM-Dpq0SbC7zWtnO9O6-KMfUoMhEZ5QCl87SX-4qXR9G7ofZvEiSayFLwGy71qupYBJSkxRykC75tq694ERHigR9P_34q4WZCsCuUR2x0c4jm-gtFBHNz2ix6hzmuNy9YOAjklTjt0bU2vMTji11ocIRIekYwMGGej6CSfTTbd5SIfV7l8A3gSnE-XE7gEQ0G5s3BMVx3SJ5cxykCoHw21-pWhgjFOG0eDnL6NPwqMA2mumjIHnlCVBZot2GoMOE9laaJ5EPuaDLy303SNtFCjnN-3Iw9huwLpnVzcWaJUBy0X7eAtycSTdQ2OSRVFNAjhOgQoynyNk=&xkcb=SoDh6_M3sH7Ykygfaj0CbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=9&fvj=0&vjs=3
+2025-09-28 15:17:40,663 - models.job_model - INFO - Raw job stored with ID: 37
+2025-09-28 15:17:40,670 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&bb=zAWLLttr-wJNzjjT5rIYKWH0NyVhkZowktZmy5m1TAlUE7kWjWmLPPFRCyg6B9RT7XqZPH5S93qGaP2goOL3MOqXefployu8p59Q6lOVN9mDO5z7eC22WAKJEL_Ch0Pbzg9iz-O-G8jKrpPEdifzlQ%3D%3D&xkcb=SoCI67M3sH7Ykygfaj0BbzkdCdPP&fccid=54b4fc7165f1674b&cmp=Fab-Costruzioni-Impianti-Srl&ti=Responsabile+Di+Cantiere&vjs=3
+2025-09-28 15:17:40,674 - models.job_model - INFO - Raw job stored with ID: 38
+2025-09-28 15:17:40,677 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=05f0ffe4f5d7f287&bb=zAWLLttr-wJNzjjT5rIYKTnRFGhpT4dfh3G45SuHnUZcen3XzzP_JSEib2oYG9HkZW_LiOVzIGhpkm97o0ggUzXeNIk3Ub_bqb8rQ-jb4Ts1jgKmbaKh1BqfvlbJ-55m3l_GMJ0Z5V0SkIL_a2YUh9YHV_AayWhj&xkcb=SoA867M3sH7Ykygfaj0AbzkdCdPP&fccid=b21712f0596052a4&vjs=3
+2025-09-28 15:17:40,682 - models.job_model - INFO - Raw job stored with ID: 39
+2025-09-28 15:17:40,686 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&bb=zAWLLttr-wJNzjjT5rIYKRUqL520ffXrL3E7RxUGCd4O-gynoYhsZ-aog-0ifel9jZAlIfFFhzCenx5LdDNbiJ0yzHib2aX89uXpsyOYxgIr-8CG0KuGkesviA1FfHlWj8cYvYlIL3cOGTQDNv1h_w%3D%3D&xkcb=SoCy67M3sH7Ykygfaj0HbzkdCdPP&fccid=1cd6ad6ff481831e&cmp=Studio-Tecnico-Piano99&ti=Geometra&vjs=3
+2025-09-28 15:17:40,688 - models.job_model - INFO - Batch storage completed: 26 new jobs, 0 duplicates
+2025-09-28 15:17:40,689 - __main__ - INFO - OK Storage completed: 26 new jobs stored, 0 duplicates skipped
+2025-09-28 15:17:40,689 - __main__ - INFO - INFO Phase 3: Processing jobs and matching companies...
+2025-09-28 15:17:40,697 - __main__ - INFO - Found 13 unprocessed jobs
+2025-09-28 15:17:40,698 - __main__ - INFO - Processing batch 1/1
+2025-09-28 15:17:40,728 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 15:17:40,746 - models.job_model - INFO - Processed job stored with ID: 27
+2025-09-28 15:17:40,764 - services.company_matcher - INFO - Google API search not implemented for: Spirax Sarco partita IVA VAT number Italy
+2025-09-28 15:17:40,766 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,771 - models.job_model - INFO - Processed job stored with ID: 28
+2025-09-28 15:17:40,792 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=aa37b961c8c8f9ed&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 15:17:40,798 - models.job_model - INFO - Processed job stored with ID: 29
+2025-09-28 15:17:40,818 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 15:17:40,818 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,823 - models.job_model - INFO - Processed job stored with ID: 30
+2025-09-28 15:17:40,840 - services.company_matcher - INFO - Google API search not implemented for: FuturHouse srl partita IVA VAT number Italy
+2025-09-28 15:17:40,840 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,844 - models.job_model - INFO - Processed job stored with ID: 31
+2025-09-28 15:17:40,866 - services.company_matcher - INFO - Google API search not implemented for: Moving Handling 24 S.r.l. partita IVA VAT number Italy
+2025-09-28 15:17:40,867 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,871 - models.job_model - INFO - Processed job stored with ID: 32
+2025-09-28 15:17:40,891 - services.company_matcher - INFO - Google API search not implemented for: Dacomat srl partita IVA VAT number Italy
+2025-09-28 15:17:40,891 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,895 - models.job_model - INFO - Processed job stored with ID: 33
+2025-09-28 15:17:40,916 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 15:17:40,917 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,924 - models.job_model - INFO - Processed job stored with ID: 34
+2025-09-28 15:17:40,945 - services.company_matcher - INFO - Google API search not implemented for: ARCHINET S.R.L. SB partita IVA VAT number Italy
+2025-09-28 15:17:40,946 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,953 - models.job_model - INFO - Processed job stored with ID: 35
+2025-09-28 15:17:40,973 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 15:17:40,974 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:40,978 - models.job_model - INFO - Processed job stored with ID: 36
+2025-09-28 15:17:40,998 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 15:17:40,999 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:41,006 - models.job_model - INFO - Processed job stored with ID: 37
+2025-09-28 15:17:41,026 - services.company_matcher - INFO - Google API search not implemented for: GiGroup partita IVA VAT number Italy
+2025-09-28 15:17:41,026 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=05f0ffe4f5d7f287&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:41,033 - models.job_model - INFO - Processed job stored with ID: 38
+2025-09-28 15:17:41,057 - services.company_matcher - INFO - Google API search not implemented for: Piano 99 SRL STP partita IVA VAT number Italy
+2025-09-28 15:17:41,058 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&b... | Match: none (0.0%) | Company: None
+2025-09-28 15:17:41,062 - models.job_model - INFO - Processed job stored with ID: 39
+2025-09-28 15:17:42,076 - __main__ - INFO - OK Processing completed: 13 jobs processed
+2025-09-28 15:17:42,076 - __main__ - INFO - INFO Generating execution report...
+2025-09-28 15:17:42,088 - __main__ - INFO - OK Report generation completed
+2025-09-28 15:17:42,088 - __main__ - INFO - SUCCESS Pipeline execution completed successfully!
+2025-09-28 15:17:42,093 - utils.db_utils - INFO - Database connection pool closed
+2025-09-28 15:36:09,233 - __main__ - INFO - INFO Initializing Indeed Scraper Pipeline...
+2025-09-28 15:36:10,366 - utils.db_utils - INFO - Database connection pool created successfully
+2025-09-28 15:36:10,386 - utils.db_utils - INFO - Migration executed successfully
+2025-09-28 15:36:10,388 - __main__ - INFO - OK Database initialized successfully
+2025-09-28 15:36:10,404 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-09-28 15:36:10,404 - __main__ - INFO - OK Companies cache loaded successfully
+2025-09-28 15:36:10,405 - __main__ - INFO - INFO Running full pipeline...
+2025-09-28 15:36:10,406 - __main__ - INFO - INFO Phase 1: Starting job scraping from Indeed...
+2025-09-28 15:36:10,406 - __main__ - INFO - Search parameters: 'software engineer' in 'Italy', 3 pages, date_filter: 1
+2025-09-28 15:36:10,413 - adapters.indeed_adapter - INFO - Starting Indeed scraping: software engineer in Italy, max_pages: 3
+2025-09-28 15:36:10,414 - adapters.indeed_adapter - INFO - Using proxy: 64.137.73.123:5211
+2025-09-28 15:36:12,440 - adapters.indeed_adapter - INFO - Scraping page 1: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=0&sort=date&fromage=1
+2025-09-28 15:36:51,309 - adapters.indeed_adapter - INFO - Found 24 jobs on page 1
+2025-09-28 15:37:35,973 - adapters.indeed_adapter - INFO - Waiting 13.5 seconds before next job (job #2)...
+2025-09-28 15:38:36,218 - adapters.indeed_adapter - INFO - Waiting 10.8 seconds before next job (job #3)...
+2025-09-28 15:38:47,090 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@64.137.73.123:5211 to 45.41.162.192:6829
+2025-09-28 15:39:33,160 - adapters.indeed_adapter - INFO - Waiting 16.8 seconds before next job (job #4)...
+2025-09-28 15:40:43,436 - adapters.indeed_adapter - INFO - Waiting 17.7 seconds before next job (job #5)...
+2025-09-28 15:41:01,206 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@64.137.73.123:5211 to 45.127.250.173:5782
+2025-09-28 15:42:22,063 - adapters.indeed_adapter - INFO - Waiting 14.3 seconds before next job (job #6)...
+2025-09-28 15:43:27,851 - adapters.indeed_adapter - INFO - Waiting 15.5 seconds before next job (job #7)...
+2025-09-28 15:43:43,473 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@64.137.73.123:5211 to 45.151.161.152:6243
+2025-09-28 15:45:08,359 - adapters.indeed_adapter - INFO - Waiting 8.2 seconds before next job (job #8)...
+2025-09-28 15:46:50,726 - adapters.indeed_adapter - INFO - Waiting 15.8 seconds before next job (job #9)...
+2025-09-28 15:47:59,163 - adapters.indeed_adapter - INFO - Waiting 15.8 seconds before next job (job #10)...
+2025-09-28 15:48:26,473 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:48:26,474 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:48:59,600 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:49:12,012 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 15:49:15,739 - adapters.indeed_adapter - INFO - Waiting 19.8 seconds before next job (job #11)...
+2025-09-28 15:49:35,503 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 11
+2025-09-28 15:49:35,504 - adapters.indeed_adapter - INFO - Using new proxy: 104.253.13.50:5482
+2025-09-28 15:51:01,955 - adapters.indeed_adapter - INFO - Waiting 19.1 seconds before next job (job #12)...
+2025-09-28 15:51:27,640 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:51:27,640 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:52:00,737 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:52:13,903 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 15:52:21,512 - adapters.indeed_adapter - INFO - Waiting 20.6 seconds before next job (job #13)...
+2025-09-28 15:52:42,071 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 13
+2025-09-28 15:52:42,072 - adapters.indeed_adapter - INFO - Using new proxy: 45.131.95.9:5673
+2025-09-28 15:52:50,883 - adapters.indeed_adapter - WARNING - Error fetching job details for https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=mczvWrNYtkmR0L_aW64HAZVu_Bks5auJqdXPICeysxD-MZhswEA-KiC6gz7ngKR2XC1nJlwaXYJ-9DiXzDqx09ZvZXhqPZEThBk4sTjGYlxisKzhllpg53FPy5D3_H-HNlpTl8A6kvJMJyO-TCAN3A%3D%3D&xkcb=SoC967M3sHxDYXT4Mp0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=mczvWrNYtkmR0L_aW64HAZVu_Bks5auJqdXPICeysxD-MZhswEA-KiC6gz7ngKR2XC1nJlwaXYJ-9DiXzDqx09ZvZXhqPZEThBk4sTjGYlxisKzhllpg53FPy5D3_H-HNlpTl8A6kvJMJyO-TCAN3A%3D%3D&xkcb=SoC967M3sHxDYXT4Mp0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3
+Call log:
+  - navigating to "https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=mczvWrNYtkmR0L_aW64HAZVu_Bks5auJqdXPICeysxD-MZhswEA-KiC6gz7ngKR2XC1nJlwaXYJ-9DiXzDqx09ZvZXhqPZEThBk4sTjGYlxisKzhllpg53FPy5D3_H-HNlpTl8A6kvJMJyO-TCAN3A%3D%3D&xkcb=SoC967M3sHxDYXT4Mp0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3", waiting until "domcontentloaded"
+
+2025-09-28 15:52:50,953 - adapters.indeed_adapter - INFO - Waiting 19.5 seconds before next job (job #14)...
+2025-09-28 15:53:17,597 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:53:17,597 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:53:50,705 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:54:05,667 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 15:54:10,965 - adapters.indeed_adapter - INFO - Waiting 15.1 seconds before next job (job #15)...
+2025-09-28 15:54:26,064 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 15
+2025-09-28 15:54:26,065 - adapters.indeed_adapter - INFO - Using new proxy: 64.137.73.123:5211
+2025-09-28 15:56:02,970 - adapters.indeed_adapter - INFO - Waiting 22.1 seconds before next job (job #16)...
+2025-09-28 15:56:25,186 - adapters.indeed_adapter - INFO - Switching proxy from http://fejxdsct:e36rq2djfzwr@64.137.73.123:5211 to 45.41.162.192:6829
+2025-09-28 15:56:34,574 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:56:34,574 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:57:07,688 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:57:21,741 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 15:57:28,541 - adapters.indeed_adapter - INFO - Waiting 21.2 seconds before next job (job #17)...
+2025-09-28 15:57:56,154 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:57:56,155 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:58:29,265 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:58:41,932 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 15:58:46,503 - adapters.indeed_adapter - INFO - Waiting 18.2 seconds before next job (job #18)...
+2025-09-28 15:59:13,587 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 15:59:13,588 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 15:59:46,702 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 15:59:59,986 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 16:00:06,458 - adapters.indeed_adapter - INFO - Waiting 17.7 seconds before next job (job #19)...
+2025-09-28 16:00:32,370 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 16:00:32,370 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 16:01:05,496 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 16:01:19,198 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 16:01:22,331 - adapters.indeed_adapter - INFO - Waiting 20.5 seconds before next job (job #20)...
+2025-09-28 16:01:42,858 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 20
+2025-09-28 16:01:42,859 - adapters.indeed_adapter - INFO - Using new proxy: 45.127.250.173:5782
+2025-09-28 16:01:54,261 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 16:01:54,261 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 16:02:27,359 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 16:02:38,074 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 16:02:41,801 - adapters.indeed_adapter - INFO - Waiting 20.7 seconds before next job (job #21)...
+2025-09-28 16:04:15,696 - adapters.indeed_adapter - INFO - Waiting 20.0 seconds before next job (job #22)...
+2025-09-28 16:04:42,366 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 16:04:42,366 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 16:05:15,474 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 16:05:28,028 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 16:05:32,669 - adapters.indeed_adapter - INFO - Waiting 23.4 seconds before next job (job #23)...
+2025-09-28 16:05:56,069 - adapters.indeed_adapter - INFO - Creating new browser context with different proxy for job 23
+2025-09-28 16:05:56,070 - adapters.indeed_adapter - INFO - Using new proxy: 45.151.161.152:6243
+2025-09-28 16:06:20,138 - adapters.indeed_adapter - INFO - Waiting 19.2 seconds before next job (job #24)...
+2025-09-28 16:06:46,172 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected, attempting advanced handling...
+2025-09-28 16:06:46,172 - adapters.indeed_adapter - INFO - Waiting for automatic Cloudflare resolution...
+2025-09-28 16:07:19,277 - adapters.indeed_adapter - WARNING - Error in Cloudflare interaction handling: object list can't be used in 'await' expression
+2025-09-28 16:07:30,402 - adapters.indeed_adapter - WARNING - Cloudflare challenge persists, skipping this page
+2025-09-28 16:07:34,739 - adapters.indeed_adapter - INFO - Waiting 18.8 seconds before next job (job #25)...
+2025-09-28 16:07:53,590 - adapters.indeed_adapter - INFO - Waiting 10.0 seconds before next page...
+2025-09-28 16:08:03,586 - adapters.indeed_adapter - INFO - Scraping page 2: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=10&sort=date&fromage=1&from=searchOnDesktopSerp
+2025-09-28 16:08:18,843 - adapters.indeed_adapter - INFO - Found 0 jobs on page 2
+2025-09-28 16:08:18,843 - adapters.indeed_adapter - INFO - Waiting 14.8 seconds before next page...
+2025-09-28 16:08:33,654 - adapters.indeed_adapter - INFO - Scraping page 3: https://it.indeed.com/jobs?q=software+engineer&l=Italy&start=20&sort=date&fromage=1&from=searchOnDesktopSerp
+2025-09-28 16:08:44,978 - adapters.indeed_adapter - INFO - Found 0 jobs on page 3
+2025-09-28 16:08:44,978 - adapters.indeed_adapter - INFO - Waiting 17.1 seconds before next page...
+2025-09-28 16:09:02,399 - adapters.indeed_adapter - INFO - Scraping completed. Found 24 jobs
+2025-09-28 16:09:02,399 - __main__ - INFO - OK Scraping completed: 24 jobs found
+2025-09-28 16:09:02,399 - __main__ - INFO - INFO Phase 2: Storing raw jobs in database...
+2025-09-28 16:09:02,481 - models.job_model - INFO - Raw job stored with ID: 40
+2025-09-28 16:09:02,482 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&bb=mczvWrNYtkmR0L_aW64HAW5npq60UZ4wdHg2Ar2FqlGm7vvdmuqJ6pi4cbCmyX7Qj7gRxVNOwytpENMI5-l0s9UIleFJs511jFTIx5D43_1W1_vuh1csO2v2pD4Rq1pJ3hNYYvNVwMKzMpnl51BHag%3D%3D&xkcb=SoCH67M3sHxDYXT4Mp0LbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 16:09:02,485 - models.job_model - INFO - Raw job stored with ID: 41
+2025-09-28 16:09:02,487 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&bb=mczvWrNYtkmR0L_aW64HAeVdI17z9owejrYRSEPUCshSjCqMeleSzKVg9iz4HSiv0bB9B3U4-_058aTQmdPu_SLjF7kuefTMmW2CmwlAJi-RmNsLA_DlGwLcszwiTpFIzQ1m1_zl00mIl68-E6KvaA%3D%3D&xkcb=SoAz67M3sHxDYXT4Mp0KbzkdCdPP&fccid=d3e096e42365dce5&vjs=3
+2025-09-28 16:09:02,490 - models.job_model - INFO - Raw job stored with ID: 42
+2025-09-28 16:09:02,491 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=aa37b961c8c8f9ed&bb=mczvWrNYtkmR0L_aW64HAaahhcsX9gNRaMzev_3X9HNS34Rt3yJO-cxUki4wwnUOC3DAXGFzLAkt6CAP1mC-iZrszZKBkns9jDcoKAjsYQVHh9J_VufhBC_sdcIOErSFXpdCF1GyjRIIVni93-K5YA%3D%3D&xkcb=SoCu67M3sHxDYXT4Mp0JbzkdCdPP&fccid=fe2d21eef233e94a&vjs=3
+2025-09-28 16:09:02,493 - models.job_model - INFO - Raw job stored with ID: 43
+2025-09-28 16:09:02,495 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&bb=mczvWrNYtkmR0L_aW64HAUD0BaoJpPaoMkhvMbDLzLGR64PPfG2jQk2jIkp1taukYGL1zIJHjJLY8deKIKrBQYZ1yS1tjVaqoJ4Knc3f-RfcSGQYhNXom50g_NYVYqkVHwTro2sevRrfMvwLlx5JUQ%3D%3D&xkcb=SoAa67M3sHxDYXT4Mp0IbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 16:09:02,497 - models.job_model - INFO - Raw job stored with ID: 44
+2025-09-28 16:09:02,498 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&bb=mczvWrNYtkmR0L_aW64HAVxkqiGIU-9HjGmcMv4remjrDVB1nKzwkTi7chCbQUSHj5zY6BmpONZuXf7NICj9w5OfA6m1bYeoxUQIBDKQBOUMBvYVfznNG_HksJOX5MTJ7xk2hCLEOvMF4Zb3gG_B3w%3D%3D&xkcb=SoCU67M3sHxDYXT4Mp0PbzkdCdPP&fccid=66d7e91c2e5a589e&cmp=Futurhouse&ti=Responsabile+Ufficio+Acquisti&vjs=3
+2025-09-28 16:09:02,500 - models.job_model - INFO - Raw job stored with ID: 45
+2025-09-28 16:09:02,502 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&bb=mczvWrNYtkmR0L_aW64HAf6puZsLoEb_J8Wj4AKiPbVAI9a0Mo_u9PT7SqKYHwNEpoK7rfREb32Sig9ll8C-mT5whyoBBwMVUOAUpqp5FhndOy8Thsi7pqsE5dkGO7x469IzoX3HH4iiIHvo_IYNOw%3D%3D&xkcb=SoAg67M3sHxDYXT4Mp0ObzkdCdPP&fccid=bb76686a67e75cb7&cmp=MOVING-HANDLING-24&ti=Direttore+Di+Cantiere&vjs=3
+2025-09-28 16:09:02,506 - models.job_model - INFO - Raw job stored with ID: 46
+2025-09-28 16:09:02,507 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&bb=mczvWrNYtkmR0L_aW64HAZVu_Bks5auJqdXPICeysxD-MZhswEA-KiC6gz7ngKR2XC1nJlwaXYJ-9DiXzDqx09ZvZXhqPZEThBk4sTjGYlxisKzhllpg53FPy5D3_H-HNlpTl8A6kvJMJyO-TCAN3A%3D%3D&xkcb=SoC967M3sHxDYXT4Mp0NbzkdCdPP&fccid=0890bea06134d5a4&vjs=3
+2025-09-28 16:09:02,510 - models.job_model - INFO - Raw job stored with ID: 47
+2025-09-28 16:09:02,511 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&bb=mczvWrNYtkmR0L_aW64HASvhHnHEwueuvsEmhr3r9AXuHRc9sNbU-e4GdV3Drkku03s_xcZXvdtmYQtsjXZgz9iZ9t9VmdFPyRj6m_wAok5nQlvvFWI5G30KqGEdrJRyPYOQriW5_hLQKDpUydCC9g%3D%3D&xkcb=SoAJ67M3sHxDYXT4Mp0MbzkdCdPP&fccid=80402dcb603cbc8d&vjs=3
+2025-09-28 16:09:02,514 - models.job_model - INFO - Raw job stored with ID: 48
+2025-09-28 16:09:02,515 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&bb=mczvWrNYtkmR0L_aW64HAY__wp8oiDmF8MZTcp5DB93A4cuh8kpLK_04KnV0Le8wMFYZridKSCMt0PtktBh6j2_i33wvAT-bxf_bhLTDxGUERiEp7lln0O3rfnG6jH9452r1pXFCyQiTk8RVi_PSPA%3D%3D&xkcb=SoDg67M3sHxDYXT4Mp0DbzkdCdPP&fccid=dd616958bd9ddc12&cmp=ARCHINET-S.R.L.-SB&ti=Preventivista&vjs=3
+2025-09-28 16:09:02,518 - models.job_model - INFO - Raw job stored with ID: 49
+2025-09-28 16:09:02,520 - models.job_model - INFO - Job already exists: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0AQYY2_NuDrSlwB0ZSKeohGBdec7RsFoVxsEIIiyBRIrSHG1gbdqpQGADvk8ZQeN23JulrA0Knsy1UweyCQ22irtFPZZapTQ0qY5v4tkm9T-nlYoQABv6A4pIZ8GScEYeJfkaAsfSSHLNYw9_UyfFbwaV1OJ0KPtTx-AS2E-bkY0awcTiJq_UChVNV64dOFrm_vU73hVCPuMbuxxEl_H-fonwv97Ohk8QeZoDl5I-JjybsHs1cbcaRbG0z6u15ZlUQR_Zsk9zm4LSSGhB3mw-wLI9CMEA4UOBip-eEIwvTFEp6oX0g0ssS5xe7p4uqTzIq8GmZjTMTaMo8yFYmoNtE-hS56STqkdOePimrHpiJbG2Z4JGLePe2e6eKzbpMVCWIbPdXgho9CJAPClf0AP6pJm845g8zFhcNTr0l-CfAGq5oiAy5oWujwnR1J_z5TAIzLPnwxziu1cN_N6pPv18qH1ii2wACNvZaMP94PU8YryqqDz6QUSwOYODEHzjZt7lhS3sNCAM25Hu5tlfdgVtpV9l5Zxoa65EKnB9aKYZuiJKCqC9L2_SkqP4nkOVrmzEeD_1W9AlDBnRPhnZ9ChL1-hhEPyntqg4kFiDds5WYhktS_CwuJ5xh1skT_OJnv3NXxxvtPBDYiLoxLxJx_xmZkoG1S04OLgAcCL9HKPz3TjH4XnaWmS4Gqm0OfA6InRJUXnSGYMhVTQBiO2zqy0oBOMjJUtSYAeVthCjGeEGfnvMb_cMq0LM-M&xkcb=SoCg6_M3sHxDYXT4Mp0CbzkdCdPP&camk=UoKtGZLa3XJWfpavyatipQ==&p=9&fvj=0&vjs=3
+2025-09-28 16:09:02,523 - models.job_model - INFO - Raw job stored with ID: 50
+2025-09-28 16:09:02,525 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&bb=mczvWrNYtkmR0L_aW64HAQ0IGa4-pyCNYpaMNuGYo6Smfcpni4ngPnoIMdbLSGyuNVrrqjlWqM4h74S2u60f-4QACkFIoJdOu2ook-_359wpvoOpkux9yn6e7GtKSSW0TL8j2YHsE2ot09YjZf7kTA%3D%3D&xkcb=SoDJ67M3sHxDYXT4Mp0BbzkdCdPP&fccid=54b4fc7165f1674b&cmp=Fab-Costruzioni-Impianti-Srl&ti=Responsabile+Di+Cantiere&vjs=3
+2025-09-28 16:09:02,529 - models.job_model - INFO - Raw job stored with ID: 51
+2025-09-28 16:09:02,531 - models.job_model - INFO - Job already exists: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&bb=mczvWrNYtkmR0L_aW64HAepEee6DTCrZ9G2NjaAe08wn3o0N-oLgB4_SyW7L4hxNH7joyvCIEoXrg5E1xq00OZeN0B5Ey3FRb9ypiyy06BJrSajreH9DOPupIk6OqJLDiAh-P9tqFC0Foac84JE4DQ%3D%3D&xkcb=SoB967M3sHxDYXT4Mp0AbzkdCdPP&fccid=1cd6ad6ff481831e&cmp=Studio-Tecnico-Piano99&ti=Geometra&vjs=3
+2025-09-28 16:09:02,533 - models.job_model - INFO - Batch storage completed: 24 new jobs, 0 duplicates
+2025-09-28 16:09:02,533 - __main__ - INFO - OK Storage completed: 24 new jobs stored, 0 duplicates skipped
+2025-09-28 16:09:02,534 - __main__ - INFO - INFO Phase 3: Processing jobs and matching companies...
+2025-09-28 16:09:02,540 - __main__ - INFO - Found 12 unprocessed jobs
+2025-09-28 16:09:02,540 - __main__ - INFO - Processing batch 1/1
+2025-09-28 16:09:02,553 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=68eef9833cfb139d&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 16:09:02,566 - models.job_model - INFO - Processed job stored with ID: 40
+2025-09-28 16:09:02,576 - services.company_matcher - INFO - Google API search not implemented for: Spirax Sarco partita IVA VAT number Italy
+2025-09-28 16:09:02,576 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=89fbfc84ad23f8ba&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,580 - models.job_model - INFO - Processed job stored with ID: 41
+2025-09-28 16:09:02,592 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=aa37b961c8c8f9ed&b... | Match: name (100.0%) | Company: Amazon
+2025-09-28 16:09:02,595 - models.job_model - INFO - Processed job stored with ID: 42
+2025-09-28 16:09:02,606 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 16:09:02,607 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=72896a56e3b481b8&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,611 - models.job_model - INFO - Processed job stored with ID: 43
+2025-09-28 16:09:02,619 - services.company_matcher - INFO - Google API search not implemented for: FuturHouse srl partita IVA VAT number Italy
+2025-09-28 16:09:02,620 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1a51246cd345027b&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,624 - models.job_model - INFO - Processed job stored with ID: 44
+2025-09-28 16:09:02,633 - services.company_matcher - INFO - Google API search not implemented for: Moving Handling 24 S.r.l. partita IVA VAT number Italy
+2025-09-28 16:09:02,634 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=cb651cd52801d1b9&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,639 - models.job_model - INFO - Processed job stored with ID: 45
+2025-09-28 16:09:02,647 - services.company_matcher - INFO - Google API search not implemented for: Dacomat srl partita IVA VAT number Italy
+2025-09-28 16:09:02,648 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=1eb77e84e1d5d5f3&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,652 - models.job_model - INFO - Processed job stored with ID: 46
+2025-09-28 16:09:02,663 - services.company_matcher - INFO - Google API search not implemented for: Capgemini Engineering partita IVA VAT number Italy
+2025-09-28 16:09:02,663 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=3cc722c372c1cc73&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,668 - models.job_model - INFO - Processed job stored with ID: 47
+2025-09-28 16:09:02,678 - services.company_matcher - INFO - Google API search not implemented for: ARCHINET S.R.L. SB partita IVA VAT number Italy
+2025-09-28 16:09:02,679 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=c997e15c6523e978&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,683 - models.job_model - INFO - Processed job stored with ID: 48
+2025-09-28 16:09:02,695 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 16:09:02,695 - services.company_matcher - INFO - Job processed: https://it.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,700 - models.job_model - INFO - Processed job stored with ID: 49
+2025-09-28 16:09:02,712 - services.company_matcher - INFO - Google API search not implemented for: Fab Costruzioni Impianti srl partita IVA VAT number Italy
+2025-09-28 16:09:02,713 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=55e47b4f0f701d44&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,717 - models.job_model - INFO - Processed job stored with ID: 50
+2025-09-28 16:09:02,727 - services.company_matcher - INFO - Google API search not implemented for: Piano 99 SRL STP partita IVA VAT number Italy
+2025-09-28 16:09:02,728 - services.company_matcher - INFO - Job processed: https://it.indeed.com/rc/clk?jk=9eafda4f5f445ec9&b... | Match: none (0.0%) | Company: None
+2025-09-28 16:09:02,732 - models.job_model - INFO - Processed job stored with ID: 51
+2025-09-28 16:09:03,736 - __main__ - INFO - OK Processing completed: 12 jobs processed
+2025-09-28 16:09:03,737 - __main__ - INFO - INFO Generating execution report...
+2025-09-28 16:09:03,748 - __main__ - INFO - OK Report generation completed
+2025-09-28 16:09:03,748 - __main__ - INFO - SUCCESS Pipeline execution completed successfully!
+2025-09-28 16:09:03,752 - utils.db_utils - INFO - Database connection pool closed

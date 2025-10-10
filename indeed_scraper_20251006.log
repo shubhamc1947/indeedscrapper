@@ -1,0 +1,915 @@
+2025-10-06 23:35:27,170 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:35:27,473 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:35:27,553 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:35:27,555 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:35:27,570 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:35:27,570 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:35:27,570 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'remote']
+2025-10-06 23:35:27,571 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:35:27,571 - __main__ - INFO - Query 1/1: ''
+2025-10-06 23:35:27,571 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-10-06 23:35:27,572 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:35:27,572 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:35:27,572 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-10-06 23:35:27,572 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Milano, Lombardia
+2025-10-06 23:35:27,573 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:35:27,573 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:35:27,573 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:35:27,573 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:35:33,552 - utils.db_utils - INFO - Database connection pool closed
+2025-10-06 23:35:33,623 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Connection.run.<locals>.init() done, defined at C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py:307> exception=Exception('Connection.init: Connection closed while reading from the driver')>
+Traceback (most recent call last):
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 308, in init
+    self.playwright_future.set_result(await self._root_object.initialize())
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 249, in initialize
+    await self._channel.send(
+    ...<5 lines>...
+    )
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Connection.init: Connection closed while reading from the driver
+2025-10-06 23:35:43,628 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:35:43,822 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:35:43,834 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:35:43,836 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:35:43,847 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:35:43,847 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:35:43,848 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'remote']
+2025-10-06 23:35:43,848 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:35:43,848 - __main__ - INFO - Query 1/1: ''
+2025-10-06 23:35:43,849 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-10-06 23:35:43,849 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:35:43,849 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:35:43,850 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-10-06 23:35:43,850 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Milano, Lombardia
+2025-10-06 23:35:43,850 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:35:43,851 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:35:43,851 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:35:43,851 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:35:48,018 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-10-06 23:35:59,630 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected
+2025-10-06 23:35:59,633 - adapters.indeed_adapter - WARNING - Cloudflare detected, attempting to handle...
+2025-10-06 23:36:01,506 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-06 23:36:02,381 - adapters.indeed_adapter - ERROR - Scraping attempt 1 failed: Browser.close: Connection closed while reading from the driver
+2025-10-06 23:36:02,382 - adapters.indeed_adapter - INFO - Retrying in 5 seconds...
+2025-10-06 23:36:03,997 - utils.db_utils - INFO - Database connection pool closed
+2025-10-06 23:36:12,403 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:36:12,777 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:36:12,789 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:36:12,790 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:36:12,800 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:36:12,801 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:36:12,801 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'remote']
+2025-10-06 23:36:12,801 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:36:12,802 - __main__ - INFO - Query 1/1: ''
+2025-10-06 23:36:12,802 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-10-06 23:36:12,802 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:36:12,803 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:36:12,803 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-10-06 23:36:12,803 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Milano, Lombardia
+2025-10-06 23:36:12,803 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:36:12,804 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:36:12,804 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:36:12,804 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:36:14,207 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-10-06 23:36:41,523 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-06 23:36:41,523 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-06 23:36:46,106 - adapters.indeed_adapter - INFO - Title: Magazziniere/a - sede di Pero (MI)...
+2025-10-06 23:37:08,660 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:37:16,973 - adapters.indeed_adapter - INFO - Company: NTWK
+2025-10-06 23:37:16,991 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Ntwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tb97qph735800&fromjk=9757f04927792345
+2025-10-06 23:37:17,005 - adapters.indeed_adapter - INFO - Location: 20121 Milano
+2025-10-06 23:37:17,031 - adapters.indeed_adapter - INFO - Rating: Per niente
+Poco
+Poco
+Molto
+Molto
+2025-10-06 23:37:17,047 - adapters.indeed_adapter - INFO - Found description: 1174 characters
+2025-10-06 23:37:17,062 - adapters.indeed_adapter - INFO - Found job details section: 117 characters
+2025-10-06 23:37:17,068 - adapters.indeed_adapter - INFO - Total description: 1293 characters
+2025-10-06 23:37:17,112 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Tempo pieno']
+2025-10-06 23:37:17,137 - adapters.indeed_adapter - INFO - Shifts: ['Dal lunedì al venerdì']
+2025-10-06 23:37:17,139 - adapters.indeed_adapter - INFO - Found 14 skills: ['c', 'go', 'r', 'ai', 'vim', 'sso', 'ui', 'precisione', 'autonomia', 'ricerca']
+2025-10-06 23:37:17,139 - adapters.indeed_adapter - INFO - Successfully scraped job 1
+2025-10-06 23:37:17,139 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-06 23:37:20,084 - adapters.indeed_adapter - INFO - Title: Back Office Commerciale e Customer Service E-Commerce...
+2025-10-06 23:37:44,682 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:37:51,826 - adapters.indeed_adapter - INFO - Company: SIAD
+2025-10-06 23:37:51,837 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Siad-S.p.a?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tbab1el50k810&fromjk=220e9de81096f83a
+2025-10-06 23:37:51,850 - adapters.indeed_adapter - INFO - Location: Assago, Lombardia
+2025-10-06 23:37:51,863 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-06 23:37:51,878 - adapters.indeed_adapter - INFO - Found description: 2381 characters
+2025-10-06 23:37:51,887 - adapters.indeed_adapter - INFO - Total description: 2381 characters
+2025-10-06 23:37:51,896 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'go', 'r', 'ai', 'sso', 'excel', 'ui', 'shopify', 'e-commerce', 'comunicazione']
+2025-10-06 23:37:51,897 - adapters.indeed_adapter - INFO - Successfully scraped job 2
+2025-10-06 23:37:51,897 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-06 23:37:56,234 - adapters.indeed_adapter - INFO - Title: Impiegato/a Contabile (full-time o part-time)...
+2025-10-06 23:38:01,353 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:38:07,583 - adapters.indeed_adapter - INFO - Company: NETwk
+2025-10-06 23:38:07,597 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Netwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tbat022kk8002&fromjk=9af4a75fe23b6c22
+2025-10-06 23:38:07,610 - adapters.indeed_adapter - INFO - Location: 20156 Milano
+2025-10-06 23:38:07,632 - adapters.indeed_adapter - INFO - Rating: Per niente
+Poco
+Poco
+Molto
+Molto
+2025-10-06 23:38:07,646 - adapters.indeed_adapter - INFO - Found description: 1532 characters
+2025-10-06 23:38:07,659 - adapters.indeed_adapter - INFO - Found job details section: 91 characters
+2025-10-06 23:38:07,670 - adapters.indeed_adapter - INFO - Found benefits section: 80 characters
+2025-10-06 23:38:07,670 - adapters.indeed_adapter - INFO - Total description: 1717 characters
+2025-10-06 23:38:07,706 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Part-time', 'Tempo pieno']
+2025-10-06 23:38:07,707 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'r', 'ai', 'test', 'odoo', 'excel', 'gestionale', 'ui', 'defi', 'attenzione ai dettagli']
+2025-10-06 23:38:07,708 - adapters.indeed_adapter - INFO - Successfully scraped job 3
+2025-10-06 23:38:07,708 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-06 23:38:10,639 - adapters.indeed_adapter - INFO - Title: Communication & Engagement Intern...
+2025-10-06 23:38:23,227 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:38:26,356 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-06 23:38:26,856 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<main() done, defined at C:\Users\shubh\Desktop\workspace\main.py:353> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[ProtocolCallback.__init__.<locals>.cb() at C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py:228, <4 more>, gather.<locals>._done_callback() at C:\Python313\Lib\asyncio\tasks.py:820]>
+2025-10-06 23:38:26,858 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<Connection.run() done, defined at C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py:303> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 712, in run_until_complete
+    self.run_forever()
+  File "C:\Python313\Lib\asyncio\base_events.py", line 683, in run_forever
+    self._run_once()
+  File "C:\Python313\Lib\asyncio\base_events.py", line 2050, in _run_once
+    handle._run()
+  File "C:\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 312, in run
+    await self._transport.run()
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_transport.py", line 161, in run
+    self.on_message(obj)
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 271, in <lambda>
+    self._transport.on_message = lambda msg: self.dispatch(msg)
+                                             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py", line 424, in dispatch
+    parsed_error._stack = "".join(callback.stack_trace.format())
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\traceback.py", line 757, in format
+    formatted_frame = self.format_frame_summary(frame_summary, colorize=colorize)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\traceback.py", line 549, in format_frame_summary
+    if frame_summary._dedented_lines and frame_summary._dedented_lines.strip():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\traceback.py", line 368, in _dedented_lines
+    self._lines_dedented = textwrap.dedent(self._lines)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\textwrap.py", line 466, in dedent
+    text = re.sub(r'(?m)^' + margin, '', text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\re\__init__.py", line 208, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\re\__init__.py", line 368, in _compile
+    del _cache2[next(iter(_cache2))]
+                     ^^^^^^^^^^^^^
+  File "C:\Python313\Lib\asyncio\runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+2025-10-06 23:51:12,841 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:51:13,092 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:51:13,108 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:51:13,109 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:51:13,120 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:51:13,121 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:51:13,121 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'tier_3', 'remote']
+2025-10-06 23:51:13,121 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:51:13,121 - __main__ - INFO - Query 1/20: 'python developer'
+2025-10-06 23:51:13,121 - __main__ - INFO - Starting multi-location scrape for query: 'python developer'
+2025-10-06 23:51:13,122 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:51:13,122 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:51:13,122 - __main__ - INFO - Scraping: 'python developer' in 'Milano, Lombardia'
+2025-10-06 23:51:13,123 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination): python developer in Milano, Lombardia
+2025-10-06 23:51:13,123 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:51:13,123 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION - python developer in Milano, Lombardia
+2025-10-06 23:51:13,124 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:51:13,124 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:51:14,892 - utils.db_utils - INFO - Database connection pool closed
+2025-10-06 23:51:23,802 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:51:23,951 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:51:23,962 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:51:23,962 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:51:23,975 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:51:23,975 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:51:23,975 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'tier_3', 'remote']
+2025-10-06 23:51:23,976 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:51:23,976 - __main__ - INFO - Query 1/1: ''
+2025-10-06 23:51:23,976 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-10-06 23:51:23,977 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:51:23,977 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:51:23,977 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-10-06 23:51:23,977 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Milano, Lombardia
+2025-10-06 23:51:23,978 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:51:23,978 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:51:23,978 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:51:23,978 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:51:25,185 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-10-06 23:51:28,663 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-06 23:51:28,820 - adapters.indeed_adapter - ERROR - Scraping attempt 1 failed: Browser.close: Connection closed while reading from the driver
+2025-10-06 23:51:28,821 - adapters.indeed_adapter - INFO - Retrying in 5 seconds...
+2025-10-06 23:51:33,822 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:51:33,822 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:51:33,823 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:51:33,823 - adapters.indeed_adapter - INFO - Using proxy: 142.147.129.156:5765
+2025-10-06 23:51:34,717 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-10-06 23:51:43,231 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-06 23:51:43,468 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=Error('net::ERR_ABORTED at https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1\nCall log:\n  - navigating to "https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1", waiting until "domcontentloaded"\n')>
+playwright._impl._errors.Error: net::ERR_ABORTED at https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+Call log:
+  - navigating to "https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1", waiting until "domcontentloaded"
+
+2025-10-06 23:51:43,484 - adapters.indeed_adapter - ERROR - Scraping attempt 2 failed: coroutine ignored GeneratorExit
+2025-10-06 23:51:43,485 - adapters.indeed_adapter - INFO - Retrying in 5 seconds...
+2025-10-06 23:51:43,485 - __main__ - ERROR - Failed to scrape Milano, Lombardia: no running event loop
+2025-10-06 23:51:43,490 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<main() done, defined at C:\Users\shubh\Desktop\workspace\main.py:353> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[ProtocolCallback.__init__.<locals>.cb() at C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py:228, <3 more>, ProtocolCallback.__init__.<locals>.cb() at C:\Users\shubh\AppData\Roaming\Python\Python313\site-packages\playwright\_impl\_connection.py:228]>
+2025-10-06 23:51:46,997 - __main__ - INFO - Initializing Indeed Scraper Pipeline...
+2025-10-06 23:51:47,382 - utils.db_utils - INFO - Database connection pool created successfully
+2025-10-06 23:51:47,402 - utils.db_utils - INFO - Migration executed successfully
+2025-10-06 23:51:47,404 - __main__ - INFO - Database initialized successfully
+2025-10-06 23:51:47,424 - services.company_matcher - INFO - Loaded 150 companies into cache
+2025-10-06 23:51:47,425 - __main__ - INFO - Companies cache loaded successfully
+2025-10-06 23:51:47,425 - __main__ - INFO - Multi-location mode with tiers: ['tier_1', 'tier_2', 'tier_3', 'remote']
+2025-10-06 23:51:47,426 - __main__ - INFO - Starting multi-query, multi-location scrape
+2025-10-06 23:51:47,427 - __main__ - INFO - Query 1/1: ''
+2025-10-06 23:51:47,427 - __main__ - INFO - Starting multi-location scrape for query: ''
+2025-10-06 23:51:47,428 - __main__ - INFO - Processing 8 locations in tier 'tier_1'
+2025-10-06 23:51:47,428 - __main__ - INFO - [tier_1] Location 1/8: Milano, Lombardia
+2025-10-06 23:51:47,428 - __main__ - INFO - Scraping: '' in 'Milano, Lombardia'
+2025-10-06 23:51:47,429 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Milano, Lombardia
+2025-10-06 23:51:47,429 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-06 23:51:47,430 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Milano, Lombardia
+2025-10-06 23:51:47,430 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-06 23:51:47,431 - adapters.indeed_adapter - INFO - Using proxy: 104.239.73.111:6654
+2025-10-06 23:51:49,192 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Milano%2C+Lombardia&start=0&sort=date&fromage=1
+2025-10-06 23:52:40,260 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-06 23:52:40,261 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-06 23:52:42,870 - adapters.indeed_adapter - INFO - Title: Magazziniere/a - sede di Pero (MI)...
+2025-10-06 23:52:50,834 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:52:54,872 - adapters.indeed_adapter - INFO - Company: NTWK
+2025-10-06 23:52:54,887 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Ntwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc5vnpjn2v800&fromjk=9757f04927792345
+2025-10-06 23:52:54,902 - adapters.indeed_adapter - INFO - Location: 20121 Milano
+2025-10-06 23:52:54,959 - adapters.indeed_adapter - INFO - Found description: 1174 characters
+2025-10-06 23:52:54,974 - adapters.indeed_adapter - INFO - Found job details section: 117 characters
+2025-10-06 23:52:54,980 - adapters.indeed_adapter - INFO - Total description: 1293 characters
+2025-10-06 23:52:55,040 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Tempo pieno']
+2025-10-06 23:52:55,061 - adapters.indeed_adapter - INFO - Shifts: ['Dal lunedì al venerdì']
+2025-10-06 23:52:55,062 - adapters.indeed_adapter - INFO - Found 14 skills: ['c', 'go', 'r', 'ai', 'vim', 'sso', 'ui', 'precisione', 'autonomia', 'ricerca']
+2025-10-06 23:52:55,063 - adapters.indeed_adapter - INFO - Successfully scraped job 1
+2025-10-06 23:52:55,063 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-06 23:52:59,559 - adapters.indeed_adapter - INFO - Title: Back Office Commerciale e Customer Service E-Commerce...
+2025-10-06 23:53:06,264 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:53:11,528 - adapters.indeed_adapter - INFO - Company: SIAD
+2025-10-06 23:53:11,542 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Siad-S.p.a?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc6fgqg35080o&fromjk=220e9de81096f83a
+2025-10-06 23:53:11,554 - adapters.indeed_adapter - INFO - Location: Assago, Lombardia
+2025-10-06 23:53:11,569 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-06 23:53:11,583 - adapters.indeed_adapter - INFO - Found description: 2381 characters
+2025-10-06 23:53:11,596 - adapters.indeed_adapter - INFO - Total description: 2381 characters
+2025-10-06 23:53:11,604 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'go', 'r', 'ai', 'sso', 'excel', 'ui', 'shopify', 'e-commerce', 'comunicazione']
+2025-10-06 23:53:11,605 - adapters.indeed_adapter - INFO - Successfully scraped job 2
+2025-10-06 23:53:11,605 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-06 23:53:14,833 - adapters.indeed_adapter - INFO - Title: Impiegato/a Contabile (full-time o part-time)...
+2025-10-06 23:53:23,066 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:53:26,796 - adapters.indeed_adapter - INFO - Company: NETwk
+2025-10-06 23:53:26,812 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Netwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc6u10jn2a804&fromjk=9af4a75fe23b6c22
+2025-10-06 23:53:26,825 - adapters.indeed_adapter - INFO - Location: 20156 Milano
+2025-10-06 23:53:26,859 - adapters.indeed_adapter - INFO - Found description: 1532 characters
+2025-10-06 23:53:26,880 - adapters.indeed_adapter - INFO - Found job details section: 91 characters
+2025-10-06 23:53:26,901 - adapters.indeed_adapter - INFO - Found benefits section: 80 characters
+2025-10-06 23:53:26,901 - adapters.indeed_adapter - INFO - Total description: 1717 characters
+2025-10-06 23:53:26,957 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Part-time', 'Tempo pieno']
+2025-10-06 23:53:26,959 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'r', 'ai', 'test', 'odoo', 'excel', 'gestionale', 'ui', 'defi', 'attenzione ai dettagli']
+2025-10-06 23:53:26,960 - adapters.indeed_adapter - INFO - Successfully scraped job 3
+2025-10-06 23:53:26,960 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-06 23:53:29,091 - adapters.indeed_adapter - INFO - Title: SALES ASSITANT (20h - Milano, Staz. Centrale)...
+2025-10-06 23:53:37,230 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:53:45,307 - adapters.indeed_adapter - INFO - Company: Mango
+2025-10-06 23:53:45,321 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Mango?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc7cenh735800&fromjk=aaf74358156b87f5
+2025-10-06 23:53:45,340 - adapters.indeed_adapter - INFO - Location: 20124 Milano
+2025-10-06 23:53:45,358 - adapters.indeed_adapter - INFO - Rating: 3.4
+2025-10-06 23:53:45,372 - adapters.indeed_adapter - INFO - Found description: 2941 characters
+2025-10-06 23:53:45,387 - adapters.indeed_adapter - INFO - Found job details section: 61 characters
+2025-10-06 23:53:45,401 - adapters.indeed_adapter - INFO - Found benefits section: 78 characters
+2025-10-06 23:53:45,402 - adapters.indeed_adapter - INFO - Total description: 3094 characters
+2025-10-06 23:53:45,432 - adapters.indeed_adapter - INFO - Contract: ['Part-time']
+2025-10-06 23:53:45,435 - adapters.indeed_adapter - INFO - Found 16 skills: ['c', 'go', 'r', 'gin', 'ai', 'sso', 'comunicazione', 'creatività', 'innovazione', 'organizzazione']
+2025-10-06 23:53:45,435 - adapters.indeed_adapter - INFO - Successfully scraped job 4
+2025-10-06 23:53:45,436 - adapters.indeed_adapter - INFO - 
+--- Processing job 5/15 ---
+2025-10-06 23:53:49,567 - adapters.indeed_adapter - INFO - Title: Sales Assistant Running Part Time...
+2025-10-06 23:53:55,704 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:54:03,529 - adapters.indeed_adapter - INFO - Company: DECATHLON Retail Omnichannel
+2025-10-06 23:54:03,543 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Decathlon?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc7vruljdf808&fromjk=d818f6bed0bacf36
+2025-10-06 23:54:03,557 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia
+2025-10-06 23:54:03,572 - adapters.indeed_adapter - INFO - Rating: 4.0
+2025-10-06 23:54:03,586 - adapters.indeed_adapter - INFO - Found description: 3634 characters
+2025-10-06 23:54:03,598 - adapters.indeed_adapter - INFO - Found job details section: 79 characters
+2025-10-06 23:54:03,602 - adapters.indeed_adapter - INFO - Total description: 3715 characters
+2025-10-06 23:54:03,637 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Part-time']
+2025-10-06 23:54:03,639 - adapters.indeed_adapter - INFO - Found 18 skills: ['c', 'go', 'r', 'ai', 'ios', 'test', 'git', 'sso', 'sap', 'ui']
+2025-10-06 23:54:03,640 - adapters.indeed_adapter - INFO - Successfully scraped job 5
+2025-10-06 23:54:03,641 - adapters.indeed_adapter - INFO - 
+--- Processing job 6/15 ---
+2025-10-06 23:54:07,794 - adapters.indeed_adapter - INFO - Title: Sales Administrator...
+2025-10-06 23:54:15,162 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:54:20,614 - adapters.indeed_adapter - INFO - Company: Caterpillar
+2025-10-06 23:54:20,627 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Caterpillar?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc8i1kgbkr801&fromjk=e35ef4aea6ed2350
+2025-10-06 23:54:20,642 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia•Remoto
+2025-10-06 23:54:20,656 - adapters.indeed_adapter - INFO - Rating: 3.8
+2025-10-06 23:54:20,671 - adapters.indeed_adapter - INFO - Found description: 5811 characters
+2025-10-06 23:54:20,685 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:54:20,689 - adapters.indeed_adapter - INFO - Total description: 5876 characters
+2025-10-06 23:54:20,712 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:54:20,715 - adapters.indeed_adapter - INFO - Found 26 skills: ['c', 'go', 'r', 'lua', 'gin', 'ai', 'sso', 'erp', 'ui', 'unity']
+2025-10-06 23:54:20,716 - adapters.indeed_adapter - INFO - Successfully scraped job 6
+2025-10-06 23:54:20,716 - adapters.indeed_adapter - INFO - 
+--- Processing job 7/15 ---
+2025-10-06 23:54:22,805 - adapters.indeed_adapter - INFO - Title: Customer Excellence Specialist (Sostituzione maternità)...
+2025-10-06 23:54:27,890 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:54:34,592 - adapters.indeed_adapter - INFO - Company: Edenred
+2025-10-06 23:54:34,605 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Edenred?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc90c0m21v801&fromjk=8e2674aa726cc584
+2025-10-06 23:54:34,620 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia
+2025-10-06 23:54:34,633 - adapters.indeed_adapter - INFO - Rating: 3.7
+2025-10-06 23:54:34,647 - adapters.indeed_adapter - INFO - Found description: 2197 characters
+2025-10-06 23:54:34,662 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:54:34,673 - adapters.indeed_adapter - INFO - Found benefits section: 90 characters
+2025-10-06 23:54:34,673 - adapters.indeed_adapter - INFO - Total description: 2364 characters
+2025-10-06 23:54:34,704 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:54:34,707 - adapters.indeed_adapter - INFO - Found 22 skills: ['c', 'go', 'r', 'less', 'express', 'gin', 'ai', 'sso', 'sap', 'excel']
+2025-10-06 23:54:34,708 - adapters.indeed_adapter - INFO - Successfully scraped job 7
+2025-10-06 23:54:34,709 - adapters.indeed_adapter - INFO - 
+--- Processing job 8/15 ---
+2025-10-06 23:54:37,095 - adapters.indeed_adapter - INFO - Title: Help Desk e It Support...
+2025-10-06 23:54:43,881 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:54:47,655 - adapters.indeed_adapter - INFO - Company: NTWK
+2025-10-06 23:54:47,669 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Ntwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc9eeelvu5805&fromjk=0c963f908159e4a4
+2025-10-06 23:54:47,684 - adapters.indeed_adapter - INFO - Location: 20121 Milano
+2025-10-06 23:54:47,711 - adapters.indeed_adapter - INFO - Found description: 1652 characters
+2025-10-06 23:54:47,726 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:54:47,734 - adapters.indeed_adapter - INFO - Total description: 1717 characters
+2025-10-06 23:54:47,776 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:54:47,777 - adapters.indeed_adapter - INFO - Found 17 skills: ['c', 'go', 'r', 'ios', 'macos', 'sistemi operativi', 'security', 'active directory', 'microsoft office', 'ui']
+2025-10-06 23:54:47,778 - adapters.indeed_adapter - INFO - Successfully scraped job 8
+2025-10-06 23:54:47,778 - adapters.indeed_adapter - INFO - 
+--- Processing job 9/15 ---
+2025-10-06 23:54:51,452 - adapters.indeed_adapter - INFO - Title: Picker/Magazziniere - Fixed Term...
+2025-10-06 23:54:57,503 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:55:03,562 - adapters.indeed_adapter - INFO - Company: Deliveroo
+2025-10-06 23:55:03,584 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Deliveroo?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tc9shnm21v800&fromjk=051f156cbca22267
+2025-10-06 23:55:03,607 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia
+2025-10-06 23:55:03,628 - adapters.indeed_adapter - INFO - Rating: 3.3
+2025-10-06 23:55:03,647 - adapters.indeed_adapter - INFO - Found description: 2477 characters
+2025-10-06 23:55:03,667 - adapters.indeed_adapter - INFO - Found job details section: 61 characters
+2025-10-06 23:55:03,687 - adapters.indeed_adapter - INFO - Found benefits section: 84 characters
+2025-10-06 23:55:03,688 - adapters.indeed_adapter - INFO - Total description: 2636 characters
+2025-10-06 23:55:03,733 - adapters.indeed_adapter - INFO - Contract: ['Part-time']
+2025-10-06 23:55:03,736 - adapters.indeed_adapter - INFO - Found 12 skills: ['c', 'go', 'r', 'gin', 'ai', 'test', 'sso', 'ui', 'unity', 'flexibility']
+2025-10-06 23:55:03,737 - adapters.indeed_adapter - INFO - Successfully scraped job 9
+2025-10-06 23:55:03,737 - adapters.indeed_adapter - INFO - 
+--- Processing job 10/15 ---
+2025-10-06 23:55:06,002 - adapters.indeed_adapter - INFO - Title: Junior Marketing Specialist – Events Italy (m/f/d)...
+2025-10-06 23:55:12,540 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:55:17,719 - adapters.indeed_adapter - INFO - Company: Siemens Healthineers
+2025-10-06 23:55:17,734 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Siemens-Healthineers?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcaa29l01k801&fromjk=b23fb1e850b3a860
+2025-10-06 23:55:17,748 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia•Remoto
+2025-10-06 23:55:17,765 - adapters.indeed_adapter - INFO - Rating: 3.8
+2025-10-06 23:55:17,788 - adapters.indeed_adapter - INFO - Found description: 4543 characters
+2025-10-06 23:55:17,806 - adapters.indeed_adapter - INFO - Found job details section: 83 characters
+2025-10-06 23:55:17,811 - adapters.indeed_adapter - INFO - Total description: 4628 characters
+2025-10-06 23:55:17,847 - adapters.indeed_adapter - INFO - Contract: ['Tempo indeterminato', 'Tempo pieno']
+2025-10-06 23:55:17,849 - adapters.indeed_adapter - INFO - Found 28 skills: ['c', 'r', 'less', 'gin', 'ai', 'git', 'excel', 'word', 'powerpoint', 'microsoft office']
+2025-10-06 23:55:17,850 - adapters.indeed_adapter - INFO - Successfully scraped job 10
+2025-10-06 23:55:17,850 - adapters.indeed_adapter - INFO - 
+--- Processing job 11/15 ---
+2025-10-06 23:55:19,921 - adapters.indeed_adapter - INFO - Title: Supporto IT...
+2025-10-06 23:55:27,867 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:55:32,109 - adapters.indeed_adapter - INFO - Company: NETwk
+2025-10-06 23:55:32,121 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Netwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcaokvl01k800&fromjk=8f8b77f4887cd371
+2025-10-06 23:55:32,138 - adapters.indeed_adapter - INFO - Location: 20121 Milano
+2025-10-06 23:55:32,168 - adapters.indeed_adapter - INFO - Found description: 868 characters
+2025-10-06 23:55:32,184 - adapters.indeed_adapter - INFO - Found job details section: 81 characters
+2025-10-06 23:55:32,190 - adapters.indeed_adapter - INFO - Total description: 951 characters
+2025-10-06 23:55:32,231 - adapters.indeed_adapter - INFO - Contract: ['Tempo determinato', 'Tempo pieno']
+2025-10-06 23:55:32,232 - adapters.indeed_adapter - INFO - Found 10 skills: ['c', 'r', 'test', 'active directory', 'sap', 'microsoft office', 'ui', 'ricerca', 'selezione', 'italian']
+2025-10-06 23:55:32,233 - adapters.indeed_adapter - INFO - Successfully scraped job 11
+2025-10-06 23:55:32,233 - adapters.indeed_adapter - INFO - 
+--- Processing job 12/15 ---
+2025-10-06 23:55:34,790 - adapters.indeed_adapter - INFO - Title: Communication & Engagement Intern...
+2025-10-06 23:55:40,408 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:55:47,095 - adapters.indeed_adapter - INFO - Company: BIP - Business Integration Partners
+2025-10-06 23:55:47,112 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Bip-a7217794?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcb635g36d815&fromjk=26504ab04e3f9d91
+2025-10-06 23:55:47,129 - adapters.indeed_adapter - INFO - Location: 20121 Milano
+2025-10-06 23:55:47,145 - adapters.indeed_adapter - INFO - Rating: 3.0
+2025-10-06 23:55:47,165 - adapters.indeed_adapter - INFO - Found description: 3316 characters
+2025-10-06 23:55:47,186 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:55:47,194 - adapters.indeed_adapter - INFO - Total description: 3381 characters
+2025-10-06 23:55:47,234 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:55:47,238 - adapters.indeed_adapter - INFO - Found 28 skills: ['c', 'go', 'r', 'gin', 'database', 'ai', 'git', 'excel', 'word', 'powerpoint']
+2025-10-06 23:55:47,238 - adapters.indeed_adapter - INFO - Successfully scraped job 12
+2025-10-06 23:55:47,239 - adapters.indeed_adapter - INFO - 
+--- Processing job 13/15 ---
+2025-10-06 23:55:51,442 - adapters.indeed_adapter - INFO - Title: Operations & Logistics Internship...
+2025-10-06 23:56:00,539 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:56:03,653 - adapters.indeed_adapter - INFO - Company: Amazon Italia Logistica S.R.L. - B96
+2025-10-06 23:56:03,667 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcbmouljdf802&fromjk=5041d695dd9c5e5d
+2025-10-06 23:56:03,682 - adapters.indeed_adapter - INFO - Location: Milano, Lombardia
+2025-10-06 23:56:03,693 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-06 23:56:03,713 - adapters.indeed_adapter - INFO - Found description: 6130 characters
+2025-10-06 23:56:03,773 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:56:03,815 - adapters.indeed_adapter - INFO - Total description: 6195 characters
+2025-10-06 23:56:03,868 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:56:03,872 - adapters.indeed_adapter - INFO - Found 31 skills: ['c', 'r', 'gin', 'ai', 'llm', 'ios', 'testing', 'test', 'security', 'sso']
+2025-10-06 23:56:03,872 - adapters.indeed_adapter - INFO - Successfully scraped job 13
+2025-10-06 23:56:03,873 - adapters.indeed_adapter - INFO - 
+--- Processing job 14/15 ---
+2025-10-06 23:56:07,279 - adapters.indeed_adapter - INFO - Title: Impiegato tecnico customer care...
+2025-10-06 23:56:22,967 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-06 23:56:30,955 - adapters.indeed_adapter - INFO - Company: NETwk
+2025-10-06 23:56:30,967 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Netwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcc65aljdf800&fromjk=71c33651b7e985d7
+2025-10-06 23:56:30,977 - adapters.indeed_adapter - INFO - Location: 20061 Carugate
+2025-10-06 23:56:30,998 - adapters.indeed_adapter - INFO - Found description: 1331 characters
+2025-10-06 23:56:31,007 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-06 23:56:31,017 - adapters.indeed_adapter - INFO - Found benefits section: 82 characters
+2025-10-06 23:56:31,017 - adapters.indeed_adapter - INFO - Total description: 1490 characters
+2025-10-06 23:56:31,037 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-06 23:56:31,038 - adapters.indeed_adapter - INFO - Found 11 skills: ['c', 'go', 'r', 'sicurezza', 'ui', 'formazione', 'ricerca', 'selezione', 'benefits', 'inglese']
+2025-10-06 23:56:31,039 - adapters.indeed_adapter - INFO - Successfully scraped job 14
+2025-10-06 23:56:31,039 - adapters.indeed_adapter - INFO - 
+--- Processing job 15/15 ---
+2025-10-06 23:56:35,409 - adapters.indeed_adapter - INFO - Title: GASTRONOMI/E – Addetto/a Area Gastronomia di MILANO VIALE SA...
+2025-10-06 23:56:48,882 - adapters.indeed_adapter - WARNING - Details panel timeout for job 15
+2025-10-06 23:56:48,883 - adapters.indeed_adapter - INFO - Returning 14 jobs with full details
+2025-10-06 23:56:48,883 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-06 23:56:49,496 - adapters.indeed_adapter - INFO - Session complete: 14 jobs scraped from search results
+2025-10-06 23:56:49,497 - __main__ - INFO - Successfully scraped 14 jobs from Milano, Lombardia
+2025-10-06 23:56:49,698 - models.job_model - INFO - Raw job stored with ID: 516
+2025-10-06 23:56:49,707 - models.job_model - INFO - Raw job stored with ID: 517
+2025-10-06 23:56:49,712 - models.job_model - INFO - Raw job stored with ID: 518
+2025-10-06 23:56:49,718 - models.job_model - INFO - Raw job stored with ID: 519
+2025-10-06 23:56:49,723 - models.job_model - INFO - Raw job stored with ID: 520
+2025-10-06 23:56:49,727 - models.job_model - INFO - Raw job stored with ID: 521
+2025-10-06 23:56:49,730 - models.job_model - INFO - Raw job stored with ID: 522
+2025-10-06 23:56:49,734 - models.job_model - INFO - Raw job stored with ID: 523
+2025-10-06 23:56:49,739 - models.job_model - INFO - Raw job stored with ID: 524
+2025-10-06 23:56:49,742 - models.job_model - INFO - Raw job stored with ID: 525
+2025-10-06 23:56:49,746 - models.job_model - INFO - Raw job stored with ID: 526
+2025-10-06 23:56:49,749 - models.job_model - INFO - Raw job stored with ID: 527
+2025-10-06 23:56:49,753 - models.job_model - INFO - Raw job stored with ID: 528
+2025-10-06 23:56:49,759 - models.job_model - INFO - Raw job stored with ID: 529
+2025-10-06 23:56:49,760 - models.job_model - INFO - Batch storage completed: 14 new jobs, 0 duplicates
+2025-10-06 23:56:49,761 - __main__ - INFO - Stored 14 new jobs, 0 duplicates from Milano, Lombardia
+2025-10-06 23:56:49,761 - __main__ - INFO - Waiting 196 seconds before next location...
+2025-10-07 00:00:05,677 - __main__ - INFO - [tier_1] Location 2/8: Roma, Lazio
+2025-10-07 00:00:05,677 - __main__ - INFO - Scraping: '' in 'Roma, Lazio'
+2025-10-07 00:00:05,678 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Roma, Lazio
+2025-10-07 00:00:05,678 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-07 00:00:05,678 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Roma, Lazio
+2025-10-07 00:00:05,678 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-07 00:00:05,679 - adapters.indeed_adapter - INFO - Using proxy: 142.147.129.156:5765
+2025-10-07 00:00:07,027 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Roma%2C+Lazio&start=0&sort=date&fromage=1
+2025-10-07 00:00:38,207 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-07 00:00:38,208 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-07 00:00:40,809 - adapters.indeed_adapter - INFO - Title: Stock Assistant - Roma via del Corso...
+2025-10-07 00:00:47,457 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:00:52,387 - adapters.indeed_adapter - INFO - Company: Sephora
+2025-10-07 00:00:52,402 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Sephora?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tckiafk3cj809&fromjk=3383df3194a4e795
+2025-10-07 00:00:52,420 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:00:52,433 - adapters.indeed_adapter - INFO - Rating: 3.7
+2025-10-07 00:00:52,448 - adapters.indeed_adapter - INFO - Found description: 3450 characters
+2025-10-07 00:00:52,460 - adapters.indeed_adapter - INFO - Total description: 3450 characters
+2025-10-07 00:00:52,471 - adapters.indeed_adapter - INFO - Found 22 skills: ['c', 'go', 'r', 'less', 'gin', 'redis', 'ai', 'ios', 'test', 'qualità']
+2025-10-07 00:00:52,472 - adapters.indeed_adapter - INFO - Successfully scraped job 1
+2025-10-07 00:00:52,472 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-07 00:00:55,418 - adapters.indeed_adapter - INFO - Title: SPECIALISTI SERVICE NOW...
+2025-10-07 00:01:01,851 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:01:06,140 - adapters.indeed_adapter - INFO - Company: P&CO SRL
+2025-10-07 00:01:06,156 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/P&Co-Srl?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcl01fgbl1800&fromjk=0cf9dff036c51630
+2025-10-07 00:01:06,170 - adapters.indeed_adapter - INFO - Location: Roma, Lazio•Remoto
+2025-10-07 00:01:06,206 - adapters.indeed_adapter - INFO - Found description: 1043 characters
+2025-10-07 00:01:06,223 - adapters.indeed_adapter - INFO - Found job details section: 103 characters
+2025-10-07 00:01:06,229 - adapters.indeed_adapter - INFO - Total description: 1148 characters
+2025-10-07 00:01:06,289 - adapters.indeed_adapter - INFO - Contract: ['Apprendistato', 'Tirocinio formativo/stage', 'Tempo pieno']
+2025-10-07 00:01:06,290 - adapters.indeed_adapter - INFO - Found 7 skills: ['c', 'go', 'r', 'ai', 'ios', 'formazione', 'ricerca']
+2025-10-07 00:01:06,291 - adapters.indeed_adapter - INFO - Successfully scraped job 2
+2025-10-07 00:01:06,291 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-07 00:01:10,653 - adapters.indeed_adapter - INFO - Title: Operations & Logistics Internship...
+2025-10-07 00:01:17,232 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:01:21,118 - adapters.indeed_adapter - INFO - Company: Amazon Italia Logistica S.R.L. - B96
+2025-10-07 00:01:21,135 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Amazon.com?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcleeelvu5802&fromjk=e3c6ee418dd5e7de
+2025-10-07 00:01:21,148 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:01:21,165 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-07 00:01:21,179 - adapters.indeed_adapter - INFO - Found description: 6126 characters
+2025-10-07 00:01:21,193 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-07 00:01:21,198 - adapters.indeed_adapter - INFO - Total description: 6191 characters
+2025-10-07 00:01:21,226 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-07 00:01:21,229 - adapters.indeed_adapter - INFO - Found 31 skills: ['c', 'r', 'gin', 'ai', 'llm', 'ios', 'testing', 'test', 'security', 'sso']
+2025-10-07 00:01:21,229 - adapters.indeed_adapter - INFO - Successfully scraped job 3
+2025-10-07 00:01:21,230 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-07 00:01:24,127 - adapters.indeed_adapter - INFO - Title: Stock Assistant - Roma Porte di Roma...
+2025-10-07 00:01:30,211 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:01:32,722 - adapters.indeed_adapter - INFO - Company: Sephora
+2025-10-07 00:01:32,742 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Sephora?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tclr622c3a000&fromjk=9d55982e648ad146
+2025-10-07 00:01:32,760 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:01:32,786 - adapters.indeed_adapter - INFO - Rating: 3.7
+2025-10-07 00:01:32,808 - adapters.indeed_adapter - INFO - Found description: 3446 characters
+2025-10-07 00:01:32,823 - adapters.indeed_adapter - INFO - Total description: 3446 characters
+2025-10-07 00:01:32,838 - adapters.indeed_adapter - INFO - Found 22 skills: ['c', 'go', 'r', 'less', 'gin', 'redis', 'ai', 'ios', 'test', 'qualità']
+2025-10-07 00:01:32,838 - adapters.indeed_adapter - INFO - Successfully scraped job 4
+2025-10-07 00:01:32,839 - adapters.indeed_adapter - INFO - 
+--- Processing job 5/15 ---
+2025-10-07 00:01:37,506 - adapters.indeed_adapter - INFO - Title: IT FIGURA SPECIALISTICA...
+2025-10-07 00:01:44,184 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:01:49,706 - adapters.indeed_adapter - INFO - Company: P&CO SRL
+2025-10-07 00:01:49,727 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/P&Co-Srl?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcm8e6gc0p801&fromjk=50ac81fee1314402
+2025-10-07 00:01:49,750 - adapters.indeed_adapter - INFO - Location: Roma, Lazio•Remoto
+2025-10-07 00:01:49,790 - adapters.indeed_adapter - INFO - Found description: 1522 characters
+2025-10-07 00:01:49,803 - adapters.indeed_adapter - INFO - Found job details section: 103 characters
+2025-10-07 00:01:49,810 - adapters.indeed_adapter - INFO - Total description: 1627 characters
+2025-10-07 00:01:49,876 - adapters.indeed_adapter - INFO - Contract: ['Apprendistato', 'Tirocinio formativo/stage', 'Tempo pieno']
+2025-10-07 00:01:49,877 - adapters.indeed_adapter - INFO - Found 11 skills: ['c', 'go', 'r', 'ai', 'ios', 'ui', 'formazione', 'ricerca', 'inglese', 'italian']
+2025-10-07 00:01:49,878 - adapters.indeed_adapter - INFO - Successfully scraped job 5
+2025-10-07 00:01:49,878 - adapters.indeed_adapter - INFO - 
+--- Processing job 6/15 ---
+2025-10-07 00:01:54,823 - adapters.indeed_adapter - INFO - Title: JUNIOR MONITORAGGIO CALI E PERDITE...
+2025-10-07 00:01:59,942 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:02:02,472 - adapters.indeed_adapter - INFO - Company: Eni
+2025-10-07 00:02:02,491 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Eni-Spa?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcmphojn1a805&fromjk=b2c2b718fb2b4615
+2025-10-07 00:02:02,508 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:02:02,522 - adapters.indeed_adapter - INFO - Rating: 3.8
+2025-10-07 00:02:02,538 - adapters.indeed_adapter - INFO - Found description: 3158 characters
+2025-10-07 00:02:02,553 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-07 00:02:02,558 - adapters.indeed_adapter - INFO - Total description: 3223 characters
+2025-10-07 00:02:02,594 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-07 00:02:02,596 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'go', 'r', 'less', 'gin', 'ai', 'sso', 'excel', 'gestionale', 'ui']
+2025-10-07 00:02:02,597 - adapters.indeed_adapter - INFO - Successfully scraped job 6
+2025-10-07 00:02:02,597 - adapters.indeed_adapter - INFO - 
+--- Processing job 7/15 ---
+2025-10-07 00:02:05,619 - adapters.indeed_adapter - INFO - Title: Fraud Merchant Analyst...
+2025-10-07 00:02:11,984 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:02:18,076 - adapters.indeed_adapter - INFO - Company: Amex
+2025-10-07 00:02:18,090 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/American-Express?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcn4oli94l8ao&fromjk=e9377f6ace6bf4e8
+2025-10-07 00:02:18,104 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:02:18,120 - adapters.indeed_adapter - INFO - Rating: 4.1
+2025-10-07 00:02:18,133 - adapters.indeed_adapter - INFO - Found description: 5324 characters
+2025-10-07 00:02:18,150 - adapters.indeed_adapter - INFO - Found benefits section: 84 characters
+2025-10-07 00:02:18,150 - adapters.indeed_adapter - INFO - Total description: 5420 characters
+2025-10-07 00:02:18,157 - adapters.indeed_adapter - INFO - Found 27 skills: ['c', 'go', 'r', 'lua', 'less', 'express', 'aws', 'ai', 'git', 'security']
+2025-10-07 00:02:18,158 - adapters.indeed_adapter - INFO - Successfully scraped job 7
+2025-10-07 00:02:18,158 - adapters.indeed_adapter - INFO - 
+--- Processing job 8/15 ---
+2025-10-07 00:02:20,437 - adapters.indeed_adapter - INFO - Title: Operai...
+2025-10-07 00:02:28,049 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:02:32,252 - adapters.indeed_adapter - INFO - Company: NTWK
+2025-10-07 00:02:32,268 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Ntwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcniklj72j8jp&fromjk=d0d09cc7597138b0
+2025-10-07 00:02:32,283 - adapters.indeed_adapter - INFO - Location: 00122 Roma
+2025-10-07 00:02:32,309 - adapters.indeed_adapter - INFO - Found description: 524 characters
+2025-10-07 00:02:32,323 - adapters.indeed_adapter - INFO - Found job details section: 53 characters
+2025-10-07 00:02:32,327 - adapters.indeed_adapter - INFO - Total description: 579 characters
+2025-10-07 00:02:32,357 - adapters.indeed_adapter - INFO - Shifts: ['Turni']
+2025-10-07 00:02:32,358 - adapters.indeed_adapter - INFO - Found 7 skills: ['c', 'r', 'ai', 'ui', 'ricerca', 'selezione', 'italian']
+2025-10-07 00:02:32,358 - adapters.indeed_adapter - INFO - Successfully scraped job 8
+2025-10-07 00:02:32,359 - adapters.indeed_adapter - INFO - 
+--- Processing job 9/15 ---
+2025-10-07 00:02:36,859 - adapters.indeed_adapter - INFO - Title: SEO Specialist...
+2025-10-07 00:02:43,820 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:02:48,798 - adapters.indeed_adapter - INFO - Company: Baiocco Holding
+2025-10-07 00:02:48,816 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Baiocco-Holding-Spa?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tco2afh735806&fromjk=bfe712341c121139
+2025-10-07 00:02:48,831 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:02:48,847 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-07 00:02:48,861 - adapters.indeed_adapter - INFO - Found description: 1706 characters
+2025-10-07 00:02:48,876 - adapters.indeed_adapter - INFO - Found job details section: 77 characters
+2025-10-07 00:02:48,883 - adapters.indeed_adapter - INFO - Total description: 1785 characters
+2025-10-07 00:02:48,914 - adapters.indeed_adapter - INFO - Contract: ['Contratto con partita IVA']
+2025-10-07 00:02:48,916 - adapters.indeed_adapter - INFO - Found 27 skills: ['c', 'go', 'r', 'html', 'css', 'ai', 'collaudo', 'qualità', 'git', 'word']
+2025-10-07 00:02:48,916 - adapters.indeed_adapter - INFO - Successfully scraped job 9
+2025-10-07 00:02:48,917 - adapters.indeed_adapter - INFO - 
+--- Processing job 10/15 ---
+2025-10-07 00:02:52,741 - adapters.indeed_adapter - INFO - Title: Responsabile Ufficio Calibrazione...
+2025-10-07 00:03:01,499 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:03:05,660 - adapters.indeed_adapter - INFO - Company: NETwk
+2025-10-07 00:03:05,675 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Netwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcoilnm221800&fromjk=e83a5806075716dc
+2025-10-07 00:03:05,688 - adapters.indeed_adapter - INFO - Location: 00121 Roma
+2025-10-07 00:03:05,711 - adapters.indeed_adapter - INFO - Found description: 2587 characters
+2025-10-07 00:03:05,721 - adapters.indeed_adapter - INFO - Total description: 2587 characters
+2025-10-07 00:03:05,728 - adapters.indeed_adapter - INFO - Found 17 skills: ['c', 'r', 'ai', 'test', 'collaudo', 'qualità', 'sap', 'erp', 'ui', 'problem solving']
+2025-10-07 00:03:05,729 - adapters.indeed_adapter - INFO - Successfully scraped job 10
+2025-10-07 00:03:05,729 - adapters.indeed_adapter - INFO - 
+--- Processing job 11/15 ---
+2025-10-07 00:03:09,455 - adapters.indeed_adapter - INFO - Title: Specialista HSE – RSPP...
+2025-10-07 00:03:16,768 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:03:19,254 - adapters.indeed_adapter - INFO - Company: NTWK
+2025-10-07 00:03:19,274 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Ntwk?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcp2du2c3a00t&fromjk=601f4c554201158c
+2025-10-07 00:03:19,294 - adapters.indeed_adapter - INFO - Location: 00118 Roma
+2025-10-07 00:03:19,365 - adapters.indeed_adapter - INFO - Found description: 1572 characters
+2025-10-07 00:03:19,388 - adapters.indeed_adapter - INFO - Found job details section: 71 characters
+2025-10-07 00:03:19,398 - adapters.indeed_adapter - INFO - Total description: 1645 characters
+2025-10-07 00:03:19,469 - adapters.indeed_adapter - INFO - Contract: ['Tempo indeterminato']
+2025-10-07 00:03:19,471 - adapters.indeed_adapter - INFO - Found 19 skills: ['c', 'go', 'r', 'redis', 'ai', 'test', 'sso', 'sicurezza', 'ui', 'progettazione']
+2025-10-07 00:03:19,472 - adapters.indeed_adapter - INFO - Successfully scraped job 11
+2025-10-07 00:03:19,473 - adapters.indeed_adapter - INFO - 
+--- Processing job 12/15 ---
+2025-10-07 00:03:21,769 - adapters.indeed_adapter - INFO - Title: Junior School Class Teacher...
+2025-10-07 00:03:34,036 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:03:38,607 - adapters.indeed_adapter - INFO - Company: St George's British International School
+2025-10-07 00:03:38,624 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/St-George's-British-International-School?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcpetrjn2v80g&fromjk=a99ca66a0c6aa5e5
+2025-10-07 00:03:38,644 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:03:38,660 - adapters.indeed_adapter - INFO - Rating: 5.0
+2025-10-07 00:03:38,678 - adapters.indeed_adapter - INFO - Found description: 10955 characters
+2025-10-07 00:03:38,698 - adapters.indeed_adapter - INFO - Found job details section: 63 characters
+2025-10-07 00:03:38,706 - adapters.indeed_adapter - INFO - Total description: 11020 characters
+2025-10-07 00:03:38,747 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-07 00:03:38,756 - adapters.indeed_adapter - INFO - Found 18 skills: ['c', 'go', 'r', 'lua', 'ai', 'ios', 'excel', 'ui', 'design', 'unity']
+2025-10-07 00:03:38,757 - adapters.indeed_adapter - INFO - Successfully scraped job 12
+2025-10-07 00:03:38,758 - adapters.indeed_adapter - INFO - 
+--- Processing job 13/15 ---
+2025-10-07 00:03:42,235 - adapters.indeed_adapter - INFO - Title: Stage nel dipartimento di Market Access - Pricing & Reimburs...
+2025-10-07 00:03:54,217 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:04:01,792 - adapters.indeed_adapter - INFO - Company: MSD
+2025-10-07 00:04:01,805 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Msd?campaignid=mobvjcmp&from=mobviewjob&tk=1j6tcq28p21pr049&fromjk=5db0187ffb1cec51
+2025-10-07 00:04:01,819 - adapters.indeed_adapter - INFO - Location: Roma, Lazio
+2025-10-07 00:04:01,833 - adapters.indeed_adapter - INFO - Rating: 4.1
+2025-10-07 00:04:01,846 - adapters.indeed_adapter - INFO - Found description: 4221 characters
+2025-10-07 00:04:01,861 - adapters.indeed_adapter - INFO - Found job details section: 90 characters
+2025-10-07 00:04:01,866 - adapters.indeed_adapter - INFO - Total description: 4313 characters
+2025-10-07 00:04:01,900 - adapters.indeed_adapter - INFO - Salary: 800 € al mese
+2025-10-07 00:04:01,921 - adapters.indeed_adapter - INFO - Contract: ['Tempo pieno']
+2025-10-07 00:04:01,924 - adapters.indeed_adapter - INFO - Found 23 skills: ['c', 'go', 'r', 'less', 'database', 'ai', 'ios', 'sso', 'project management', 'ui']
+2025-10-07 00:04:01,925 - adapters.indeed_adapter - INFO - Successfully scraped job 13
+2025-10-07 00:04:01,925 - adapters.indeed_adapter - INFO - 
+--- Processing job 14/15 ---
+2025-10-07 00:04:05,179 - adapters.indeed_adapter - INFO - Title: Miliatry RME Area Manager, Reliability Maintenance Engineeri...
+2025-10-07 00:04:19,526 - adapters.indeed_adapter - WARNING - Details panel timeout for job 14
+2025-10-07 00:04:19,527 - adapters.indeed_adapter - INFO - 
+--- Processing job 15/15 ---
+2025-10-07 00:04:22,486 - adapters.indeed_adapter - INFO - Title: Vice Store Manager / Assistant Head Coach NIKE Factory Store...
+2025-10-07 00:04:36,658 - adapters.indeed_adapter - WARNING - Details panel timeout for job 15
+2025-10-07 00:04:36,659 - adapters.indeed_adapter - INFO - Returning 13 jobs with full details
+2025-10-07 00:04:36,659 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-07 00:04:37,593 - adapters.indeed_adapter - INFO - Session complete: 13 jobs scraped from search results
+2025-10-07 00:04:37,594 - __main__ - INFO - Successfully scraped 13 jobs from Roma, Lazio
+2025-10-07 00:04:37,819 - models.job_model - INFO - Raw job stored with ID: 530
+2025-10-07 00:04:37,826 - models.job_model - INFO - Raw job stored with ID: 531
+2025-10-07 00:04:37,831 - models.job_model - INFO - Raw job stored with ID: 532
+2025-10-07 00:04:37,839 - models.job_model - INFO - Raw job stored with ID: 533
+2025-10-07 00:04:37,844 - models.job_model - INFO - Raw job stored with ID: 534
+2025-10-07 00:04:37,849 - models.job_model - INFO - Raw job stored with ID: 535
+2025-10-07 00:04:37,855 - models.job_model - INFO - Raw job stored with ID: 536
+2025-10-07 00:04:37,861 - models.job_model - INFO - Raw job stored with ID: 537
+2025-10-07 00:04:37,866 - models.job_model - INFO - Raw job stored with ID: 538
+2025-10-07 00:04:37,870 - models.job_model - INFO - Raw job stored with ID: 539
+2025-10-07 00:04:37,878 - models.job_model - INFO - Raw job stored with ID: 540
+2025-10-07 00:04:37,882 - models.job_model - INFO - Raw job stored with ID: 541
+2025-10-07 00:04:37,887 - models.job_model - INFO - Raw job stored with ID: 542
+2025-10-07 00:04:37,889 - models.job_model - INFO - Batch storage completed: 13 new jobs, 0 duplicates
+2025-10-07 00:04:37,890 - __main__ - INFO - Stored 13 new jobs, 0 duplicates from Roma, Lazio
+2025-10-07 00:04:37,891 - __main__ - INFO - Waiting 275 seconds before next location...
+2025-10-07 00:09:13,018 - __main__ - INFO - [tier_1] Location 3/8: Torino, Piemonte
+2025-10-07 00:09:13,019 - __main__ - INFO - Scraping: '' in 'Torino, Piemonte'
+2025-10-07 00:09:13,019 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Torino, Piemonte
+2025-10-07 00:09:13,020 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-07 00:09:13,020 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Torino, Piemonte
+2025-10-07 00:09:13,021 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-07 00:09:13,022 - adapters.indeed_adapter - INFO - Using proxy: 103.99.33.128:6123
+2025-10-07 00:09:14,186 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Torino%2C+Piemonte&start=0&sort=date&fromage=1
+2025-10-07 00:09:25,365 - adapters.indeed_adapter - WARNING - Cloudflare challenge detected
+2025-10-07 00:09:25,365 - adapters.indeed_adapter - WARNING - Cloudflare detected, attempting to handle...
+2025-10-07 00:09:50,526 - adapters.indeed_adapter - WARNING - No job cards found with any selector
+2025-10-07 00:09:50,526 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-07 00:09:50,753 - adapters.indeed_adapter - INFO - Session complete: 0 jobs scraped from search results
+2025-10-07 00:09:50,753 - __main__ - INFO - Successfully scraped 0 jobs from Torino, Piemonte
+2025-10-07 00:09:50,753 - __main__ - INFO - Waiting 197 seconds before next location...
+2025-10-07 00:13:07,476 - __main__ - INFO - [tier_1] Location 4/8: Napoli, Campania
+2025-10-07 00:13:07,476 - __main__ - INFO - Scraping: '' in 'Napoli, Campania'
+2025-10-07 00:13:07,477 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Napoli, Campania
+2025-10-07 00:13:07,477 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-07 00:13:07,478 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Napoli, Campania
+2025-10-07 00:13:07,478 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-07 00:13:07,479 - adapters.indeed_adapter - INFO - Using proxy: 103.37.180.144:6538
+2025-10-07 00:13:08,753 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Napoli%2C+Campania&start=0&sort=date&fromage=1
+2025-10-07 00:13:39,688 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-07 00:13:39,689 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-07 00:13:44,403 - adapters.indeed_adapter - INFO - Title: Part time - NAPOLI PIAZZA MUNICIPIO...
+2025-10-07 00:13:58,737 - adapters.indeed_adapter - WARNING - Details panel timeout for job 1
+2025-10-07 00:13:58,738 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-07 00:14:01,885 - adapters.indeed_adapter - WARNING - No job link found for card 2
+2025-10-07 00:14:01,886 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-07 00:14:05,087 - adapters.indeed_adapter - WARNING - No job link found for card 3
+2025-10-07 00:14:05,087 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-07 00:14:08,967 - adapters.indeed_adapter - WARNING - No job link found for card 4
+2025-10-07 00:14:08,967 - adapters.indeed_adapter - INFO - 
+--- Processing job 5/15 ---
+2025-10-07 00:14:13,133 - adapters.indeed_adapter - WARNING - No job link found for card 5
+2025-10-07 00:14:13,133 - adapters.indeed_adapter - INFO - 
+--- Processing job 6/15 ---
+2025-10-07 00:14:17,936 - adapters.indeed_adapter - WARNING - No job link found for card 6
+2025-10-07 00:14:17,937 - adapters.indeed_adapter - INFO - 
+--- Processing job 7/15 ---
+2025-10-07 00:14:20,634 - adapters.indeed_adapter - WARNING - No job link found for card 7
+2025-10-07 00:14:20,635 - adapters.indeed_adapter - INFO - 
+--- Processing job 8/15 ---
+2025-10-07 00:14:23,666 - adapters.indeed_adapter - WARNING - No job link found for card 8
+2025-10-07 00:14:23,667 - adapters.indeed_adapter - INFO - 
+--- Processing job 9/15 ---
+2025-10-07 00:14:27,349 - adapters.indeed_adapter - WARNING - No job link found for card 9
+2025-10-07 00:14:27,350 - adapters.indeed_adapter - INFO - 
+--- Processing job 10/15 ---
+2025-10-07 00:14:31,928 - adapters.indeed_adapter - WARNING - No job link found for card 10
+2025-10-07 00:14:31,928 - adapters.indeed_adapter - INFO - 
+--- Processing job 11/15 ---
+2025-10-07 00:14:35,116 - adapters.indeed_adapter - WARNING - No job link found for card 11
+2025-10-07 00:14:35,117 - adapters.indeed_adapter - INFO - 
+--- Processing job 12/15 ---
+2025-10-07 00:14:38,637 - adapters.indeed_adapter - WARNING - No job link found for card 12
+2025-10-07 00:14:38,637 - adapters.indeed_adapter - INFO - 
+--- Processing job 13/15 ---
+2025-10-07 00:14:43,426 - adapters.indeed_adapter - WARNING - No job link found for card 13
+2025-10-07 00:14:43,427 - adapters.indeed_adapter - INFO - 
+--- Processing job 14/15 ---
+2025-10-07 00:14:46,248 - adapters.indeed_adapter - WARNING - No job link found for card 14
+2025-10-07 00:14:46,249 - adapters.indeed_adapter - INFO - 
+--- Processing job 15/15 ---
+2025-10-07 00:14:49,321 - adapters.indeed_adapter - WARNING - No job link found for card 15
+2025-10-07 00:14:49,322 - adapters.indeed_adapter - INFO - Returning 0 jobs with full details
+2025-10-07 00:14:49,322 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-07 00:14:49,581 - adapters.indeed_adapter - INFO - Session complete: 0 jobs scraped from search results
+2025-10-07 00:14:49,583 - __main__ - INFO - Successfully scraped 0 jobs from Napoli, Campania
+2025-10-07 00:14:49,584 - __main__ - INFO - Waiting 263 seconds before next location...
+2025-10-07 00:19:12,163 - __main__ - INFO - [tier_1] Location 5/8: Bologna, Emilia-Romagna
+2025-10-07 00:19:12,163 - __main__ - INFO - Scraping: '' in 'Bologna, Emilia-Romagna'
+2025-10-07 00:19:12,164 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Bologna, Emilia-Romagna
+2025-10-07 00:19:12,164 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-07 00:19:12,165 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Bologna, Emilia-Romagna
+2025-10-07 00:19:12,165 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-07 00:19:12,166 - adapters.indeed_adapter - INFO - Using proxy: 193.161.2.155:6578
+2025-10-07 00:19:13,339 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Bologna%2C+Emilia-Romagna&start=0&sort=date&fromage=1
+2025-10-07 00:19:43,145 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-07 00:19:43,146 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-07 00:19:46,881 - adapters.indeed_adapter - INFO - Title: COMMERCIALE SICUREZZA AREA TOSCANA...
+2025-10-07 00:20:00,478 - adapters.indeed_adapter - WARNING - Details panel timeout for job 1
+2025-10-07 00:20:00,478 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-07 00:20:05,468 - adapters.indeed_adapter - WARNING - No job link found for card 2
+2025-10-07 00:20:05,469 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-07 00:20:10,266 - adapters.indeed_adapter - WARNING - No job link found for card 3
+2025-10-07 00:20:10,266 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-07 00:20:12,910 - adapters.indeed_adapter - WARNING - No job link found for card 4
+2025-10-07 00:20:12,911 - adapters.indeed_adapter - INFO - 
+--- Processing job 5/15 ---
+2025-10-07 00:20:17,199 - adapters.indeed_adapter - WARNING - No job link found for card 5
+2025-10-07 00:20:17,199 - adapters.indeed_adapter - INFO - 
+--- Processing job 6/15 ---
+2025-10-07 00:20:22,163 - adapters.indeed_adapter - WARNING - No job link found for card 6
+2025-10-07 00:20:22,164 - adapters.indeed_adapter - INFO - 
+--- Processing job 7/15 ---
+2025-10-07 00:20:26,462 - adapters.indeed_adapter - WARNING - No job link found for card 7
+2025-10-07 00:20:26,463 - adapters.indeed_adapter - INFO - 
+--- Processing job 8/15 ---
+2025-10-07 00:20:30,158 - adapters.indeed_adapter - WARNING - No job link found for card 8
+2025-10-07 00:20:30,158 - adapters.indeed_adapter - INFO - 
+--- Processing job 9/15 ---
+2025-10-07 00:20:35,073 - adapters.indeed_adapter - WARNING - No job link found for card 9
+2025-10-07 00:20:35,074 - adapters.indeed_adapter - INFO - 
+--- Processing job 10/15 ---
+2025-10-07 00:20:37,227 - adapters.indeed_adapter - WARNING - No job link found for card 10
+2025-10-07 00:20:37,228 - adapters.indeed_adapter - INFO - 
+--- Processing job 11/15 ---
+2025-10-07 00:20:40,238 - adapters.indeed_adapter - WARNING - No job link found for card 11
+2025-10-07 00:20:40,239 - adapters.indeed_adapter - INFO - 
+--- Processing job 12/15 ---
+2025-10-07 00:20:43,056 - adapters.indeed_adapter - WARNING - No job link found for card 12
+2025-10-07 00:20:43,056 - adapters.indeed_adapter - INFO - 
+--- Processing job 13/15 ---
+2025-10-07 00:20:47,532 - adapters.indeed_adapter - WARNING - No job link found for card 13
+2025-10-07 00:20:47,532 - adapters.indeed_adapter - INFO - 
+--- Processing job 14/15 ---
+2025-10-07 00:20:52,373 - adapters.indeed_adapter - WARNING - No job link found for card 14
+2025-10-07 00:20:52,374 - adapters.indeed_adapter - INFO - 
+--- Processing job 15/15 ---
+2025-10-07 00:20:55,961 - adapters.indeed_adapter - WARNING - No job link found for card 15
+2025-10-07 00:20:55,962 - adapters.indeed_adapter - INFO - Returning 0 jobs with full details
+2025-10-07 00:20:55,962 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-07 00:20:56,178 - adapters.indeed_adapter - INFO - Session complete: 0 jobs scraped from search results
+2025-10-07 00:20:56,179 - __main__ - INFO - Successfully scraped 0 jobs from Bologna, Emilia-Romagna
+2025-10-07 00:20:56,179 - __main__ - INFO - Waiting 278 seconds before next location...
+2025-10-07 00:25:34,011 - __main__ - INFO - [tier_1] Location 6/8: Firenze, Toscana
+2025-10-07 00:25:34,012 - __main__ - INFO - Scraping: '' in 'Firenze, Toscana'
+2025-10-07 00:25:34,012 - adapters.indeed_adapter - INFO - Starting Indeed scraping (new session, no pagination):  in Firenze, Toscana
+2025-10-07 00:25:34,013 - adapters.indeed_adapter - INFO - 
+================================================================================
+2025-10-07 00:25:34,013 - adapters.indeed_adapter - INFO - NEW BROWSER SESSION -  in Firenze, Toscana
+2025-10-07 00:25:34,013 - adapters.indeed_adapter - INFO - ================================================================================
+2025-10-07 00:25:34,014 - adapters.indeed_adapter - INFO - Using proxy: 92.249.34.110:5792
+2025-10-07 00:25:35,205 - adapters.indeed_adapter - INFO - Navigating to: https://it.indeed.com/jobs?q=&l=Firenze%2C+Toscana&start=0&sort=date&fromage=1
+2025-10-07 00:26:03,227 - adapters.indeed_adapter - INFO - Found 15 job cards using selector: li.css-1ac2h1w > div[class*="cardOutline"]
+2025-10-07 00:26:03,227 - adapters.indeed_adapter - INFO - 
+--- Processing job 1/15 ---
+2025-10-07 00:26:06,921 - adapters.indeed_adapter - INFO - Title: GINORI 1735 - Operations & Logistics Intern...
+2025-10-07 00:26:14,310 - adapters.indeed_adapter - INFO - Reading job details...
+2025-10-07 00:26:17,760 - adapters.indeed_adapter - INFO - Company: Kering
+2025-10-07 00:26:17,776 - adapters.indeed_adapter - INFO - Company URL: https://it.indeed.com/cmp/Kering?campaignid=mobvjcmp&from=mobviewjob&tk=1j6te33tciojj801&fromjk=0e5873d112f80091
+2025-10-07 00:26:17,788 - adapters.indeed_adapter - INFO - Location: Sesto Fiorentino, Toscana
+2025-10-07 00:26:17,798 - adapters.indeed_adapter - INFO - Rating: 3.5
+2025-10-07 00:26:17,809 - adapters.indeed_adapter - INFO - Found description: 4467 characters
+2025-10-07 00:26:17,819 - adapters.indeed_adapter - INFO - Found job details section: 89 characters
+2025-10-07 00:26:17,823 - adapters.indeed_adapter - INFO - Total description: 4558 characters
+2025-10-07 00:26:17,851 - adapters.indeed_adapter - INFO - Contract: ['Tirocinio formativo/stage', 'Tempo pieno']
+2025-10-07 00:26:17,853 - adapters.indeed_adapter - INFO - Found 32 skills: ['c', 'go', 'r', 'less', 'express', 'gin', 'redis', 'ai', 'analisi dati', 'excel']
+2025-10-07 00:26:17,854 - adapters.indeed_adapter - INFO - Successfully scraped job 1
+2025-10-07 00:26:17,854 - adapters.indeed_adapter - INFO - 
+--- Processing job 2/15 ---
+2025-10-07 00:26:22,546 - adapters.indeed_adapter - WARNING - No job link found for card 2
+2025-10-07 00:26:22,546 - adapters.indeed_adapter - INFO - 
+--- Processing job 3/15 ---
+2025-10-07 00:26:27,519 - adapters.indeed_adapter - WARNING - No job link found for card 3
+2025-10-07 00:26:27,520 - adapters.indeed_adapter - INFO - 
+--- Processing job 4/15 ---
+2025-10-07 00:26:30,049 - adapters.indeed_adapter - WARNING - No job link found for card 4
+2025-10-07 00:26:30,050 - adapters.indeed_adapter - INFO - 
+--- Processing job 5/15 ---
+2025-10-07 00:26:33,604 - adapters.indeed_adapter - WARNING - No job link found for card 5
+2025-10-07 00:26:33,605 - adapters.indeed_adapter - INFO - 
+--- Processing job 6/15 ---
+2025-10-07 00:26:36,041 - adapters.indeed_adapter - WARNING - No job link found for card 6
+2025-10-07 00:26:36,042 - adapters.indeed_adapter - INFO - 
+--- Processing job 7/15 ---
+2025-10-07 00:26:39,916 - adapters.indeed_adapter - WARNING - No job link found for card 7
+2025-10-07 00:26:39,916 - adapters.indeed_adapter - INFO - 
+--- Processing job 8/15 ---
+2025-10-07 00:26:43,492 - adapters.indeed_adapter - WARNING - No job link found for card 8
+2025-10-07 00:26:43,492 - adapters.indeed_adapter - INFO - 
+--- Processing job 9/15 ---
+2025-10-07 00:26:46,071 - adapters.indeed_adapter - WARNING - No job link found for card 9
+2025-10-07 00:26:46,071 - adapters.indeed_adapter - INFO - 
+--- Processing job 10/15 ---
+2025-10-07 00:26:50,323 - adapters.indeed_adapter - WARNING - No job link found for card 10
+2025-10-07 00:26:50,323 - adapters.indeed_adapter - INFO - 
+--- Processing job 11/15 ---
+2025-10-07 00:26:54,383 - adapters.indeed_adapter - WARNING - No job link found for card 11
+2025-10-07 00:26:54,383 - adapters.indeed_adapter - INFO - 
+--- Processing job 12/15 ---
+2025-10-07 00:26:58,321 - adapters.indeed_adapter - WARNING - No job link found for card 12
+2025-10-07 00:26:58,322 - adapters.indeed_adapter - INFO - 
+--- Processing job 13/15 ---
+2025-10-07 00:27:02,796 - adapters.indeed_adapter - WARNING - No job link found for card 13
+2025-10-07 00:27:02,796 - adapters.indeed_adapter - INFO - 
+--- Processing job 14/15 ---
+2025-10-07 00:27:07,082 - adapters.indeed_adapter - WARNING - No job link found for card 14
+2025-10-07 00:27:07,083 - adapters.indeed_adapter - INFO - 
+--- Processing job 15/15 ---
+2025-10-07 00:27:11,700 - adapters.indeed_adapter - WARNING - No job link found for card 15
+2025-10-07 00:27:11,701 - adapters.indeed_adapter - INFO - Returning 1 jobs with full details
+2025-10-07 00:27:11,701 - adapters.indeed_adapter - INFO - Closing browser session
+2025-10-07 00:27:11,919 - adapters.indeed_adapter - INFO - Session complete: 1 jobs scraped from search results
+2025-10-07 00:27:11,920 - __main__ - INFO - Successfully scraped 1 jobs from Firenze, Toscana
+2025-10-07 00:27:12,002 - models.job_model - INFO - Raw job stored with ID: 543
+2025-10-07 00:27:12,003 - models.job_model - INFO - Batch storage completed: 1 new jobs, 0 duplicates
+2025-10-07 00:27:12,004 - __main__ - INFO - Stored 1 new jobs, 0 duplicates from Firenze, Toscana
+2025-10-07 00:27:12,004 - __main__ - INFO - Waiting 192 seconds before next location...
+2025-10-07 00:27:52,812 - utils.db_utils - INFO - Database connection pool closed
