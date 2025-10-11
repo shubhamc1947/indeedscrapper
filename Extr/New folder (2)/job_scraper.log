@@ -1,0 +1,59 @@
+2025-09-12 20:38:36,544 - INFO - 
+####################################################################################################
+2025-09-12 20:38:36,544 - INFO - SEARCH 1/2: python developer in Bengaluru, India
+2025-09-12 20:38:36,545 - INFO - ####################################################################################################
+2025-09-12 20:38:44,112 - WARNING - Status 403 for https://www.glassdoor.com/Job/jobs.htm
+2025-09-12 20:38:48,822 - WARNING - Status 403 for https://www.simplyhired.com/search
+2025-09-12 20:40:47,297 - INFO - Starting Multi-Source Job Scraper...
+2025-09-12 20:40:47,298 - INFO - 
+################################################################################
+2025-09-12 20:40:47,299 - INFO - SEARCH 1/2: python developer in India
+2025-09-12 20:40:47,299 - INFO - ################################################################################
+2025-09-12 20:40:47,299 - INFO - MULTI-SOURCE SEARCH: 'python developer' in 'India'
+2025-09-12 20:40:47,300 - INFO - Trying RSS and Feeds...
+2025-09-12 20:40:47,300 - INFO - Trying RSS and alternative sources for 'python developer' in 'India'
+2025-09-12 20:40:47,300 - INFO - Trying Indeed RSS...
+2025-09-12 20:40:48,323 - WARNING - Status 404 for https://rss.indeed.com/rss
+2025-09-12 20:40:53,242 - INFO - Trying CareerJet...
+2025-09-12 20:40:57,558 - INFO - RSS and Feeds: Found 0 jobs
+2025-09-12 20:41:05,523 - INFO - Trying Startup Job Boards...
+2025-09-12 20:41:05,524 - INFO - Scraping startup job boards for 'python developer' in 'India'
+2025-09-12 20:41:05,525 - INFO - Trying AngelList...
+2025-09-12 20:41:06,035 - WARNING - Status 403 for https://angel.co/jobs
+2025-09-12 20:41:09,416 - INFO - Trying RemoteOK...
+2025-09-12 20:41:12,112 - INFO - Found 4 job cards with selector: div[class*="job"]
+2025-09-12 20:41:16,087 - INFO - Startup Job Boards: Found 0 jobs
+2025-09-12 20:41:24,636 - INFO - Trying GitHub Jobs...
+2025-09-12 20:41:24,637 - INFO - Trying GitHub jobs for 'python developer'
+2025-09-12 20:41:25,695 - WARNING - Status 404 for https://github.com/jobs
+2025-09-12 20:41:25,695 - INFO - GitHub Jobs: Found 0 jobs
+2025-09-12 20:41:32,944 - INFO - Removed 0 duplicates
+2025-09-12 20:41:32,945 - INFO - Search 1 complete: 0 unique jobs found
+2025-09-12 20:41:44,606 - INFO - 
+################################################################################
+2025-09-12 20:41:44,607 - INFO - SEARCH 2/2: software engineer in Bengaluru
+2025-09-12 20:41:44,607 - INFO - ################################################################################
+2025-09-12 20:41:44,608 - INFO - MULTI-SOURCE SEARCH: 'software engineer' in 'Bengaluru'
+2025-09-12 20:41:44,609 - INFO - Trying RSS and Feeds...
+2025-09-12 20:41:44,609 - INFO - Trying RSS and alternative sources for 'software engineer' in 'Bengaluru'
+2025-09-12 20:41:44,610 - INFO - Trying Indeed RSS...
+2025-09-12 20:41:45,457 - WARNING - Status 404 for https://rss.indeed.com/rss
+2025-09-12 20:41:47,557 - INFO - Trying CareerJet...
+2025-09-12 20:41:52,592 - INFO - RSS and Feeds: Found 0 jobs
+2025-09-12 20:41:58,376 - INFO - Trying Startup Job Boards...
+2025-09-12 20:41:58,377 - INFO - Scraping startup job boards for 'software engineer' in 'Bengaluru'
+2025-09-12 20:41:58,377 - INFO - Trying AngelList...
+2025-09-12 20:41:58,666 - WARNING - Status 403 for https://angel.co/jobs
+2025-09-12 20:42:03,525 - INFO - Trying RemoteOK...
+2025-09-12 20:42:04,865 - INFO - Found 4 job cards with selector: div[class*="job"]
+2025-09-12 20:42:11,478 - INFO - Startup Job Boards: Found 0 jobs
+2025-09-12 20:42:16,952 - INFO - Trying GitHub Jobs...
+2025-09-12 20:42:16,953 - INFO - Trying GitHub jobs for 'software engineer'
+2025-09-12 20:42:17,712 - WARNING - Status 404 for https://github.com/jobs
+2025-09-12 20:42:17,712 - INFO - GitHub Jobs: Found 0 jobs
+2025-09-12 20:42:26,121 - INFO - Removed 0 duplicates
+2025-09-12 20:42:26,121 - INFO - Search 2 complete: 0 unique jobs found
+2025-09-12 20:42:26,121 - INFO - 
+ALL SEARCHES COMPLETE!
+2025-09-12 20:42:26,122 - INFO - Total unique jobs found: 0
+2025-09-12 20:42:26,122 - INFO - Check job_scraper.log and JSON files for all results

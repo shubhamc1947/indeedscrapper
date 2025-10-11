@@ -1,0 +1,1179 @@
+2025-09-12 20:57:30,408 - INFO - Starting AUTO-HEALING Selenium Job Scraper...
+2025-09-12 20:57:30,409 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-12 20:57:30,409 - INFO - ====== WebDriver manager ======
+2025-09-12 20:57:31,524 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:57:32,130 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:57:32,855 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 20:57:34,171 - INFO - Auto-healing driver setup complete
+2025-09-12 20:57:34,172 - INFO - 
+################################################################################
+2025-09-12 20:57:34,172 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-12 20:57:34,172 - INFO - ################################################################################
+2025-09-12 20:57:34,173 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 20:57:34,173 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 20:57:41,830 - INFO - Processing page 1 with auto-healing
+2025-09-12 20:57:41,868 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 20:57:42,079 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:57:42,079 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:57:42,080 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:57:42,202 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:57:42,202 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:57:42,204 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:57:42,284 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:57:42,805 - WARNING - HTML structure change detected (similarity: 0.51)
+2025-09-12 20:57:42,806 - INFO - Structure change detected, triggering healing for title
+2025-09-12 20:57:42,806 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 20:57:42,807 - INFO - Generated 1 adaptive selectors for title
+2025-09-12 20:57:42,835 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 20:57:42,947 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:57:42,947 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:57:42,948 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:57:43,044 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:57:43,045 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:57:43,045 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:57:43,139 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:57:43,644 - WARNING - HTML structure change detected (similarity: 0.68)
+2025-09-12 20:57:43,644 - INFO - Structure change detected, triggering healing for title
+2025-09-12 20:57:43,645 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 20:57:43,645 - INFO - Generated 2 adaptive selectors for title
+2025-09-12 20:57:43,691 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 20:57:43,805 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:57:43,806 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:57:43,806 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:57:43,911 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:57:43,911 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:57:43,912 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:57:43,986 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:57:44,675 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 20:57:44,712 - INFO - No next page found
+2025-09-12 20:57:44,713 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-12 20:57:44,713 - INFO - Search 1 complete: 3 jobs found
+2025-09-12 20:57:58,692 - INFO - 
+################################################################################
+2025-09-12 20:57:58,693 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-12 20:57:58,693 - INFO - ################################################################################
+2025-09-12 20:57:58,693 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-12 20:57:58,694 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-12 20:58:03,543 - INFO - Processing page 1 with auto-healing
+2025-09-12 20:58:49,491 - WARNING - No job cards found on page 1
+2025-09-12 20:58:49,492 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 20:58:49,493 - INFO - Search 2 complete: 0 jobs found
+2025-09-12 20:58:59,221 - INFO - 
+################################################################################
+2025-09-12 20:58:59,221 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-12 20:58:59,222 - INFO - ################################################################################
+2025-09-12 20:58:59,223 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-12 20:58:59,223 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-12 20:59:04,819 - INFO - Processing page 1 with auto-healing
+2025-09-12 20:59:23,379 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/62a9e7323e8f10e4f2993a111b3a292c
+2025-09-12 20:59:25,406 - INFO - Scraper stopped by user
+2025-09-12 20:59:39,528 - INFO - Starting AUTO-HEALING Selenium Job Scraper...
+2025-09-12 20:59:39,529 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-12 20:59:39,530 - INFO - ====== WebDriver manager ======
+2025-09-12 20:59:40,612 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:59:41,148 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:59:41,703 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 20:59:42,933 - INFO - Auto-healing driver setup complete
+2025-09-12 20:59:42,933 - INFO - 
+################################################################################
+2025-09-12 20:59:42,934 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-12 20:59:42,934 - INFO - ################################################################################
+2025-09-12 20:59:42,934 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 20:59:42,935 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 20:59:49,151 - INFO - Processing page 1 with auto-healing
+2025-09-12 20:59:49,172 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 20:59:49,374 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:59:49,374 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:59:49,376 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:59:49,507 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:59:49,508 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:59:49,510 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:59:49,604 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:59:50,251 - WARNING - HTML structure change detected (similarity: 0.52)
+2025-09-12 20:59:50,251 - INFO - Structure change detected, triggering healing for title
+2025-09-12 20:59:50,252 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 20:59:50,253 - INFO - Generated 1 adaptive selectors for title
+2025-09-12 20:59:50,285 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 20:59:50,410 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:59:50,411 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:59:50,411 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:59:50,472 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:59:50,472 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:59:50,473 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:59:50,511 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:59:51,143 - WARNING - HTML structure change detected (similarity: 0.13)
+2025-09-12 20:59:51,143 - INFO - Structure change detected, triggering healing for title
+2025-09-12 20:59:51,144 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 20:59:51,145 - INFO - Generated 2 adaptive selectors for title
+2025-09-12 20:59:51,192 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 20:59:51,314 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 20:59:51,315 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 20:59:51,315 - INFO - Generated 0 adaptive selectors for company
+2025-09-12 20:59:51,425 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 20:59:51,425 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 20:59:51,426 - INFO - Generated 0 adaptive selectors for location
+2025-09-12 20:59:51,505 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 20:59:52,287 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 20:59:52,318 - INFO - No next page found
+2025-09-12 20:59:52,319 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-12 20:59:52,319 - INFO - Search 1 complete: 3 jobs found
+2025-09-12 21:00:04,610 - INFO - 
+################################################################################
+2025-09-12 21:00:04,610 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-12 21:00:04,611 - INFO - ################################################################################
+2025-09-12 21:00:04,612 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-12 21:00:04,612 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-12 21:00:08,322 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:00:54,191 - WARNING - No job cards found on page 1
+2025-09-12 21:00:54,191 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:00:54,191 - INFO - Search 2 complete: 0 jobs found
+2025-09-12 21:01:03,799 - INFO - 
+################################################################################
+2025-09-12 21:01:03,800 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-12 21:01:03,800 - INFO - ################################################################################
+2025-09-12 21:01:03,801 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-12 21:01:03,802 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-12 21:01:08,854 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:01:55,227 - WARNING - No job cards found on page 1
+2025-09-12 21:01:55,228 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:01:55,228 - INFO - Search 3 complete: 0 jobs found
+2025-09-12 21:01:55,230 - INFO - Results saved to: auto_healed_jobs_20250912_210155.json
+2025-09-12 21:01:55,230 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-12 21:01:55,231 - INFO - Total jobs found: 3
+2025-09-12 21:01:57,419 - INFO - Saved selector knowledge
+2025-09-12 21:01:57,420 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 9
+Successful Extractions: 1
+Success Rate: 11.1%
+Healing Events: 8
+Structure Changes Detected: 2
+Jobs Found: 3
+========================================
+
+2025-09-12 21:01:57,421 - INFO - Browser closed and knowledge saved
+2025-09-12 21:17:37,599 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-12 21:17:37,600 - INFO - Loaded previous selector knowledge
+2025-09-12 21:17:37,601 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-12 21:17:37,601 - INFO - ====== WebDriver manager ======
+2025-09-12 21:17:38,695 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 21:17:39,298 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 21:17:39,919 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 21:17:41,130 - INFO - Auto-healing driver setup complete
+2025-09-12 21:17:41,131 - INFO - 
+################################################################################
+2025-09-12 21:17:41,131 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-12 21:17:41,131 - INFO - ################################################################################
+2025-09-12 21:17:41,131 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 21:17:41,131 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 21:17:49,087 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:17:51,788 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 21:17:51,939 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:17:51,940 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:17:51,941 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-12 21:17:51,942 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:17:52,053 - INFO - FUZZY MATCH: Found company via text matching: 'Python Developer'
+2025-09-12 21:17:52,125 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:17:52,125 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:17:52,128 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '.city', '[class*="loc"]']
+2025-09-12 21:17:52,128 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:17:52,276 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: Python Developer
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:17:53,026 - WARNING - HTML structure change detected (similarity: 0.53)
+2025-09-12 21:17:53,026 - INFO - Structure change detected, triggering healing for title
+2025-09-12 21:17:53,027 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 21:17:53,029 - INFO - Generated 8 adaptive selectors for title: ['[title]', 'h1', '.jcs-JobTitle', '.title', '#jobTitle-605dc658931b49b7']
+2025-09-12 21:17:53,029 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 21:17:53,051 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-12 21:17:53,144 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:17:53,144 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:17:53,145 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-12 21:17:53,146 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:17:53,219 - INFO - FUZZY MATCH: Found company via text matching: 'Python Micro services Developer-5'
+2025-09-12 21:17:53,263 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:17:53,263 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:17:53,263 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '.city', '[class*="loc"]']
+2025-09-12 21:17:53,263 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:17:53,371 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Python Micro services Developer-5
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:17:54,185 - WARNING - HTML structure change detected (similarity: 0.68)
+2025-09-12 21:17:54,186 - INFO - Structure change detected, triggering healing for title
+2025-09-12 21:17:54,186 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 21:17:54,187 - INFO - Generated 8 adaptive selectors for title: ['[title]', 'h1', '.jcs-JobTitle', '.title', '#jobTitle-605dc658931b49b7']
+2025-09-12 21:17:54,188 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 21:17:54,215 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-12 21:17:54,342 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:17:54,342 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:17:54,343 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-12 21:17:54,344 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:17:54,600 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:17:54,601 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:17:54,601 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '.city', '[class*="loc"]']
+2025-09-12 21:17:54,602 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:17:54,825 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:17:55,622 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 21:17:55,658 - INFO - No next page found
+2025-09-12 21:17:55,659 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-12 21:17:55,659 - INFO - Search 1 complete: 3 jobs found
+2025-09-12 21:18:07,816 - INFO - 
+################################################################################
+2025-09-12 21:18:07,818 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-12 21:18:07,818 - INFO - ################################################################################
+2025-09-12 21:18:07,819 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-12 21:18:07,819 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-12 21:18:11,823 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:18:57,773 - WARNING - No job cards found on page 1
+2025-09-12 21:18:57,774 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:18:57,774 - INFO - Search 2 complete: 0 jobs found
+2025-09-12 21:19:06,465 - INFO - 
+################################################################################
+2025-09-12 21:19:06,465 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-12 21:19:06,466 - INFO - ################################################################################
+2025-09-12 21:19:06,467 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-12 21:19:06,468 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-12 21:19:11,427 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:19:57,747 - WARNING - No job cards found on page 1
+2025-09-12 21:19:57,747 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:19:57,747 - INFO - Search 3 complete: 0 jobs found
+2025-09-12 21:19:57,758 - INFO - Results saved to: auto_healed_jobs_20250912_211957.json
+2025-09-12 21:19:57,758 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-12 21:19:57,759 - INFO - Total jobs found: 3
+2025-09-12 21:19:59,951 - INFO - Saved selector knowledge
+2025-09-12 21:19:59,951 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 9
+Successful Extractions: 1
+Success Rate: 11.1%
+Healing Events: 8
+Structure Changes Detected: 2
+Jobs Found: 3
+========================================
+
+2025-09-12 21:19:59,952 - INFO - Browser closed and knowledge saved
+2025-09-12 21:54:21,724 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-12 21:54:21,725 - INFO - Loaded previous selector knowledge
+2025-09-12 21:54:21,726 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-12 21:54:21,726 - INFO - ====== WebDriver manager ======
+2025-09-12 21:54:22,888 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 21:54:23,456 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 21:54:24,141 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 21:54:25,356 - INFO - Auto-healing driver setup complete
+2025-09-12 21:54:25,356 - INFO - 
+################################################################################
+2025-09-12 21:54:25,357 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-12 21:54:25,358 - INFO - ################################################################################
+2025-09-12 21:54:25,358 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 21:54:25,359 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 21:54:32,398 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:54:33,604 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 21:54:33,796 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:54:33,797 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:54:33,799 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '.employer', '[href*="company"]', '.company']
+2025-09-12 21:54:33,799 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:54:33,931 - INFO - FUZZY MATCH: Found company via text matching: 'Python Developer'
+2025-09-12 21:54:34,022 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:54:34,023 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:54:34,025 - INFO - Generated 5 adaptive selectors for location: ['.location', '[data-location]', '.locale', '[class*="loc"]', '.city']
+2025-09-12 21:54:34,025 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:54:34,286 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: Python Developer
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:54:34,911 - WARNING - HTML structure change detected (similarity: 0.48)
+2025-09-12 21:54:34,911 - INFO - Structure change detected, triggering healing for title
+2025-09-12 21:54:34,912 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 21:54:34,914 - INFO - Generated 8 adaptive selectors for title: ['#jobTitle-605dc658931b49b7', '.title', '[title]', 'h3', '.jcs-JobTitle']
+2025-09-12 21:54:34,914 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 21:54:34,945 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 21:54:35,095 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:54:35,096 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:54:35,096 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '.employer', '[href*="company"]', '.company']
+2025-09-12 21:54:35,097 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:54:35,202 - INFO - FUZZY MATCH: Found company via text matching: 'Python Micro services Developer-5'
+2025-09-12 21:54:35,277 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:54:35,278 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:54:35,278 - INFO - Generated 5 adaptive selectors for location: ['.location', '[data-location]', '.locale', '[class*="loc"]', '.city']
+2025-09-12 21:54:35,279 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:54:35,498 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Python Micro services Developer-5
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:54:36,010 - WARNING - HTML structure change detected (similarity: 0.60)
+2025-09-12 21:54:36,010 - INFO - Structure change detected, triggering healing for title
+2025-09-12 21:54:36,010 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 21:54:36,011 - INFO - Generated 8 adaptive selectors for title: ['#jobTitle-605dc658931b49b7', '.title', '[title]', 'h3', '.jcs-JobTitle']
+2025-09-12 21:54:36,012 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 21:54:36,036 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-605dc658931b49b7
+2025-09-12 21:54:36,143 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 21:54:36,143 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 21:54:36,144 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '.employer', '[href*="company"]', '.company']
+2025-09-12 21:54:36,144 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 21:54:36,309 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 21:54:36,309 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 21:54:36,310 - INFO - Generated 5 adaptive selectors for location: ['.location', '[data-location]', '.locale', '[class*="loc"]', '.city']
+2025-09-12 21:54:36,310 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 21:54:36,430 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 21:54:36,802 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 21:54:36,839 - INFO - No next page found
+2025-09-12 21:54:36,840 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-12 21:54:36,841 - INFO - Search 1 complete: 3 jobs found
+2025-09-12 21:54:47,425 - INFO - 
+################################################################################
+2025-09-12 21:54:47,426 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-12 21:54:47,426 - INFO - ################################################################################
+2025-09-12 21:54:47,426 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-12 21:54:47,427 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-12 21:54:55,433 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:55:41,323 - WARNING - No job cards found on page 1
+2025-09-12 21:55:41,324 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:55:41,324 - INFO - Search 2 complete: 0 jobs found
+2025-09-12 21:55:53,773 - INFO - 
+################################################################################
+2025-09-12 21:55:53,774 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-12 21:55:53,775 - INFO - ################################################################################
+2025-09-12 21:55:53,775 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-12 21:55:53,776 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-12 21:55:59,066 - INFO - Processing page 1 with auto-healing
+2025-09-12 21:56:45,122 - WARNING - No job cards found on page 1
+2025-09-12 21:56:45,122 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 21:56:45,123 - INFO - Search 3 complete: 0 jobs found
+2025-09-12 21:56:45,124 - INFO - Results saved to: auto_healed_jobs_20250912_215645.json
+2025-09-12 21:56:45,124 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-12 21:56:45,125 - INFO - Total jobs found: 3
+2025-09-12 21:56:47,392 - INFO - Saved selector knowledge
+2025-09-12 21:56:47,393 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 9
+Successful Extractions: 1
+Success Rate: 11.1%
+Healing Events: 8
+Structure Changes Detected: 2
+Jobs Found: 3
+========================================
+
+2025-09-12 21:56:47,394 - INFO - Browser closed and knowledge saved
+2025-09-12 22:03:01,514 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-12 22:03:01,515 - INFO - Loaded previous selector knowledge
+2025-09-12 22:03:01,515 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-12 22:03:01,516 - INFO - ====== WebDriver manager ======
+2025-09-12 22:03:02,570 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 22:03:03,237 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 22:03:03,809 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 22:03:05,066 - INFO - Auto-healing driver setup complete
+2025-09-12 22:03:05,066 - INFO - 
+################################################################################
+2025-09-12 22:03:05,066 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-12 22:03:05,067 - INFO - ################################################################################
+2025-09-12 22:03:05,067 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 22:03:05,067 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 22:03:10,665 - INFO - Processing page 1 with auto-healing
+2025-09-12 22:03:10,682 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 22:03:10,966 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 22:03:10,966 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 22:03:10,968 - INFO - Generated 5 adaptive selectors for company: ['.org', '[href*="company"]', '[data-company]', '.company', '.employer']
+2025-09-12 22:03:10,969 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 22:03:11,085 - INFO - FUZZY MATCH: Found company via text matching: 'Python Micro services Developer-5'
+2025-09-12 22:03:11,136 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 22:03:11,136 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 22:03:11,138 - INFO - Generated 5 adaptive selectors for location: ['.location', '.locale', '.city', '[class*="loc"]', '[data-location]']
+2025-09-12 22:03:11,138 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 22:03:11,304 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Python Micro services Developer-5
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 22:03:11,791 - WARNING - HTML structure change detected (similarity: 0.55)
+2025-09-12 22:03:11,791 - INFO - Structure change detected, triggering healing for title
+2025-09-12 22:03:11,792 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 22:03:11,793 - INFO - Generated 8 adaptive selectors for title: ['[title]', '#jobTitle-583d90af42399441', 'h2', '[role="heading"]', '.jcs-JobTitle']
+2025-09-12 22:03:11,794 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 22:03:11,824 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-12 22:03:11,970 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 22:03:11,970 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 22:03:11,971 - INFO - Generated 5 adaptive selectors for company: ['.org', '[href*="company"]', '[data-company]', '.company', '.employer']
+2025-09-12 22:03:11,971 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 22:03:12,078 - INFO - FUZZY MATCH: Found company via text matching: 'Python Developer'
+2025-09-12 22:03:12,163 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 22:03:12,163 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 22:03:12,164 - INFO - Generated 5 adaptive selectors for location: ['.location', '.locale', '.city', '[class*="loc"]', '[data-location]']
+2025-09-12 22:03:12,164 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 22:03:12,287 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Developer
+Company: Python Developer
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 22:03:13,032 - WARNING - HTML structure change detected (similarity: 0.61)
+2025-09-12 22:03:13,032 - INFO - Structure change detected, triggering healing for title
+2025-09-12 22:03:13,032 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-12 22:03:13,033 - INFO - Generated 8 adaptive selectors for title: ['[title]', '#jobTitle-583d90af42399441', 'h2', '[role="heading"]', '.jcs-JobTitle']
+2025-09-12 22:03:13,033 - INFO - Generated 8 adaptive selectors for title
+2025-09-12 22:03:13,061 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-12 22:03:13,181 - WARNING - All base selectors failed for company, triggering healing
+2025-09-12 22:03:13,181 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-12 22:03:13,182 - INFO - Generated 5 adaptive selectors for company: ['.org', '[href*="company"]', '[data-company]', '.company', '.employer']
+2025-09-12 22:03:13,182 - INFO - Generated 5 adaptive selectors for company
+2025-09-12 22:03:13,436 - WARNING - All base selectors failed for location, triggering healing
+2025-09-12 22:03:13,436 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-12 22:03:13,436 - INFO - Generated 5 adaptive selectors for location: ['.location', '.locale', '.city', '[class*="loc"]', '[data-location]']
+2025-09-12 22:03:13,437 - INFO - Generated 5 adaptive selectors for location
+2025-09-12 22:03:13,630 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-12 22:03:14,294 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 22:03:14,331 - INFO - No next page found
+2025-09-12 22:03:14,331 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-12 22:03:14,331 - INFO - Search 1 complete: 3 jobs found
+2025-09-12 22:03:22,422 - INFO - 
+################################################################################
+2025-09-12 22:03:22,423 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-12 22:03:22,423 - INFO - ################################################################################
+2025-09-12 22:03:22,424 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-12 22:03:22,424 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-12 22:03:28,864 - INFO - Processing page 1 with auto-healing
+2025-09-12 22:04:14,944 - WARNING - No job cards found on page 1
+2025-09-12 22:04:14,945 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 22:04:14,945 - INFO - Search 2 complete: 0 jobs found
+2025-09-12 22:04:26,538 - INFO - 
+################################################################################
+2025-09-12 22:04:26,539 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-12 22:04:26,539 - INFO - ################################################################################
+2025-09-12 22:04:26,540 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-12 22:04:26,540 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-12 22:04:31,263 - INFO - Processing page 1 with auto-healing
+2025-09-12 22:05:17,275 - WARNING - No job cards found on page 1
+2025-09-12 22:05:17,275 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-12 22:05:17,275 - INFO - Search 3 complete: 0 jobs found
+2025-09-12 22:05:17,277 - INFO - Results saved to: auto_healed_jobs_20250912_220517.json
+2025-09-12 22:05:17,277 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-12 22:05:17,277 - INFO - Total jobs found: 3
+2025-09-12 22:05:19,463 - INFO - Saved selector knowledge
+2025-09-12 22:05:19,464 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 9
+Successful Extractions: 1
+Success Rate: 11.1%
+Healing Events: 8
+Structure Changes Detected: 2
+Jobs Found: 3
+========================================
+
+2025-09-12 22:05:19,464 - INFO - Browser closed and knowledge saved
+2025-09-13 09:19:42,795 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-13 09:19:42,816 - INFO - Loaded previous selector knowledge
+2025-09-13 09:19:42,817 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-13 09:19:42,818 - INFO - ====== WebDriver manager ======
+2025-09-13 09:19:44,520 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:19:45,614 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:19:46,412 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:19:47,705 - INFO - WebDriver version 140.0.7339.82 selected
+2025-09-13 09:19:47,711 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.82/win32/chromedriver-win32.zip
+2025-09-13 09:19:47,711 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.82/win32/chromedriver-win32.zip
+2025-09-13 09:19:48,336 - INFO - Driver downloading response is 200
+2025-09-13 09:19:52,324 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:19:53,794 - INFO - Driver has been saved in cache [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82]
+2025-09-13 09:19:57,392 - INFO - Auto-healing driver setup complete
+2025-09-13 09:19:57,393 - INFO - 
+################################################################################
+2025-09-13 09:19:57,394 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-13 09:19:57,394 - INFO - ################################################################################
+2025-09-13 09:19:57,395 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-13 09:19:57,396 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-13 09:20:02,481 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:20:02,514 - INFO - Found 3 job cards with: [data-jk]
+2025-09-13 09:20:02,905 - WARNING - All base selectors failed for company, triggering healing
+2025-09-13 09:20:02,906 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-13 09:20:02,908 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-13 09:20:02,909 - INFO - Generated 5 adaptive selectors for company
+2025-09-13 09:20:03,060 - INFO - FUZZY MATCH: Found company via text matching: 'Python Micro services Developer-5'
+2025-09-13 09:20:03,140 - WARNING - All base selectors failed for location, triggering healing
+2025-09-13 09:20:03,141 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-13 09:20:03,144 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '[class*="loc"]', '.city']
+2025-09-13 09:20:03,144 - INFO - Generated 5 adaptive selectors for location
+2025-09-13 09:20:03,491 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Python Micro services Developer-5
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-13 09:20:03,987 - WARNING - HTML structure change detected (similarity: 0.53)
+2025-09-13 09:20:03,987 - INFO - Structure change detected, triggering healing for title
+2025-09-13 09:20:03,988 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-13 09:20:03,991 - INFO - Generated 8 adaptive selectors for title: ['#jobTitle-583d90af42399441', '[role="heading"]', 'h3', '.jcs-JobTitle', '[title]']
+2025-09-13 09:20:03,991 - INFO - Generated 8 adaptive selectors for title
+2025-09-13 09:20:04,029 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-583d90af42399441
+2025-09-13 09:20:04,139 - WARNING - All base selectors failed for company, triggering healing
+2025-09-13 09:20:04,140 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-13 09:20:04,140 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-13 09:20:04,141 - INFO - Generated 5 adaptive selectors for company
+2025-09-13 09:20:04,233 - INFO - FUZZY MATCH: Found company via text matching: 'Python Developer'
+2025-09-13 09:20:04,290 - WARNING - All base selectors failed for location, triggering healing
+2025-09-13 09:20:04,290 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-13 09:20:04,291 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '[class*="loc"]', '.city']
+2025-09-13 09:20:04,292 - INFO - Generated 5 adaptive selectors for location
+2025-09-13 09:20:04,514 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Developer
+Company: Python Developer
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-13 09:20:04,884 - WARNING - HTML structure change detected (similarity: 0.60)
+2025-09-13 09:20:04,885 - INFO - Structure change detected, triggering healing for title
+2025-09-13 09:20:04,886 - INFO - HEALING: Attempting auto-heal for title (attempt 3)
+2025-09-13 09:20:04,886 - INFO - Generated 8 adaptive selectors for title: ['#jobTitle-583d90af42399441', '[role="heading"]', 'h3', '.jcs-JobTitle', '[title]']
+2025-09-13 09:20:04,887 - INFO - Generated 8 adaptive selectors for title
+2025-09-13 09:20:04,924 - INFO - HEALING SUCCESS: Found title using adaptive selector: #jobTitle-583d90af42399441
+2025-09-13 09:20:05,030 - WARNING - All base selectors failed for company, triggering healing
+2025-09-13 09:20:05,030 - INFO - HEALING: Attempting auto-heal for company (attempt 1)
+2025-09-13 09:20:05,031 - INFO - Generated 5 adaptive selectors for company: ['.org', '[data-company]', '[href*="company"]', '.employer', '.company']
+2025-09-13 09:20:05,031 - INFO - Generated 5 adaptive selectors for company
+2025-09-13 09:20:05,238 - WARNING - All base selectors failed for location, triggering healing
+2025-09-13 09:20:05,238 - INFO - HEALING: Attempting auto-heal for location (attempt 2)
+2025-09-13 09:20:05,239 - INFO - Generated 5 adaptive selectors for location: ['[data-location]', '.location', '.locale', '[class*="loc"]', '.city']
+2025-09-13 09:20:05,239 - INFO - Generated 5 adaptive selectors for location
+2025-09-13 09:20:05,466 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: N/A
+================================================================================
+
+2025-09-13 09:20:06,228 - INFO - Page 1: Extracted 3 jobs
+2025-09-13 09:20:06,282 - INFO - No next page found
+2025-09-13 09:20:06,282 - INFO - Auto-healing scrape complete: 3 jobs found
+2025-09-13 09:20:06,283 - INFO - Search 1 complete: 3 jobs found
+2025-09-13 09:20:20,011 - INFO - 
+################################################################################
+2025-09-13 09:20:20,012 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-13 09:20:20,013 - INFO - ################################################################################
+2025-09-13 09:20:20,014 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-13 09:20:20,015 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-13 09:20:27,010 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:21:13,036 - WARNING - No job cards found on page 1
+2025-09-13 09:21:13,037 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:21:13,037 - INFO - Search 2 complete: 0 jobs found
+2025-09-13 09:21:24,046 - INFO - 
+################################################################################
+2025-09-13 09:21:24,047 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-13 09:21:24,048 - INFO - ################################################################################
+2025-09-13 09:21:24,049 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-13 09:21:24,050 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-13 09:21:28,431 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:22:13,987 - WARNING - No job cards found on page 1
+2025-09-13 09:22:13,988 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:22:13,988 - INFO - Search 3 complete: 0 jobs found
+2025-09-13 09:22:13,991 - INFO - Results saved to: auto_healed_jobs_20250913_092213.json
+2025-09-13 09:22:13,992 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-13 09:22:13,992 - INFO - Total jobs found: 3
+2025-09-13 09:22:16,392 - INFO - Saved selector knowledge
+2025-09-13 09:22:16,392 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 9
+Successful Extractions: 1
+Success Rate: 11.1%
+Healing Events: 8
+Structure Changes Detected: 2
+Jobs Found: 3
+========================================
+
+2025-09-13 09:22:16,393 - INFO - Browser closed and knowledge saved
+2025-09-13 09:26:29,723 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-13 09:26:29,735 - INFO - Loaded previous selector knowledge
+2025-09-13 09:26:29,736 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-13 09:26:29,736 - INFO - ====== WebDriver manager ======
+2025-09-13 09:26:30,660 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:26:31,106 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:26:31,540 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-13 09:26:32,711 - INFO - Auto-healing driver setup complete
+2025-09-13 09:26:32,711 - INFO - 
+################################################################################
+2025-09-13 09:26:32,711 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-13 09:26:32,711 - INFO - ################################################################################
+2025-09-13 09:26:32,712 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-13 09:26:32,712 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-13 09:26:40,090 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:26:40,165 - INFO - Found 2 job cards with: .job_seen_beacon
+2025-09-13 09:26:40,304 - WARNING - All base selectors failed for location, triggering healing
+2025-09-13 09:26:40,304 - INFO - HEALING: Attempting auto-heal for location (attempt 1)
+2025-09-13 09:26:40,306 - INFO - Generated 9 adaptive selectors for location: ['.location', '.company_location', '.locale', '[data-location]', '.city']
+2025-09-13 09:26:40,306 - INFO - Generated 9 adaptive selectors for location
+2025-09-13 09:26:40,338 - INFO - HEALING SUCCESS: Found location using adaptive selector: .company_location
+2025-09-13 09:26:40,353 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Realign LLC
+Location: Realign LLC
+McLean, VA
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=KoERBSwBotIJCzmirA3AS3A_4TJvSkzUT7DhUWa9BBuex3KLJTSBcU02M82sa2AMuGkhInqZv3CR-53-555q3nvAIOuf3XFJRC-RMLgNy8xJ06GmZDOjZ0FxT3b05wPI0N12O_-BbQ--kJzZX4dTgw%3D%3D&xkcb=SoAe67M3tguyQEQh5Z0LbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-13 09:26:40,926 - WARNING - HTML structure change detected (similarity: 0.66)
+2025-09-13 09:26:40,926 - INFO - Structure change detected, triggering healing for title
+2025-09-13 09:26:40,926 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 09:26:40,927 - INFO - Generated 9 adaptive selectors for title: ['[title]', 'h1', '#jobTitle-583d90af42399441', 'h2', '.jobTitle']
+2025-09-13 09:26:40,928 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 09:26:40,949 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-13 09:26:41,035 - WARNING - All base selectors failed for location, triggering healing
+2025-09-13 09:26:41,036 - INFO - HEALING: Attempting auto-heal for location (attempt 1)
+2025-09-13 09:26:41,036 - INFO - Generated 9 adaptive selectors for location: ['.location', '.company_location', '.locale', '[data-location]', '.city']
+2025-09-13 09:26:41,036 - INFO - Generated 9 adaptive selectors for location
+2025-09-13 09:26:41,061 - INFO - HEALING SUCCESS: Found location using adaptive selector: .company_location
+2025-09-13 09:26:41,072 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Developer
+Company: Creed Infotech
+Location: Creed Infotech
+Thousand Oaks, CA 91360
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=KoERBSwBotIJCzmirA3AS8etJtSkMZGJvE9mdar5lvkSzP5_rwIRFThnKlaL8sVf9Mny4UrjfDqiDUZjfSuLG1pAkSw46egNcPsavFH1hNSUktzj-BwBNA5dEaUHZfLoylgmrt2DWB-e3JShYuzgJA%3D%3D&xkcb=SoCq67M3tguyQEQh5Z0KbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-13 09:26:41,704 - INFO - Page 1: Extracted 2 jobs
+2025-09-13 09:26:41,734 - INFO - No next page found
+2025-09-13 09:26:41,735 - INFO - Auto-healing scrape complete: 2 jobs found
+2025-09-13 09:26:41,735 - INFO - Search 1 complete: 2 jobs found
+2025-09-13 09:26:50,002 - INFO - 
+################################################################################
+2025-09-13 09:26:50,002 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-13 09:26:50,003 - INFO - ################################################################################
+2025-09-13 09:26:50,003 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-13 09:26:50,003 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-13 09:26:54,338 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:29:42,933 - INFO - Trying alternative job card detection...
+2025-09-13 09:29:43,076 - WARNING - No job cards found on page 1
+2025-09-13 09:29:43,076 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:29:43,076 - INFO - Search 2 complete: 0 jobs found
+2025-09-13 09:29:53,508 - INFO - 
+################################################################################
+2025-09-13 09:29:53,508 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-13 09:29:53,509 - INFO - ################################################################################
+2025-09-13 09:29:53,509 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-13 09:29:53,510 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-13 09:29:59,538 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:32:48,407 - INFO - Trying alternative job card detection...
+2025-09-13 09:32:48,534 - WARNING - No job cards found on page 1
+2025-09-13 09:32:48,534 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:32:48,535 - INFO - Search 3 complete: 0 jobs found
+2025-09-13 09:32:48,536 - INFO - Results saved to: auto_healed_jobs_20250913_093248.json
+2025-09-13 09:32:48,536 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-13 09:32:48,537 - INFO - Total jobs found: 2
+2025-09-13 09:32:52,290 - INFO - Saved selector knowledge
+2025-09-13 09:32:52,290 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 6
+Successful Extractions: 3
+Success Rate: 50.0%
+Healing Events: 3
+Structure Changes Detected: 1
+Jobs Found: 2
+========================================
+
+2025-09-13 09:32:52,291 - INFO - Browser closed and knowledge saved
+2025-09-13 09:39:33,473 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-13 09:39:33,538 - INFO - Loaded previous selector knowledge
+2025-09-13 09:39:33,538 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-13 09:39:33,539 - INFO - ====== WebDriver manager ======
+2025-09-13 09:39:34,479 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:39:34,906 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 09:39:35,458 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-13 09:39:36,659 - INFO - Auto-healing driver setup complete
+2025-09-13 09:39:36,659 - INFO - 
+################################################################################
+2025-09-13 09:39:36,659 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-13 09:39:36,660 - INFO - ################################################################################
+2025-09-13 09:39:36,660 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-13 09:39:36,660 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-13 09:39:43,242 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:39:45,444 - INFO - Found 2 job cards with: li.css-1ac2h1w
+2025-09-13 09:39:45,546 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Realign LLC
+Location: McLean, VA
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=lPP6mxaGz9W-Jc0AkjYKaPUqVci_GW2zTpGNh-N8HxLaF4IkPLMW1mGccuXosjVorAeeMaQkZjKo9utTzhqwGT8e0jGBEnrduxFYQqN5DggEr7uOQtMiyRln4Cq4h1yKHkdgO9e2NEM63WMckJd-RA%3D%3D&xkcb=SoDx67M3tggSl5QVlB0LbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-13 09:39:46,256 - WARNING - HTML structure change detected (similarity: 0.33)
+2025-09-13 09:39:46,257 - INFO - Structure change detected, triggering healing for title
+2025-09-13 09:39:46,257 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 09:39:46,258 - INFO - Generated 9 adaptive selectors for title: ['[title]', '.title', '.jcs-JobTitle', 'h2', '.jobTitle']
+2025-09-13 09:39:46,259 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 09:39:46,279 - INFO - HEALING SUCCESS: Found title using adaptive selector: [title]
+2025-09-13 09:39:46,346 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Developer
+Company: Creed Infotech
+Location: Thousand Oaks, CA 91360
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=lPP6mxaGz9W-Jc0AkjYKaKvlv1vTb5lYLKx3BnbywpuLyzgWZGActA-9UXLkVYvtEA_zBKpZdfVQubs0yKEv4Xo0z58v7FIQ1fvIOhIm_bH1Zx7stFWQ9V7d7p4fNLZMfnjm8iwoj1yuzfiVDeh4zw%3D%3D&xkcb=SoBF67M3tggSl5QVlB0KbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-13 09:39:46,807 - INFO - Page 1: Extracted 2 jobs
+2025-09-13 09:39:46,836 - INFO - No next page found
+2025-09-13 09:39:46,836 - INFO - Auto-healing scrape complete: 2 jobs found
+2025-09-13 09:39:46,837 - INFO - Search 1 complete: 2 jobs found
+2025-09-13 09:39:55,694 - INFO - 
+################################################################################
+2025-09-13 09:39:55,695 - INFO - AUTO-HEALING SEARCH 2/3: data scientist in Mumbai
+2025-09-13 09:39:55,695 - INFO - ################################################################################
+2025-09-13 09:39:55,696 - INFO - Auto-healing scrape: 'data scientist' in 'Mumbai' (max 2 pages)
+2025-09-13 09:39:55,696 - INFO - Navigating to: https://indeed.com/jobs?q=data+scientist&l=Mumbai&sort=date&fromage=7
+2025-09-13 09:40:01,144 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:42:34,607 - INFO - Trying alternative job card detection...
+2025-09-13 09:42:34,730 - WARNING - No job cards found on page 1
+2025-09-13 09:42:34,731 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:42:34,731 - INFO - Search 2 complete: 0 jobs found
+2025-09-13 09:42:45,108 - INFO - 
+################################################################################
+2025-09-13 09:42:45,108 - INFO - AUTO-HEALING SEARCH 3/3: software engineer in Delhi
+2025-09-13 09:42:45,109 - INFO - ################################################################################
+2025-09-13 09:42:45,109 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-13 09:42:45,110 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-13 09:42:49,476 - INFO - Processing page 1 with auto-healing
+2025-09-13 09:45:22,965 - INFO - Trying alternative job card detection...
+2025-09-13 09:45:23,087 - WARNING - No job cards found on page 1
+2025-09-13 09:45:23,088 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 09:45:23,088 - INFO - Search 3 complete: 0 jobs found
+2025-09-13 09:45:23,089 - INFO - Results saved to: auto_healed_jobs_20250913_094523.json
+2025-09-13 09:45:23,090 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-13 09:45:23,090 - INFO - Total jobs found: 2
+2025-09-13 09:45:26,863 - INFO - Saved selector knowledge
+2025-09-13 09:45:26,864 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 6
+Successful Extractions: 5
+Success Rate: 83.3%
+Healing Events: 1
+Structure Changes Detected: 1
+Jobs Found: 2
+========================================
+
+2025-09-13 09:45:26,865 - INFO - Browser closed and knowledge saved
+2025-09-13 10:08:25,213 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-13 10:08:25,214 - INFO - Loaded previous selector knowledge
+2025-09-13 10:08:25,214 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-13 10:08:25,214 - INFO - ====== WebDriver manager ======
+2025-09-13 10:08:26,165 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 10:08:26,612 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 10:08:27,075 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-13 10:08:28,263 - INFO - Auto-healing driver setup complete
+2025-09-13 10:08:28,264 - INFO - 
+################################################################################
+2025-09-13 10:08:28,264 - INFO - AUTO-HEALING SEARCH 1/3: python developer in Bengaluru
+2025-09-13 10:08:28,264 - INFO - ################################################################################
+2025-09-13 10:08:28,265 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-13 10:08:28,265 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-13 10:08:30,286 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/7b5b53b7260d01958c790076c142d168
+2025-09-13 10:08:34,344 - INFO - Scraper stopped by user
+2025-09-13 10:09:06,709 - INFO - Starting FIXED AUTO-HEALING Selenium Job Scraper...
+2025-09-13 10:09:06,710 - INFO - Loaded previous selector knowledge
+2025-09-13 10:09:06,711 - INFO - Setting up auto-healing Chrome WebDriver...
+2025-09-13 10:09:06,711 - INFO - ====== WebDriver manager ======
+2025-09-13 10:09:07,645 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 10:09:08,103 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-13 10:09:08,569 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-13 10:09:09,720 - INFO - Auto-healing driver setup complete
+2025-09-13 10:09:09,720 - INFO - 
+################################################################################
+2025-09-13 10:09:09,720 - INFO - AUTO-HEALING SEARCH 1/4: python developer in Bengaluru
+2025-09-13 10:09:09,720 - INFO - ################################################################################
+2025-09-13 10:09:09,721 - INFO - Auto-healing scrape: 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-13 10:09:09,721 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-13 10:09:15,355 - INFO - Processing page 1 with auto-healing
+2025-09-13 10:09:17,583 - INFO - Found 2 job cards with: li.css-1ac2h1w
+2025-09-13 10:09:17,676 - INFO - 
+================================================================================
+AUTO-HEALED JOB #1 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: Realign LLC
+Location: McLean, VA
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=j9ii5EY_zSCHjuTyj9hDtXt5u3UUO9P_Wfgc3ZrWsbqDneKdUlU56DFUGb9QpZkaJm96Q4ezO_zqbgFgzbPjim6YSS5jt4YqpTmZj4iP6TDqjeRfzy94nG5TixqsNwNTPDVezCmDQ8xJtdD9Zf0Dxw%3D%3D&xkcb=SoCR67M3tgj6G1Rwch0LbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-13 10:09:18,405 - WARNING - HTML structure change detected (similarity: 0.37)
+2025-09-13 10:09:18,406 - INFO - Structure change detected, triggering healing for title
+2025-09-13 10:09:18,406 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 10:09:18,408 - INFO - Generated 9 adaptive selectors for title: ['[role="heading"]', '.jobTitle', 'h1', '#jobTitle-583d90af42399441', '[title]']
+2025-09-13 10:09:18,408 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 10:09:18,446 - INFO - HEALING SUCCESS: Found title using adaptive selector: .jobTitle
+2025-09-13 10:09:18,507 - INFO - 
+================================================================================
+AUTO-HEALED JOB #2 - Indeed
+================================================================================
+Title: Python Developer
+Company: Creed Infotech
+Location: Thousand Oaks, CA 91360
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=j9ii5EY_zSCHjuTyj9hDtSNmU9yvWq7PPN3D5S2abPxOeHLErFShB4NqFedjxck-j1HcBOLEMO5h6LJKdf1XlFVxxIfkMZlIM3cpRHQDS5YaX0gz3ZIKSldr9ebg7kxAYGaBPEw2hNEKbT8p0XPCNg%3D%3D&xkcb=SoAl67M3tgj6G1Rwch0KbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-13 10:09:19,083 - INFO - Page 1: Extracted 2 jobs
+2025-09-13 10:09:19,111 - INFO - No next page found
+2025-09-13 10:09:19,111 - INFO - Auto-healing scrape complete: 2 jobs found
+2025-09-13 10:09:19,111 - INFO - Search 1 complete: 2 jobs found
+2025-09-13 10:09:33,365 - INFO - 
+################################################################################
+2025-09-13 10:09:33,366 - INFO - AUTO-HEALING SEARCH 2/4: Software Developer Engineer in Mumbai
+2025-09-13 10:09:33,367 - INFO - ################################################################################
+2025-09-13 10:09:33,367 - INFO - Auto-healing scrape: 'Software Developer Engineer' in 'Mumbai' (max 2 pages)
+2025-09-13 10:09:33,368 - INFO - Navigating to: https://indeed.com/jobs?q=Software+Developer+Engineer&l=Mumbai&sort=date&fromage=7
+2025-09-13 10:09:39,488 - INFO - Processing page 1 with auto-healing
+2025-09-13 10:09:41,195 - INFO - Found 12 job cards with: li.css-1ac2h1w
+2025-09-13 10:09:41,202 - WARNING - HTML structure change detected (similarity: 0.12)
+2025-09-13 10:09:41,202 - INFO - Structure change detected, triggering healing for title
+2025-09-13 10:09:41,202 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 10:09:41,203 - INFO - Generated 9 adaptive selectors for title: ['[role="heading"]', '.jobTitle', 'h1', '[title]', 'h3']
+2025-09-13 10:09:41,203 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 10:09:41,231 - INFO - HEALING SUCCESS: Found title using adaptive selector: .jobTitle
+2025-09-13 10:09:41,291 - INFO - 
+================================================================================
+AUTO-HEALED JOB #3 - Indeed
+================================================================================
+Title: Pipeline Software Engineer
+Company: Aechelon Technology
+Location: Hybrid work in South San Francisco, CA
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=3d52f6bbf0a39d64&bb=3OU-f67UeJmrWCgh7_RFvuoXRpDNapRAdQwPesjepiL7cLvZuqBvi39ZehzEqGEqY4cvDIs3lB1ZchRr_2nbTYdntftseXwDmqrSx7-aq4JYPkdOYE1tT-a_urChbsDTXg9e96xIVrfWWoFTfQJL01fDPdUmcG8e&xkcb=SoAH67M3tgj3RdxSxJ0LbzkdCdPP&fccid=7f1a8e02f759b85e&vjs=3
+================================================================================
+
+2025-09-13 10:09:41,980 - INFO - 
+================================================================================
+AUTO-HEALED JOB #4 - Indeed
+================================================================================
+Title: Software Engineer III, Projects
+Company: GitHub
+Location: Remote in United States
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=5a344dc9f08fbf88&bb=3OU-f67UeJmrWCgh7_RFvlK1VaO9oL4Oxfrvx44aVDTTyi8nRSjYNrZ9bB3nLm6gemh_0oLMrUPwnNFwWUiT42F92o7b7TW9NAUovJ04AxP9ZmNVP3ZPnMwQbNECl3YkW8a0lQJcqoi5jVZCCS32uU3MEqSgJtHu&xkcb=SoCz67M3tgj3RdxSxJ0KbzkdCdPP&fccid=c594c442f5397e7b&vjs=3
+================================================================================
+
+2025-09-13 10:09:42,444 - WARNING - HTML structure change detected (similarity: 0.63)
+2025-09-13 10:09:42,444 - INFO - Structure change detected, triggering healing for title
+2025-09-13 10:09:42,445 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 10:09:42,446 - INFO - Generated 9 adaptive selectors for title: ['.jobTitle', '[role="heading"]', 'h1', '#jobTitle-be03d95f561e5290', '[title]']
+2025-09-13 10:09:42,446 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 10:09:42,471 - INFO - HEALING SUCCESS: Found title using adaptive selector: .jobTitle
+2025-09-13 10:09:42,557 - INFO - 
+================================================================================
+AUTO-HEALED JOB #5 - Indeed
+================================================================================
+Title: Software Engineer
+Company: Intrepid Studios
+Location: Remote
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=be03d95f561e5290&bb=3OU-f67UeJmrWCgh7_RFvmGcVfgwac7Q25RbFSwJ_XlmDaFkUUrRBXYkta_tdRP4BQyhlT3L076SrpNVJikXfa1tGNBZo2gLCvUTOLMP2d2PSzZDngxHU1LZotwPCm53MJQnoHM4tuwWSvyT_-NoySGmR6iOAew0&xkcb=SoAu67M3tgj3RdxSxJ0JbzkdCdPP&fccid=d1c0370def7fa894&vjs=3
+================================================================================
+
+2025-09-13 10:09:43,325 - INFO - 
+================================================================================
+AUTO-HEALED JOB #6 - Indeed
+================================================================================
+Title: Software Development Engineer
+Company: Apple
+Location: Cupertino, CA
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=7774599103a79cbf&bb=3OU-f67UeJmrWCgh7_RFvtSbtwwLLxVyuWx01c4vS0cXWKFoz-RgJ-Fd7rrPkmMKG0mDRmCxZhFlvu0ARElcZK25VvSEMH_KITQL-G1CJr-3xg6oLYR7p9GTAcX1du9aJu9ESsN6Li0jLu3v0tGOEREV4Lsitc_X&xkcb=SoCa67M3tgj3RdxSxJ0IbzkdCdPP&fccid=c1099851e9794854&vjs=3
+================================================================================
+
+2025-09-13 10:09:44,091 - INFO - 
+================================================================================
+AUTO-HEALED JOB #7 - Indeed
+================================================================================
+Title: Software Development Engineer
+Company: Adobe
+Location: Lehi, UT 84043
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=5c63312846193743&bb=3OU-f67UeJmrWCgh7_RFvrRBZbuCzAcVImVtrG8C5Dx6b9rBmwmcyJ5Gn439iUj0haqkLw5aB-RTcHvCh0vNE8Y1ce8S1Cl3TNfZV20d95VecaMQbcpsOTDVBQBzayDJx7Y1Z26s-dlyYzeyVRELv6Kp7_kOtfKx&xkcb=SoAU67M3tgj3RdxSxJ0PbzkdCdPP&fccid=f89deb5a97c7738a&vjs=3
+================================================================================
+
+2025-09-13 10:09:44,704 - INFO - 
+================================================================================
+AUTO-HEALED JOB #8 - Indeed
+================================================================================
+Title: Software Development Engineer
+Company: Fiserv, Inc.
+Location: Omaha, NE 68106
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=db7888ff0910ab51&bb=3OU-f67UeJmrWCgh7_RFvtSbtwwLLxVymnBcPOit6CwqAdWiyMA4z_m8uVQf4QTxX76-XxOAb4-j5bflsKkZ_OFCk4A0w1ZthvvhTxGig4ugnh_vQLbghUBz9Eu9V-2mOrHmHB__sXUzcGQoQJUlkf3Oyax3DAPg&xkcb=SoCg67M3tgj3RdxSxJ0ObzkdCdPP&fccid=1ea0475711674f3b&vjs=3
+================================================================================
+
+2025-09-13 10:09:45,527 - INFO - 
+================================================================================
+AUTO-HEALED JOB #9 - Indeed
+================================================================================
+Title: Senior Software Engineer
+Company: Fang Enterprises & Co.
+Location: Remote
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=096c534eb08bf1d4&bb=3OU-f67UeJmrWCgh7_RFvrCThik5FwjMY0WwJBppyGHqQ01ZlUX71N2CZaqBP0QQk1C84DLOAPI1NCwtyG8ejxrv85N452x0ipozFFae6U7L_2rBe0e3FedV9ehm9eLEsJyZME8BRpHtybDmpI_PaYzsEeK0JoQc&xkcb=SoA967M3tgj3RdxSxJ0NbzkdCdPP&fccid=62ab2654b6a4e123&cmp=True-Nature-Environmental-Restoration-Foundation&ti=Senior+Software+Engineer&vjs=3
+================================================================================
+
+2025-09-13 10:09:45,978 - INFO - 
+================================================================================
+AUTO-HEALED JOB #10 - Indeed
+================================================================================
+Title: Software Engineer
+Company: Intrinsic, Inc.
+Location: Idaho Falls, ID 83401
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=c91511783bd6c1c1&bb=3OU-f67UeJmrWCgh7_RFvp6ehzLmi3fT3icZXGUPEUxWRtmfKeg5UcCxA4aJDridp6OWdv0KHO9x5GVG4Qn8cO0uxpEyc7Td3R4XO27bZwmw0qVjB3L8iikzYQmJMINqD2kqfr_Pt-30ZzkET9XSY4QXfQlQtsVhfzaIt5A2RZI%3D&xkcb=SoCJ67M3tgj3RdxSxJ0MbzkdCdPP&fccid=9e39e14ea51689e3&cmp=Intrinsic%2C-Inc.&ti=Software+Engineer&vjs=3
+================================================================================
+
+2025-09-13 10:09:46,665 - WARNING - HTML structure change detected (similarity: 0.13)
+2025-09-13 10:09:46,665 - INFO - Structure change detected, triggering healing for title
+2025-09-13 10:09:46,665 - INFO - HEALING: Attempting auto-heal for title (attempt 1)
+2025-09-13 10:09:46,674 - INFO - Generated 9 adaptive selectors for title: ['[role="heading"]', '.jobTitle', '#jobTitle-da782954754f9544', 'h1', '[title]']
+2025-09-13 10:09:46,675 - INFO - Generated 9 adaptive selectors for title
+2025-09-13 10:09:46,708 - INFO - HEALING SUCCESS: Found title using adaptive selector: .jobTitle
+2025-09-13 10:09:46,770 - INFO - 
+================================================================================
+AUTO-HEALED JOB #11 - Indeed
+================================================================================
+Title: Software Application Engineer
+Company: Seasats
+Location: San Diego, CA 92117 
+(Bay Ho area)
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=da782954754f9544&bb=3OU-f67UeJmrWCgh7_RFvvSgEuHKfkR5d3msWXupKz6QbrO9JVCFAFu-cuv2qRy4saM6QrivFJAM0Ej8w4yIWERRce2NpNjL-U9VTaAkZPwoNkybsRO7A6RmCF11YRSwJrWYoXZD-n27Jm4TyEb1mdl3xel9gZ_1&xkcb=SoBg67M3tgj3RdxSxJ0DbzkdCdPP&fccid=5d7c7f69498c53a6&vjs=3
+================================================================================
+
+2025-09-13 10:09:47,184 - INFO - 
+================================================================================
+AUTO-HEALED JOB #12 - Indeed
+================================================================================
+Title: Software Engineer
+Company: Albers Aerospace
+Location: McKinney, TX 75069
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=3ca4e85b1dc2e9f7&bb=3OU-f67UeJmrWCgh7_RFvuHhuRm407a921imc40lyioQgytVvB_L9aH82CQnO8NZl9OZkQk7WKMOnMyYBa9KbVTllF2kNrdAupZMkdQphvFvnPdq7KYrNHVvp1YpcvrO5hN0IHtadarH-tbhnloAKg3kLv2YmY8l&xkcb=SoDU67M3tgj3RdxSxJ0CbzkdCdPP&fccid=d0c7d3ecb48a482d&vjs=3
+================================================================================
+
+2025-09-13 10:09:47,978 - INFO - 
+================================================================================
+AUTO-HEALED JOB #13 - Indeed
+================================================================================
+Title: Software Applications Engineer
+Company: Psionic Inc.
+Location: Hampton, VA 23666 
+(Northampton area)
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=5e1fc396a05d46a5&bb=3OU-f67UeJmrWCgh7_RFvlmiE6Gckab137aToJnIZRuShYX9Btj88f2lH41aNVEY1Yy6Xm5yWBAOYEw9f3-cNAB39EKw3RZB8y3EOjQTWDnj-bhbgDGAWUFSCI7BKRA5yU-hnKEPjUF8yjhCUteldw_2mqmaBJjE&xkcb=SoBJ67M3tgj3RdxSxJ0BbzkdCdPP&fccid=cc50aebbdbc32c53&cmp=Psionic%2C-Inc.&ti=Application+Developer&vjs=3
+================================================================================
+
+2025-09-13 10:09:48,864 - INFO - 
+================================================================================
+AUTO-HEALED JOB #14 - Indeed
+================================================================================
+Title: Software Engineer | The Synthesizer
+Company: Infinity Labs
+Location: Colorado Springs, CO 80910
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=bdeb71670448453c&bb=3OU-f67UeJmrWCgh7_RFvtqrHEuAPjkWP_i3Z-gEOe82yF4sJeqaIyPbmPT2PcrL5A1Kh1uVDVrlfO81QvDw5YrgKsGSs0Kj9Pb91fjVwviHHkRz6dENan7AmuxmEWXbOyYbDjFW6BcN74Nuxfs_ZJ_tsW3LjQrV&xkcb=SoD967M3tgj3RdxSxJ0AbzkdCdPP&fccid=cc66ecc923c53ec5&vjs=3
+================================================================================
+
+2025-09-13 10:09:49,477 - INFO - Page 1: Extracted 12 jobs
+2025-09-13 10:09:49,493 - INFO - No next page found
+2025-09-13 10:09:49,493 - INFO - Auto-healing scrape complete: 12 jobs found
+2025-09-13 10:09:49,493 - INFO - Search 2 complete: 12 jobs found
+2025-09-13 10:10:02,281 - INFO - 
+################################################################################
+2025-09-13 10:10:02,282 - INFO - AUTO-HEALING SEARCH 3/4: software engineer in Delhi
+2025-09-13 10:10:02,282 - INFO - ################################################################################
+2025-09-13 10:10:02,283 - INFO - Auto-healing scrape: 'software engineer' in 'Delhi' (max 2 pages)
+2025-09-13 10:10:02,283 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Delhi&sort=date&fromage=7
+2025-09-13 10:10:07,902 - INFO - Processing page 1 with auto-healing
+2025-09-13 10:12:41,100 - INFO - Trying alternative job card detection...
+2025-09-13 10:12:41,234 - WARNING - No job cards found on page 1
+2025-09-13 10:12:41,234 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 10:12:41,234 - INFO - Search 3 complete: 0 jobs found
+2025-09-13 10:12:55,723 - INFO - 
+################################################################################
+2025-09-13 10:12:55,724 - INFO - AUTO-HEALING SEARCH 4/4: software engineer in 
+2025-09-13 10:12:55,724 - INFO - ################################################################################
+2025-09-13 10:12:55,725 - INFO - Auto-healing scrape: 'software engineer' in '' (max 2 pages)
+2025-09-13 10:12:55,725 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=&sort=date&fromage=7
+2025-09-13 10:12:59,228 - INFO - Processing page 1 with auto-healing
+2025-09-13 10:15:32,951 - INFO - Trying alternative job card detection...
+2025-09-13 10:15:33,079 - WARNING - No job cards found on page 1
+2025-09-13 10:15:33,080 - INFO - Auto-healing scrape complete: 0 jobs found
+2025-09-13 10:15:33,080 - INFO - Search 4 complete: 0 jobs found
+2025-09-13 10:15:33,081 - INFO - Results saved to: auto_healed_jobs_20250913_101533.json
+2025-09-13 10:15:33,082 - INFO - 
+AUTO-HEALING SCRAPING COMPLETE!
+2025-09-13 10:15:33,082 - INFO - Total jobs found: 14
+2025-09-13 10:15:36,862 - INFO - Saved selector knowledge
+2025-09-13 10:15:36,863 - INFO - 
+=== AUTO-HEALING PERFORMANCE REPORT ===
+Total Extractions Attempted: 42
+Successful Extractions: 38
+Success Rate: 90.5%
+Healing Events: 4
+Structure Changes Detected: 4
+Jobs Found: 14
+========================================
+
+2025-09-13 10:15:36,863 - INFO - Browser closed and knowledge saved

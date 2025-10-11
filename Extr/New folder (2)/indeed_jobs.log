@@ -1,0 +1,125 @@
+2025-09-12 20:32:05,018 - INFO - 
+####################################################################################################
+2025-09-12 20:32:05,019 - INFO - STARTING NEW SEARCH
+2025-09-12 20:32:05,019 - INFO - ####################################################################################################
+2025-09-12 20:32:05,020 - INFO - Starting job search: 'python developer' in 'New York, NY' (max 3 pages)
+2025-09-12 20:32:05,020 - INFO - Scraping page 1 for 'python developer' in 'New York, NY'
+2025-09-12 20:32:05,775 - WARNING - Status code 403 on attempt 1
+2025-09-12 20:32:06,403 - WARNING - Status code 403 on attempt 2
+2025-09-12 20:32:06,917 - WARNING - Status code 403 on attempt 3
+2025-09-12 20:32:06,919 - ERROR - Failed to get page 1
+2025-09-12 20:32:06,919 - INFO - No more jobs found, stopping
+2025-09-12 20:32:06,920 - INFO - SCRAPING COMPLETE! Total jobs found: 0
+2025-09-12 20:32:06,922 - INFO - Results also saved to: indeed_results_20250912_203206.json
+2025-09-12 20:32:06,922 - INFO - Search completed: 0 jobs found
+2025-09-12 20:32:06,922 - INFO - 
+####################################################################################################
+2025-09-12 20:32:06,923 - INFO - STARTING NEW SEARCH
+2025-09-12 20:32:06,923 - INFO - ####################################################################################################
+2025-09-12 20:32:06,923 - INFO - Starting job search: 'data scientist' in 'San Francisco, CA' (max 2 pages)
+2025-09-12 20:32:06,924 - INFO - Scraping page 1 for 'data scientist' in 'San Francisco, CA'
+2025-09-12 20:32:07,424 - WARNING - Status code 403 on attempt 1
+2025-09-12 20:32:07,967 - WARNING - Status code 403 on attempt 2
+2025-09-12 20:32:08,506 - WARNING - Status code 403 on attempt 3
+2025-09-12 20:32:08,508 - ERROR - Failed to get page 1
+2025-09-12 20:32:08,508 - INFO - No more jobs found, stopping
+2025-09-12 20:32:08,509 - INFO - SCRAPING COMPLETE! Total jobs found: 0
+2025-09-12 20:32:08,511 - INFO - Results also saved to: indeed_results_20250912_203208.json
+2025-09-12 20:32:08,511 - INFO - Search completed: 0 jobs found
+2025-09-12 20:32:08,511 - INFO - 
+ALL SEARCHES COMPLETE! Check the logs and JSON files for results.
+2025-09-12 20:34:07,131 - INFO - 
+####################################################################################################
+2025-09-12 20:34:07,131 - INFO - SEARCH 1/2 - python developer in New York, NY
+2025-09-12 20:34:07,132 - INFO - ####################################################################################################
+2025-09-12 20:34:07,132 - INFO - Starting STEALTH job search: 'python developer' in 'New York, NY' (max 2 pages)
+2025-09-12 20:34:07,133 - INFO - Scraping page 1 for 'python developer' in 'New York, NY'
+2025-09-12 20:34:07,133 - INFO - Making request (attempt 1) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:34:07,434 - INFO - Response status: 403
+2025-09-12 20:34:07,434 - WARNING - 403 Forbidden on attempt 1
+2025-09-12 20:34:07,435 - INFO - Waiting 8.12s before retry...
+2025-09-12 20:34:15,555 - INFO - Making request (attempt 2) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:34:15,808 - INFO - Response status: 403
+2025-09-12 20:34:15,809 - WARNING - 403 Forbidden on attempt 2
+2025-09-12 20:34:15,809 - INFO - Waiting 8.15s before retry...
+2025-09-12 20:34:23,966 - INFO - Making request (attempt 3) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:34:24,270 - INFO - Response status: 403
+2025-09-12 20:34:24,271 - WARNING - 403 Forbidden on attempt 3
+2025-09-12 20:34:24,271 - INFO - Waiting 17.80s before retry...
+2025-09-12 20:34:42,068 - INFO - Making request (attempt 4) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2025-09-12 20:34:42,305 - INFO - Response status: 403
+2025-09-12 20:34:42,306 - WARNING - 403 Forbidden on attempt 4
+2025-09-12 20:34:42,306 - INFO - Waiting 22.22s before retry...
+2025-09-12 20:34:46,704 - INFO - Scraping interrupted by user
+2025-09-12 20:34:46,705 - INFO - SCRAPING COMPLETE! Total jobs found: 0
+2025-09-12 20:34:46,711 - INFO - Waiting 14.5s before next search...
+2025-09-12 20:35:01,179 - INFO - 
+####################################################################################################
+2025-09-12 20:35:01,180 - INFO - SEARCH 2/2 - software engineer in San Francisco, CA
+2025-09-12 20:35:01,181 - INFO - ####################################################################################################
+2025-09-12 20:35:01,182 - INFO - Starting STEALTH job search: 'software engineer' in 'San Francisco, CA' (max 2 pages)
+2025-09-12 20:35:01,182 - INFO - Scraping page 1 for 'software engineer' in 'San Francisco, CA'
+2025-09-12 20:35:01,182 - INFO - Making request (attempt 1) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2025-09-12 20:35:01,337 - INFO - Response status: 403
+2025-09-12 20:35:01,338 - WARNING - 403 Forbidden on attempt 1
+2025-09-12 20:35:01,338 - INFO - Waiting 12.62s before retry...
+2025-09-12 20:35:13,349 - INFO - Scraping interrupted by user
+2025-09-12 20:35:13,350 - INFO - SCRAPING COMPLETE! Total jobs found: 0
+2025-09-12 20:35:30,730 - INFO - 
+####################################################################################################
+2025-09-12 20:35:30,730 - INFO - SEARCH 1/2 - python developer in Bengaluru, IN
+2025-09-12 20:35:30,730 - INFO - ####################################################################################################
+2025-09-12 20:35:30,731 - INFO - Starting STEALTH job search: 'python developer' in 'Bengaluru, IN' (max 2 pages)
+2025-09-12 20:35:30,731 - INFO - Scraping page 1 for 'python developer' in 'Bengaluru, IN'
+2025-09-12 20:35:30,731 - INFO - Making request (attempt 1) with User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2025-09-12 20:35:30,958 - INFO - Response status: 403
+2025-09-12 20:35:30,959 - WARNING - 403 Forbidden on attempt 1
+2025-09-12 20:35:30,959 - INFO - Waiting 8.26s before retry...
+2025-09-12 20:35:39,223 - INFO - Making request (attempt 2) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:35:39,428 - INFO - Response status: 403
+2025-09-12 20:35:39,429 - WARNING - 403 Forbidden on attempt 2
+2025-09-12 20:35:39,429 - INFO - Waiting 10.38s before retry...
+2025-09-12 20:35:49,812 - INFO - Making request (attempt 3) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:35:50,038 - INFO - Response status: 403
+2025-09-12 20:35:50,039 - WARNING - 403 Forbidden on attempt 3
+2025-09-12 20:35:50,039 - INFO - Waiting 9.85s before retry...
+2025-09-12 20:35:59,893 - INFO - Making request (attempt 4) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2025-09-12 20:36:00,174 - INFO - Response status: 403
+2025-09-12 20:36:00,174 - WARNING - 403 Forbidden on attempt 4
+2025-09-12 20:36:00,175 - INFO - Waiting 21.16s before retry...
+2025-09-12 20:36:21,333 - INFO - Making request (attempt 5) with User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2025-09-12 20:36:21,452 - INFO - Response status: 403
+2025-09-12 20:36:21,459 - WARNING - 403 Forbidden on attempt 5
+2025-09-12 20:36:21,461 - INFO - Normal approach failed, trying alternatives...
+2025-09-12 20:36:21,461 - INFO - Trying alternative URL: https://www.indeed.com/jobs
+2025-09-12 20:36:21,466 - INFO - Making request (attempt 1) with User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2025-09-12 20:36:21,630 - INFO - Response status: 403
+2025-09-12 20:36:21,630 - WARNING - 403 Forbidden on attempt 1
+2025-09-12 20:36:21,630 - INFO - Waiting 12.07s before retry...
+2025-09-12 20:36:33,704 - INFO - Making request (attempt 2) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:36:33,964 - INFO - Response status: 403
+2025-09-12 20:36:33,964 - WARNING - 403 Forbidden on attempt 2
+2025-09-12 20:36:33,965 - INFO - Waiting 8.21s before retry...
+2025-09-12 20:36:42,177 - INFO - Making request (attempt 3) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:36:42,464 - INFO - Response status: 403
+2025-09-12 20:36:42,464 - WARNING - 403 Forbidden on attempt 3
+2025-09-12 20:36:42,465 - INFO - Waiting 15.02s before retry...
+2025-09-12 20:36:57,488 - INFO - Making request (attempt 4) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...
+2025-09-12 20:36:57,722 - INFO - Response status: 403
+2025-09-12 20:36:57,722 - WARNING - 403 Forbidden on attempt 4
+2025-09-12 20:36:57,722 - INFO - Waiting 17.97s before retry...
+2025-09-12 20:37:15,695 - INFO - Making request (attempt 5) with User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...
+2025-09-12 20:37:15,948 - INFO - Response status: 403
+2025-09-12 20:37:15,948 - WARNING - 403 Forbidden on attempt 5
+2025-09-12 20:37:15,949 - INFO - Trying alternative URL: https://indeed.com/jobs
+2025-09-12 20:37:15,950 - INFO - Making request (attempt 1) with User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...
+2025-09-12 20:37:16,254 - INFO - Response status: 403
+2025-09-12 20:37:16,255 - WARNING - 403 Forbidden on attempt 1
+2025-09-12 20:37:16,255 - INFO - Waiting 11.65s before retry...
+2025-09-12 20:37:27,902 - INFO - Making request (attempt 2) with User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0...
+2025-09-12 20:37:28,133 - INFO - Response status: 403
+2025-09-12 20:37:28,133 - WARNING - 403 Forbidden on attempt 2
+2025-09-12 20:37:28,134 - INFO - Waiting 12.11s before retry...
+2025-09-12 20:37:33,009 - INFO - Scraping interrupted by user
+2025-09-12 20:37:33,010 - INFO - SCRAPING COMPLETE! Total jobs found: 0
+2025-09-12 20:37:33,015 - INFO - Waiting 10.9s before next search...

@@ -1,0 +1,265 @@
+2025-09-12 20:45:58,648 - INFO - Starting FIXED Selenium Job Scraper...
+2025-09-12 20:45:58,649 - INFO - Setting up Chrome WebDriver with stealth mode...
+2025-09-12 20:45:58,650 - INFO - ====== WebDriver manager ======
+2025-09-12 20:45:59,798 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:46:00,400 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:46:01,030 - INFO - There is no [win64] chromedriver "140.0.7339.82" for browser google-chrome "140.0.7339" in cache
+2025-09-12 20:46:01,031 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:46:02,706 - INFO - WebDriver version 140.0.7339.82 selected
+2025-09-12 20:46:02,711 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.82/win32/chromedriver-win32.zip
+2025-09-12 20:46:02,712 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.82/win32/chromedriver-win32.zip
+2025-09-12 20:46:03,319 - INFO - Driver downloading response is 200
+2025-09-12 20:46:06,894 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:46:08,629 - INFO - Driver has been saved in cache [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82]
+2025-09-12 20:46:11,873 - INFO - Chrome WebDriver setup complete
+2025-09-12 20:46:11,874 - INFO - 
+################################################################################
+2025-09-12 20:46:11,874 - INFO - SEARCH 1/2: python developer in Bengaluru
+2025-09-12 20:46:11,875 - INFO - ################################################################################
+2025-09-12 20:46:11,875 - INFO - SELENIUM MULTI-SITE SEARCH: 'python developer' in 'Bengaluru'
+2025-09-12 20:46:11,875 - INFO - Starting Indeed scraper...
+2025-09-12 20:46:11,876 - INFO - Scraping Indeed for 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 20:46:11,876 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 20:46:19,779 - INFO - Processing page 1
+2025-09-12 20:46:33,809 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 20:46:37,861 - INFO - 
+================================================================================
+JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=O2WdpnXwcwfi4QPVoEzcrWSleYnxN-09yBjZ75EYFh8Hf3HZEoJakEg9Dj0047kpQDsYa2nw6I1DFYV4xExwEvWWqvRppb2sZEXBdC9rLWN8hzmElGXbpPUBGmy3YOMXwmaqOvvaTGpFYjCC1vM_cQ%3D%3D&xkcb=SoBY67M3tfHzYOANU70LbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-12 20:46:41,477 - INFO - 
+================================================================================
+JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=O2WdpnXwcwfi4QPVoEzcrZrWGuwg66AiHHHVzqh4d2aXuCXcenznoZ6oMHzuZEtbBjslAqCKVbPHiiKdZBN1u6qCGvzXYo9VQcYly3VD1QU-3WlstzXPlpCTUai1bNmt_nMZYE6Birrm9PK7uH8Kyg%3D%3D&xkcb=SoDs67M3tfHzYOANU70KbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-12 20:46:45,026 - INFO - 
+================================================================================
+JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/viewjob?jk=cdef0123456789ab
+================================================================================
+
+2025-09-12 20:46:45,027 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 20:46:45,073 - INFO - No more pages available
+2025-09-12 20:46:45,073 - INFO - Indeed: 3 jobs scraped successfully
+2025-09-12 20:46:45,074 - INFO - Indeed complete: 3 jobs found
+2025-09-12 20:46:53,126 - INFO - Starting Naukri scraper...
+2025-09-12 20:46:53,127 - INFO - Scraping Naukri for 'python developer' in 'Bengaluru'
+2025-09-12 20:46:53,128 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=python+developer&l=Bengaluru
+2025-09-12 20:47:09,411 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:47:09,411 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:47:18,355 - INFO - Removed 1 duplicates
+2025-09-12 20:47:18,358 - INFO - Results saved to: selenium_jobs_20250912_204718.json
+2025-09-12 20:47:18,358 - INFO - Search 1 complete: 2 unique jobs found
+2025-09-12 20:47:18,359 - INFO - 
+################################################################################
+2025-09-12 20:47:18,359 - INFO - SEARCH 2/2: software engineer in Mumbai
+2025-09-12 20:47:18,359 - INFO - ################################################################################
+2025-09-12 20:47:18,360 - INFO - SELENIUM MULTI-SITE SEARCH: 'software engineer' in 'Mumbai'
+2025-09-12 20:47:18,361 - INFO - Starting Indeed scraper...
+2025-09-12 20:47:18,361 - INFO - Scraping Indeed for 'software engineer' in 'Mumbai' (max 2 pages)
+2025-09-12 20:47:18,361 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Mumbai&sort=date&fromage=7
+2025-09-12 20:47:24,569 - INFO - Processing page 1
+2025-09-12 20:47:39,942 - WARNING - Timeout waiting for job cards on page 1
+2025-09-12 20:47:39,942 - INFO - Indeed: 0 jobs scraped successfully
+2025-09-12 20:47:39,943 - INFO - Indeed complete: 0 jobs found
+2025-09-12 20:47:54,209 - INFO - Starting Naukri scraper...
+2025-09-12 20:47:54,209 - INFO - Scraping Naukri for 'software engineer' in 'Mumbai'
+2025-09-12 20:47:54,210 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=software+engineer&l=Mumbai
+2025-09-12 20:48:13,450 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:48:13,450 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:48:27,457 - INFO - Removed 0 duplicates
+2025-09-12 20:48:27,458 - INFO - Search 2 complete: 0 unique jobs found
+2025-09-12 20:48:27,458 - INFO - 
+SELENIUM SCRAPING COMPLETE!
+2025-09-12 20:48:27,459 - INFO - Total jobs found: 2
+2025-09-12 20:48:27,459 - INFO - Check selenium_scraper.log and JSON files for results
+2025-09-12 20:48:29,682 - INFO - Browser closed
+2025-09-12 20:50:40,842 - INFO - Starting FIXED Selenium Job Scraper...
+2025-09-12 20:50:40,842 - INFO - Setting up Chrome WebDriver with stealth mode...
+2025-09-12 20:50:40,843 - INFO - ====== WebDriver manager ======
+2025-09-12 20:50:41,979 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:50:42,653 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:50:43,344 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 20:50:44,616 - INFO - Chrome WebDriver setup complete
+2025-09-12 20:50:44,617 - INFO - 
+################################################################################
+2025-09-12 20:50:44,618 - INFO - SEARCH 1/2: python developer in Bengaluru
+2025-09-12 20:50:44,618 - INFO - ################################################################################
+2025-09-12 20:50:44,618 - INFO - SELENIUM MULTI-SITE SEARCH: 'python developer' in 'Bengaluru'
+2025-09-12 20:50:44,619 - INFO - Starting Indeed scraper...
+2025-09-12 20:50:44,620 - INFO - Scraping Indeed for 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 20:50:44,620 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 20:50:52,946 - INFO - Processing page 1
+2025-09-12 20:51:06,308 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 20:51:09,813 - INFO - 
+================================================================================
+JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=v85nJ6W-v-jmR1KQOU67sv_GKmlZW3OG6l2fa0JWjCGe5B_tMNwYqAatEdChlsYNpO1YrmsAY7C7H7H7JTOKIcLLA4KK56EvYnNrLSay7R68TK8ZTmIEq80y7X_gAjo6ILoWy4v3TKh1WyfobiwjSQ%3D%3D&xkcb=SoBs67M3tfYSJYy04B0LbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-12 20:51:12,202 - INFO - 
+================================================================================
+JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=v85nJ6W-v-jmR1KQOU67svRTsuOD2FXKDYkQmc3vz7RchcTh5ROS2Gh82Aw9NtDhThhZa4MzGl3eq4h-SC5v8ShVthnPxsBfFPI6FZhEDjBPACSayv6-Qla5uWNZvFs9tVbuWKSPCtcR40340fnWcg%3D%3D&xkcb=SoDY67M3tfYSJYy04B0KbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-12 20:51:15,309 - INFO - 
+================================================================================
+JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/viewjob?jk=cdef0123456789ab
+================================================================================
+
+2025-09-12 20:51:15,310 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 20:51:15,383 - INFO - No more pages available
+2025-09-12 20:51:15,384 - INFO - Indeed: 3 jobs scraped successfully
+2025-09-12 20:51:15,384 - INFO - Indeed complete: 3 jobs found
+2025-09-12 20:51:30,189 - INFO - Starting Naukri scraper...
+2025-09-12 20:51:30,190 - INFO - Scraping Naukri for 'python developer' in 'Bengaluru'
+2025-09-12 20:51:30,190 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=python+developer&l=Bengaluru
+2025-09-12 20:51:47,722 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:51:47,723 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:52:01,046 - INFO - Removed 1 duplicates
+2025-09-12 20:52:01,048 - INFO - Results saved to: selenium_jobs_20250912_205201.json
+2025-09-12 20:52:01,049 - INFO - Search 1 complete: 2 unique jobs found
+2025-09-12 20:52:01,049 - INFO - 
+################################################################################
+2025-09-12 20:52:01,049 - INFO - SEARCH 2/2: software engineer in Mumbai
+2025-09-12 20:52:01,050 - INFO - ################################################################################
+2025-09-12 20:52:01,050 - INFO - SELENIUM MULTI-SITE SEARCH: 'software engineer' in 'Mumbai'
+2025-09-12 20:52:01,051 - INFO - Starting Indeed scraper...
+2025-09-12 20:52:01,051 - INFO - Scraping Indeed for 'software engineer' in 'Mumbai' (max 2 pages)
+2025-09-12 20:52:01,052 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Mumbai&sort=date&fromage=7
+2025-09-12 20:52:09,286 - INFO - Processing page 1
+2025-09-12 20:52:24,598 - WARNING - Timeout waiting for job cards on page 1
+2025-09-12 20:52:24,598 - INFO - Indeed: 0 jobs scraped successfully
+2025-09-12 20:52:24,599 - INFO - Indeed complete: 0 jobs found
+2025-09-12 20:52:34,082 - INFO - Starting Naukri scraper...
+2025-09-12 20:52:34,083 - INFO - Scraping Naukri for 'software engineer' in 'Mumbai'
+2025-09-12 20:52:34,083 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=software+engineer&l=Mumbai
+2025-09-12 20:52:51,689 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:52:51,690 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:53:01,668 - INFO - Removed 0 duplicates
+2025-09-12 20:53:01,668 - INFO - Search 2 complete: 0 unique jobs found
+2025-09-12 20:53:01,669 - INFO - 
+SELENIUM SCRAPING COMPLETE!
+2025-09-12 20:53:01,670 - INFO - Total jobs found: 2
+2025-09-12 20:53:01,670 - INFO - Check selenium_scraper.log and JSON files for results
+2025-09-12 20:53:03,872 - INFO - Browser closed
+2025-09-12 20:54:53,624 - INFO - Starting FIXED Selenium Job Scraper...
+2025-09-12 20:54:53,624 - INFO - Setting up Chrome WebDriver with stealth mode...
+2025-09-12 20:54:53,625 - INFO - ====== WebDriver manager ======
+2025-09-12 20:54:54,661 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:54:55,206 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-12 20:54:55,678 - INFO - Driver [C:\Users\shubh\.wdm\drivers\chromedriver\win64\140.0.7339.82\chromedriver-win32/chromedriver.exe] found in cache
+2025-09-12 20:54:56,889 - INFO - Chrome WebDriver setup complete
+2025-09-12 20:54:56,889 - INFO - 
+################################################################################
+2025-09-12 20:54:56,890 - INFO - SEARCH 1/2: python developer in Bengaluru
+2025-09-12 20:54:56,890 - INFO - ################################################################################
+2025-09-12 20:54:56,891 - INFO - SELENIUM MULTI-SITE SEARCH: 'python developer' in 'Bengaluru'
+2025-09-12 20:54:56,891 - INFO - Starting Indeed scraper...
+2025-09-12 20:54:56,891 - INFO - Scraping Indeed for 'python developer' in 'Bengaluru' (max 2 pages)
+2025-09-12 20:54:56,892 - INFO - Navigating to: https://indeed.com/jobs?q=python+developer&l=Bengaluru&sort=date&fromage=7
+2025-09-12 20:55:06,587 - INFO - Processing page 1
+2025-09-12 20:55:20,114 - INFO - Found 3 job cards with: [data-jk]
+2025-09-12 20:55:23,086 - INFO - 
+================================================================================
+JOB #1 - Indeed
+================================================================================
+Title: Python Developer
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=583d90af42399441&bb=4wf6r3EkSWA9l5NRHInn1lU1U157Yi1j8gp0oVyspZgT0DM5Ovwbxj7Q0PCGwi9NWOSfLk58Rh51nd3ecvVhh7GrguSbdgZx4zGcEN_4-zwVYYBO1uKbk3eG5Bcd8cz9OQUpWH2M1iqUBNDqGzwVOQ%3D%3D&xkcb=SoAm67M3tfYzCYxSxJ0LbzkdCdPP&fccid=8a5ba745769b80b8&cmp=Creed-Infotech&ti=Python+Developer&vjs=3
+================================================================================
+
+2025-09-12 20:55:25,380 - INFO - 
+================================================================================
+JOB #2 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/rc/clk?jk=605dc658931b49b7&bb=4wf6r3EkSWA9l5NRHInn1jroVsm1FrOTp4gkflXFrzqchz7pSIw81I_oL6khf1krveoIuIJNMUL9uPjoRnkw2VJA4AJeNRjTSKSxOnCeGpco2KW4h2fwWvgx7F5OYlelOl_4XK3PVpwYADLZV4xxXQ%3D%3D&xkcb=SoCS67M3tfYzCYxSxJ0KbzkdCdPP&fccid=3f20b9848b31e1a9&vjs=3
+================================================================================
+
+2025-09-12 20:55:28,479 - INFO - 
+================================================================================
+JOB #3 - Indeed
+================================================================================
+Title: Python Micro services Developer-5
+Company: N/A
+Location: N/A
+Salary: Not specified
+URL: https://www.indeed.com/viewjob?jk=cdef0123456789ab
+================================================================================
+
+2025-09-12 20:55:28,480 - INFO - Page 1: Extracted 3 jobs
+2025-09-12 20:55:28,547 - INFO - No more pages available
+2025-09-12 20:55:28,548 - INFO - Indeed: 3 jobs scraped successfully
+2025-09-12 20:55:28,548 - INFO - Indeed complete: 3 jobs found
+2025-09-12 20:55:38,356 - INFO - Starting Naukri scraper...
+2025-09-12 20:55:38,356 - INFO - Scraping Naukri for 'python developer' in 'Bengaluru'
+2025-09-12 20:55:38,356 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=python+developer&l=Bengaluru
+2025-09-12 20:55:55,040 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:55:55,040 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:56:05,427 - INFO - Removed 1 duplicates
+2025-09-12 20:56:05,430 - INFO - Results saved to: selenium_jobs_20250912_205605.json
+2025-09-12 20:56:05,430 - INFO - Search 1 complete: 2 unique jobs found
+2025-09-12 20:56:05,431 - INFO - 
+################################################################################
+2025-09-12 20:56:05,432 - INFO - SEARCH 2/2: software engineer in Mumbai
+2025-09-12 20:56:05,432 - INFO - ################################################################################
+2025-09-12 20:56:05,433 - INFO - SELENIUM MULTI-SITE SEARCH: 'software engineer' in 'Mumbai'
+2025-09-12 20:56:05,433 - INFO - Starting Indeed scraper...
+2025-09-12 20:56:05,434 - INFO - Scraping Indeed for 'software engineer' in 'Mumbai' (max 2 pages)
+2025-09-12 20:56:05,434 - INFO - Navigating to: https://indeed.com/jobs?q=software+engineer&l=Mumbai&sort=date&fromage=7
+2025-09-12 20:56:13,825 - INFO - Processing page 1
+2025-09-12 20:56:28,975 - WARNING - Timeout waiting for job cards on page 1
+2025-09-12 20:56:28,976 - INFO - Indeed: 0 jobs scraped successfully
+2025-09-12 20:56:28,976 - INFO - Indeed complete: 0 jobs found
+2025-09-12 20:56:38,346 - INFO - Starting Naukri scraper...
+2025-09-12 20:56:38,346 - INFO - Scraping Naukri for 'software engineer' in 'Mumbai'
+2025-09-12 20:56:38,346 - INFO - Navigating to Naukri: https://www.naukri.com/jobs-in-india?k=software+engineer&l=Mumbai
+2025-09-12 20:56:55,283 - INFO - Naukri: 0 jobs scraped
+2025-09-12 20:56:55,283 - INFO - Naukri complete: 0 jobs found
+2025-09-12 20:57:08,045 - INFO - Removed 0 duplicates
+2025-09-12 20:57:08,045 - INFO - Search 2 complete: 0 unique jobs found
+2025-09-12 20:57:08,046 - INFO - 
+SELENIUM SCRAPING COMPLETE!
+2025-09-12 20:57:08,046 - INFO - Total jobs found: 2
+2025-09-12 20:57:08,046 - INFO - Check selenium_scraper.log and JSON files for results
+2025-09-12 20:57:10,342 - INFO - Browser closed
